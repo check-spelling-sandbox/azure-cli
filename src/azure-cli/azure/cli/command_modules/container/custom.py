@@ -334,7 +334,7 @@ def _get_subnet_id(cmd, location, resource_group_name, vnet, vnet_address_prefix
         logger.info('Using existing subnet "%s" in resource group "%s"', subnet["name"], resource_group_name)
         for sal in subnet.get("serviceAssociationLinks", []):
             if sal.get("linkedResourceType", None) != aci_delegation_service_name:
-                raise CLIError("Can not use subnet with existing service association links other than {}.".format(aci_delegation_service_name))
+                raise CLIError("Cannot use subnet with existing service association links other than {}.".format(aci_delegation_service_name))
 
         if not subnet.get("delegations", None):
             logger.info('Adding ACI delegation to the existing subnet.')
@@ -348,7 +348,7 @@ def _get_subnet_id(cmd, location, resource_group_name, vnet, vnet_address_prefix
         else:
             for delegation in subnet["delegations"]:
                 if delegation.get("serviceName", None) != aci_delegation_service_name:
-                    raise CLIError("Can not use subnet with existing delegations other than {}".format(aci_delegation_service_name))
+                    raise CLIError("Cannot use subnet with existing delegations other than {}".format(aci_delegation_service_name))
 
     # Create new subnet and Vnet if not exists
     else:

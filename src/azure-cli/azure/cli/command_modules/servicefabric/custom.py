@@ -132,18 +132,18 @@ def new_cluster(cmd,
             '\'--certificate-subject-name\', \'--certificate-file\', \'--secret-identifier\', one of them must be specified')
     if certificate_output_folder and certificate_file:
         raise CLIError(
-            '\'--certificate-output-folder\' and \'--certificate-file\' can not be specified at same time')
+            '\'--certificate-output-folder\' and \'--certificate-file\' cannot be specified at same time')
     if secret_identifier:
         if certificate_output_folder or certificate_file or certificate_output_folder or vault_resource_group_name or certificate_password:
             raise CLIError(
-                '\'--certificate-output-folder\' , \'--certificate-file\', \'certificate_output_folder\', \'vault_resource_group_name\', \'certificate_password\' can not be specified, ' +
+                '\'--certificate-output-folder\' , \'--certificate-file\', \'certificate_output_folder\', \'vault_resource_group_name\', \'certificate_password\' cannot be specified, ' +
                 'when \'--secret-identifier\' is specified')
     if parameter_file or template_file:
         if parameter_file is None or template_file is None:
-            raise CLIError('If using customize template to deploy,both \'--parameter-file\' and \'--template-file\' can not be None ' + '\n For example:\n az sf cluster create --resource-group myRg --location westus --certificate-subject-name test.com --parameter-file c:\\parameter.json --template-file c:\\template.json' +
+            raise CLIError('If using customize template to deploy,both \'--parameter-file\' and \'--template-file\' cannot be None ' + '\n For example:\n az sf cluster create --resource-group myRg --location westus --certificate-subject-name test.com --parameter-file c:\\parameter.json --template-file c:\\template.json' +
                            '\n az sf cluster create --resource-group myRg --location westus --parameter-file c:\\parameter.json --template-file c:\\template.json --certificate_file c:\\test.pfx' + '\n az sf cluster create --resource-group myRg --location westus --certificate-subject-name test.com --parameter-file c:\\parameter.json --template-file c:\\template.json --certificate-output-folder c:\\certoutput')
         if cluster_size or vm_sku or vm_user_name:
-            raise CLIError('\'cluster_size\',\'vm_sku\',\'vm_os\',\'vm_user_name\' can not be specified when using customize template deployment')
+            raise CLIError('\'cluster_size\',\'vm_sku\',\'vm_os\',\'vm_user_name\' cannot be specified when using customize template deployment')
 
     else:
         if vm_password is None:
@@ -593,7 +593,7 @@ def set_cluster_setting(cmd,
     if section or parameter or value:
         if section is None or parameter is None or value is None:
             raise CLIError(
-                '\'--section\' , \'--parameter\' and \'--value\' can not be None')
+                '\'--section\' , \'--parameter\' and \'--value\' cannot be None')
     cluster = client.get(resource_group_name, cluster_name)
     setting_dict = _fabric_settings_to_dict(cluster.fabric_settings)
     if settings_section_description:

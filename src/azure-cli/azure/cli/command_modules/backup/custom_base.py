@@ -429,7 +429,7 @@ def restore_disks(cmd, client, resource_group_name, vault_name, container_name, 
     if mi_system_assigned and mi_user_assigned:
         raise MutuallyExclusiveArgumentError(
             """
-            Both --mi-system-assigned and --mi-user-assigned can not be used together.
+            Both --mi-system-assigned and --mi-user-assigned cannot be used together.
             """)
 
     return custom.restore_disks(cmd, client, resource_group_name, vault_name, container_name, item_name, rp_name,

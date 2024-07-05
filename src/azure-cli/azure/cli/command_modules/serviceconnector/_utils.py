@@ -52,7 +52,7 @@ def generate_random_string(length=5, prefix='', lower_only=False, ensure_complex
 
     if lower_only and ensure_complexity:
         raise CLIInternalError(
-            'lower_only and ensure_complexity can not both be specified to True')
+            'lower_only and ensure_complexity cannot both be specified to True')
     if ensure_complexity and length < 8:
         raise CLIInternalError('ensure_complexity needs length >= 8')
 

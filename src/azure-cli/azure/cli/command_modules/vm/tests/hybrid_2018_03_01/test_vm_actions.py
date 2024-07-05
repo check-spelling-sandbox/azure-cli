@@ -135,7 +135,7 @@ class TestActions(unittest.TestCase):
         self._verify_username_with_ex('gue[', 'linux', err_invalid_char)
         self._verify_username_with_ex('Aguest', 'linux', err_invalid_char)
         self._verify_username_with_ex('-gguest', 'linux', err_invalid_char)
-        self._verify_username_with_ex('', 'linux', 'admin user name can not be empty')
+        self._verify_username_with_ex('', 'linux', 'admin user name cannot be empty')
         self._verify_username_with_ex('guest', 'linux',
                                       "This user name 'guest' meets the general requirements, but is specifically disallowed for this image. Please try a different value.")
 

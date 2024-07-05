@@ -47,8 +47,8 @@ The newly designed error types are provided in [azure/cli/core/azclierror.py](ht
 
 To summarize, here is a list of rules for command group authors to select a proper error type.
 - __DO NOT__ use the error types defined in the base layer and the second layer
-- Avoid using the fallback error types unless you can not find a specific one for your case
-- Consider defining a new error type if you can not find a proper one when it is a general error
+- Avoid using the fallback error types unless you cannot find a specific one for your case
+- Consider defining a new error type if you cannot find a proper one when it is a general error
 
 ### Apply the Error Type
 

@@ -70,7 +70,7 @@ def process_loaded_yaml(yaml_containerapp):
         if nested_property in yaml_containerapp:
             yaml_containerapp['properties'][nested_property] = tmp
             del yaml_containerapp[nested_property]
-    # remove property managedEnvironmentId, can not use safe_get()
+    # remove property managedEnvironmentId, cannot use safe_get()
     if "managedEnvironmentId" in yaml_containerapp['properties']:
         tmp = yaml_containerapp['properties']['managedEnvironmentId']
         if tmp:

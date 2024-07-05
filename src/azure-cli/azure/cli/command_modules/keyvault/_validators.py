@@ -284,7 +284,7 @@ def process_key_release_policy(cmd, ns):
         return
 
     if ns.release_policy and default_cvm_policy:
-        raise InvalidArgumentValueError('Can not specify both `--policy` and `--default-cvm-policy`')
+        raise InvalidArgumentValueError('Cannot specify both `--policy` and `--default-cvm-policy`')
 
     import json
     KeyReleasePolicy = cmd.loader.get_sdk('KeyReleasePolicy', mod='_models',

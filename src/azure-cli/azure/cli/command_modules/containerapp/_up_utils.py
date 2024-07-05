@@ -249,7 +249,7 @@ class ContainerAppEnvironment(Resource):
                     logger.info(
                         f"Failed to create ManagedEnvironment in {loc} due to {ex}"
                     )
-            raise ValidationError("Can not find a region with quota to create ManagedEnvironment")
+            raise ValidationError("Cannot find a region with quota to create ManagedEnvironment")
 
     def get_rid(self):
         rid = self.name

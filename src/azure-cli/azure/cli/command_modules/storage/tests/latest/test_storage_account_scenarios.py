@@ -2529,7 +2529,7 @@ class StorageAccountORScenarioTest(StorageScenarioMixin, ScenarioTest):
         self.kwargs.update({"src_policy_id": src_policy_id})
         self.cmd('storage account or-policy update -g {rg} -n {src_sc} -p @"{policy}" --policy-id {src_policy_id}')
 
-        # Service behavior change: (InvalidObjectReplicationPolicy) SourceAccount can not be overwritten
+        # Service behavior change: (InvalidObjectReplicationPolicy) SourceAccount cannot be overwritten
         # # Update ORS policy
         # result = self.cmd('storage account or-policy update -g {} -n {} --policy-id {} --source-account {}'.format(
         #     resource_group, self.kwargs["dest_sc"], self.kwargs["policy_id"], self.kwargs['new_sc'])).get_output_in_json()

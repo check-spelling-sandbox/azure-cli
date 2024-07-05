@@ -587,7 +587,7 @@ def process_nw_cm_v2_create_namespace(cmd):
 
         args.location = resource.location
         if not has_value(args.location):
-            raise ValidationError("Can not get location from --endpoint-source-resource-id")
+            raise ValidationError("Cannot get location from --endpoint-source-resource-id")
 
     if not has_value(args.test_config_protocol):
         raise ValidationError('usage error: --protocol is required to create a test '

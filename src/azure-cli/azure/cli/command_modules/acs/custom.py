@@ -181,7 +181,7 @@ def _aks_browse(
 
     # otherwise open the kube-dashboard addon
     if not which('kubectl'):
-        raise FileOperationError('Can not find kubectl executable in PATH')
+        raise FileOperationError('Cannot find kubectl executable in PATH')
 
     fd, browse_path = tempfile.mkstemp()
     try:
@@ -1168,17 +1168,17 @@ def aks_enable_addons(cmd, client, resource_group_name, name, addons,
                         enable_high_log_scale_mode=enable_high_log_scale_mode)
                 else:
                     raise ArgumentUsageError(
-                        "--enable-msi-auth-for-monitoring can not be used on clusters with service principal auth.")
+                        "--enable-msi-auth-for-monitoring cannot be used on clusters with service principal auth.")
             else:
                 # monitoring addon will use legacy path
                 if enable_syslog:
                     raise ArgumentUsageError(
-                        "--enable-syslog can not be used without MSI auth.")
+                        "--enable-syslog cannot be used without MSI auth.")
                 if enable_high_log_scale_mode:
                     raise ArgumentUsageError(
-                        "--enable-high-log-scale-mode can not be used without MSI auth.")
+                        "--enable-high-log-scale-mode cannot be used without MSI auth.")
                 if data_collection_settings is not None:
-                    raise ArgumentUsageError("--data-collection-settings can not be used without MSI auth.")
+                    raise ArgumentUsageError("--data-collection-settings cannot be used without MSI auth.")
                 if ampls_resource_id is not None:
                     raise ArgumentUsageError("--ampls-resource-id supported only in MSI auth mode.")
                 ensure_container_insights_for_monitoring(
@@ -1589,7 +1589,7 @@ def aks_update_credentials(cmd, client, resource_group_name, name,
 
 def aks_check_acr(cmd, client, resource_group_name, name, acr, node_name=None):
     if not which("kubectl"):
-        raise ValidationError("Can not find kubectl executable in PATH")
+        raise ValidationError("Cannot find kubectl executable in PATH")
 
     return_msg = None
     fd, browse_path = tempfile.mkstemp()

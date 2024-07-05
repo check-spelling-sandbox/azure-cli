@@ -7,7 +7,7 @@ from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
 
 
 class TestAAZResourceArgFmt(ScenarioTest):
-    """ Scenario tests can not be contained in azure-cli-core, so have to move them here."""
+    """ Scenario tests cannot be contained in azure-cli-core, so have to move them here."""
 
     def format_arg(self, schema, data):
         from azure.cli.core.aaz._command_ctx import AAZCommandCtx

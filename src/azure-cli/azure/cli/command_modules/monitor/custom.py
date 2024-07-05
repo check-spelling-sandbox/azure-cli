@@ -74,7 +74,7 @@ def _activity_log_select_filter_builder(events=None):
 def _build_odata_filter(default_filter, field_name, field_value, field_label):
     if not field_value:
         from knack.util import CLIError
-        raise CLIError('Value for {} can not be empty.'.format(field_name))
+        raise CLIError('Value for {} cannot be empty.'.format(field_name))
 
     return _add_condition(default_filter, field_label, field_value)
 

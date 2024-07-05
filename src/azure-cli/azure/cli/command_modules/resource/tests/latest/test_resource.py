@@ -5622,7 +5622,7 @@ class DeploymentWithBicepScenarioTest(LiveScenarioTest):
             'params2' : "./param2.json",
         })
 
-        with self.assertRaisesRegex(CLIError, "Can not use --parameters argument more than once when using a .bicepparam file"):
+        with self.assertRaisesRegex(CLIError, "Cannot use --parameters argument more than once when using a .bicepparam file"):
             self.cmd('deployment group create --resource-group {rg} --parameters {params1} --parameters {params2}')
 
     def test_resource_deployment_with_misspelled_bicepparam_file(self):

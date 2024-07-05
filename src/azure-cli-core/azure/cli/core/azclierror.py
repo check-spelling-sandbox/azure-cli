@@ -131,7 +131,7 @@ class UnknownError(AzCLIError):
 
 # region: Third Layer
 # Specific categories of the AzureCLI error types
-# Raise the error classes here in your codes. Avoid using fallback error classes unless you can not find a proper one.
+# Raise the error classes here in your codes. Avoid using fallback error classes unless you cannot find a proper one.
 # Command related error types
 class CommandNotFoundError(UserFault):
     """ Command is misspelled or not recognized by AzureCLI. """
@@ -150,7 +150,7 @@ class RequiredArgumentMissingError(UserFault):
 
 
 class MutuallyExclusiveArgumentError(UserFault):
-    """ Arguments can not be specified together. """
+    """ Arguments cannot be specified together. """
     pass
 
 
@@ -161,7 +161,7 @@ class InvalidArgumentValueError(UserFault):
 
 class ArgumentUsageError(UserFault):
     """ Fallback of the argument usage related errors.
-    Avoid using this class unless the error can not be classified
+    Avoid using this class unless the error cannot be classified
     into the Argument related specific error types. """
     pass
 
@@ -183,7 +183,7 @@ class ForbiddenError(UserFault):
 
 
 class ResourceNotFoundError(UserFault):
-    """ Can not find Azure resources: 404 error """
+    """ Cannot find Azure resources: 404 error """
     pass
 
 
@@ -194,7 +194,7 @@ class AzureInternalError(ServiceError):
 
 class AzureResponseError(UserFault):
     """ Fallback of the response related errors.
-    Avoid using this class unless the error can not be classified
+    Avoid using this class unless the error cannot be classified
     into the Response related specific error types. """
     pass
 
@@ -208,7 +208,7 @@ class AzureConnectionError(UserFault):
 class ClientRequestError(UserFault):
     """ Fallback of the request related errors. Error occurs while attempting
     to make a request to the service. No request is sent.
-    Avoid using this class unless the error can not be classified
+    Avoid using this class unless the error cannot be classified
     into the Request related specific errors types. """
     pass
 
@@ -244,14 +244,14 @@ class DeploymentError(UserFault):
 # Validation related error types
 class ValidationError(UserFault):
     """ Fallback of the errors in validation functions.
-    Avoid using this class unless the error can not be classified into
+    Avoid using this class unless the error cannot be classified into
     the Argument, Request and Response related specific error types. """
     pass
 
 
 class UnclassifiedUserFault(UserFault):
     """ Fallback of the UserFault related error types.
-    Avoid using this class unless the error can not be classified into
+    Avoid using this class unless the error cannot be classified into
     the UserFault related specific error types.
     """
     pass

@@ -93,7 +93,7 @@ def _create_mysql_exist_vnet_subnet_delegation(cmd, nw_subscription, resource_cl
     else:
         for delgtn in subnet["delegations"]:
             if delgtn["serviceName"] != delegation_service_name:
-                raise CLIError("Can not use subnet with existing delegations other than {}".format(delegation_service_name))
+                raise CLIError("Cannot use subnet with existing delegations other than {}".format(delegation_service_name))
 
     return subnet
 
@@ -265,7 +265,7 @@ def _create_subnet_delegation(cmd, nw_subscription, resource_client, delegation_
         else:
             for delgtn in subnet["delegations"]:
                 if delgtn["serviceName"] != delegation_service_name:
-                    raise CLIError("Can not use subnet with existing delegations other than {}".format(
+                    raise CLIError("Cannot use subnet with existing delegations other than {}".format(
                         delegation_service_name))
 
     return subnet

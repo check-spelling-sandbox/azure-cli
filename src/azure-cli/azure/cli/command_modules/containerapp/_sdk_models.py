@@ -1621,7 +1621,7 @@ class Configuration(_serialization.Model):
      .. raw:: html
 
         <list><item>Multiple: multiple revisions can be active.</item><item>Single: Only one
-     revision can be active at a time. Revision weights can not be used in this mode. If no value if
+     revision can be active at a time. Revision weights cannot be used in this mode. If no value if
      provided, this is the default.</item></list>. Known values are: "Multiple" and "Single".
     :vartype active_revisions_mode: str or ~azure.mgmt.appcontainers.models.ActiveRevisionsMode
     :ivar ingress: Ingress configurations.
@@ -1669,7 +1669,7 @@ class Configuration(_serialization.Model):
          .. raw:: html
 
             <list><item>Multiple: multiple revisions can be active.</item><item>Single: Only one
-         revision can be active at a time. Revision weights can not be used in this mode. If no value if
+         revision can be active at a time. Revision weights cannot be used in this mode. If no value if
          provided, this is the default.</item></list>. Known values are: "Multiple" and "Single".
         :paramtype active_revisions_mode: str or ~azure.mgmt.appcontainers.models.ActiveRevisionsMode
         :keyword ingress: Ingress configurations.

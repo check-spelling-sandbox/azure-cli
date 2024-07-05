@@ -79,6 +79,6 @@ def validate_subnet(ns):
         raise CLIError('usage error: --vnet NAME --subnet NAME | --vnet ID --subnet NAME | --subnet ID')
 
     if (ns.subnet or ns.vnet) and ns.ip_address == "Public":
-        raise MutuallyExclusiveArgumentError('Can not use "--subnet" or "--vnet" with IP address type "Public".')
+        raise MutuallyExclusiveArgumentError('Cannot use "--subnet" or "--vnet" with IP address type "Public".')
     if (ns.subnet or ns.vnet) and ns.dns_name_label:
-        raise MutuallyExclusiveArgumentError('Can not use "--subnet" or "--vnet" with "--dns-name-label".')
+        raise MutuallyExclusiveArgumentError('Cannot use "--subnet" or "--vnet" with "--dns-name-label".')

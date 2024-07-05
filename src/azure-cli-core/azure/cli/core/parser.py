@@ -325,7 +325,7 @@ class AzCliCommandParser(CLICommandParser):
             if recommendations:
                 az_error.set_aladdin_recommendation(recommendations)
 
-            # remind user to check extensions if we can not find a command to recommend
+            # remind user to check extensions if we cannot find a command to recommend
             if isinstance(az_error, CommandNotFoundError) \
                     and not az_error.recommendations and self.prog == 'az' \
                     and use_dynamic_install == 'no':

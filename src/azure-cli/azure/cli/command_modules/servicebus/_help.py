@@ -107,7 +107,7 @@ short-summary: Manage Azure Service Bus Migration of Standard to Premium
 helps['servicebus migration abort'] = """
 type: command
 short-summary: Disable the Service Bus Migration of Standard to Premium namespace
-long-summary: abort command stops the replication of entities from standard to premium namespaces. The entities replicated to premium namespace before abort command will be available under premium namespace. The aborted migration can not be resumed, its has to restarted.
+long-summary: abort command stops the replication of entities from standard to premium namespaces. The entities replicated to premium namespace before abort command will be available under premium namespace. The aborted migration cannot be resumed, its has to restarted.
 examples:
   - name: Disable Service Bus Migration of Standard to Premium namespace
     text: az servicebus migration abort --resource-group myresourcegroup --name standardnamespace

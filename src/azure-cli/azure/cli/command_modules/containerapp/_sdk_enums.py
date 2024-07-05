@@ -33,7 +33,7 @@ class ActiveRevisionsMode(str, Enum, metaclass=CaseInsensitiveEnumMeta):
     .. raw:: html
 
        <list><item>Multiple: multiple revisions can be active.</item><item>Single: Only one
-    revision can be active at a time. Revision weights can not be used in this mode. If no value if
+    revision can be active at a time. Revision weights cannot be used in this mode. If no value if
     provided, this is the default.</item></list>.
     """
 

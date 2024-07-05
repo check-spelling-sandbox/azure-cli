@@ -16,7 +16,7 @@ from ._utils import (
 
 logger = get_logger(__name__)
 
-SOURCE_REGISTRY_NOT_FOUND = "The source container registry can not be found in the current subscription. " \
+SOURCE_REGISTRY_NOT_FOUND = "The source container registry cannot be found in the current subscription. " \
                             "Please provide a valid address and/or credentials."
 IMPORT_NOT_SUPPORTED = "Imports are only supported for managed registries."
 SOURCE_NOT_FOUND = "Source cannot be found. " \

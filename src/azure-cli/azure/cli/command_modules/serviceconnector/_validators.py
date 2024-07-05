@@ -924,7 +924,7 @@ def validate_kafka_params(cmd, namespace):
         if getattr(namespace, 'connection_name', None) is None:
             namespace.connection_name = generate_connection_name(cmd)
         elif namespace.connection_name.endswith('_schema'):
-            raise InvalidArgumentValueError("Connection name of {} can not end with "
+            raise InvalidArgumentValueError("Connection name of {} cannot end with "
                                             "'_schema'".format(RESOURCE.ConfluentKafka.value))
         else:
             validate_connection_name(namespace.connection_name)

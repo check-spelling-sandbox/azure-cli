@@ -9,4 +9,4 @@ def validate_cluster_args(namespace):
     max_name_length = 22
     name_length = len(namespace.cluster_name)
     if name_length > max_name_length:
-        raise CLIError('name can not be longer then ' + str(max_name_length) + " letters")
+        raise CLIError('name cannot be longer then ' + str(max_name_length) + " letters")

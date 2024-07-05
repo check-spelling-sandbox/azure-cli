@@ -270,7 +270,7 @@ def _get_vault_redunancy_settings(backup_storage_redundancy, cross_region_restor
     if cross_region_restore_flag is not None:
         if redundancy_settings.cross_region_restore == 'Enabled' and cross_region_restore_flag == 'Disabled':
             raise ArgumentUsageError("""
-            Cross Region Restore is currently a non-reversible storage property. You can not disable it once enabled.
+            Cross Region Restore is currently a non-reversible storage property. You cannot disable it once enabled.
             """)
         redundancy_settings.cross_region_restore = cross_region_restore_flag
 
@@ -923,7 +923,7 @@ def enable_protection_for_vm(cmd, client, resource_group_name, vault_name, vm, p
 
     if disk_list_setting is not None and exclude_all_data_disks is not None:
         raise MutuallyExclusiveArgumentError("""
-        Both --disk-list-setting and --exclude-all-data-disks can not be provided together.
+        Both --disk-list-setting and --exclude-all-data-disks cannot be provided together.
         """)
     if disk_list_setting is not None:
         if diskslist is None:
@@ -960,7 +960,7 @@ def update_protection_for_vm(cmd, client, resource_group_name, vault_name, item,
 
     if disk_list_setting is not None and exclude_all_data_disks is not None:
         raise MutuallyExclusiveArgumentError("""
-        Both --disk-list-setting and --exclude-all-data-disks can not be provided together.
+        Both --disk-list-setting and --exclude-all-data-disks cannot be provided together.
         """)
     if disk_list_setting is not None:
         if disk_list_setting.lower() == "resetexclusionsettings":

@@ -321,7 +321,7 @@ def show_recovery_point(cmd, client, resource_group_name, vault_name, container_
         response = client.get(vault_name, resource_group_name, fabric_name, container_uri, item_uri, name)
     except Exception as ex:
         errorMessage = str(ex)
-        raise InvalidArgumentValueError("Specified recovery point can not be fetched - \n" + errorMessage)
+        raise InvalidArgumentValueError("Specified recovery point cannot be fetched - \n" + errorMessage)
     return response
 
 

@@ -4926,7 +4926,7 @@ class AKSManagedClusterContext(BaseAKSContext):
                 )
             ):
                 raise ArgumentUsageError(
-                    '"--azure-keyvault-kms-key-vault-resource-id" can not be empty if '
+                    '"--azure-keyvault-kms-key-vault-resource-id" cannot be empty if '
                     '"--azure-keyvault-kms-key-vault-network-access" is "Private".'
                 )
             if (

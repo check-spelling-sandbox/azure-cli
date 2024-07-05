@@ -1193,7 +1193,7 @@ def _prompt_for_password(namespace):
 def _validate_admin_username(username, os_type):
     import re
     if not username:
-        raise CLIError("admin user name can not be empty")
+        raise CLIError("admin user name cannot be empty")
     is_linux = (os_type.lower() == 'linux')
     # pylint: disable=line-too-long
     pattern = (r'[\\\/"\[\]:|<>+=;,?*@#()!A-Z]+' if is_linux else r'[\\\/"\[\]:|<>+=;,?*@]+')
