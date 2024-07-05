@@ -191,7 +191,7 @@ helps['containerapp env logs show'] = """
     - name: Fetch the past 20 lines of logs from an app and return
       text: |
           az containerapp env logs show -n MyEnvironment -g MyResourceGroup
-    - name: Fetch 30 lines of past logs logs from an environment and print logs as they come in
+    - name: Fetch 30 lines of past logs from an environment and print logs as they come in
       text: |
           az containerapp env logs show -n MyEnvironment -g MyResourceGroup --follow --tail 30
 """
@@ -211,7 +211,7 @@ helps['containerapp logs show'] = """
     - name: Fetch the past 20 lines of system logs from an app and return
       text: |
           az containerapp logs show -n my-containerapp -g MyResourceGroup --type system
-    - name: Fetch 30 lines of past logs logs from an app and print logs as they come in
+    - name: Fetch 30 lines of past logs from an app and print logs as they come in
       text: |
           az containerapp logs show -n my-containerapp -g MyResourceGroup --follow --tail 30
     - name: Fetch logs for a particular revision, replica, and container
