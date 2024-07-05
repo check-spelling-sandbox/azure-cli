@@ -524,7 +524,7 @@ class KeyVaultSecretScenarioTest(ScenarioTest):
 #             self.check('credentials.accountId', 'test_account')
 #         ])
 #         with self.assertRaises(CLIError):
-#             self.cmd('keyvault certificate issuer update --vault-name {kv} --issuer-name notexist --organization-id TestOrg --account-id test_account')
+#             self.cmd('keyvault certificate issuer update --vault-name {kv} --issuer-name nonexistent --organization-id TestOrg --account-id test_account')
 #         self.cmd('keyvault certificate issuer update --vault-name {kv} --issuer-name issuer1 --account-id ""', checks=[
 #             self.check('provider', 'Test'),
 #             self.check('attributes.enabled', True),
@@ -863,7 +863,7 @@ def _generate_certificate(path, keyfile=None, password=None):
 
 #         # Test certificate file not exist
 #         with self.assertRaises(CLIError):
-#             self.cmd('keyvault certificate import --vault-name {kv} -n pem-cert2 --file "notexist.json" -p @"{pem_policy_path}"')
+#             self.cmd('keyvault certificate import --vault-name {kv} -n pem-cert2 --file "nonexistent.json" -p @"{pem_policy_path}"')
 
 #         # self.kwargs.update({
 #         #     'pfx_plain_file': os.path.join(TEST_DIR, 'import_pfx.pfx'),

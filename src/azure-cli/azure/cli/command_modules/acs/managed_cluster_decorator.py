@@ -1104,7 +1104,7 @@ class AKSManagedClusterContext(BaseAKSContext):
             except (TypeError, ValueError):
                 shortened_key = truncate_text(ssh_key_value)
                 raise InvalidArgumentValueError(
-                    "Provided ssh key ({}) is invalid or non-existent".format(
+                    "Provided ssh key ({}) is invalid or nonexistent".format(
                         shortened_key
                     )
                 )

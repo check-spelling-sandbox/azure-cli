@@ -106,7 +106,7 @@ class TestApplication(unittest.TestCase):
             [['bar=name@company.com'], ['bar=name@company.com']],
             [['bar', 'name@company.com'], ['bar', 'name@company.com']],
             [['bar=mymongo=@connectionstring'], ['bar=mymongo=@connectionstring']],
-            [['bar=@noneexisting'], ['bar=@noneexisting']]
+            [['bar=@nonexistent'], ['bar=@nonexistent']]
         ]
 
         for test_case in cases:

@@ -241,19 +241,19 @@ class TestAPIProfiles(unittest.TestCase):
         with mock.patch('azure.cli.core.profiles.API_PROFILES', test_profile):
             custom_rt = CustomResourceType('mysdkpath', 'myClient')
             with self.assertRaises(ValueError):
-                register_resource_type('doesnotexist', custom_rt, '2020-12-12-preview')
+                register_resource_type('doesnonexistent', custom_rt, '2020-12-12-preview')
 
     def test_register_resource_type_bad_rt_string(self):
         test_profile = {'latest': {ResourceType.MGMT_STORAGE: '2020-10-10'}}
         with mock.patch('azure.cli.core.profiles.API_PROFILES', test_profile):
             with self.assertRaises(TypeError):
-                register_resource_type('doesnotexist', 'ResourceType.MGMT_STORAGE', '2020-12-12-preview')
+                register_resource_type('doesnonexistent', 'ResourceType.MGMT_STORAGE', '2020-12-12-preview')
 
     def test_register_resource_type_bad_rt_attempted_override(self):
         test_profile = {'latest': {ResourceType.MGMT_STORAGE: '2020-10-10'}}
         with mock.patch('azure.cli.core.profiles.API_PROFILES', test_profile):
             with self.assertRaises(TypeError):
-                register_resource_type('doesnotexist', ResourceType.MGMT_STORAGE, '2020-12-12-preview')
+                register_resource_type('doesnonexistent', ResourceType.MGMT_STORAGE, '2020-12-12-preview')
 
     def test_get_versioned_sdk_path_date(self):
         test_profile = {'latest': {ResourceType.MGMT_STORAGE: '2020-10-10'}}

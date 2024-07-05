@@ -245,15 +245,15 @@ class GenericUpdateTest(unittest.TestCase):
         missing_remove_message = "Couldn't find 'doesntExist' in ''. Available options: ['additional1', 'additionalList', 'emptyDict', 'emptyDictOfDicts', 'emptyList', 'emptyProp', 'myDict', 'myList', 'myListOfCamelDicts', 'myListOfObjects', 'myListOfSnakeDicts', 'myProp', 'myTestObject']"
         _execute_with_error('genupdate --remove doesntExist',
                             missing_remove_message,
-                            'remove non-existent property by name')
+                            'remove nonexistent property by name')
         _execute_with_error('genupdate --remove doesntExist 2',
                             missing_remove_message,
-                            'remove non-existent property by index')
+                            'remove nonexistent property by index')
 
         remove_prop_message = "Couldn't find 'doesntExist' in 'myList.doesntExist'. Available options: index into the collection 'myList.doesntExist' with [<index>] or [<key=value>]"
         _execute_with_error('genupdate --remove myList.doesntExist.missing 2',
                             remove_prop_message,
-                            'remove non-existent sub-property by index')
+                            'remove nonexistent sub-property by index')
 
         _execute_with_error('genupdate --remove myList 20',
                             "index 20 doesn't exist on myList",

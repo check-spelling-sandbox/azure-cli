@@ -43,7 +43,7 @@ _METADATA = [
         "sqlManagement": "https://management.core.windows.net.test:8443/",
         "gallery": "https://gallery.azure.com.test/",
         "notExist": {
-            "Special": "https://notexist.azure.com.test/",
+            "Special": "https://nonexistent.azure.com.test/",
         }
     }
 ]
@@ -85,7 +85,7 @@ class TestAAZCommandCtx(unittest.TestCase):
             "azuredatalakestore.net.test")
         self.assertEqual(
             AAZBaseClient._retrieve_value_in_arm_cloud_metadata(ctx, "notExist.Special"),
-            "https://notexist.azure.com.test/")
+            "https://nonexistent.azure.com.test/")
         self.assertEqual(
             AAZBaseClient._retrieve_value_in_arm_cloud_metadata(ctx, "authentication.audiences[0]"),
             "https://management.core.windows.net.test/")
@@ -114,4 +114,4 @@ class TestAAZCommandCtx(unittest.TestCase):
             self.assertTrue(value is None or value.startswith("https://"))
 
         self.assertEqual(AAZBaseClient.get_cloud_endpoint(ctx, "notExist.Special"),
-                         "https://notexist.azure.com.test/")
+                         "https://nonexistent.azure.com.test/")

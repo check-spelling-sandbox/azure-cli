@@ -131,7 +131,7 @@ def get_folded_parameter_validator(
             raise ValueError('incorrect usage: {0} ID | {0} NAME {1} NAME'.format(
                 property_option, parent_option))
 
-        # if non-existent ID was supplied, throw error depending on whether a new resource can
+        # if nonexistent ID was supplied, throw error depending on whether a new resource can
         # be created.
         if value_was_id:
             usage_message = '{} NAME'.format(property_option) if not has_parent \

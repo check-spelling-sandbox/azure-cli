@@ -386,7 +386,7 @@ class KeyVaultCertificateIssuerScenarioTest(ScenarioTest):
             self.check('credentials.accountId', 'test_account')
         ])
         with self.assertRaises(CLIError):
-            self.cmd('keyvault certificate issuer update --vault-name {kv} --issuer-name notexist --organization-id TestOrg --account-id test_account')
+            self.cmd('keyvault certificate issuer update --vault-name {kv} --issuer-name nonexistent --organization-id TestOrg --account-id test_account')
         self.cmd('keyvault certificate issuer update --vault-name {kv} --issuer-name issuer1', checks=[
             self.check('provider', 'Test'),
             self.check('attributes.enabled', True),

@@ -42,8 +42,8 @@ class CdnAfdSecurityPolicyScenarioTest(CdnAfdScenarioMixin, ScenarioTest):
         domain_ids.append(f'/subscriptions/{self.get_subscription_id()}/resourcegroups/{resource_group}/providers/Microsoft.Cdn/profiles/{profile_name}/afdEndpoints/{endpoint1_name}')
         domain_ids.append(f'/subscriptions/{self.get_subscription_id()}/resourcegroups/{resource_group}/providers/Microsoft.Cdn/profiles/{profile_name}/afdEndpoints/{endpoint2_name}')
         
-        # Create a security policy with non-exisit waf should fail
-        waf_policy_id = f'/subscriptions/{self.get_subscription_id()}/resourcegroups/CliDevReservedGroup/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/nonexist'
+        # Create a security policy with nonexistent waf should fail
+        waf_policy_id = f'/subscriptions/{self.get_subscription_id()}/resourcegroups/CliDevReservedGroup/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/nonexistent'
         with self.assertRaisesRegexp(HttpResponseError, "Web Application Firewall Policy being attached to AFDX profile does not exist"):
             self.afd_security_policy_create_cmd(resource_group,
                                                 profile_name,

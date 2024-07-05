@@ -3091,7 +3091,7 @@ class AppConfigSnapshotLiveScenarioTest(ScenarioTest):
         kvs = self.cmd('appconfig kv list --connection-string {connection_string} --snapshot {snapshot_name}').get_output_in_json()
         assert len(kvs) == 2
 
-        # Test error returned for listing kvs in non-existent snapshot
+        # Test error returned for listing kvs in nonexistent snapshot
         non_existent_snapshot_name = "non_existent_snapshot"
 
         self.kwargs.update({

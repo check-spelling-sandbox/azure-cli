@@ -71,12 +71,12 @@ class AmsJobTests(ScenarioTest):
             self.check('outputs[0].label', '{outputLabel}')
         ])
 
-        nonexits_job_name = self.create_random_name(prefix='job', length=20)
+        nonexistent_job_name = self.create_random_name(prefix='job', length=20)
         self.kwargs.update({
-            'nonexits_job_name': nonexits_job_name
+            'nonexistent_job_name': nonexistent_job_name
         })
         with self.assertRaisesRegex(SystemExit, '3'):
-            self.cmd('az ams job show -a {amsname} -n{nonexits_job_name} -g {rg} -t {transformName}')
+            self.cmd('az ams job show -a {amsname} -n{nonexistent_job_name} -g {rg} -t {transformName}')
 
         list = self.cmd('az ams job list -a {amsname} -g {rg} -t {transformName}').get_output_in_json()
         assert len(list) > 0

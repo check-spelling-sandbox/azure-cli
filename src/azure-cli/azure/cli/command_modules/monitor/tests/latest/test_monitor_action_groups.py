@@ -68,7 +68,7 @@ class TestActionGroupScenarios(ScenarioTest):
                  .format(action_group_name, resource_group), checks=[JMESPathCheck('length(emailReceivers)', 2),
                                                                      JMESPathCheck('length(webhookReceivers)', 0)])
 
-        self.cmd('monitor action-group enable-receiver -n nonexist --action-group {} -g {}'
+        self.cmd('monitor action-group enable-receiver -n nonexistent --action-group {} -g {}'
                  .format(action_group_name, resource_group), expect_failure=True)
 
         self.cmd('monitor action-group enable-receiver -n alice --action-group {} -g {}'

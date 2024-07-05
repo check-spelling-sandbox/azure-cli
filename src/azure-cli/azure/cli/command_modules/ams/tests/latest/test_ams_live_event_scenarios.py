@@ -420,11 +420,11 @@ class AmsLiveEventTests(ScenarioTest):
             self.check('input.accessToken', '{accessToken}')
         ])
 
-        nonexits_live_event_name = self.create_random_name(prefix='live-event', length=20)
+        nonexistent_live_event_name = self.create_random_name(prefix='live-event', length=20)
         self.kwargs.update({
-            'nonexits_live_event_name': nonexits_live_event_name
+            'nonexistent_live_event_name': nonexistent_live_event_name
         })
         with self.assertRaisesRegex(SystemExit, '3'):
-            self.cmd('az ams live-event show -a {amsname} -n {nonexits_live_event_name} -g {rg}')
+            self.cmd('az ams live-event show -a {amsname} -n {nonexistent_live_event_name} -g {rg}')
 
         self.cmd('az ams live-event delete -a {amsname} -n {liveEventName} -g {rg}')

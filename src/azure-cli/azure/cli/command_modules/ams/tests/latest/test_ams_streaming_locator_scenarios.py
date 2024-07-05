@@ -62,12 +62,12 @@ class AmsStreamingLocatorTests(ScenarioTest):
             self.check('resourceGroup', '{rg}')
         ])
 
-        nonexits_streaming_locator_name = self.create_random_name(prefix='sl', length=20)
+        nonexistent_streaming_locator_name = self.create_random_name(prefix='sl', length=20)
         self.kwargs.update({
-            'nonexits_streaming_locator_name': nonexits_streaming_locator_name
+            'nonexistent_streaming_locator_name': nonexistent_streaming_locator_name
         })
         with self.assertRaisesRegex(SystemExit, '3'):
-            self.cmd('az ams streaming-locator show -a {amsname} -n {nonexits_streaming_locator_name} -g {rg}')
+            self.cmd('az ams streaming-locator show -a {amsname} -n {nonexistent_streaming_locator_name} -g {rg}')
 
         list = self.cmd('az ams streaming-locator list -a {amsname} -g {rg}').get_output_in_json()
         assert len(list) > 0

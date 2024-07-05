@@ -69,12 +69,12 @@ class AmsAccountFilterTests(ScenarioTest):
             self.check('tracks[1].trackSelections[1].value', 'MP4A')
         ])
 
-        nonexits_filter_name = self.create_random_name(prefix='filter', length=12)
+        nonexistent_filter_name = self.create_random_name(prefix='filter', length=12)
         self.kwargs.update({
-            'nonexits_filter_name': nonexits_filter_name
+            'nonexistent_filter_name': nonexistent_filter_name
         })
         with self.assertRaisesRegex(SystemExit, '3'):
-            self.cmd('az ams account-filter show -a {amsname} -g {rg} -n {nonexits_filter_name}')
+            self.cmd('az ams account-filter show -a {amsname} -g {rg} -n {nonexistent_filter_name}')
 
     @ResourceGroupPreparer()
     @StorageAccountPreparer(parameter_name='storage_account_for_list_and_delete')

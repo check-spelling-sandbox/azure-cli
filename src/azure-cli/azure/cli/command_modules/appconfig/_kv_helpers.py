@@ -342,7 +342,7 @@ def __read_kv_from_config_store(azconfig_client,
         if count >= top:
             return retrieved_kvs
 
-    # A request to list kvs of a non-existent snapshot returns an empty result.
+    # A request to list kvs of a nonexistent snapshot returns an empty result.
     # We first check if the snapshot exists before returning an empty result.
     if snapshot and len(retrieved_kvs) == 0:
         try:

@@ -132,12 +132,12 @@ class AmsLiveOutputTests(ScenarioTest):
             self.check('resourceGroup', '{rg}')
         ])
 
-        nonexits_live_output_name = self.create_random_name(prefix='live-output', length=20)
+        nonexistent_live_output_name = self.create_random_name(prefix='live-output', length=20)
         self.kwargs.update({
-            'nonexits_live_output_name': nonexits_live_output_name
+            'nonexistent_live_output_name': nonexistent_live_output_name
         })
         with self.assertRaisesRegex(SystemExit, '3'):
-            self.cmd('az ams live-output show -a {amsname} -n {liveOutputName} -g {rg} --live-event-name {nonexits_live_output_name}')
+            self.cmd('az ams live-output show -a {amsname} -n {liveOutputName} -g {rg} --live-event-name {nonexistent_live_output_name}')
 
     @ResourceGroupPreparer()
     @StorageAccountPreparer(parameter_name='storage_account_for_create')

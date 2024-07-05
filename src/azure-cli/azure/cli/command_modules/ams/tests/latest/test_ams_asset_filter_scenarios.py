@@ -133,12 +133,12 @@ class AmsAssetFilterTests(ScenarioTest):
             self.check('tracks[1].trackSelections[1].value', 'MP4A')
         ])
 
-        nonexits_asset_filter_name = self.create_random_name(prefix='asset-filter', length=20)
+        nonexistent_asset_filter_name = self.create_random_name(prefix='asset-filter', length=20)
         self.kwargs.update({
-            'nonexits_asset_filter_name': nonexits_asset_filter_name
+            'nonexistent_asset_filter_name': nonexistent_asset_filter_name
         })
         with self.assertRaisesRegex(SystemExit, '3'):
-            self.cmd('az ams asset-filter show -a {amsname} --asset-name {asset_name} -g {rg} -n {nonexits_asset_filter_name}')
+            self.cmd('az ams asset-filter show -a {amsname} --asset-name {asset_name} -g {rg} -n {nonexistent_asset_filter_name}')
 
     @ResourceGroupPreparer()
     @StorageAccountPreparer(parameter_name='storage_account_for_list_and_delete')
