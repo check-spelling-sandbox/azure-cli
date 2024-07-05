@@ -183,7 +183,7 @@ def load_arguments(self, _):
     with self.argument_context('bot sms create') as c:
         c.argument('is_disabled', options_list=['--add-disabled'], arg_type=get_three_state_flag(), help='Add the channel in a disabled state.')
         c.argument('account_sid', help='The account SID for the Twilio account.')
-        c.argument('auth_token', help='The token token for the Twilio account.')
+        c.argument('auth_token', help='The token for the Twilio account.')
         c.argument('is_validated', help='Whether or not the Twilio account has been validated for use with the bot.', arg_type=get_three_state_flag())
         c.argument('phone', help='The phone number for the Twilio account.')
 
