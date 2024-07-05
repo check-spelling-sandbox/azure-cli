@@ -110,10 +110,10 @@ parameters:
   - name: --name -n
     long-summary: |
         --kind and --location will be ignored when --name is specified.
-        --resource-group is required when when --name is specified.
+        --resource-group is required when --name is specified.
   - name: --resource-group -g
     long-summary: |
-        --resource-group is used when when --name is specified. In other cases it will be ignored.
+        --resource-group is used when --name is specified. In other cases it will be ignored.
   - name: --kind
     populator-commands:
       - az cognitiveservices account list-kinds
