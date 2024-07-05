@@ -89,7 +89,7 @@ class KeyVaultMgmtScenarioTest(ScenarioTest):
             self.check('name', '{kv}'),
             self.check('properties.sku.name', 'premium'),
         ])
-        # test updating updating other properties
+        # test updating other properties
         self.cmd('keyvault update -g {rg} -n {kv} --enable-purge-protection '
                  '--enabled-for-deployment --enabled-for-disk-encryption --enabled-for-template-deployment ',
                  checks=[
