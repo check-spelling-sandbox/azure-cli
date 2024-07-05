@@ -282,7 +282,7 @@ def _register_resource_provider(cmd, resource_provider):
                 raise CLIInternalError(f"Timed out while waiting for the {resource_provider} resource provider to be registered.")
 
     except Exception as e:
-        msg = ("This operation requires requires registering the resource provider {0}. "
+        msg = ("This operation requires registering the resource provider {0}. "
                "We were unable to perform that registration on your behalf: "
                "Server responded with error message -- {1} . "
                "Please check with your admin on permissions, "
