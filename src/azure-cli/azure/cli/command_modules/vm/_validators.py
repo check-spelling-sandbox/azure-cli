@@ -923,7 +923,7 @@ def _validate_vm_vmss_accelerated_networking(cli_ctx, namespace):
 
         if publisher == 'coreos' or offer == 'coreos':
             from azure.cli.core.parser import InvalidArgumentValueError
-            raise InvalidArgumentValueError("As CoreOS is deprecated and there is no image in the marketplace any more,"
+            raise InvalidArgumentValueError("As CoreOS is deprecated and there is no image in the marketplace anymore,"
                                             " please use Flatcar Container Linux instead.")
 
         distros = [('canonical', 'UbuntuServer', '^16.04|^18.04'),

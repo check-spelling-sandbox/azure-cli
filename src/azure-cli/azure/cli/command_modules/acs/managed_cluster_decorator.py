@@ -251,7 +251,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     mode (currently supports create and update).
 
     In the create mode, the most basic principles is that when parameters are put into a certain profile (and further
-    decorated into the ManagedCluster object by AKSCreateDecorator), it shouldn't be modified any more, only read-only
+    decorated into the ManagedCluster object by AKSCreateDecorator), it shouldn't be modified anymore, only read-only
     operations (e.g. validation) can be performed. In other words, when we try to get the value of a parameter, we
     should use its attribute value in the `mc` object as a preference. Only when the value has not been set in the `mc`
     object, we could return the user input value.
