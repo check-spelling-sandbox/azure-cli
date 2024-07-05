@@ -2873,7 +2873,7 @@ examples:
 helps['vmss encryption'] = """
 type: group
 short-summary: "Manage encryption of VMSS."
-long-summary: "For more information, see: ttps://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss"
+long-summary: "For more information, see: https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss"
 """
 
 helps['vmss encryption disable'] = """
@@ -2888,7 +2888,7 @@ examples:
 helps['vmss encryption enable'] = """
 type: command
 short-summary: "Encrypt a VMSS with managed disks."
-long-summary: "For more information, see: For more information, see: ttps://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss"
+long-summary: "For more information, see: For more information, see: https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss"
 examples:
   - name: encrypt a VM scale set using a key vault in the same resource group
     text: >
