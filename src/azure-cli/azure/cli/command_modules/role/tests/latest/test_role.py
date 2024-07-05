@@ -52,7 +52,7 @@ class CreateForRbacScenarioTest(RoleScenarioTestBase):
 
             self.assertTrue(result['fileWithCertAndPrivateKey'].endswith('.pem'))
 
-            # On Linux or MacOS, check the cert file is a regular file (S_IFREG 0100000) with permission 600
+            # On Linux or macOS, check the cert file is a regular file (S_IFREG 0100000) with permission 600
             # https://manpages.ubuntu.com/manpages/focal/man7/inode.7.html
             # Windows doesn't have the Linux permission concept.
             if sys.platform != 'win32':

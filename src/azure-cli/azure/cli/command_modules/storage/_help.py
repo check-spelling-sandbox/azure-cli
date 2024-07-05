@@ -259,7 +259,7 @@ examples:
     text: |
         end=`date -u -d "30 minutes" '+%Y-%m-%dT%H:%MZ'`
         az storage account generate-sas --permissions cdlruwap --account-name MyStorageAccount --services qt --resource-types sco --expiry $end -o tsv
-  - name: Generate a sas token for the account that is valid for queue and table services on MacOS.
+  - name: Generate a sas token for the account that is valid for queue and table services on macOS.
     text: |
         end=`date -v+30M '+%Y-%m-%dT%H:%MZ'`
         az storage account generate-sas --permissions cdlruwap --account-name MyStorageAccount --services qt --resource-types sco --expiry $end -o tsv

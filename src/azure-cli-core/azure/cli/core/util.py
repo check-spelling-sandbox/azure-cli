@@ -1342,7 +1342,7 @@ def get_secret_store(cli_ctx, name):
     from azure.cli.core.auth.persistence import load_secret_store
     # Save to CLI's config dir, by default ~/.azure
     location = os.path.join(get_config_dir(), name)
-    # We honor the system type (Windows, Linux, or MacOS) and global config
+    # We honor the system type (Windows, Linux, or macOS) and global config
     encrypt = should_encrypt_token_cache(cli_ctx)
     return load_secret_store(location, encrypt)
 

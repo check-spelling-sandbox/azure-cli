@@ -172,7 +172,7 @@ class TestUtils(unittest.TestCase):
         get_platform_mock.return_value = ('windows', '10')
         assert can_launch_browser()
 
-        # MacOS is always fine
+        # macOS is always fine
         get_platform_mock.return_value = ('darwin', '10')
         assert can_launch_browser()
 

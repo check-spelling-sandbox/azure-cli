@@ -59,7 +59,7 @@ python -m venv env
 # Activate it
 # PowerShell
 env\Scripts\activate.ps1
-# Linux/MacOS Bash
+# Linux/macOS Bash
 . ./env/bin/activate
 ```
 
@@ -81,7 +81,7 @@ python -m venv env
 # Activate the virtual environment
 # PowerShell
 env\Scripts\activate.ps1
-# Linux/MacOS Bash
+# Linux/macOS Bash
 . ./env/bin/activate
 
 # Install azdev - the development tool for Azure CLI
