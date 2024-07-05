@@ -6304,7 +6304,7 @@ class SqlFailoverGroupMgmtScenarioTest(ScenarioTest):
                                        secondary_server, failover_group, failover_type):
         failover_type_parameter = self._get_failover_type_parameter(failover_type)
 
-        # Failover Failover Group
+        # Failover to Failover Group
         self.cmd('sql failover-group set-primary -g {} -s {} -n {} {}'
                  .format(secondary_server.group, secondary_server.name, failover_group, failover_type_parameter))
 
@@ -6664,7 +6664,7 @@ class SqlInstanceFailoverGroupMgmtScenarioTest(ScenarioTest):
                      JMESPathCheck('readOnlyEndpoint.failoverPolicy', 'Disabled')
                  ])
 
-        # Failover Failover Group
+        # Failover to Failover Group
         self.cmd('sql instance-failover-group set-primary -g {} -n {} -l {} '
                  .format(secondary_group, failover_group_name, secondary_location))
 
