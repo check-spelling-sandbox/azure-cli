@@ -52,7 +52,7 @@ class UserCredential(PublicClientApplication):
         # Usernames are usually unique. We are collecting corner cases to better understand its behavior.
         if len(accounts) > 1:
             raise CLIError(f"Found multiple accounts with the same username '{username}': {accounts}\n"
-                           "Please report to us via Github: https://github.com/Azure/azure-cli/issues/20168")
+                           "Please report to us via GitHub: https://github.com/Azure/azure-cli/issues/20168")
 
         if not accounts:
             raise CLIError("User '{}' does not exist in MSAL token cache. Run `az login`.".format(username))

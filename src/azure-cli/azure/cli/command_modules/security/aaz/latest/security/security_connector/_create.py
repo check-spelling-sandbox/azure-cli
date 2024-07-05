@@ -78,7 +78,7 @@ class Create(AAZCommand):
             options=["--environment-name"],
             arg_group="Properties",
             help="The multi cloud resource's cloud name.",
-            enum={"AWS": "AWS", "Azure": "Azure", "AzureDevOps": "AzureDevOps", "GCP": "GCP", "GitLab": "GitLab", "Github": "Github"},
+            enum={"AWS": "AWS", "Azure": "Azure", "AzureDevOps": "AzureDevOps", "GCP": "GCP", "GitLab": "GitLab", "GitHub": "GitHub"},
         )
         _args_schema.hierarchy_identifier = AAZStrArg(
             options=["--hierarchy-identifier"],

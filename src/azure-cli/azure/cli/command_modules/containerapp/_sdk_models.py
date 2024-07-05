@@ -4448,7 +4448,7 @@ class GithubActionConfiguration(_serialization.Model):
     :vartype azure_credentials: ~azure.mgmt.appcontainers.models.AzureCredentials
     :ivar context_path: Context path.
     :vartype context_path: str
-    :ivar github_personal_access_token: One time Github PAT to configure github environment.
+    :ivar github_personal_access_token: One time GitHub PAT to configure github environment.
     :vartype github_personal_access_token: str
     :ivar image: Image name.
     :vartype image: str
@@ -4495,7 +4495,7 @@ class GithubActionConfiguration(_serialization.Model):
         :paramtype azure_credentials: ~azure.mgmt.appcontainers.models.AzureCredentials
         :keyword context_path: Context path.
         :paramtype context_path: str
-        :keyword github_personal_access_token: One time Github PAT to configure github environment.
+        :keyword github_personal_access_token: One time GitHub PAT to configure github environment.
         :paramtype github_personal_access_token: str
         :keyword image: Image name.
         :paramtype image: str

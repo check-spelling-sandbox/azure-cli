@@ -60,7 +60,7 @@ def analyze_data():
 
 
 def create_issue(regression_data):
-    # Create Github issue
+    # Create GitHub issue
     headers = {
         'Accept': 'application/vnd.github.v3+json'
     }

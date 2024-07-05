@@ -2016,7 +2016,7 @@ def create_or_update_github_action(cmd,
     headers = ["x-ms-github-auxiliary={}".format(token)]
 
     try:
-        logger.warning("Creating Github action...")
+        logger.warning("Creating GitHub action...")
         r = GitHubActionClient.create_or_update(cmd=cmd, resource_group_name=resource_group_name, name=name, github_action_envelope=source_control_info, headers=headers, no_wait=no_wait)
         if not no_wait:
             WORKFLOW_POLL_RETRY = 3

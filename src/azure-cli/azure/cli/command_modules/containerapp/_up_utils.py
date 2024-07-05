@@ -720,7 +720,7 @@ def _get_dockerfile_content_from_repo(
             resp = requests.get(f.download_url)
             if resp.ok and resp.content:
                 return resp.content.decode("utf-8").split("\n")
-    raise ValidationError("Could not find Dockerfile in Github repo/branch. Please ensure it is named 'Dockerfile'. "
+    raise ValidationError("Could not find Dockerfile in GitHub repo/branch. Please ensure it is named 'Dockerfile'. "
                           "Set the path with --context-path if not in the root directory.")
 
 
@@ -765,7 +765,7 @@ def _validate_up_args(cmd, source, image, repo, registry_server):
     if source and repo:
         raise MutuallyExclusiveArgumentError(
             "Cannot use --source and --repo togther. "
-            "Can either deploy from a local directory or a Github repo"
+            "Can either deploy from a local directory or a GitHub repo"
         )
 
     if repo and registry_server and "azurecr.io" in registry_server:

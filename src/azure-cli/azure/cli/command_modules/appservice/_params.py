@@ -996,10 +996,10 @@ subscription than the app service environment, please use the resource ID for --
         c.argument('name', arg_type=functionapp_name_arg_type)
         c.argument('resource_group', arg_type=resource_group_name_type)
         c.argument('repo', help='The GitHub repository to which the workflow file will be added. In the format: https://github.com/<owner>/<repository-name> or <owner>/<repository-name>')
-        c.argument('token', help='A Personal Access Token with write access to the specified repository. For more information: https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line', arg_group="Github")
+        c.argument('token', help='A Personal Access Token with write access to the specified repository. For more information: https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line', arg_group="GitHub")
         c.argument('slot', options_list=['--slot', '-s'], help='The name of the slot. Default to the production slot if not specified.')
         c.argument('branch', options_list=['--branch', '-b'], help='The branch to which the workflow file will be added.')
-        c.argument('login_with_github', help="Interactively log in with Github to retrieve the Personal Access Token", arg_group="Github")
+        c.argument('login_with_github', help="Interactively log in with GitHub to retrieve the Personal Access Token", arg_group="GitHub")
 
     with self.argument_context('functionapp deployment github-actions add')as c:
         c.argument('runtime', options_list=['--runtime', '-r'], help='The functions runtime stack. Use "az functionapp list-runtimes" to check supported runtimes and versions.')
@@ -1186,8 +1186,8 @@ subscription than the app service environment, please use the resource ID for --
     with self.argument_context('staticwebapp', validator=validate_public_cloud) as c:
         c.argument('source', options_list=['--source', '-s'], help="URL for the repository of the static site.", arg_group="Source Control")
         c.argument('token', options_list=['--token', '-t'], arg_group="Source Control",
-                   help="A user's GitHub or Azure Dev Ops repository token. This is used to create the Github Action or Dev Ops pipeline.")
-        c.argument('login_with_github', help="Interactively log in with Github to retrieve the Personal Access Token", arg_group="Source Control")
+                   help="A user's GitHub or Azure Dev Ops repository token. This is used to create the GitHub Action or Dev Ops pipeline.")
+        c.argument('login_with_github', help="Interactively log in with GitHub to retrieve the Personal Access Token", arg_group="Source Control")
         c.argument('login_with_ado', help='Use azure credentials to create an Azure Dev Ops personal access token', arg_group="Source Control")
         c.argument('branch', options_list=['--branch', '-b'], help="The target branch in the repository.", arg_group="Source Control")
         c.ignore('format_output')

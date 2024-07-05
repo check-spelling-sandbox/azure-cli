@@ -3822,7 +3822,7 @@ Add new parameter key value pair to support password from KeyVault (#22319)
 * `az staticwebapp identity remove`: Disable static web app's managed service identity (#20140)
 * `az staticwebapp identity show`: Display static web app's managed service identity (#20140)
 * Fix #17507: `az staticwebapp functions`: Add support for linking existing function app to static webapp (bring your own functions) (#20116)
-* `az staticwebapp create`: Update help text with guidance for repos in Github organizations (#20245)
+* `az staticwebapp create`: Update help text with guidance for repos in GitHub organizations (#20245)
 * `az functionapp deployment source config-zip`: Fix #12289: Allow build on zip deploy for windows function apps (#20207)
 * `az staticwebapp create`: Add better error message when attempting to create a static webapp that already exists (#20184)
 * `az appservice`: Fix AttributeError during user error handling (#20264)
@@ -4708,7 +4708,7 @@ Workload container registration fix, SDK upgraded to 0.12.0, Fixed and Re-ran te
 
 **RDBMS**
 
-* Add commands for Github actions (#17949)
+* Add commands for GitHub actions (#17949)
 * `az postgres flexible-server migration`: Add customer facing feature to migrate postgres db servers from Sterling to Meru platform (#18161)
 * Private DNS zone parameter added for restore command, high availability validator (#18218)
 * Change server default location (issue reported) (#18157)

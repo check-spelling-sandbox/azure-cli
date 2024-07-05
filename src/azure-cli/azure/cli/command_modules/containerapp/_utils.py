@@ -193,7 +193,7 @@ def get_workflow(github_repo, workflow_name):  # pylint: disable=inconsistent-re
 
 def trigger_workflow(token, repo, workflow_name, branch):
     wf = get_workflow(get_github_repo(token, repo), workflow_name)
-    logger.warning(f"Triggering Github Action: {wf.path}")
+    logger.warning(f"Triggering GitHub Action: {wf.path}")
     wf.create_dispatch(branch)
 
 
@@ -218,18 +218,18 @@ def await_github_action(token, repo, workflow_name, timeout_secs=1200):
         animation.flush()
 
         if (datetime.utcnow() - start).seconds >= timeout_secs:
-            raise CLIInternalError("Timed out while waiting for the Github action to start.")
+            raise CLIInternalError("Timed out while waiting for the GitHub action to start.")
 
     runs = workflow.get_runs()
     while runs is None or not [r for r in runs if r.status in ('queued', 'in_progress')]:
         time.sleep(SHORT_POLLING_INTERVAL_SECS)
         runs = workflow.get_runs()
         if (datetime.utcnow() - start).seconds >= timeout_secs:
-            raise CLIInternalError("Timed out while waiting for the Github action to be started.")
+            raise CLIInternalError("Timed out while waiting for the GitHub action to be started.")
     runs = [r for r in runs if r.status in ('queued', 'in_progress')]
     runs.sort(key=lambda r: r.created_at, reverse=True)
     run = runs[0]  # run with the latest created_at date that's either in progress or queued
-    logger.warning(f"Github action run: https://github.com/{repo}/actions/runs/{run.id}")
+    logger.warning(f"GitHub action run: https://github.com/{repo}/actions/runs/{run.id}")
     logger.warning("Waiting for deployment to complete...")
     run_id = run.id
     status = run.status
@@ -239,12 +239,12 @@ def await_github_action(token, repo, workflow_name, timeout_secs=1200):
         status = github_repo.get_workflow_run(run_id).status
         animation.flush()
         if (datetime.utcnow() - start).seconds >= timeout_secs:
-            raise CLIInternalError("Timed out while waiting for the Github action to complete.")
+            raise CLIInternalError("Timed out while waiting for the GitHub action to complete.")
 
     animation.flush()  # needed to clear the animation from the terminal
     run = github_repo.get_workflow_run(run_id)
     if run.status != "completed" or run.conclusion != "success":
-        raise ValidationError("Github action build or deployment failed. "
+        raise ValidationError("GitHub action build or deployment failed. "
                               f"Please see https://github.com/{repo}/actions/runs/{run.id} for more details")
 
 
@@ -557,7 +557,7 @@ def parse_list_of_strings(comma_separated_string):
 def raise_missing_token_suggestion():
     pat_documentation = "https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line"
     raise RequiredArgumentMissingError("GitHub access token is required to authenticate to your repositories. "
-                                       "If you need to create a Github Personal Access Token, "
+                                       "If you need to create a GitHub Personal Access Token, "
                                        "please run with the '--login-with-github' flag or follow "
                                        "the steps found at the following link:\n{0}".format(pat_documentation))
 

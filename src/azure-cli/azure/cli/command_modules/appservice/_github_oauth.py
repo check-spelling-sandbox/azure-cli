@@ -19,7 +19,7 @@ logger = get_logger(__name__)
 
 
 '''
-Get Github personal access token following Github oauth for command line tools
+Get GitHub personal access token following GitHub oauth for command line tools
 https://docs.github.com/en/developers/apps/authorizing-oauth-apps#device-flow
 '''
 
@@ -133,6 +133,6 @@ def get_github_access_token(cmd, scope_list=None, token=None):  # pylint: disabl
                 return parsed_confirmation_response['access_token'][0]
     except Exception as e:
         raise CLIInternalError(
-            'Error: {}. Please try again, or retrieve personal access token from the Github website'.format(e)) from e
+            'Error: {}. Please try again, or retrieve personal access token from the GitHub website'.format(e)) from e
 
     raise UnclassifiedUserFault('Activation did not happen in time. Please try again')

@@ -243,7 +243,7 @@ def github_actions_run(action_name, branch):
 def gitcli_check_and_login():
     output = run_subprocess_get_output("gh")
     if output.returncode:
-        raise ClientRequestError('Please install "Github CLI" to run this command.')
+        raise ClientRequestError('Please install "GitHub CLI" to run this command.')
 
     output = run_subprocess_get_output("gh auth status")
     if output.returncode:

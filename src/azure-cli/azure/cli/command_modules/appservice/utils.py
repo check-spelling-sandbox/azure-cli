@@ -175,7 +175,7 @@ def register_app_provider(cmd):
 def raise_missing_token_suggestion():
     pat_documentation = "https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line"
     raise RequiredArgumentMissingError("GitHub access token is required to authenticate to your repositories. "
-                                       "If you need to create a Github Personal Access Token, "
+                                       "If you need to create a GitHub Personal Access Token, "
                                        "please run with the '--login-with-github' flag or follow "
                                        "the steps found at the following link:\n{0}".format(pat_documentation))
 

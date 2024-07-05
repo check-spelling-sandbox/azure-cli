@@ -3159,7 +3159,7 @@ def config_diagnostics(cmd, resource_group_name, name, level=None,
     server_logging_option = web_server_logging or docker_container_logging
     if server_logging_option:
         # TODO: az blob storage log config currently not in use, will be impelemented later.
-        # Tracked as Issue: #4764 on Github
+        # Tracked as Issue: #4764 on GitHub
         filesystem_log_config = None
         turned_on = server_logging_option != 'off'
         if server_logging_option in ['filesystem', 'off']:
@@ -7917,7 +7917,7 @@ def _get_pom_xml_content(repo, branch, token, pom_path="."):
             resp = requests.get(f.download_url)
             if resp.ok and resp.content:
                 return resp.content.decode("utf-8")
-    raise ValidationError("Could not find pom.xml in Github repo/branch. Please ensure it is named 'pom.xml'. "
+    raise ValidationError("Could not find pom.xml in GitHub repo/branch. Please ensure it is named 'pom.xml'. "
                           "Set the path with --build-path if not in the root directory.")
 
 

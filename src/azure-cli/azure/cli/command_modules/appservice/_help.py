@@ -2544,7 +2544,7 @@ helps['staticwebapp show'] = """
 
 helps['staticwebapp create'] = """
     type: command
-    short-summary: Create a static app. To provide content to the static web app and integrate with a Github repo, provide the Github repository URL (--source) and a branch (--branch). If the repo is under a Github organization, please ensure that the Azure CLI Github App has access to the organization. Access can be requested in the browser when using the "--login-with-github" argument. Access must be granted by the organization's admin.
+    short-summary: Create a static app. To provide content to the static web app and integrate with a GitHub repo, provide the GitHub repository URL (--source) and a branch (--branch). If the repo is under a GitHub organization, please ensure that the Azure CLI GitHub App has access to the organization. Access can be requested in the browser when using the "--login-with-github" argument. Access must be granted by the organization's admin.
     examples:
     - name: Create static app in a subscription.
       text: az staticwebapp create -n MyStaticAppName -g MyExistingRg

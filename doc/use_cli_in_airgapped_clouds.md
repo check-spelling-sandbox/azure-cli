@@ -80,4 +80,4 @@ az login --service-principal -u <service principal id> -p <service principal pas
 ```
 
 ## Run CLI Commands
-If you meet any issues while running Azure CLI commands in airgapped clouds, please provide feedback through [Github issues](https://github.com/Azure/azure-cli/issues/new?assignees=&labels=&template=Bug_report.md&title=).
+If you meet any issues while running Azure CLI commands in airgapped clouds, please provide feedback through [GitHub issues](https://github.com/Azure/azure-cli/issues/new?assignees=&labels=&template=Bug_report.md&title=).

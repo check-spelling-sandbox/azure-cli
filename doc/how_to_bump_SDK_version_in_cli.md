@@ -46,7 +46,7 @@ For scenario a, variables `CUSTOM_REPO`, `CUSTOM_BRANCH`, `CUSTOM_GITHUB_TOKEN` 
 For scenario b, variables `PACKAGE`, `TARGET_PACKAGE_VERSION`, `RESOURCE_TYPE` and `TARGET_API_VERSION` are used.
 - CUSTOM_REPO: The forked repo name: `https://github.com/{CUSTOM_REPO}/azure-cli/`, e.g., `azclibot`, `evelyn-ys`, etc. **Required for scenario a**. Leave it as empty for scenario b.
 - CUSTOM_BRANCH: The branch you used in your forked repo to develop features, e.g., `dev`, `fix_XXX`, etc. **Required for scenario a**. Leave it as empty for scenario b.
-- CUSTOM_GITHUB_TOKEN: Github personal access token which allows commit changes to your repo and branch. See [creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). **Required for scenario a**. Leave it as empty for scenario b.
+- CUSTOM_GITHUB_TOKEN: GitHub personal access token which allows commit changes to your repo and branch. See [creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). **Required for scenario a**. Leave it as empty for scenario b.
 - CUSTOM_WHL_URL: A download url for SDK whl file if you want to test based on private package
 - PACKAGE: The SDK package name, e.g., `azure-mgmt-network`. **Required for scenario b**. Leave it as empty for scenario a.
 - TARGET_PACKAGE_VERSION: The SDK new version, e.g., `19.3.0`. **Required for scenario b**. Leave it as empty for scenario a.

@@ -107,7 +107,7 @@ class NWConnectionMonitorScenarioTest(ScenarioTest):
                  '--connection-monitor {cmv2} '
                  '--location {location} '
                  '--dest-test-groups {test_group} '
-                 '--name Github '
+                 '--name GitHub '
                  '--address github.com '
                  '--type ExternalAddress')
 
@@ -116,7 +116,7 @@ class NWConnectionMonitorScenarioTest(ScenarioTest):
         self.cmd('network watcher connection-monitor endpoint show '
                  '--connection-monitor {cmv2} '
                  '--location {location} '
-                 '--name Github')
+                 '--name GitHub')
 
         # remove one
         self.cmd('network watcher connection-monitor endpoint remove '
@@ -215,7 +215,7 @@ class NWConnectionMonitorScenarioTest(ScenarioTest):
                  '--connection-monitor {cmv2} '
                  '--location {location} '
                  '--dest-test-groups {test_group} '
-                 '--name Github '
+                 '--name GitHub '
                  '--address github.com ')
 
         # add a HTTP test configuration for later use

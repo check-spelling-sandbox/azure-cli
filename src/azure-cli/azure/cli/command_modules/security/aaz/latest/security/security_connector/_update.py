@@ -68,7 +68,7 @@ class Update(AAZCommand):
             arg_group="Properties",
             help="The multi cloud resource's cloud name.",
             nullable=True,
-            enum={"AWS": "AWS", "Azure": "Azure", "AzureDevOps": "AzureDevOps", "GCP": "GCP", "GitLab": "GitLab", "Github": "Github"},
+            enum={"AWS": "AWS", "Azure": "Azure", "AzureDevOps": "AzureDevOps", "GCP": "GCP", "GitLab": "GitLab", "GitHub": "GitHub"},
         )
         _args_schema.offerings = AAZListArg(
             options=["--offerings"],
