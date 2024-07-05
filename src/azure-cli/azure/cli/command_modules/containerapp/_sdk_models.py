@@ -3023,7 +3023,7 @@ class CustomHostnameAnalysisResultCustomDomainVerificationFailureInfoDetailsItem
 class CustomOpenIdConnectProvider(_serialization.Model):
     """The configuration settings of the custom Open ID Connect provider.
 
-    :ivar enabled: :code:`<code>false</code>` if the custom Open ID provider provider should not be
+    :ivar enabled: :code:`<code>false</code>` if the custom Open ID provider should not be
      enabled; otherwise, :code:`<code>true</code>`.
     :vartype enabled: bool
     :ivar registration: The configuration settings of the app registration for the custom Open ID
@@ -3049,7 +3049,7 @@ class CustomOpenIdConnectProvider(_serialization.Model):
         **kwargs: Any
     ) -> None:
         """
-        :keyword enabled: :code:`<code>false</code>` if the custom Open ID provider provider should not
+        :keyword enabled: :code:`<code>false</code>` if the custom Open ID provider should not
          be enabled; otherwise, :code:`<code>true</code>`.
         :paramtype enabled: bool
         :keyword registration: The configuration settings of the app registration for the custom Open
