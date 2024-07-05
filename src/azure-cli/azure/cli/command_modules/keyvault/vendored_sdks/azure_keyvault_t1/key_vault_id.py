@@ -436,8 +436,8 @@ def _parse_uri_argument(uri):
     try:
         parsed_uri = parse.urlparse(uri)
     except Exception: # pylint: disable=broad-except
-        raise ValueError("'{}' is not not a valid URI".format(uri))
+        raise ValueError("'{}' is not a valid URI".format(uri))
     if not (parsed_uri.scheme and parsed_uri.hostname):
-        raise ValueError("'{}' is not not a valid URI".format(uri))
+        raise ValueError("'{}' is not a valid URI".format(uri))
     return parsed_uri
 
