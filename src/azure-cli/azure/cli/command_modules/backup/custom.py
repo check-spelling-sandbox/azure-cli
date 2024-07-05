@@ -907,7 +907,7 @@ def enable_protection_for_vm(cmd, client, resource_group_name, vault_name, vm, p
             """
             The specified Azure Virtual Machine Not Found. Possible causes are
                1. VM does not exist
-               2. The VM name or the Service name needs to be case sensitive
+               2. The VM name or the Service name needs to be case-sensitive
                3. VM is already Protected with same or other Vault.
                   Please Unprotect VM first and then try to protect it again.
 

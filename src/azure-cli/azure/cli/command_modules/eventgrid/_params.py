@@ -213,7 +213,7 @@ def load_arguments(self, _):    # pylint: disable=too-many-statements
         c.argument('subject_begins_with', arg_group="Filtering", help="An optional string to filter events for an event subscription based on a prefix. Wildcard characters are not supported.")
         c.argument('subject_ends_with', arg_group="Filtering", help="An optional string to filter events for an event subscription based on a suffix. Wildcard characters are not supported.")
         c.argument('topic_type_name', help="Name of the topic type.")
-        c.argument('is_subject_case_sensitive', arg_group="Filtering", arg_type=get_three_state_flag(), options_list=['--subject-case-sensitive'], help="Specify to indicate whether the subject fields should be compared in a case sensitive manner. True if flag present.", )
+        c.argument('is_subject_case_sensitive', arg_group="Filtering", arg_type=get_three_state_flag(), options_list=['--subject-case-sensitive'], help="Specify to indicate whether the subject fields should be compared in a case-sensitive manner. True if flag present.", )
         c.argument('input_mapping_fields', arg_type=input_mapping_fields_type)
         c.argument('input_mapping_default_values', arg_type=input_mapping_default_values_type)
         c.argument('input_schema', arg_type=input_schema_type)

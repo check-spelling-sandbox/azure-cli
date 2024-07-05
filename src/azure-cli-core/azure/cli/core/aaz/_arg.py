@@ -62,7 +62,7 @@ class AAZArgEnum:
     def __getitem__(self, data):
         key = data
         if isinstance(self.items, dict):
-            # convert data, it can be key, value or key.lower() when not case sensitive
+            # convert data, it can be key, value or key.lower() when not case-sensitive
             for k, v in self.items.items():
                 if v == data or k == data or not self._case_sensitive and k.lower() == data.lower():
                     key = k

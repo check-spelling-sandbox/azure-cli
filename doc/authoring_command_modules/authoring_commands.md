@@ -402,7 +402,7 @@ Additionally, the following `kwargs`, supported by argparse, are supported as we
 - `const` - See https://docs.python.org/3/library/argparse.html#const
 - `default` - See https://docs.python.org/3/library/argparse.html#default. Note that the default value is inferred from the parameter's default value in the function signature. If specified, this will override that value.
 - `type` - See https://docs.python.org/3/library/argparse.html#type
-- `choices` - See https://docs.python.org/3/library/argparse.html#choices. If specified this will also serve as a value completer for people using tab completion. However, it is not recommended that you use this because the choice lists will be case sensitive. Instead see "Registering Enums".
+- `choices` - See https://docs.python.org/3/library/argparse.html#choices. If specified this will also serve as a value completer for people using tab completion. However, it is not recommended that you use this because the choice lists will be case-sensitive. Instead see "Registering Enums".
 - `required` - See https://docs.python.org/3/library/argparse.html#required. Note that this value is inferred from the function signature depending on whether or not the parameter has a default value. If specified, this will override that value.
 - `help` - See https://docs.python.org/3/library/argparse.html#help. Generally you should avoid adding help text in this way, instead opting to create a help file as described above.
 - `metavar` - See https://docs.python.org/3/library/argparse.html#metavar
