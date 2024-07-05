@@ -1131,7 +1131,7 @@ def parse_proxy_resource_id(rid):
 
     :param rid: The resource id being parsed
     :type rid: str
-    :returns: A dictionary with with following key/value pairs (if found):
+    :returns: A dictionary with following key/value pairs (if found):
 
         - subscription:            Subscription id
         - resource_group:          Name of resource group

@@ -928,7 +928,7 @@ examples:
         az acr task create -t acb:{{.Run.ID}} -n acb-win -r myregistry \\
             -c https://github.com/Azure/acr-builder.git -f Windows.Dockerfile \\
             --commit-trigger-enabled false --platform Windows/amd64
-  - name: Create a Linux multi-step task from a public GitHub repository with with both system-assigned and user-assigned managed identities and base image, git commit, pull request, and timer triggers that run the task at noon on Mondays through Fridays with the timer trigger name provided.
+  - name: Create a Linux multi-step task from a public GitHub repository with both system-assigned and user-assigned managed identities and base image, git commit, pull request, and timer triggers that run the task at noon on Mondays through Fridays with the timer trigger name provided.
     text: |
         az acr task create -t hello-world:{{.Run.ID}} -n hello-world -r myregistry \\
             --pull-request-trigger-enabled true --schedule "dailyTimer:0 12 * * Mon-Fri" \\

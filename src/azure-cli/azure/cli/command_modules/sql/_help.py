@@ -380,7 +380,7 @@ examples:
     text: az sql db replica create -g mygroup -s myserver -n originalDb --partner-server newDb --service-objective S0
   - name: Create a database with GeneralPurpose edition, Gen4 hardware, and 1 vcore as a secondary replica of an existing GeneralPurpose database
     text: az sql db replica create -g mygroup -s myserver -n originalDb --partner-server newDb -f Gen4 -c 1
-  - name: Create a database with with zone redundant backup storage as a secondary replica of an existing database.
+  - name: Create a database with zone redundant backup storage as a secondary replica of an existing database.
     text: az sql db replica create -g mygroup -s myserver -n originalDb --partner-server newDb --backup-storage-redundancy Zone
 """
 
