@@ -49,7 +49,7 @@ class LongRunningOperationResultTransform(LongRunningOperation):  # pylint: disa
 
         from azure.cli.core.util import poller_classes
         if isinstance(result, poller_classes()):
-            # Poll for long-running operation result result by calling base class
+            # Poll for long-running operation result by calling base class
             result = super(LongRunningOperationResultTransform, self).__call__(result)
 
         # Apply transform function
