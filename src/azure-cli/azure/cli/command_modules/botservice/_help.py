@@ -37,9 +37,9 @@ helps['bot prepare-deploy'] = """
                   scripts or configuration files should be appear in D:\\home\\site\\wwwroot on App Service's Kudu web
                   page.
     examples:
-        - name: Prepare to use `az webapp` to deploy a Javascript bot by fetching a Node.js IIS web.config file.
+        - name: Prepare to use `az webapp` to deploy a JavaScript bot by fetching a Node.js IIS web.config file.
           text: |-
-            az bot prepare-deploy --lang Javascript --code-dir "MyBotCode"
+            az bot prepare-deploy --lang JavaScript --code-dir "MyBotCode"
         - name: Prepare to use `az webapp` to deploy a Csharp bot by creating a .deployment file.
           text: |-
             az bot prepare-deploy --lang Csharp --code-dir "." --proj-file-path "MyBot.csproj"

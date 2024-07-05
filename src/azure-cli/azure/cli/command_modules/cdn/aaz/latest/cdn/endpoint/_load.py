@@ -17,7 +17,7 @@ from azure.cli.core.aaz import *
 class Load(AAZCommand):
     """Pre-loads a content to CDN. Available for Verizon Profiles.
 
-    :example: Pre-load Javascript and CSS content for an endpoint.
+    :example: Pre-load JavaScript and CSS content for an endpoint.
         az cdn endpoint load -g group -n endpoint --profile-name profile-name --content-paths '/scripts/app.js' '/styles/main.css'
     """
 

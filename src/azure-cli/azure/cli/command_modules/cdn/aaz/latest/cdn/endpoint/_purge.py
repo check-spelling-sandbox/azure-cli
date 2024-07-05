@@ -17,7 +17,7 @@ from azure.cli.core.aaz import *
 class Purge(AAZCommand):
     """Removes a content from CDN.
 
-    :example: Purge pre-loaded Javascript and CSS content.
+    :example: Purge pre-loaded JavaScript and CSS content.
         az cdn endpoint purge -g group -n endpoint --profile-name profile-name --content-paths '/scripts/app.js' '/styles/*'
     """
 

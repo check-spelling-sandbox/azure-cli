@@ -150,7 +150,7 @@ parameters:
     short-summary: Space-separated values. The path to the content to be loaded.
                    Path should be a relative file URL of the origin.
 examples:
-  - name: Pre-load Javascript and CSS content for an endpoint.
+  - name: Pre-load JavaScript and CSS content for an endpoint.
     text: >
         az cdn endpoint load -g group -n endpoint --profile-name profile-name --content-paths
         '/scripts/app.js' '/styles/main.css'
@@ -165,7 +165,7 @@ parameters:
     short-summary: Space-separated values. The path to the content to be purged.
                    Can describe a file path or a wildcard directory.
 examples:
-  - name: Purge pre-loaded Javascript and CSS content.
+  - name: Purge pre-loaded JavaScript and CSS content.
     text: >
         az cdn endpoint purge -g group -n endpoint --profile-name profile-name --content-paths
         '/scripts/app.js' '/styles/*'

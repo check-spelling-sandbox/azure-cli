@@ -15,7 +15,7 @@ name_arg_type = CLIArgumentType(metavar='NAME', configured_default='botname', id
 
 # supported_languages will be use with get_enum_type after the 'Node' value is completely removed from `az bot`
 # In custom.py we're still supporting 'Node' in __language_validator()
-UPCOMING_LANGUAGES = ['Csharp', 'Javascript', 'Typescript']
+UPCOMING_LANGUAGES = ['Csharp', 'JavaScript', 'Typescript']
 SUPPORTED_APP_INSIGHTS_REGIONS = [
     'Australia East',
     'Canada Central',

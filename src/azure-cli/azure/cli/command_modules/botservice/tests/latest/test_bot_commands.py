@@ -773,7 +773,7 @@ class BotLiveOnlyTests(LiveScenarioTest):
 class BotLocalErrorsTests(unittest.TestCase):
     def test_botservice_prepare_deploy_should_fail_if_code_dir_doesnt_exist(self):
         code_dir = 'does_not_exist'
-        language = 'Javascript'
+        language = 'JavaScript'
         proj_file_path = None
 
         try:
@@ -787,7 +787,7 @@ class BotLocalErrorsTests(unittest.TestCase):
 
     def test_botservice_prepare_deploy_javascript_should_fail_with_proj_file_path(self):
         code_dir = None
-        language = 'Javascript'
+        language = 'JavaScript'
         proj_file_path = 'node_bot/test.csproj'
 
         try:
@@ -800,7 +800,7 @@ class BotLocalErrorsTests(unittest.TestCase):
 
     def test_botservice_prepare_deploy_javascript(self):
         code_dir = 'node_bot_javascript'
-        language = 'Javascript'
+        language = 'JavaScript'
         proj_file_path = None
 
         if os.path.exists(code_dir):
@@ -907,7 +907,7 @@ class BotLocalErrorsTests(unittest.TestCase):
 
     def test_botservice_prepare_deploy_javascript_fail_if_web_config_exists(self):
         code_dir = 'node_bot_web_config'
-        language = 'Javascript'
+        language = 'JavaScript'
         proj_file_path = None
 
         if os.path.exists(code_dir):
