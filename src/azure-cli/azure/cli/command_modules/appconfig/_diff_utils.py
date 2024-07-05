@@ -144,7 +144,7 @@ def get_serializer(level):
     kvset_modes = ("kvset", "restore")
 
     if level not in source_modes and level not in kvset_modes:
-        raise CLIError("Invalid argument '{}' supplied. level argument should be on of the following: {}".format(level, source_modes + kvset_modes))
+        raise CLIError("Invalid argument '{}' supplied. level argument should be one of the following: {}".format(level, source_modes + kvset_modes))
 
     def serialize(obj):
 

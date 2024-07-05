@@ -103,7 +103,7 @@ def load_arguments(self, _):
 
     # Managed Identity
     with self.argument_context('signalr identity assign') as c:
-        c.argument('identity', help="Assigns managed identities to the service. Use '[system]' to refer to the system-assigned identity or a resource ID to refer to a user-assigned identity. You can only assign either on of them.")
+        c.argument('identity', help="Assigns managed identities to the service. Use '[system]' to refer to the system-assigned identity or a resource ID to refer to a user-assigned identity. You can only assign either one of them.")
 
     # Custom Domain
     for scope in ['signalr custom-domain update',
