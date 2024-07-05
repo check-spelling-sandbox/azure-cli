@@ -134,7 +134,7 @@ class MigrationScenarioTest(ScenarioTest):
                                   JMESPathCheck('sslMode', "Prefer")]).get_output_in_json()
         migration_name = result['name']
 
-        # test test show migration - success
+        # test show migration - success
         result = self.cmd('{} flexible-server migration show --subscription {} --resource-group {} --name {} --migration-name {}'
                           .format(database_engine, target_subscription_id, target_resource_group_name, target_server_name, migration_name)).get_output_in_json()
 
