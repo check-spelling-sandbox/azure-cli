@@ -857,7 +857,7 @@ parameters:
   - name: --pattern
     type: string
     short-summary: The pattern used for globbing files or blobs in the source. The supported patterns are '*', '?', '[seq]', and '[!seq]'. For more information, please refer to https://docs.python.org/3.7/library/fnmatch.html.
-    long-summary: When you use '*' in --pattern, it will match any character including the the directory separator '/'.
+    long-summary: When you use '*' in --pattern, it will match any character including the directory separator '/'.
   - name: --dryrun
     type: bool
     short-summary: List the files or blobs to be uploaded. No actual data transfer will occur.
@@ -924,7 +924,7 @@ parameters:
   - name: --pattern
     type: string
     short-summary: The pattern used for globbing files or blobs in the source. The supported patterns are '*', '?', '[seq]', and '[!seq]'. For more information, please refer to https://docs.python.org/3.7/library/fnmatch.html.
-    long-summary: When you use '*' in --pattern, it will match any character including the the directory separator '/'. You can also try "az storage remove" command with --include and --exclude with azure cli >= 2.0.70 to match multiple patterns.
+    long-summary: When you use '*' in --pattern, it will match any character including the directory separator '/'. You can also try "az storage remove" command with --include and --exclude with azure cli >= 2.0.70 to match multiple patterns.
   - name: --dryrun
     type: bool
     short-summary: Show the summary of the operations to be taken instead of actually deleting the file(s).
@@ -966,7 +966,7 @@ parameters:
   - name: --pattern
     type: string
     short-summary: The pattern used for globbing files or blobs in the source. The supported patterns are '*', '?', '[seq]', and '[!seq]'. For more information, please refer to https://docs.python.org/3.7/library/fnmatch.html.
-    long-summary: When you use '*' in --pattern, it will match any character including the the directory separator '/'.
+    long-summary: When you use '*' in --pattern, it will match any character including the directory separator '/'.
   - name: --dryrun
     type: bool
     short-summary: Show the summary of the operations to be taken instead of actually downloading the file(s).
@@ -1294,7 +1294,7 @@ parameters:
   - name: --pattern
     type: string
     short-summary: The pattern used for globbing files or blobs in the source. The supported patterns are '*', '?', '[seq]', and '[!seq]'. For more information, please refer to https://docs.python.org/3.7/library/fnmatch.html.
-    long-summary: When you use '*' in --pattern, it will match any character including the the directory separator '/'.
+    long-summary: When you use '*' in --pattern, it will match any character including the directory separator '/'.
   - name: --dryrun
     type: bool
     short-summary: Show the summary of the operations to be taken instead of actually uploading the file(s).
@@ -1951,7 +1951,7 @@ parameters:
   - name: --pattern
     type: string
     short-summary: The pattern used for globbing files and blobs. The supported patterns are '*', '?', '[seq]', and '[!seq]'. For more information, please refer to https://docs.python.org/3.7/library/fnmatch.html.
-    long-summary: When you use '*' in --pattern, it will match any character including the the directory separator '/'.
+    long-summary: When you use '*' in --pattern, it will match any character including the directory separator '/'.
   - name: --dryrun
     type: bool
     short-summary: List the files and blobs to be copied. No actual data transfer will occur.
@@ -1993,7 +1993,7 @@ parameters:
   - name: --pattern
     type: string
     short-summary: The pattern used for file globbing. The supported patterns are '*', '?', '[seq]', and '[!seq]'. For more information, please refer to https://docs.python.org/3.7/library/fnmatch.html.
-    long-summary: When you use '*' in --pattern, it will match any character including the the directory separator '/'.
+    long-summary: When you use '*' in --pattern, it will match any character including the directory separator '/'.
   - name: --dryrun
     type: bool
     short-summary: List the files and blobs to be deleted. No actual data deletion will occur.
@@ -2027,7 +2027,7 @@ parameters:
   - name: --pattern
     type: string
     short-summary: The pattern used for file globbing. The supported patterns are '*', '?', '[seq]', and '[!seq]'. For more information, please refer to https://docs.python.org/3.7/library/fnmatch.html.
-    long-summary: When you use '*' in --pattern, it will match any character including the the directory separator '/'.
+    long-summary: When you use '*' in --pattern, it will match any character including the directory separator '/'.
   - name: --dryrun
     type: bool
     short-summary: List the files and blobs to be downloaded. No actual data transfer will occur.
@@ -2182,7 +2182,7 @@ parameters:
   - name: --pattern
     type: string
     short-summary: The pattern used for file globbing. The supported patterns are '*', '?', '[seq]', and '[!seq]'. For more information, please refer to https://docs.python.org/3.7/library/fnmatch.html.
-    long-summary: When you use '*' in --pattern, it will match any character including the the directory separator '/'.
+    long-summary: When you use '*' in --pattern, it will match any character including the directory separator '/'.
   - name: --dryrun
     type: bool
     short-summary: List the files and blobs to be uploaded. No actual data transfer will occur.

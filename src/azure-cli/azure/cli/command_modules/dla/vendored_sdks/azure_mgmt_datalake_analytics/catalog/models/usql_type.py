@@ -40,18 +40,18 @@ class USqlType(CatalogItem):
     :type schema_id: int
     :param principal_id: the principal ID for this type.
     :type principal_id: int
-    :param is_nullable: the the switch indicating if this type is nullable.
+    :param is_nullable: the switch indicating if this type is nullable.
     :type is_nullable: bool
-    :param is_user_defined: the the switch indicating if this type is user
+    :param is_user_defined: the switch indicating if this type is user
      defined.
     :type is_user_defined: bool
-    :param is_assembly_type: the the switch indicating if this type is an
+    :param is_assembly_type: the switch indicating if this type is an
      assembly type.
     :type is_assembly_type: bool
-    :param is_table_type: the the switch indicating if this type is a table
+    :param is_table_type: the switch indicating if this type is a table
      type.
     :type is_table_type: bool
-    :param is_complex_type: the the switch indicating if this type is a
+    :param is_complex_type: the switch indicating if this type is a
      complex type.
     :type is_complex_type: bool
     """

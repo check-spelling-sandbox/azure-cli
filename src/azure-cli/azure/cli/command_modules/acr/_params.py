@@ -92,7 +92,7 @@ def load_arguments(self, _):  # pylint: disable=too-many-statements
         c.argument('yes', options_list=['--yes', '-y'], help='Do not prompt for confirmation.', action='store_true')
         c.argument('image_names', options_list=['--image', '-t'], help="The name and tag of the image using the format: '-t repo/image:tag'. Multiple tags are supported by passing -t multiple times.", action='append')
         c.argument('timeout', type=int, help='The timeout in seconds.')
-        c.argument('docker_file_path', options_list=['--file', '-f'], help="The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'.")
+        c.argument('docker_file_path', options_list=['--file', '-f'], help="The relative path of the docker file to the source code root folder. Default to 'Dockerfile'.")
         c.argument('no_logs', help="Do not show logs after successfully queuing the build.", action='store_true')
         c.argument('no_wait', help="Do not wait for the run to complete and return immediately after queuing the run.", action='store_true')
         c.argument('no_format', help="Indicates whether the logs should be displayed in raw format", action='store_true')
@@ -336,7 +336,7 @@ def load_arguments(self, _):  # pylint: disable=too-many-statements
         c.argument('is_system_task', options_list=['--is-system-task'], help="Indicates whether the task resource is a system task. The name of the task must be 'quicktask'. Only applicable to CMK enabled registry.", action='store_true', is_preview=True)
 
         # DockerBuildStep, FileTaskStep parameters
-        c.argument('file', options_list=['--file', '-f'], help="Relative path of the the task/docker file to the source code root folder. Task files must be suffixed with '.yaml' or piped from the standard input using '-'.")
+        c.argument('file', options_list=['--file', '-f'], help="Relative path of the task/docker file to the source code root folder. Task files must be suffixed with '.yaml' or piped from the standard input using '-'.")
         c.argument('image', arg_type=image_by_tag_or_digest_type)
         c.argument('no_push', help="Indicates whether the image built should be pushed to the registry.", arg_type=get_three_state_flag())
         c.argument('no_cache', help='Indicates whether the image cache is enabled.', arg_type=get_three_state_flag())

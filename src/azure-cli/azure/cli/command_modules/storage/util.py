@@ -55,7 +55,7 @@ def collect_blob_objects(blob_service, container, pattern=None):
 
 def collect_files(cmd, file_service, share, pattern=None):
     """
-    Search files in the the given file share recursively. Filter the files by matching their path to the given pattern.
+    Search files in the given file share recursively. Filter the files by matching their path to the given pattern.
     Returns a iterable of tuple (dir, name).
     """
     if not file_service:

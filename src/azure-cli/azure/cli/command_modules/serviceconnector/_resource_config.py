@@ -206,7 +206,7 @@ SOURCE_RESOURCES_PARAMS = {
         },
         'spring': {
             'options': ['--service'],
-            'help': 'Name of the the Azure Spring Apps resource',
+            'help': 'Name of the Azure Spring Apps resource',
             'placeholder': 'MySpringService'
         },
         'app': {

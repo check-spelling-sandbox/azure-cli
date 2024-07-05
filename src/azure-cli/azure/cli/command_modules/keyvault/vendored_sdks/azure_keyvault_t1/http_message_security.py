@@ -129,7 +129,7 @@ class HttpMessageSecurity(object):
 
     def supports_protection(self):
         """
-        Determines if the the current HttpMessageSecurity object supports the message protection protocol.
+        Determines if the current HttpMessageSecurity object supports the message protection protocol.
         :return: True if the current object supports protection, otherwise False
         """
         return self.client_signature_key \

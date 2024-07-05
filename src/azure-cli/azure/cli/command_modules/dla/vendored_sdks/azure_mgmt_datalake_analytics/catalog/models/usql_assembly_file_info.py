@@ -19,9 +19,9 @@ class USqlAssemblyFileInfo(Model):
      'Resource', 'Nodeploy'
     :type type: str or :class:`FileType
      <azure.mgmt.datalake.analytics.catalog.models.FileType>`
-    :param original_path: the the original path to the assembly file.
+    :param original_path: the original path to the assembly file.
     :type original_path: str
-    :param content_path: the the content path to the assembly file.
+    :param content_path: the content path to the assembly file.
     :type content_path: str
     """
 

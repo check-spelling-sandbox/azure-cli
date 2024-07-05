@@ -367,7 +367,7 @@ def setup_arguments(parser):
     parser.add_argument('--live', action='store_true', help='Run all the tests live.')
     parser.add_argument(dest='tests', nargs='*',
                         help='Space separated list of tests to run. Can specify test filenames, class name or individual method names.')
-    parser.add_argument('--src-file', dest='src_file', help='Text file of test names to include in the the test run.')
+    parser.add_argument('--src-file', dest='src_file', help='Text file of test names to include in the test run.')
     parser.add_argument('--dest-file', dest='dest_file', help='File in which to save the names of any test failures.', default='test_failures.txt')
     parser.add_argument('--ci', dest='ci', action='store_true', help='Run the tests in CI mode.')
     parser.add_argument('--discover', dest='discover', action='store_true', help='Build an index of test names so that you don\'t need to specify '
