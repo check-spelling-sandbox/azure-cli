@@ -1,0 +1,31 @@
+# Public Keys
+-----BEGIN PUBLIC KEY-----
+-----END PUBLIC KEY-----
+
+# RSA Private Key
+-----BEGIN RSA PRIVATE KEY-----
+-----END RSA PRIVATE KEY-----
+
+# GPG Public Key
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+-----END PGP PUBLIC KEY BLOCK-----
+
+# Certificates
+-----BEGIN CERTIFICATE-----
+-----END CERTIFICATE-----
+
+# .github/policies/resourceManagement.yml
+  mentionees:
+:
+
+# src/azure-cli/azure/cli/command_modules/role/tests/latest/test_graph.py
+TEST_CERTIFICATE = """
+"""
+
+# src/azure-cli-core/azure/cli/core/tests/test_profile.py
+_msi_access_token = ('
+')
+
+# src/azure-cli/azure/cli/command_modules/batchai/tests/latest/test_batchai_custom.py
+SSH_KEY = '
+@
