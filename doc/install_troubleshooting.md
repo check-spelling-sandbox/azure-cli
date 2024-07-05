@@ -32,7 +32,7 @@ $ sudo rpm -ivh --nodeps azure-cli-*.rpm
 ```
 
 
-Install on SLES 12 or other other zypper-managed systems without Python 3.6
+Install on SLES 12 or other zypper-managed systems without Python 3.6
 ---------------------------------------------------------------------------
 
 On SLES 12, the default `python3` package is 3.4 and not supported by Azure CLI. You can first build a higher version `python3` from source. Then you can download the Azure CLI package and install it without dependency.
