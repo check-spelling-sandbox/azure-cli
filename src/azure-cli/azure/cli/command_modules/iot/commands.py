@@ -34,7 +34,7 @@ class RouteUpdateResultTransform(LongRunningOperation):  # pylint: disable=too-f
 
 # Deleting IoT Hub is a long-running operation. Due to API implementation issue, 404 error will be thrown during
 # deletion of an IoT Hub.
-# This is a work around to suppress the 404 error. It should be removed after API is fixed.
+# This is a workaround to suppress the 404 error. It should be removed after API is fixed.
 class HubDeleteResultTransform(LongRunningOperation):  # pylint: disable=too-few-public-methods
     def __call__(self, poller):
         from azure.cli.core.util import CLIError

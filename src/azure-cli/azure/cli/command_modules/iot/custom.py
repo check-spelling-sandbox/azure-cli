@@ -86,7 +86,7 @@ class KeyType(Enum):
     secondary = 'secondary'
 
 
-# This is a work around to simplify the permission parameter for access policy creation, and also align with the other
+# This is a workaround to simplify the permission parameter for access policy creation, and also align with the other
 # command modules.
 # The original AccessRights enum is a combination of below four basic access rights.
 # In order to avoid asking for comma- & space-separated strings from the user, a space-separated list is supported for
