@@ -2140,7 +2140,7 @@ capacity=2 size="Medium" --resource-group "kustorptest" --workspace-name "synaps
 
 helps['synapse kusto pool update'] = """
     type: command
-    short-summary: "Update a Kusto Kusto Pool."
+    short-summary: "Update a Kusto Pool."
     parameters:
       - name: --sku
         short-summary: "The SKU of the kusto pool."
