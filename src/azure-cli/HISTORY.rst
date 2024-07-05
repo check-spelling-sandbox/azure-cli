@@ -4301,7 +4301,7 @@ Hotfix: Fix #19468: pip installs azure-cli 2.0.73 because of the dependency on d
 
 * [BREAKING CHANGE] `az postgres flexible-server migration`: Rename `--migration-id` to `--migration-name` (#19149)
 * [BREAKING CHANGE] `az mysql flexible-server create/update`: `--high-availability` available parameter is changed from 'Enabled' to 'ZoneRedundant' and 'SameZone' . (#19301)
-* Fix maintenance window update issue with MySQL and Change restart parameter to be case insensitive (#19231)
+* Fix maintenance window update issue with MySQL and Change restart parameter to be case-insensitive (#19231)
 * `az mysql flexible-server restore` enables network option change from private network  to public network and vice versa. (#19301)
 * `az mysql flexible-server replica create`: Add `zone` parameter. (#19301)
 
@@ -7408,7 +7408,7 @@ Added Cluster commands and trusted_service_access_enabled parameter for Networkr
 **Network**
 
 * az network application-gateway rewrite-rule create: support url configuration
-* az network dns zone import: --zone-name will be case insensitive in the future
+* az network dns zone import: --zone-name will be case-insensitive in the future
 * az network private-endpoint/private-link-service: remove preview label
 * az network bastion: support bastion
 * az network vnet list-available-ips: support list available ips in a vnet
@@ -8036,7 +8036,7 @@ Added Cluster commands and trusted_service_access_enabled parameter for Networkr
 * Added "--build remote" flag for "az functionapp deployment source config-zip" to support remote build action during function app deployment.
 * Change default node version on function apps to ~10 for Windows
 * Add --runtime-version property to `az functionapp create`
-* az appservice vnet-integration add: Fixed so that subnet delegation is case insensitive and delegating subnets does not overwrite previous data.
+* az appservice vnet-integration add: Fixed so that subnet delegation is case-insensitive and delegating subnets does not overwrite previous data.
 
 
 **ARM**

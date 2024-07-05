@@ -28,7 +28,7 @@ class TestRecordingProcessors(unittest.TestCase):
         rp.replace_header(request_sample, 'beta', 'value_1', 'replaced_1')
         self.assertSequenceEqual(request_sample['headers']['beta'], ['replaced_1', 'value_2'])
 
-        rp.replace_header(request_sample, 'Beta', 'replaced_1', 'replaced_2')  # case insensitive
+        rp.replace_header(request_sample, 'Beta', 'replaced_1', 'replaced_2')  # case-insensitive
         self.assertSequenceEqual(request_sample['headers']['beta'], ['replaced_2', 'value_2'])
 
         rp.replace_header(request_sample, 'alpha', 'replaced_1', 'replaced_2')  # ignore KeyError

@@ -19,7 +19,7 @@ class RecordingProcessor(object):
 
     @classmethod
     def replace_header_fn(cls, entity, header, replace_fn):
-        # Loop over the headers to find the one we want case insensitively,
+        # Loop over the headers to find the one we want case-insensitively,
         # but we don't want to modify the case of original header key.
         for key, values in entity['headers'].items():
             if key.lower() == header.lower():

@@ -152,7 +152,7 @@ def _aks_browse(
     # verify the kube-dashboard addon was not disabled
     instance = client.get(resource_group_name, name)
     addon_profiles = instance.addon_profiles or {}
-    # addon name is case insensitive
+    # addon name is case-insensitive
     addon_profile = next((addon_profiles[k] for k in addon_profiles
                           if k.lower() == CONST_KUBE_DASHBOARD_ADDON_NAME.lower()),
                          ManagedClusterAddonProfile(enabled=False))

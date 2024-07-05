@@ -105,7 +105,7 @@ az synapse kusto attached-database-configuration list --kusto-pool-name "kustocl
 |------|----|-----------|----------|------------|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolAttachedDatabaseConfigurationsGet">Command `az synapse kusto attached-database-configuration show`</a>
 
@@ -121,7 +121,7 @@ az synapse kusto attached-database-configuration show --attached-database-config
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--attached-database-configuration-name**|string|The name of the attached database configuration.|attached_database_configuration_name|attachedDatabaseConfigurationName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolAttachedDatabaseConfigurationsCreateOrUpdate#Create">Command `az synapse kusto attached-database-configuration create`</a>
 
@@ -141,7 +141,7 @@ alTable1" materialized-views-to-exclude="MaterializedViewTable2" materialized-vi
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--attached-database-configuration-name**|string|The name of the attached database configuration.|attached_database_configuration_name|attachedDatabaseConfigurationName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--location**|string|Resource location.|location|location|
 |**--database-name**|string|The name of the database which you would like to attach, use * if you want to follow all current and future databases.|database_name|databaseName|
 |**--kusto-pool-resource-id**|string|The resource id of the kusto pool where the databases you would like to attach reside.|kusto_pool_resource_id|kustoPoolResourceId|
@@ -157,7 +157,7 @@ alTable1" materialized-views-to-exclude="MaterializedViewTable2" materialized-vi
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--attached-database-configuration-name**|string|The name of the attached database configuration.|attached_database_configuration_name|attachedDatabaseConfigurationName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--location**|string|Resource location.|location|location|
 |**--database-name**|string|The name of the database which you would like to attach, use * if you want to follow all current and future databases.|database_name|databaseName|
 |**--kusto-pool-resource-id**|string|The resource id of the kusto pool where the databases you would like to attach reside.|kusto_pool_resource_id|kustoPoolResourceId|
@@ -178,7 +178,7 @@ az synapse kusto attached-database-configuration delete --attached-database-conf
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--attached-database-configuration-name**|string|The name of the attached database configuration.|attached_database_configuration_name|attachedDatabaseConfigurationName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 ### group `az synapse kusto data-connection`
 #### <a name="KustoPoolDataConnectionsListByDatabase">Command `az synapse kusto data-connection list`</a>
@@ -191,7 +191,7 @@ az synapse kusto data-connection list --database-name "KustoDatabase8" --kusto-p
 ##### <a name="ParametersKustoPoolDataConnectionsListByDatabase">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -206,7 +206,7 @@ az synapse kusto data-connection show --data-connection-name "DataConnections8" 
 ##### <a name="ParametersKustoPoolDataConnectionsGet">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -218,7 +218,7 @@ az synapse kusto data-connection show --data-connection-name "DataConnections8" 
 ##### <a name="ParametersKustoPoolDataConnectionsCreateOrUpdate#Create#EventGrid">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -246,7 +246,7 @@ soft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-gro
 ##### <a name="ParametersKustoPoolDataConnectionsCreateOrUpdate#Create#EventHub">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -267,7 +267,7 @@ soft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-gro
 ##### <a name="ParametersKustoPoolDataConnectionsCreateOrUpdate#Create#IotHub">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -287,7 +287,7 @@ soft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-gro
 ##### <a name="ParametersKustoPoolDataConnectionsUpdate#EventGrid">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -315,7 +315,7 @@ soft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-gro
 ##### <a name="ParametersKustoPoolDataConnectionsUpdate#EventHub">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -336,7 +336,7 @@ soft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-gro
 ##### <a name="ParametersKustoPoolDataConnectionsUpdate#IotHub">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -361,7 +361,7 @@ az synapse kusto data-connection delete --data-connection-name "kustoeventhubcon
 ##### <a name="ParametersKustoPoolDataConnectionsDelete">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -378,7 +378,7 @@ az synapse kusto database list --kusto-pool-name "kustoclusterrptest4" --resourc
 ##### <a name="ParametersKustoPoolDatabasesListByKustoPool">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 
@@ -392,7 +392,7 @@ az synapse kusto database show --database-name "KustoDatabase8" --kusto-pool-nam
 ##### <a name="ParametersKustoPoolDatabasesGet">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -408,7 +408,7 @@ az synapse kusto database create --database-name "KustoDatabase8" --kusto-pool-n
 ##### <a name="ParametersKustoPoolDatabasesCreateOrUpdate#Create">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -424,7 +424,7 @@ az synapse kusto database update --database-name "KustoDatabase8" --kusto-pool-n
 ##### <a name="ParametersKustoPoolDatabasesUpdate">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -440,7 +440,7 @@ az synapse kusto database delete --database-name "KustoDatabase8" --kusto-pool-n
 ##### <a name="ParametersKustoPoolDatabasesDelete">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
@@ -459,7 +459,7 @@ az synapse kusto database-principal-assignment list --database-name "Kustodataba
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolDatabasePrincipalAssignmentsGet">Command `az synapse kusto database-principal-assignment show`</a>
 
@@ -476,7 +476,7 @@ az synapse kusto database-principal-assignment show --database-name "Kustodataba
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
 |**--principal-assignment-name**|string|The name of the Kusto principalAssignment.|principal_assignment_name|principalAssignmentName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolDatabasePrincipalAssignmentsCreateOrUpdate#Create">Command `az synapse kusto database-principal-assignment create`</a>
 
@@ -494,7 +494,7 @@ az synapse kusto database-principal-assignment create --database-name "Kustodata
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
 |**--principal-assignment-name**|string|The name of the Kusto principalAssignment.|principal_assignment_name|principalAssignmentName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--principal-id**|string|The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.|principal_id|principalId|
 |**--role**|choice|Database principal role.|role|role|
 |**--tenant-id**|string|The tenant id of the principal|tenant_id|tenantId|
@@ -510,7 +510,7 @@ az synapse kusto database-principal-assignment create --database-name "Kustodata
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
 |**--principal-assignment-name**|string|The name of the Kusto principalAssignment.|principal_assignment_name|principalAssignmentName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--principal-id**|string|The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.|principal_id|principalId|
 |**--role**|choice|Database principal role.|role|role|
 |**--tenant-id**|string|The tenant id of the principal|tenant_id|tenantId|
@@ -531,7 +531,7 @@ az synapse kusto database-principal-assignment delete --database-name "Kustodata
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--database-name**|string|The name of the database in the Kusto pool.|database_name|databaseName|
 |**--principal-assignment-name**|string|The name of the Kusto principalAssignment.|principal_assignment_name|principalAssignmentName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 ### group `az synapse kusto pool`
 #### <a name="KustoPoolListSkus">Command `az synapse kusto pool list-sku`</a>
@@ -554,7 +554,7 @@ az synapse kusto pool list --resource-group "kustorptest" --workspace-name "kust
 ##### <a name="ParametersKustoPoolsListByWorkspace">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 
 #### <a name="KustoPoolsGet">Command `az synapse kusto pool show`</a>
@@ -569,7 +569,7 @@ az synapse kusto pool show --name "kustoclusterrptest4" --resource-group "kustor
 |------|----|-----------|----------|------------|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolsDelete">Command `az synapse kusto pool delete`</a>
 
@@ -582,7 +582,7 @@ az synapse kusto pool delete --name "kustoclusterrptest4" --resource-group "kust
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 
 #### <a name="KustoPoolsListFollowerDatabases">Command `az synapse kusto pool list-follower-database`</a>
@@ -597,7 +597,7 @@ az synapse kusto pool list-follower-database --name "kustoclusterrptest4" --reso
 |------|----|-----------|----------|------------|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolsListLanguageExtensions">Command `az synapse kusto pool list-language-extension`</a>
 
@@ -611,7 +611,7 @@ az synapse kusto pool list-language-extension --name "kustoclusterrptest4" --res
 |------|----|-----------|----------|------------|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolsListSkusByResource">Command `az synapse kusto pool list-sku`</a>
 
@@ -625,7 +625,7 @@ az synapse kusto pool list-sku --name "kustoclusterrptest4" --resource-group "ku
 |------|----|-----------|----------|------------|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolsStart">Command `az synapse kusto pool start`</a>
 
@@ -638,7 +638,7 @@ az synapse kusto pool start --name "kustoclusterrptest4" --resource-group "kusto
 |------|----|-----------|----------|------------|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolsStop">Command `az synapse kusto pool stop`</a>
 
@@ -651,7 +651,7 @@ az synapse kusto pool stop --name "kustoclusterrptest4" --resource-group "kustor
 |------|----|-----------|----------|------------|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 ### group `az synapse kusto pool-principal-assignment`
 #### <a name="KustoPoolPrincipalAssignmentsList">Command `az synapse kusto pool-principal-assignment list`</a>
@@ -666,7 +666,7 @@ az synapse kusto pool-principal-assignment list --kusto-pool-name "kustoclusterr
 |------|----|-----------|----------|------------|
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolPrincipalAssignmentsGet">Command `az synapse kusto pool-principal-assignment show`</a>
 
@@ -681,7 +681,7 @@ az synapse kusto pool-principal-assignment show --kusto-pool-name "kustoclusterr
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--principal-assignment-name**|string|The name of the Kusto principalAssignment.|principal_assignment_name|principalAssignmentName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 #### <a name="KustoPoolPrincipalAssignmentsCreateOrUpdate#Create">Command `az synapse kusto pool-principal-assignment create`</a>
 
@@ -698,7 +698,7 @@ az synapse kusto pool-principal-assignment create --kusto-pool-name "kustocluste
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--principal-assignment-name**|string|The name of the Kusto principalAssignment.|principal_assignment_name|principalAssignmentName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--principal-id**|string|The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.|principal_id|principalId|
 |**--role**|choice|Cluster principal role.|role|role|
 |**--tenant-id**|string|The tenant id of the principal|tenant_id|tenantId|
@@ -713,7 +713,7 @@ az synapse kusto pool-principal-assignment create --kusto-pool-name "kustocluste
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--principal-assignment-name**|string|The name of the Kusto principalAssignment.|principal_assignment_name|principalAssignmentName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 |**--principal-id**|string|The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.|principal_id|principalId|
 |**--role**|choice|Cluster principal role.|role|role|
 |**--tenant-id**|string|The tenant id of the principal|tenant_id|tenantId|
@@ -732,7 +732,7 @@ az synapse kusto pool-principal-assignment delete --kusto-pool-name "kustocluste
 |**--workspace-name**|string|The name of the workspace|workspace_name|workspaceName|
 |**--kusto-pool-name**|string|The name of the Kusto pool.|kusto_pool_name|kustoPoolName|
 |**--principal-assignment-name**|string|The name of the Kusto principalAssignment.|principal_assignment_name|principalAssignmentName|
-|**--resource-group-name**|string|The name of the resource group. The name is case insensitive.|resource_group_name|resourceGroupName|
+|**--resource-group-name**|string|The name of the resource group. The name is case-insensitive.|resource_group_name|resourceGroupName|
 
 ### group `az synapse kusto-operation`
 #### <a name="KustoOperationsList">Command `az synapse kusto-operation list`</a>

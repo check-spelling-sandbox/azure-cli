@@ -2698,7 +2698,7 @@ def import_zone(cmd, resource_group_name, zone_name, file_name):
     from azure.cli.core.util import read_file_content
     from azure.core.exceptions import HttpResponseError
     import sys
-    logger.warning("In the future, zone name will be case insensitive.")
+    logger.warning("In the future, zone name will be case-insensitive.")
 
     from azure.cli.core.azclierror import FileOperationError, UnclassifiedUserFault
     try:

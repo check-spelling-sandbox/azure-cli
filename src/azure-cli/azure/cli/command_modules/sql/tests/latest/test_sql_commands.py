@@ -3828,7 +3828,7 @@ class SqlServerCapabilityScenarioTest(ScenarioTest):
                      # Max size data is included
                      JMESPathCheckGreaterThan(db_max_size_length_jmespath, 0)])
 
-        # Search for db edition - note that it's case insensitive
+        # Search for db edition - note that it's case-insensitive
         self.cmd('sql db list-editions -l {} --edition standard'.format(location),
                  checks=[
                      # Standard edition exists, other editions don't
@@ -3854,7 +3854,7 @@ class SqlServerCapabilityScenarioTest(ScenarioTest):
                      JMESPathCheck('length([].supportedServiceLevelObjectives[?performanceLevel.unit != `VCores`][])',
                                    0)])
 
-        # Search for db service objective - note that it's case insensitive
+        # Search for db service objective - note that it's case-insensitive
         # Checked items:
         #   * Standard edition exists, other editions don't
         #   * S0 service objective exists, others don't exist
@@ -3880,7 +3880,7 @@ class SqlServerCapabilityScenarioTest(ScenarioTest):
                          JMESPathCheck(pool_db_min_dtu_length_jmespath, 0),
                          JMESPathCheck(pool_db_max_size_length_jmespath, 0)])
 
-        # Search for elastic pool edition - note that it's case insensitive
+        # Search for elastic pool edition - note that it's case-insensitive
         self.cmd('sql elastic-pool list-editions -l {} --edition standard'.format(location),
                  checks=[JMESPathCheckExists("[?name == 'Standard']"),  # Standard edition exists, other editions don't
                          JMESPathCheck("length([?name != 'Standard'])", 0)])

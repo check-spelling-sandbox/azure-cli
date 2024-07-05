@@ -289,7 +289,7 @@ class BatchArgumentTree:
         try:
             import azure.batch.models
             model_type = getattr(azure.batch.models, self._request_param['model'])
-            # Use from_dict in order to deserialize with case insensitive
+            # Use from_dict in order to deserialize with case-insensitive
             kwargs[self._request_param['name']] = model_type.from_dict(json_obj)
         except DeserializationError as error:
             message += f": {error}"

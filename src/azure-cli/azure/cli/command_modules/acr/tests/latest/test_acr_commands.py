@@ -460,7 +460,7 @@ class AcrCommandsTests(ScenarioTest):
         self.cmd('acr create -n {registry_1} -g {rg} --sku {sku} --public-network-enabled false --allow-exports',
                  checks=[self.check('name', '{registry_1}'),
                          self.check('provisioningState', 'Succeeded'),
-                         self.check_pattern('policies.exportPolicy.status', 'Enabled')])  # case insensitive check
+                         self.check_pattern('policies.exportPolicy.status', 'Enabled')])  # case-insensitive check
 
         self.cmd('acr create -n {registry_1} -g {rg} --sku {sku} --public-network-enabled false --allow-exports true',
                  checks=[self.check('name', '{registry_1}'),

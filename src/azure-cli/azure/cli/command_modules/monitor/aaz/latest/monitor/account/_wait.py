@@ -42,7 +42,7 @@ class Wait(AAZWaitCommand):
         _args_schema = cls._args_schema
         _args_schema.azure_monitor_workspace_name = AAZStrArg(
             options=["-n", "--name", "--azure-monitor-workspace-name"],
-            help="The name of the Azure Monitor workspace.  The name is case insensitive",
+            help="The name of the Azure Monitor workspace.  The name is case-insensitive",
             required=True,
             id_part="name",
             fmt=AAZStrArgFormat(
