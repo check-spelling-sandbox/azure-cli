@@ -1722,7 +1722,7 @@ def process_vmss_create_namespace(cmd, namespace):
 
     if namespace.orchestration_mode.lower() == flexible_str.lower():
 
-        # The commentted parameters are also forbidden, but they have default values.
+        # The commented parameters are also forbidden, but they have default values.
         # I don't know whether they are provided by user.
 
         namespace.load_balancer_sku = 'Standard'  # lb sku MUST be standard
