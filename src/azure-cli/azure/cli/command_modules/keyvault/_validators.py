@@ -468,7 +468,7 @@ def certificate_type(string):
 
 
 def datetime_type(string):
-    """ Validates UTC datettime in accepted format. Examples: 2017-12-31T01:11:59Z,
+    """ Validates UTC datetime in accepted format. Examples: 2017-12-31T01:11:59Z,
     2017-12-31T01:11Z or 2017-12-31T01Z or 2017-12-31 """
     accepted_date_formats = ['%Y-%m-%dT%H:%M:%SZ', '%Y-%m-%dT%H:%MZ',
                              '%Y-%m-%dT%HZ', '%Y-%m-%d']

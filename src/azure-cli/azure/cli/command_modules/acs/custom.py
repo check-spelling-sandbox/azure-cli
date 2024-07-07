@@ -952,7 +952,7 @@ def _update_upgrade_settings(cmd, instance,
                 instance.upgrade_settings.override_settings.until = parse(upgrade_override_until)
             except Exception:  # pylint: disable=broad-except
                 raise InvalidArgumentValueError(
-                    f"{upgrade_override_until} is not a valid datatime format."
+                    f"{upgrade_override_until} is not a valid datetime format."
                 )
         elif force_upgrade:
             default_extended_until = datetime.datetime.utcnow() + datetime.timedelta(days=3)

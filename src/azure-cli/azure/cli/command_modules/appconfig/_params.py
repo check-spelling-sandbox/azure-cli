@@ -55,7 +55,7 @@ def load_arguments(self, _):
         help="Space-separated filter parameters in 'name[=value]' format. The value must be an escaped JSON string.",
         nargs='*'
     )
-    datatime_filter_arg_type = CLIArgumentType(
+    datetime_filter_arg_type = CLIArgumentType(
         validator=validate_datetime,
         help='Format: "YYYY-MM-DDThh:mm:ssZ". If no time zone specified, use UTC by default.'
     )
@@ -121,7 +121,7 @@ def load_arguments(self, _):
         c.argument('connection_string', validator=validate_connection_string,
                    help="Combination of access key and endpoint of the App Configuration store. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.")
         c.argument('yes', options_list=['--yes', '-y'], help='Do not prompt for confirmation.')
-        c.argument('datetime', arg_type=datatime_filter_arg_type)
+        c.argument('datetime', arg_type=datetime_filter_arg_type)
         c.argument('top', arg_type=top_arg_type)
         c.argument('all_', options_list=['--all'], action='store_true', help="List all items.")
         c.argument('fields', arg_type=fields_arg_type)

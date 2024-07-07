@@ -7180,7 +7180,7 @@ class AKSManagedClusterUpdateDecorator(BaseAKSManagedClusterDecorator):
                     mc.upgrade_settings.override_settings.until = parse(override_until)
                 except Exception:  # pylint: disable=broad-except
                     raise InvalidArgumentValueError(
-                        f"{override_until} is not a valid datatime format."
+                        f"{override_until} is not a valid datetime format."
                     )
             elif force_upgrade:
                 default_extended_until = datetime.datetime.utcnow() + datetime.timedelta(days=3)
