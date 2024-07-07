@@ -190,7 +190,7 @@ class KuduClient:  # pylint:disable=too-many-instance-attributes
         # if the deployment is taking longer than expected
         if res_dict.get('status', 0) != 4:
             raise CLIError("""Deployment is taking longer than expected. Please verify
-                                status at '{}' beforing launching the app""".format(deployment_status_url))
+                                status at '{}' before launching the app""".format(deployment_status_url))
         return res_dict
 
     def __empty_source_folder(self):
