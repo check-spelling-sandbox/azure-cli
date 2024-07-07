@@ -174,7 +174,7 @@ class ContainerAppJobDecorator(BaseResource):
     def get_argument_workload_profile_name(self):
         return self.get_param("workload_profile_name")
 
-    def set_augument_workload_profile_name(self, workload_profile_name):
+    def set_argument_workload_profile_name(self, workload_profile_name):
         self.set_param("workload_profile_name", workload_profile_name)
 
 
@@ -261,7 +261,7 @@ class ContainerAppJobCreateDecorator(ContainerAppJobDecorator):
 
         if not self.get_argument_workload_profile_name() and "workloadProfiles" in managed_env_info:
             workload_profile_name = get_default_workload_profile_name_from_env(self.cmd, managed_env_info, managed_env_rg)
-            self.set_augument_workload_profile_name(workload_profile_name)
+            self.set_argument_workload_profile_name(workload_profile_name)
 
         manualTriggerConfig_def = None
         if self.get_argument_trigger_type() is not None and self.get_argument_trigger_type().lower() == "manual":

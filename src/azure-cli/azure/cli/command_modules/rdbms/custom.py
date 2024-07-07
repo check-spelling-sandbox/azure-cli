@@ -247,7 +247,7 @@ def _server_restore(cmd, client, resource_group_name, server_name, source_server
 
 # need to replace source server name with source server id, so customer server georestore function
 # The parameter list should be the same as that in factory to use the ParametersContext
-# auguments and validators
+# arguments and validators
 def _server_georestore(cmd, client, resource_group_name, server_name, sku_name, location, source_server,
                        backup_retention=None, geo_redundant_backup=None, no_wait=False, **kwargs):
     provider = 'Microsoft.DBforPostgreSQL'
