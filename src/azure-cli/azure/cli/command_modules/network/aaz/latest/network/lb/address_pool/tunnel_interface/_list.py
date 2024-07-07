@@ -16,9 +16,9 @@ from azure.cli.core.aaz import *
     is_preview=True,
 )
 class List(AAZCommand):
-    """List all tunnel interfacees of the load balance tunnel interface pool.
+    """List all tunnel interfaces of the load balance tunnel interface pool.
 
-    :example: List all tunnel interfacees of the load balance tunnel interface pool.
+    :example: List all tunnel interfaces of the load balance tunnel interface pool.
         az network lb address-pool tunnel-interface list -g MyResourceGroup --lb-name MyLb --address-pool MyAddressPool
     """
 

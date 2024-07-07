@@ -3511,9 +3511,9 @@ examples:
 
 helps['network lb address-pool tunnel-interface list'] = """
 type: command
-short-summary: List all tunnel interfacees of the load balance tunnel interface pool.
+short-summary: List all tunnel interfaces of the load balance tunnel interface pool.
 examples:
-  - name: List all tunnel interfacees of the load balance tunnel interface pool.
+  - name: List all tunnel interfaces of the load balance tunnel interface pool.
     text: az network lb address-pool tunnel-interface list -g MyResourceGroup --lb-name MyLb --address-pool MyAddressPool
 """
 
