@@ -153,7 +153,7 @@ def _try_parse_key_value_object(parameters, template_obj, value):
     elif param_type == 'int':
         parameters[key] = {'value': int(value)}
     else:
-        logger.warning("Unrecognized type '%s' for parameter '%s'. Interpretting as string.", param_type, key)
+        logger.warning("Unrecognized type '%s' for parameter '%s'. Interpreting as string.", param_type, key)
         parameters[key] = {'value': value}
 
     return True
