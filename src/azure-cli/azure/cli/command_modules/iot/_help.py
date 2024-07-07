@@ -77,7 +77,7 @@ short-summary: Manage certificates for an Azure IoT Hub Device Provisioning Serv
 
 helps['iot dps certificate create'] = """
 type: command
-short-summary: Create/upload a certficate to an Azure IoT Hub Device Provisioning Service instance.
+short-summary: Create/upload a certificate to an Azure IoT Hub Device Provisioning Service instance.
 examples:
   - name: Upload a CA certificate PEM file to an Azure IoT Hub Device Provisioning Service instance.
     text: >

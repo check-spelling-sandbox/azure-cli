@@ -713,7 +713,7 @@ class KeyVaultSoftDeleteScenarioTest(ScenarioTest):
         self.cmd('keyvault certificate import --vault-name {kv} -n cert1 --file "{pem_plain_file}" -p @"{pem_policy_path}"')
         self.cmd('keyvault certificate import --vault-name {kv} -n cert2 --file "{pem_plain_file}" -p @"{pem_policy_path}"')
 
-        # delete the secrets keys and certficates
+        # delete the secrets keys and certificates
         self.cmd('keyvault secret delete --vault-name {kv} -n secret1')
         self.cmd('keyvault secret delete --vault-name {kv} -n secret2')
         self.cmd('keyvault key delete --vault-name {kv} -n key1')
