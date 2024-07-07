@@ -353,7 +353,7 @@ def flexible_server_create(cmd, client,
     # Process parameters
     server_name = server_name.lower()
 
-    # MySQL chnged MemoryOptimized tier to BusinessCritical (only in client tool not in list-skus return)
+    # MySQL changed MemoryOptimized tier to BusinessCritical (only in client tool not in list-skus return)
     if tier == 'BusinessCritical':
         tier = 'MemoryOptimized'
     mysql_arguments_validator(db_context,
@@ -967,7 +967,7 @@ def flexible_server_update_custom_func(cmd, client, instance,
         cf_availability_without_location=cf_mysql_check_resource_availability_without_location,
         logging_name='MySQL', command_group='mysql', server_client=client, location=instance.location)
 
-    # MySQL chnged MemoryOptimized tier to BusinessCritical (only in client tool not in list-skus return)
+    # MySQL changed MemoryOptimized tier to BusinessCritical (only in client tool not in list-skus return)
     if tier == 'BusinessCritical':
         tier = 'MemoryOptimized'
     mysql_arguments_validator(db_context,
