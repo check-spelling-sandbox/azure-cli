@@ -535,7 +535,7 @@ def remove_identity(cmd, client, registry_name, identities, resource_group_name=
         registry.identity.type = (ResourceIdentityType.none
                                   if registry.identity.type.lower() == ResourceIdentityType.system_assigned.lower()
                                   else ResourceIdentityType.user_assigned)
-        # if we have no system assigned identitiy then set identity object to none
+        # if we have no system assigned identity then set identity object to none
         registry.identity.principal_id = None
         registry.identity.tenant_id = None
 

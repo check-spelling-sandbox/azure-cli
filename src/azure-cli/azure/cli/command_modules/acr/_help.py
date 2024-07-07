@@ -933,7 +933,7 @@ examples:
         az acr task create -t hello-world:{{.Run.ID}} -n hello-world -r myregistry \\
             --pull-request-trigger-enabled true --schedule "dailyTimer:0 12 * * Mon-Fri" \\
             -c https://github.com/Azure-Samples/acr-tasks.git#:multipleRegistries -f testtask.yaml \\
-            --assign-identity [system] "/subscriptions/<subscriptionId>/resourcegroups/<myResourceGroup>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<myUserAssignedIdentitiy>"
+            --assign-identity [system] "/subscriptions/<subscriptionId>/resourcegroups/<myResourceGroup>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<myUserAssignedIdentity>"
 """
 
 helps['acr task credential'] = """
@@ -1026,11 +1026,11 @@ examples:
   - name: Assign user-assigned managed identities to an existing task. This will remove the existing system-assigned identity.
     text: |
         az acr task identity assign -n MyTask -r myregistry \\
-            --identities "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentitiy"
+            --identities "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentity"
   - name: Assign both system-assigned and user-assigned managed identities to an existing task.
     text: |
         az acr task identity assign -n MyTask -r myregistry \\
-            --identities [system] "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentitiy"
+            --identities [system] "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentity"
 """
 
 helps['acr task identity remove'] = """
@@ -1043,7 +1043,7 @@ examples:
   - name: Remove a user-assigned identity from a task.
     text: |
         az acr task identity remove -n MyTask -r myregistry \\
-            --identities "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentitiy"
+            --identities "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentity"
   - name: Remove all managed identities from a task.
     text: >
         az acr task identity remove -n MyTask -r myregistry --identities [all]

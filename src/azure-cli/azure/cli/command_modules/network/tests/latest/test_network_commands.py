@@ -832,7 +832,7 @@ class NetworkAppGatewayDefaultScenarioTest(ScenarioTest):
         self.cmd("network application-gateway delete -g {rg} -n {appgw}")
 
 
-class NetworkAppGatewayIndentityScenarioTest(ScenarioTest):
+class NetworkAppGatewayIdentityScenarioTest(ScenarioTest):
 
     @live_only()
     @ResourceGroupPreparer(name_prefix='cli_test_ag_identity')

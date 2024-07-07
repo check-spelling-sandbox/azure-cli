@@ -376,7 +376,7 @@ def parse_secret_flags(secret_list):
     for secret in secret_list:
         key_val = secret.split('=', 1)
         if len(key_val) != 2:
-            raise ValidationError("Secrets must be in format \"<key>=<value> <key>=<value> ...\" or \"<key>=<keyvaultref:keyvaulturl,identityref:indentityId> ...\".")
+            raise ValidationError("Secrets must be in format \"<key>=<value> <key>=<value> ...\" or \"<key>=<keyvaultref:keyvaulturl,identityref:identityId> ...\".")
         if key_val[0] in secret_entries:
             raise ValidationError("Duplicate secret \"{secret}\" found, secret names must be unique.".format(secret=key_val[0]))
         secret_entries.append(key_val[0])
@@ -389,9 +389,9 @@ def parse_secret_flags(secret_list):
         kv_identity = value.split(',', 2)
         if len(kv_identity) == 1:
             if kv_identity[0].startswith('keyvaultref:'):
-                raise ValidationError("Identityref is missing. Secrets must be in format \"<key>=<value> <key>=<value> ...\" or \"<key>=<keyvaultref:keyvaulturl,identityref:indentityId> ...\".")
+                raise ValidationError("Identityref is missing. Secrets must be in format \"<key>=<value> <key>=<value> ...\" or \"<key>=<keyvaultref:keyvaulturl,identityref:identityId> ...\".")
             if kv_identity[0].startswith('identityref:'):
-                raise ValidationError("Keyvaultref is missing. Secrets must be in format \"<key>=<value> <key>=<value> ...\" or \"<key>=<keyvaultref:keyvaulturl,identityref:indentityId> ...\".")
+                raise ValidationError("Keyvaultref is missing. Secrets must be in format \"<key>=<value> <key>=<value> ...\" or \"<key>=<keyvaultref:keyvaulturl,identityref:identityId> ...\".")
 
         if len(kv_identity) == 2:
             kv = kv_identity[0]
