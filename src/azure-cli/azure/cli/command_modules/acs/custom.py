@@ -2030,7 +2030,7 @@ def aks_runcommand(cmd, client, resource_group_name, name, command_string="", co
 
     # if this cluster have Azure AD enabled, we should pass user token.
     # so the command execution also using current user identity.
-    # here we aquire token for AKS managed server AppID (same id for all cloud)
+    # here we acquire token for AKS managed server AppID (same id for all cloud)
     if mc.aad_profile is not None and mc.aad_profile.managed:
         request_payload.cluster_token = _get_dataplane_aad_token(
             cmd.cli_ctx, "6dae42f8-4368-4678-94ff-3960e28e3630")
