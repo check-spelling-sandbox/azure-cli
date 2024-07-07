@@ -3055,7 +3055,7 @@ class SynapseScenarioTests(ScenarioTest):
             'edit_table_file': os.path.join(os.path.join(os.path.dirname(__file__), 'assets'), 'link-connection-table.json'),
             'file': os.path.join(os.path.join(os.path.dirname(__file__), 'assets'), 'linkconnectionfortest.json')
         })
-        # create link connnection
+        # create link connection
         self.cmd(
             'az synapse link-connection create --workspace-name {workspace_name} '
             '--name {link_connection_name} --file @"{file}" ',
@@ -3064,14 +3064,14 @@ class SynapseScenarioTests(ScenarioTest):
             ])
 
         time.sleep(600)
-        # get link connnection
+        # get link connection
         self.cmd(
             'az synapse link-connection show --workspace-name {workspace_name} --name {link_connection_name}',
             checks=[
                 self.check('name', self.kwargs['link_connection_name'])
             ])
 
-        # list link connnection
+        # list link connection
         self.cmd(
             'az synapse link-connection list --workspace-name {workspace_name}',
             checks=[
@@ -3083,7 +3083,7 @@ class SynapseScenarioTests(ScenarioTest):
             'az synapse link-connection edit-link-tables --workspace-name {workspace_name} --n {link_connection_name} --file @"{edit_table_file}" ')
         
         time.sleep(600)
-        # start a link connnection
+        # start a link connection
         self.cmd(
             'az synapse link-connection start --workspace-name {workspace_name} --name {link_connection_name}')
         self.cmd(
@@ -3093,7 +3093,7 @@ class SynapseScenarioTests(ScenarioTest):
             ])
 
         time.sleep(120)
-        # stop a link connnection
+        # stop a link connection
         self.cmd(
             'az synapse link-connection stop --workspace-name {workspace_name} --name {link_connection_name}')
         self.cmd(
@@ -3110,7 +3110,7 @@ class SynapseScenarioTests(ScenarioTest):
             ])
 
         time.sleep(300)
-        #delete a link connnection
+        #delete a link connection
         self.cmd(
             'az synapse link-connection delete --workspace-name {workspace_name} --name {link_connection_name}')
         self.cmd(

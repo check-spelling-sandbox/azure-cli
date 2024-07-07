@@ -2369,7 +2369,7 @@ examples:
   - name: Get a link-connection.
     text: |-
         az synapse link-connection show --workspace-name testsynapseworkspace \\
-          --name testlinkconectionname
+          --name testlinkconnectionname
 """
 
 helps['synapse link-connection delete'] = """
@@ -2426,7 +2426,7 @@ helps['synapse link-connection update'] = """
 type: command
 short-summary: Update a link connection.
 examples:
-  - name: Update a link connnection.
+  - name: Update a link connection.
           Definition.json sample is
           {
             "name":"sampleLinkConnection", // please change to your link connection name
@@ -2464,7 +2464,7 @@ examples:
 
 helps['synapse link-connection start'] = """
 type: command
-short-summary: Start a link connnection.
+short-summary: Start a link connection.
 examples:
   - name: Start a link connection.
     text: |-

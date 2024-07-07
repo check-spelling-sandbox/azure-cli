@@ -195,7 +195,7 @@ Release History
 
 * [BREAKING CHANGE] `az network dns zone`: Deprecate `--zone-type`, `registration-vnets` and `resolution-vnets` (#28640)
 * `az network vnet subnet`: Add parameter `--sharing-scope` (#28752)
-* `az network private-endpoint-connnection`: Add `Microsoft.App/managedEnvironment` for private endpoint connections (#28794)
+* `az network private-endpoint-connection`: Add `Microsoft.App/managedEnvironment` for private endpoint connections (#28794)
 * Fix #28615: `az network application-gateway address-pool update`: Race condition in concurrent scenario (#28777)
 * Fix #28705: `az network lb rule`: Authentication token not being generated (#28840)
 

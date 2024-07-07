@@ -6663,7 +6663,7 @@ def show_conn_policy(
         resource_group_name,
         server_name):
     '''
-    Shows a connectin policy
+    Shows a connection policy
     '''
     return client.get(
         resource_group_name=resource_group_name,
@@ -6677,7 +6677,7 @@ def update_conn_policy(
         server_name,
         connection_type):
     '''
-    Updates a connectin policy
+    Updates a connection policy
     '''
     return client.begin_create_or_update(
         resource_group_name=resource_group_name,

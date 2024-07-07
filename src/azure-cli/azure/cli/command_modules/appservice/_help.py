@@ -22,7 +22,7 @@ type: command
 short-summary: set the key that all apps in an appservice plan use to connect to the hybrid-connections in that appservice plan
 examples:
   - name: set the key that all apps in an appservice plan use to connect to the hybrid-connections in that appservice plan
-    text: az appservice hybrid-connection set-key -g MyResourceGroup --plan MyAppServicePlan --namespace [HybridConectionNamespace] --hybrid-connection [HybridConnectionName] --key-type ["primary"/"secondary"]
+    text: az appservice hybrid-connection set-key -g MyResourceGroup --plan MyAppServicePlan --namespace [HybridConnectionNamespace] --hybrid-connection [HybridConnectionName] --key-type ["primary"/"secondary"]
 """
 
 helps['appservice list-locations'] = """

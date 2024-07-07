@@ -2967,7 +2967,7 @@ class NetworkPrivateLinkHDInsightScenarioTest(ScenarioTest):
                 self.check('properties.privateLinkServiceConnectionState.status', 'Approved')
             ])
 
-        # Test reject private endpoint connnection
+        # Test reject private endpoint connection
         self.cmd('network private-endpoint-connection reject --id {private-endpoint-connection-id}'
                  ' --description {reject_description_msg}', checks=[
             self.check('properties.privateLinkServiceConnectionState.status', 'Rejected'),
@@ -3222,7 +3222,7 @@ class NetworkPrivateLinkDataFactoryScenarioTest(ScenarioTest):
                 self.check('properties.privateLinkServiceConnectionState.status', 'Approved')
             ])
 
-        # Test reject private endpoint connnection
+        # Test reject private endpoint connection
         self.cmd('network private-endpoint-connection reject --id {private-endpoint-connection-id}'
                  ' --description {reject_description_msg}', checks=[
                   self.check('properties.privateLinkServiceConnectionState.status', 'Rejected'),
@@ -3872,7 +3872,7 @@ class NetworkPrivateLinkDeviceUpdateScenarioTest(ScenarioTest):
                 self.check('properties.privateLinkServiceConnectionState.status', 'Approved')
             ])
 
-        # Test reject private endpoint connnection
+        # Test reject private endpoint connection
         self.cmd('network private-endpoint-connection reject --id {private-endpoint-connection-id}'
                  ' --description {reject_description_msg}', checks=[
                   self.check('properties.privateLinkServiceConnectionState.status', 'Rejected'),
@@ -4085,7 +4085,7 @@ class NetworkPrivateLinkMLRegistryScenarioTest(ScenarioTest):
                 self.check('properties.privateLinkServiceConnectionState.status', 'Approved')
             ])
 
-        # Test reject private endpoint connnection
+        # Test reject private endpoint connection
         self.cmd('network private-endpoint-connection reject --id {private-endpoint-connection-id}'
                  ' --description {reject_description_msg}', checks=[
                   self.check('properties.privateLinkServiceConnectionState.status', 'Rejected'),
@@ -4162,7 +4162,7 @@ class NetworkPrivateLinkMicrosoftMonitorAccountsRegistryScenarioTest(ScenarioTes
                 self.check('properties.privateLinkServiceConnectionState.status', 'Approved')
             ])
 
-        # Test reject previous approved private endpoint connnection
+        # Test reject previous approved private endpoint connection
         self.cmd('network private-endpoint-connection reject --id {private_endpoint_connection2_id}'
                  ' --description {reject_desc}', checks=[
                   self.check('properties.privateLinkServiceConnectionState.status', 'Rejected'),

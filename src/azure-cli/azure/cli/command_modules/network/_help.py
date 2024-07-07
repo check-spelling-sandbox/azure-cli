@@ -5100,7 +5100,7 @@ type: command
 short-summary: Disconnect vpn connections of virtual network gateway.
 examples:
   - name: Disconnect vpn connections of virtual network gateway.
-    text: az network vnet-gateway disconnect-vpn-connections -g MyResourceGroup -n MyVnetGateway --vpn-connections MyConnetion1ByName MyConnection2ByID
+    text: az network vnet-gateway disconnect-vpn-connections -g MyResourceGroup -n MyVnetGateway --vpn-connections MyConnection1ByName MyConnection2ByID
 """
 
 helps['network vnet-gateway ipsec-policy'] = """

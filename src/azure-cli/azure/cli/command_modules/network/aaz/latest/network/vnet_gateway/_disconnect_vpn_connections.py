@@ -19,7 +19,7 @@ class DisconnectVpnConnections(AAZCommand):
     """Disconnect vpn connections of virtual network gateway.
 
     :example: Disconnect vpn connections of virtual network gateway.
-        az network vnet-gateway disconnect-vpn-connections -g MyResourceGroup -n MyVnetGateway --vpn-connections MyConnetion1ByName MyConnection2ByID
+        az network vnet-gateway disconnect-vpn-connections -g MyResourceGroup -n MyVnetGateway --vpn-connections MyConnection1ByName MyConnection2ByID
     """
 
     _aaz_info = {
