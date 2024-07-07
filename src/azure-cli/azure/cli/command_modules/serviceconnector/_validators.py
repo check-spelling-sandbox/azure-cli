@@ -400,17 +400,17 @@ def validate_source_resource_id(cmd, namespace):
 def validate_connection_id(namespace):
     '''Validate resource id of a connection
     '''
-    if getattr(namespace, 'indentifier', None):
+    if getattr(namespace, 'identifier', None):
         matched = False
         for resource in list(SOURCE_RESOURCES.values()) + [WEB_APP_SLOT_RESOURCE, SPRING_APP_DEPLOYMENT_RESOURCE]:
             regex = '({})/providers/Microsoft.ServiceLinker/linkers/([^/]*)'.format(get_resource_regex(resource))
-            matched = re.match(regex, namespace.indentifier, re.IGNORECASE)
+            matched = re.match(regex, namespace.identifier, re.IGNORECASE)
             if matched:
                 namespace.source_id = matched.group(1)
                 namespace.connection_name = matched.group(2)
                 return True
         if not matched:
-            e = InvalidArgumentValueError('Connection id is invalid: {}'.format(namespace.indentifier))
+            e = InvalidArgumentValueError('Connection id is invalid: {}'.format(namespace.identifier))
             telemetry.set_exception(e, 'connection-id-invalid')
             raise e
 

@@ -66,7 +66,7 @@ def add_source_resource_block(context, source, enable_id=True, validate_source_i
             **validator_kwargs)
     else:
         required_args.append('--connection')
-        context.argument('indentifier', options_list=['--id'], type=str,
+        context.argument('identifier', options_list=['--id'], type=str,
                          help="The resource id of the connection. {required_args} are required "
                          "if '--id' is not specified.".format(required_args=str(required_args)))
         context.ignore('source_id')
