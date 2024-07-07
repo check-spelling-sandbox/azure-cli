@@ -435,7 +435,7 @@ class TestMonitorAutoscaleScenario(ScenarioTest):
                 self.check('scaleAction.type', 'ExactCount'),
                 self.check('scaleAction.value', '5')
             ])
-        self.cmd('monitor autoscale show-predictive-metric -g {rg} --autoscale-setting-name {vmss} --aggregation Total --interva PT1H '
+        self.cmd('monitor autoscale show-predictive-metric -g {rg} --autoscale-setting-name {vmss} --aggregation Total --interval PT1H '
                  '--metric-name "PercentageCPU" --metric-namespace "Microsoft.Compute/virtualMachineScaleSets" '
                  '--timespan "2022-01-14T22:00:00.000Z/2022-01-16T22:00:00.000Z" ',
                  checks=[
