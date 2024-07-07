@@ -1782,7 +1782,7 @@ def _azure_monitor_quickstart(cmd, name, resource_group_name, storage_account, l
                                     resource_uri=env_id,
                                     storage_account=storage_account,
                                     logs=json.loads(LOGS_STRING))
-        logger.warning("Azure Monitor diagnastic settings created successfully.")
+        logger.warning("Azure Monitor diagnostic settings created successfully.")
     except Exception as ex:
         handle_raw_exception(ex)
 
