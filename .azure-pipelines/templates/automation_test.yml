@@ -65,7 +65,7 @@ steps:
 
       if [[ "$(Build.Reason)" == "PullRequest" && "${{ parameters.fullTest }}" == 'False' ]]; then
         echo "Running incremental test"
-        # If CI is set to shallow fetch, target branch should be expilictly fetched.
+        # If CI is set to shallow fetch, target branch should be explicitly fetched.
         git fetch origin --depth=1 $(System.PullRequest.TargetBranch)
         azdev test --no-exitfirst --repo=./ --src=HEAD --tgt=origin/$(System.PullRequest.TargetBranch) --cli-ci --profile ${{ parameters.profile }} --verbose --series --pytest-args "--durations=10"
       else
