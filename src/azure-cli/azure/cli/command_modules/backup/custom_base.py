@@ -323,8 +323,8 @@ def unregister_container(cmd, client, vault_name, resource_group_name, container
     container_friendly_name = None
     container_type = custom_help.validate_and_extract_container_type(container_name, backup_management_type)
 
-    containrs_client = backup_protection_containers_cf(cmd.cli_ctx)
-    container = show_container(cmd, containrs_client, container_name, resource_group_name, vault_name,
+    containers_client = backup_protection_containers_cf(cmd.cli_ctx)
+    container = show_container(cmd, containers_client, container_name, resource_group_name, vault_name,
                                backup_management_type)
     container_name = container.name
     container_friendly_name = container.properties.friendly_name
