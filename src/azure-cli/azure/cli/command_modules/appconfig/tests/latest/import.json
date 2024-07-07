@@ -1,7 +1,7 @@
 {
   "BackgroundColor": "red",
   "Language": "spanish",
-  "Langugage": "English",
+  "Language": "English",
   "Settings:BackgroundColor": {
     "cars":{"Toyota":"Acura"},
     "ship":["ship1", "ship2", "ship3"]
