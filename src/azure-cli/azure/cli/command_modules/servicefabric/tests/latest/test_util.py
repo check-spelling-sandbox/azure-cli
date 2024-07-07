@@ -81,7 +81,7 @@ def _wait_for_cluster_state_ready(test, kwargs):
             time.sleep(60)
 
 
-# Manged Cluster helpers
+# Managed Cluster helpers
 def _create_managed_cluster(test, kwargs):
     test.cmd('az sf managed-cluster create -g {rg} -c {cluster_name} -l {loc} --cert-thumbprint {cert_tp} --cert-is-admin --admin-password {vm_password}',
              checks=[test.check('provisioningState', 'Succeeded'),

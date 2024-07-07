@@ -437,7 +437,7 @@ examples:
 
 helps['sf managed-cluster client-certificate'] = """
 type: group
-short-summary: Manage client certificates of a manged cluster.
+short-summary: Manage client certificates of a managed cluster.
 """
 
 helps['sf managed-cluster client-certificate add'] = """
