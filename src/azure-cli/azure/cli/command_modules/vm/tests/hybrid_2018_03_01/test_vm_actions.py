@@ -54,7 +54,7 @@ class TestActions(unittest.TestCase):
         self.assertTrue(os.path.isfile(private_key_file))
 
         # 2 verify we load existing key files
-        # for convinience we will reuse the generated file in the previous step
+        # for convenience we will reuse the generated file in the previous step
         args2 = mock.MagicMock()
         args2.ssh_key_name = None
         args2.ssh_key_value = [generated_public_key_string]
