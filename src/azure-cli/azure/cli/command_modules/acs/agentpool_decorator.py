@@ -336,7 +336,7 @@ class AKSAgentPoolContext(BaseAKSContext):
     def get_snapshot(self) -> Union[Snapshot, None]:
         """Helper function to retrieve the Snapshot object corresponding to a snapshot id.
 
-        This fuction will store an intermediate "snapshot" to avoid sending the same request multiple times.
+        This function will store an intermediate "snapshot" to avoid sending the same request multiple times.
 
         Function "get_snapshot_by_snapshot_id" will be called to retrieve the Snapshot object corresponding to a
         snapshot id, which internally used the snapshot client (snapshots operations belonging to container service
