@@ -671,7 +671,7 @@ def update_cluster_reliability_level(cmd,
     if instance_target > instance_now:
         if vmss.sku.capacity < instance_target:
             if auto_add_node is not True:
-                raise CLIError('Please use --auto_add_node to automatically increase the nodes,{} requires {} nodes, but currenty there are {}'.
+                raise CLIError('Please use --auto_add_node to automatically increase the nodes,{} requires {} nodes, but currently there are {}'.
                                format(reliability_level, instance_target, vmss.sku.capacity))
             vmss.sku.capacity = instance_target
             vmss_poll = compute_client.virtual_machine_scale_sets.begin_create_or_update(
