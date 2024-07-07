@@ -335,7 +335,7 @@ class BatchMgmtApplicationScenarioTests(ScenarioTest):
             self.check('name', '{app}'),
             self.check('defaultVersion', '{app_p}')])
 
-        # test batch applcation delete
+        # test batch application delete
         self.cmd('batch application package delete -g {rg} -n {acc} --application-name {app} '
                  '--version {app_p} --yes')
         self.cmd('batch application delete -g {rg} -n {acc} --application-name {app} --yes')

@@ -7666,7 +7666,7 @@ Added Cluster commands and trusted_service_access_enabled parameter for Networkr
 
 **ServiceFabric**
 
-* Adding new commands to manage appliaction and services.
+* Adding new commands to manage application and services.
     - sf application-type
         - list
         - delete
