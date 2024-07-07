@@ -136,11 +136,11 @@ def configure_rule_parameters(c, is_afdx):
 
     all_actions = list(DeliveryRuleAction._subtype_map["name"].keys())
     if is_afdx:
-        excldued_actions = ["UrlSigning", "CacheExpiration", "CacheKeyQueryString", "OriginGroupOverride"]
+        excluded_actions = ["UrlSigning", "CacheExpiration", "CacheKeyQueryString", "OriginGroupOverride"]
         c.argument('action_name', arg_group="Action",
                    help='The name of the action for the delivery rule: '
                         'https://docs.microsoft.com/en-us/azure/frontdoor/front-door-rules-engine-actions',
-                   arg_type=get_enum_type([action for action in all_actions if action not in excldued_actions]))
+                   arg_type=get_enum_type([action for action in all_actions if action not in excluded_actions]))
 
         c.argument('cache_behavior', arg_group="Action",
                    arg_type=get_enum_type(['HonorOrigin', 'OverrideAlways', 'OverrideIfOriginMissing']),
@@ -172,11 +172,11 @@ def configure_rule_parameters(c, is_afdx):
                    arg_group="Action",
                    help='Indicates whether to enable caching on the route.')
     else:
-        excldued_actions = ["RouteConfigurationOverride", "UrlSigning"]
+        excluded_actions = ["RouteConfigurationOverride", "UrlSigning"]
         c.argument('action_name', arg_group="Action",
                    help='The name of the action for the delivery rule: '
                         'https://docs.microsoft.com/en-us/azure/cdn/cdn-standard-rules-engine-actions',
-                   arg_type=get_enum_type([action for action in all_actions if action not in excldued_actions]))
+                   arg_type=get_enum_type([action for action in all_actions if action not in excluded_actions]))
 
         # CacheExpirationAction parameters
         c.argument('cache_behavior', arg_group="Action",
