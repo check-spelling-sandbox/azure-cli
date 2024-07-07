@@ -1836,7 +1836,7 @@ class FlexibleServerPrivateDnsZoneScenarioTest(ScenarioTest):
                  checks=[JMESPathCheck('addressPrefix', subnet_prefix),
                          JMESPathCheck('delegations[0].serviceName', delegation_service_name)])
 
-        # exisitng private dns zone in vnet group
+        # existing private dns zone in vnet group
         vnet_group_dns_zone = 'clitestvnetgroup.{}.database.azure.com'.format(database_engine)
         self.cmd('network private-dns zone create -g {} --name {}'.format(
                  vnet_resource_group, vnet_group_dns_zone))

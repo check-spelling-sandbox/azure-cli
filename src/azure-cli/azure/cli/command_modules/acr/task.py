@@ -432,7 +432,7 @@ def acr_task_update(cmd,  # pylint: disable=too-many-locals, too-many-statements
         git_access_token = step.context_access_token
 
     step = update_task_step(
-        step=step,  # Need exisiting step for update
+        step=step,  # Need existing step for update
         context_path=context_path,
         cmd=cmd,
         encoded_task_content=encoded_task_content,
