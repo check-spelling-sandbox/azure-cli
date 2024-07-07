@@ -360,7 +360,7 @@ def _get_vault_public_network_access(public_network_access):
 
 
 def _force_delete_vault(cmd, vault_name, resource_group_name):
-    logger.warning('Attemping to force delete vault: %s', vault_name)
+    logger.warning('Attempting to force delete vault: %s', vault_name)
     container_client = backup_protection_containers_cf(cmd.cli_ctx)
     protection_containers_client = protection_containers_cf(cmd.cli_ctx)
     backup_item_client = backup_protected_items_cf(cmd.cli_ctx)
