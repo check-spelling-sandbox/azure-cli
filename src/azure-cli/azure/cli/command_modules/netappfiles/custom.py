@@ -22,7 +22,7 @@ from .aaz.latest.netappfiles.pool import Create as _PoolCreate, Update as _PoolU
 
 logger = get_logger(__name__)
 
-# RP expted bytes but CLI allows integer TiBs for ease of use
+# RP expected bytes but CLI allows integer TiBs for ease of use
 gib_scale = 1024 * 1024 * 1024
 tib_scale = gib_scale * 1024
 
