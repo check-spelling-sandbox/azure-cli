@@ -5363,7 +5363,7 @@ Workload container registration fix, SDK upgraded to 0.12.0, Fixed and Re-ran te
 * Fix #14054: 'NoneType' object has no attribute '__name__' (#16993)
 * Fix #16679: `az storage blob download` fails with "Permission denied" if the destination file is a directory (#17008)
 * Upgrade storage api version to 2021-01-01 (#17028)
-* Support version in Lifecyle management policy (#16724)
+* Support version in Lifecycle management policy (#16724)
 * Support storage account shared key access management (#16759)
 * `az storage account network-rule`: GA resource access rules (#16995)
 * Support double encryption for encryption scope (#17087)
