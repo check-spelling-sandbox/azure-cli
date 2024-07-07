@@ -13,7 +13,7 @@ from azure.cli.command_modules.network._format import (
     transform_local_gateway_table_output, transform_dns_record_set_output,
     transform_dns_zone_table_output, transform_public_ip_create_output,
     transform_traffic_manager_create_output,
-    transform_geographic_hierachy_table_output,
+    transform_geographic_hierarchy_table_output,
     transform_service_community_table_output, transform_waf_rule_sets_table_output,
     transform_network_usage_table, transform_nsg_rule_table_output,
     transform_vnet_table_output, transform_effective_route_table, transform_effective_nsg,
@@ -628,7 +628,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_traffic_manager_endpoints')
 
     from azure.cli.command_modules.network.aaz.latest.network.traffic_manager.endpoint import ShowGeographicHierarchy
-    self.command_table['network traffic-manager endpoint show-geographic-hierarchy'] = ShowGeographicHierarchy(loader=self, table_transformer=transform_geographic_hierachy_table_output)
+    self.command_table['network traffic-manager endpoint show-geographic-hierarchy'] = ShowGeographicHierarchy(loader=self, table_transformer=transform_geographic_hierarchy_table_output)
     # endregion
 
     # region VirtualNetworks

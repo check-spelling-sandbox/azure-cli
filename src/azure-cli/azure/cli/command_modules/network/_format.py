@@ -124,7 +124,7 @@ def transform_nsg_rule_table_output(result):
     return item
 
 
-def transform_geographic_hierachy_table_output(result):
+def transform_geographic_hierarchy_table_output(result):
     transformed = []
 
     def _extract_values(obj):
