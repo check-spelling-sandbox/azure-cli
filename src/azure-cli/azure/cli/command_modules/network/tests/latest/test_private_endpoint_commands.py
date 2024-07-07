@@ -3256,7 +3256,7 @@ class NetworkHybridComputePrivateLinkScopesTest(ScenarioTest):
         # install az connectedmachine
         self.cmd('extension add --name connectedmachine')
 
-        # Test connectedmachine private-link-scope funcitons and create a private link scope
+        # Test connectedmachine private-link-scope functions and create a private link scope
         self.cmd('connectedmachine private-link-scope create --scope-name {scope} -g {rg}', checks=[
             self.check('name', '{scope}')
         ])
