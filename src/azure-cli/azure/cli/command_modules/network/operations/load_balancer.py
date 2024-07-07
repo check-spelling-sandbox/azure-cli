@@ -441,7 +441,7 @@ class LBAddressPoolCreate(_LBAddressPoolBasicCreate):
         az network lb address-pool create -g MyResourceGroup --lb-name MyLb -n MyAddressPool --backend-address name=addr1 ip-address=10.0.0.1 subnet=/subscriptions/000/resourceGroups/MyRg/providers/Microsoft.Network/virtualNetworks/vnet/subnets/subnet1
     """
 
-    # inherient the BackendAddressPoolsCreateOrUpdate operation
+    # inherent the BackendAddressPoolsCreateOrUpdate operation
     class LoadBalancerBackendAddressPoolsCreateOrUpdate(_LBAddressPoolCreate.LoadBalancerBackendAddressPoolsCreateOrUpdate):
 
         def on_200_201(self, session):
