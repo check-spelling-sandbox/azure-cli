@@ -337,9 +337,9 @@ examples:
 
 helps['cdn endpoint rule action show'] = """
 type: command
-short-summary: show delivery rules asscociate with the endpoint.
+short-summary: show delivery rules associate with the endpoint.
 examples:
-  - name: show delivery rules asscociate with the endpoint.
+  - name: show delivery rules associate with the endpoint.
     text: >
         az cdn endpoint rule action show -g group --profile-name profile-name -n endpoint
 """
