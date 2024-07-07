@@ -88,10 +88,10 @@ helps['acr config authentication-as-arm update'] = """
 type: command
 short-summary: Update 'Azure AD authenticate as ARM' policy for an Azure Container Registry.
 examples:
-  - name: Disable 'Azure AD authenticate as ARM' policy for an Azure Container Registry, so only ACR audienced tokens can be used for authentication
+  - name: Disable 'Azure AD authenticate as ARM' policy for an Azure Container Registry, so only ACR audience tokens can be used for authentication
     text: >
         az acr config authentication-as-arm update -r myregistry --status Disabled
-  - name: Enable 'Azure AD authenticate as ARM' policy for an Azure Container Registry, it will allow both ACR and ARM audienced tokens to be used for authentication
+  - name: Enable 'Azure AD authenticate as ARM' policy for an Azure Container Registry, it will allow both ACR and ARM audience tokens to be used for authentication
     text: >
         az acr config authentication-as-arm update -r myregistry --status Enabled
 """
