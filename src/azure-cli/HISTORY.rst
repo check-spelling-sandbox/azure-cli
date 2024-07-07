@@ -546,7 +546,7 @@ Release History
 * `az billing account`: Add new command `list-invoice-section` to support listing invoice section (#28214)
 * `az billing account`: Add new command group `invoice-section` to support managing account invoice section (#28214)
 * `az billing`: Add new command `enrollment-account` to support managing enrollment account (#28214)
-* `az billing invoice section`: Add new command `initiate-transfer` to support intiating transfer (#28214)
+* `az billing invoice section`: Add new command `initiate-transfer` to support initiating transfer (#28214)
 * `az billing profile`: Add new command `reservation list ` to support managing reservation (#28214)
 * `az billing`: Add new command group `transfer` to support managing transfer (#28214)
 
