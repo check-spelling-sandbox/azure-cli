@@ -41,7 +41,7 @@ def validate_update_application(cmd, namespace):
         raise CLIError("Application '{}' Not Found.".format(namespace.application_name))
     if namespace.application_type_version is not None:
         if app.type_version == namespace.application_type_version:
-            raise CLIError("The application '{}' is alrady running with type version '{}'."
+            raise CLIError("The application '{}' is already running with type version '{}'."
                            .format(app.name, app.type_version))
         type_version = _safe_get_resource(client.application_type_versions.get,
                                           (namespace.resource_group_name,
@@ -285,7 +285,7 @@ def validate_update_managed_application(cmd, namespace):
         raise CLIError("Application '{}' Not Found.".format(namespace.application_name))
     if namespace.application_type_version is not None:
         if app.version.endswith(namespace.application_type_version):
-            raise ValidationError("The application '{}' is alrady running with type version '{}'."
+            raise ValidationError("The application '{}' is already running with type version '{}'."
                                   .format(app.name, app.version))
         app_type_name = app.version.split("/")[-3]
         type_version = _safe_get_resource(client.application_type_versions.get,
