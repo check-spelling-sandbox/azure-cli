@@ -113,7 +113,7 @@ def build_public_ip_resource(cmd, name, location, tags, address_allocation, dns_
             'count': count
         }
 
-    # when multiple zones are provided(through a x-zone scale set), we don't propagate to PIP becasue it doesn't
+    # when multiple zones are provided(through a x-zone scale set), we don't propagate to PIP because it doesn't
     # support x-zone; rather we will rely on the Standard LB to work with such scale sets
     if zone and len(zone) == 1:
         public_ip['zones'] = zone
