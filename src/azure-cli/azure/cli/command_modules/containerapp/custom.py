@@ -3479,7 +3479,7 @@ def remove_dapr_component(cmd, resource_group_name, dapr_component_name, environ
 
     try:
         r = DaprComponentClient.delete(cmd, resource_group_name, environment_name, name=dapr_component_name)
-        logger.warning("Dapr componenet successfully deleted.")
+        logger.warning("Dapr component successfully deleted.")
         return r
     except Exception as e:
         handle_raw_exception(e)
