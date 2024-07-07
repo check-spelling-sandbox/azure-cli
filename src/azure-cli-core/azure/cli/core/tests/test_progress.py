@@ -19,7 +19,7 @@ class MockOutstream(progress.ProgressViewBase):
 
 
 class TestProgress(unittest.TestCase):
-    def test_progress_indicator_det_model(self):
+    def test_progress_indicator_determinate_model(self):
         # test the progress reporter
         reporter = progress.ProgressReporter()
         args = reporter.report()
@@ -63,7 +63,7 @@ class TestProgress(unittest.TestCase):
         self.assertTrue(after == before)
         view.write({'message': 'TESTING'})
 
-    def test_progress_indicator_det_stdview(self):
+    def test_progress_indicator_determinate_stdview(self):
         # test the determinate progress standardout view
         outstream = MockOutstream()
         view = progress.DeterminateStandardOut(out=outstream)
