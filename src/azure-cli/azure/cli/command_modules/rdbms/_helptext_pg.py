@@ -866,7 +866,7 @@ examples:
 
 helps['postgres flexible-server identity remove'] = """
 type: command
-short-summary: Remove user assigned managed identites from the server.
+short-summary: Remove user assigned managed identities from the server.
 examples:
   - name: Remove identity 'test-identity' from server 'testsvr'.
     text: az postgres flexible-server identity remove -g testgroup -s testsvr --identity test-identity
