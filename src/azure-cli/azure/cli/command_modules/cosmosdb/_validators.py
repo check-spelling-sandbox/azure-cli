@@ -51,10 +51,10 @@ def validate_capabilities(ns):
     """ Extracts multiple space-separated capabilities """
     from azure.mgmt.cosmosdb.models import Capability
     if ns.capabilities is not None:
-        capabilties_list = []
+        capabilities_list = []
         for item in ns.capabilities:
-            capabilties_list.append(Capability(name=item))
-        ns.capabilities = capabilties_list
+            capabilities_list.append(Capability(name=item))
+        ns.capabilities = capabilities_list
 
 
 def validate_virtual_network_rules(ns):
