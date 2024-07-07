@@ -538,7 +538,7 @@ def send_to_kusto(data):
     result = client.ingest_from_file(f"{ARTIFACT_DIR}/livetest.csv", ingestion_properties=ingestion_props)
     # Inspect the result for useful information, such as source_id and blob_url
     print(repr(result))
-    logger.info('Finsh send live test csv data to kusto db.')
+    logger.info('Finish send live test csv data to kusto db.')
 
 
 def get_container_name():

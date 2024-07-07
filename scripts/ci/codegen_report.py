@@ -76,7 +76,7 @@ def send_to_kusto(data):
     result = client.ingest_from_file(f"/tmp/codegen_report.csv", ingestion_properties=ingestion_props)
     # Inspect the result for useful information, such as source_id and blob_url
     print(repr(result))
-    logger.info('Finsh send codegen report csv data to kusto db.')
+    logger.info('Finish send codegen report csv data to kusto db.')
 
 
 if __name__ == '__main__':
