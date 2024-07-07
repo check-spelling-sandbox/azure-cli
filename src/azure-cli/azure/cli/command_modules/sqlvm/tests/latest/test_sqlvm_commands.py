@@ -380,7 +380,7 @@ class SqlVmScenarioTest(ScenarioTest):
                      JMESPathCheck('sqlServerLicenseType', 'PAYG')
                  ])
 
-        # test create sqlvm2 with AHUB changes inmediately and least privilege mode
+        # test create sqlvm2 with AHUB changes immediately and least privilege mode
         self.cmd('sql vm create -n {} -g {} -l {} --license-type {} --least-privilege-mode {} --sql-mgmt-type {}'
                  .format(sqlvm2, resource_group, resource_group_location, 'AHUB', 'Enabled', 'Full'),
                  checks=[

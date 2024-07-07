@@ -1611,7 +1611,7 @@ examples:
   - name: List all the connected registries of 'mycloudregistry' in table format.
     text: >
         az acr connected-registry list --registry mycloudregistry --output table
-  - name: List only the inmediate children of 'mycloudregistry' in expanded form in a table.
+  - name: List only the immediate children of 'mycloudregistry' in expanded form in a table.
     text: >
         az acr connected-registry list --registry mycloudregistry --no-children --output table
   - name: List all the offspring of 'myconnectedregistry' in expanded form inside a table.
