@@ -104,7 +104,7 @@ If in doubt, ask!
 **AVOID**
 ```
     --parameters-url   URL to a parameters file.
-    --parameters-path  Local path to a parameters fle.
+    --parameters-path  Local path to a parameters file.
 ```
 
 **PREFERRED**
