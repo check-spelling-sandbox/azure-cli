@@ -7072,7 +7072,7 @@ class AKSManagedClusterUpdateDecorator(BaseAKSManagedClusterDecorator):
         """Internal function to ensure that the incoming `mc` object is valid and the same as the attached `mc` object
         in the context.
 
-        If the incomding `mc` is not valid or is inconsistent with the `mc` in the context, raise a CLIInternalError.
+        If the incoming `mc` is not valid or is inconsistent with the `mc` in the context, raise a CLIInternalError.
 
         :return: None
         """
