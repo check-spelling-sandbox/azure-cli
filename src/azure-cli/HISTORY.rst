@@ -6965,7 +6965,7 @@ Added Cluster commands and trusted_service_access_enabled parameter for Networkr
 
 **Packaging**
 
-* Build MSI/Homebrew packages with dependecies resolved from requirements.txt (#13353)
+* Build MSI/Homebrew packages with dependencies resolved from requirements.txt (#13353)
 
 **RBAC**
 
