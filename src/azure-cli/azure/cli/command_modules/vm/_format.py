@@ -70,7 +70,7 @@ def transform_vm_list(vm_list):
     return [transform_vm(v) for v in vm_list]
 
 
-# flattern out important fields (single member arrays) to be displayed in the table output
+# flatten out important fields (single member arrays) to be displayed in the table output
 def transform_sku_for_table_output(skus):
     from collections import OrderedDict
     result = []
