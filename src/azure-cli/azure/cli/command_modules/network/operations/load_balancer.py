@@ -487,7 +487,7 @@ class LBAddressPoolCreate(_LBAddressPoolBasicCreate):
             self.post_instance_create(self.ctx.selectors.subresource.required())
             yield self.LoadBalancersCreateOrUpdate(ctx=self.ctx)()
         else:
-            # use AddressPoolsCreateOrUpdate API to update Standarded or Geteway lb
+            # use AddressPoolsCreateOrUpdate API to update Standarded or Gateway lb
             yield self.LoadBalancerBackendAddressPoolsCreateOrUpdate(ctx=self.ctx)()
             self.LoadBalancersGet(ctx=self.ctx)()
         self.post_operations()
