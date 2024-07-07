@@ -436,7 +436,7 @@ Scope: /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg1
                     "stringValue": "The quick brown fox jumps over the lazy dog.",
                     "emptyArray": [],
                     "emptyObject": {},
-                    "arrayContaingValues": ["foo", "bar"],
+                    "arrayContainingValues": ["foo", "bar"],
                 },
             ),
         ]
@@ -452,7 +452,7 @@ Scope: /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg1
       stringValue:  "The quick brown fox jumps over the lazy dog."
       emptyArray:   []
       emptyObject:  {}
-      arrayContaingValues: [
+      arrayContainingValues: [
         0: "foo"
         1: "bar"
       ]
