@@ -125,14 +125,14 @@ def normalize_sku_for_staticapp(sku):
     raise ValidationError("Invalid sku(pricing tier), please refer to command help for valid values")
 
 
-def retryable_method(retries=3, interval_sec=5, excpt_type=Exception):
+def retryable_method(retries=3, interval_sec=5, except_type=Exception):
     def decorate(func):
         def call(*args, **kwargs):
             current_retry = retries
             while True:
                 try:
                     return func(*args, **kwargs)
-                except excpt_type:  # pylint: disable=broad-except
+                except except_type:  # pylint: disable=broad-except
                     current_retry -= 1
                     if current_retry <= 0:
                         raise
