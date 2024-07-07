@@ -103,7 +103,7 @@ az storage share-rm create \
     --quota 10
     --enabled-protocols NFS \
     --root-squash AllSquash \
-    --storage-account "/subscriptions/musub/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/mystorageaccunt"
+    --storage-account "/subscriptions/musub/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/mystorageccount"
 ```
 
 ##### Show the properties for a specified Azure file share

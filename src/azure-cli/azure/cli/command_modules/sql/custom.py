@@ -1854,7 +1854,7 @@ def db_update(  # pylint: disable=too-many-locals, too-many-branches
     if perform_cutover is not None:
         instance.perform_cutover = perform_cutover
 
-    # Set storage_account_type even if storage_acount_type is None
+    # Set storage_account_type even if storage_account_type is None
     # Otherwise, empty value defaults to current storage_account_type
     # and will potentially conflict with a previously requested update
     instance.requested_backup_storage_redundancy = requested_backup_storage_redundancy

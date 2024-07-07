@@ -32,11 +32,11 @@ helps['billing account show'] = """
     type: command
     short-summary: "Get a billing account by its ID."
     examples:
-      - name: Show an billing acount with expanded properties
+      - name: Show an billing account with expanded properties
         text: |-
                az billing account show --expand "soldTo,billingProfiles,billingProfiles/invoiceSections" --name \
 "{billingAccountName}"
-      - name: Show an billing acount with default properties
+      - name: Show an billing account with default properties
         text: |-
                az billing account show --name "{billingAccountName}"
 """

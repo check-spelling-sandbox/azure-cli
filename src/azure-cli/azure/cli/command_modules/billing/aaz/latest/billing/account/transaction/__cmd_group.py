@@ -15,7 +15,7 @@ from azure.cli.core.aaz import *
     "billing account transaction",
 )
 class __CMDGroup(AAZCommandGroup):
-    """Manage billing acount transaction
+    """Manage billing account transaction
     """
     pass
 
