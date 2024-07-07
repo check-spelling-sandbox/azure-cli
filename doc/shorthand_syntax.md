@@ -172,7 +172,7 @@ az some-command --contact "??"
 
 ### use `??` in `Full Value` format
 
-Show help message of `--contant` argument when writing `Full Value`:
+Show help message of `--contact` argument when writing `Full Value`:
 ```bash
 az some-command --contact "{??"
 ```
@@ -180,39 +180,39 @@ az some-command --contact "{??"
 az some-command --contact "{name:Bill,??"
 ```
 
-Show help message of `--contant.address` property when writing `Full Value`:
+Show help message of `--contact.address` property when writing `Full Value`:
 ```bash
 az some-command --contact "{name:Bill,address:??"
 ```
 
-Show help message of `--contant.address.country` property when writing `Full Value`:
+Show help message of `--contact.address.country` property when writing `Full Value`:
 ```bash
 az some-command --contact "{name:Bill,address:{country:??"
 ```
 
-Show help message of `--contant.emails` property when writing `Full Value`:
+Show help message of `--contact.emails` property when writing `Full Value`:
 ```bash
 az some-command --contact "{name:Bill,address:{country:USA},emails:??"
 ```
 
-Show help message of the element of `--contant.emails` property when writing `Full Value`:
+Show help message of the element of `--contact.emails` property when writing `Full Value`:
 ```bash
 az some-command --contact "{name:Bill,address:{country:USA},emails:[??"
 ```
 
 ### use `??` in `Partial Value` format
 
-Show help message of `--contant.address` property when writing `Partial Value`:
+Show help message of `--contact.address` property when writing `Partial Value`:
 ```bash
 az some-command --contact address="??"
 ```
 
-Show help message of `--contant.emails` property when writing `Partial Value`:
+Show help message of `--contact.emails` property when writing `Partial Value`:
 ```bash
 az some-command --contact emails="??"
 ```
 
-Show help message of the element of `--contant.emails` property when writing `Partial Value`:
+Show help message of the element of `--contact.emails` property when writing `Partial Value`:
 ```bash
 az some-command --contact emails[0]="??"
 ```
