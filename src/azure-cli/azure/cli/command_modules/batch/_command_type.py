@@ -228,14 +228,14 @@ class BatchArgumentTree:
     def _get_children(self, group):
         """Find all the arguments under to a specific complex argument group.
         :param str group: The namespace of the complex parameter.
-        :returns: The names of the related arugments.
+        :returns: The names of the related arguments.
         """
         return [arg for arg, value in self._arg_tree.items() if value['path'].startswith(group)]
 
     def _get_siblings(self, group):
         """Find all the arguments at the same level of a specific complex argument group.
         :param str group: The namespace of the complex parameter.
-        :returns: The names of the related arugments.
+        :returns: The names of the related arguments.
         """
         return [arg for arg, value in self._arg_tree.items() if value['path'] == group]
 

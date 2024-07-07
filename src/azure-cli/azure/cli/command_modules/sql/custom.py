@@ -2300,7 +2300,7 @@ def _audit_policy_validate_arguments(
         event_hub_authorization_rule_id=None,
         event_hub_name=None):
     '''
-    Validate input agruments
+    Validate input arguments
     '''
 
     blob_storage_arguments_provided = blob_storage_target_state is not None or\
