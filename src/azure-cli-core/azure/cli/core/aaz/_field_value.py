@@ -99,7 +99,7 @@ class AAZObject(AAZBaseValue):
         if isinstance(other, AAZBaseValue):
             return self._data == other._data
 
-        # other is buld-in type value
+        # other is built-in type value
         if other is None:
             return self._data is None
 
@@ -189,7 +189,7 @@ class AAZBaseDictValue(AAZBaseValue):
         if isinstance(other, AAZBaseValue):
             return self._data == other._data
 
-        # other is buld-in type value
+        # other is built-in type value
         if other is None:
             return self._data is None
 
@@ -394,7 +394,7 @@ class AAZList(AAZBaseValue):
         if isinstance(other, AAZBaseValue):
             return self._data == other._data
 
-        # other is buld-in type value
+        # other is built-in type value
         if other is None:
             return self._data is None
 
