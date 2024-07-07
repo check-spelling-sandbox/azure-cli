@@ -1780,7 +1780,7 @@ stages:
           scriptLocation: inlineScript
           inlineScript: |
             set -o errexit
-            echo "ArtifastsDirectory: $(System.ArtifactsDirectory)"
+            echo "ArtifactsDirectory: $(System.ArtifactsDirectory)"
             ls $(System.ArtifactsDirectory)
             pwd
             workDir=$(pwd)
