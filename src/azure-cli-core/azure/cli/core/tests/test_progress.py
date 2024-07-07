@@ -51,7 +51,7 @@ class TestProgress(unittest.TestCase):
         message = reporter.report()
         self.assertEqual(message['message'], 'Progress')
 
-    def test_progress_indicator_indet_stdview(self):
+    def test_progress_indicator_indeterminate_stdview(self):
         # tests the indeterminate progress standardout view
         outstream = MockOutstream()
         view = progress.IndeterminateStandardOut(out=outstream)
