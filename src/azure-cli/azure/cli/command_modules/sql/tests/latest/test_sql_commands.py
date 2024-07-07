@@ -5636,7 +5636,7 @@ class SqlManagedInstancePoolScenarioTest(ScenarioTest):
                      JMESPathCheck('resourceGroup', resource_group),
                      JMESPathCheck('tags', {})])
 
-        # test updating maintanace conf id of an instance pool
+        # test updating maintenance conf id of an instance pool
         self.cmd('sql instance-pool update -g {} -n {} -maintenance-configuration-id {}'
                  .format(resource_group, instance_pool_name_2, maintenance_configuration_id),
                  checks=[
