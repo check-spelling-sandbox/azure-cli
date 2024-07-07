@@ -6,13 +6,13 @@
 import sys
 import os
 import subprocess
-import automation.utilities.path as autmation_path
+import automation.utilities.path as automation_path
 
 INSTALL_COMMAND = 'python -m pip install -e {}'
 
 
 def install_modules():
-    all_modules = list(autmation_path.get_command_modules_paths())
+    all_modules = list(automation_path.get_command_modules_paths())
 
     print('Installing command modules')
     print('Modules: {}'.format(', '.join(name for name, _ in all_modules)))
