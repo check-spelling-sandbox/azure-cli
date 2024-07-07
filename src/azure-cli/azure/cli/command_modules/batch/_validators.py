@@ -42,7 +42,7 @@ def disk_encryption_configuration_format(value):
 
 
 def duration_format(value):
-    """Validate the correct format of a timespan string and deserilize."""
+    """Validate the correct format of a timespan string and deserialize."""
     from msrest.serialization import Deserializer
     from msrest.exceptions import DeserializationError
     try:
