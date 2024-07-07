@@ -3,7 +3,7 @@
 : "${CLI_VERSION:?CLI_VERSION environment variable not set.}"
 
 yum check-update
-yum install -y gcc rpm-build rpm-level rpmlint make bash corutils diffutils \
+yum install -y gcc rpm-build rpm-level rpmlint make bash coreutils diffutils \
                path rpmdevtools python libffi-devel python3-devel openssl-devel \
                wget
 
