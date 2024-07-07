@@ -1,6 +1,6 @@
 # `GraphClient` - Microsoft Graph API client
 
-Azure CLI has been migrated to Microsoft Graph API for Azure Active Directory operations. A lightweight client `azure.cli.command_modules.role._msgrpah.GraphClient` is developed for calling Microsoft Graph API.
+Azure CLI has been migrated to Microsoft Graph API for Azure Active Directory operations. A lightweight client `azure.cli.command_modules.role._msgraph.GraphClient` is developed for calling Microsoft Graph API.
 
 ## Create a `GraphClient` instance
 
@@ -12,7 +12,7 @@ from azure.cli.command_modules.role import graph_client_factory
 graph_client = graph_client_factory(cli_ctx)
 
 # Wrong!
-from azure.cli.command_modules.role._msgrpah import GraphClient
+from azure.cli.command_modules.role._msgraph import GraphClient
 graph_client = GraphClient(cli_ctx)
 ```
 
