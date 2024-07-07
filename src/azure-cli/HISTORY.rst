@@ -1778,7 +1778,7 @@ Release History
 * `az aks create`: Add new parameter `--pod-cidrs` for setting the IP ranges used to allocate IPs to pods (#25256)
 * `az aks create`: Add new parameter `--service-cidrs` for setting the K8s service IPs (#25256)
 * `az aks create`: Add new parameter `--ip-families` for setting the IP types that should be used in a cluster (IPv4 or IPv6) (#25256)
-* `az aks create`: Add new parameter `--load-balanacer-managed-outbound-ipv6-count` for setting the number of IPv6 outbound IPs that AKS should managed for a cluster with IPv6 enabled (#25256)
+* `az aks create`: Add new parameter `--load-balancer-managed-outbound-ipv6-count` for setting the number of IPv6 outbound IPs that AKS should managed for a cluster with IPv6 enabled (#25256)
 * `az aks update`: Support changing the load balancer managed outbound IPv6 count property (#25256)
 * Fix #22321: `az aks get-credentials`: Fix path separator for Windows when finding `kubeconfig_path` (#25425)
 
