@@ -2981,7 +2981,7 @@ This version is only available on CentOS 7 and RHEL 7.
 * Fix #22563: `az storage blob upload`: Fix storage blob upload to a through pipe encode error (#22611)
 * Fix #20452: `az storage container policy create\update\list\show\delete`: Add new permissions, currently support `racwdxyltmei` (#21917)
 * Fix #22679: `az storage account file-service-properties update`: Fix `AttributeError: 'NoneType' object has no attribute 'smb'` (#22691)
-* Fix #22845: `az storage account genarete-sas`: Fix the flag `--auth-mode login` cause AttributeError (#22854)
+* Fix #22845: `az storage account generate-sas`: Fix the flag `--auth-mode login` cause AttributeError (#22854)
 
 **Synapse**
 
