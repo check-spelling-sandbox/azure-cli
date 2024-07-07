@@ -662,11 +662,11 @@ class HDInsightClusterTests(ScenarioTest):
                .format(private_link_configuration_file)
 
     @staticmethod
-    def _with_availability_zones(custome_all_metastores_file):
+    def _with_availability_zones(custom_all_metastores_file):
         return '--version 4.0 -l southcentralus ' \
                '--subnet /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetforcreatcluster/subnets/default ' \
                '--zones 1 --cluster-configurations @"{}"'\
-               .format(custome_all_metastores_file)
+               .format(custom_all_metastores_file)
 
     @staticmethod
     def _with_compute_isolation():
