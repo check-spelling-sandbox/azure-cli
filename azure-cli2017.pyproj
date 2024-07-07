@@ -746,7 +746,7 @@
     <Compile Include="azure-cli\azure\cli\command_modules\resource\custom.py" />
     <Compile Include="azure-cli\azure\cli\command_modules\resource\tests\latest\test_api_check.py" />
     <Compile Include="azure-cli\azure\cli\command_modules\resource\tests\latest\test_locks.py" />
-    <Compile Include="azure-cli\azure\cli\command_modules\resource\tests\latest\test_managmentgroups.py" />
+    <Compile Include="azure-cli\azure\cli\command_modules\resource\tests\latest\test_managementgroup.py" />
     <Compile Include="azure-cli\azure\cli\command_modules\resource\tests\latest\test_resource.py" />
     <Compile Include="azure-cli\azure\cli\command_modules\resource\tests\latest\test_resource_custom.py" />
     <Compile Include="azure-cli\azure\cli\command_modules\resource\tests\latest\test_resource_id_deletes.py" />
