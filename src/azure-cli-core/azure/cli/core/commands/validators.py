@@ -21,7 +21,7 @@ logger = get_logger(__name__)
 class IterateAction(argparse.Action):  # pylint: disable=too-few-public-methods
     """Action used to collect argument values in an IterateValue list
     The application will loop through each value in the IterateValue
-    and execeute the associated handler for each
+    and execute the associated handler for each
     """
 
     def __call__(self, parser, namespace, values, option_string=None):
