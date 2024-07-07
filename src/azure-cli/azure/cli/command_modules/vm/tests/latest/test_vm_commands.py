@@ -5791,9 +5791,9 @@ class VMSSRunCommandScenarioTest(ScenarioTest):
             self.check('name', '{vmss}'),
             self.check('securityProfile', None),
         ])
-        instace_ids = self.cmd('vmss list-instances --resource-group {rg} --name {vmss} --query "[].instanceId"').get_output_in_json()
+        instance_ids = self.cmd('vmss list-instances --resource-group {rg} --name {vmss} --query "[].instanceId"').get_output_in_json()
         self.kwargs.update({
-            'instance_id': instace_ids[0]
+            'instance_id': instance_ids[0]
         })
         self.cmd('vmss run-command create --name {run_cmd} -g {rg} --vmss-name {vmss} --instance-id {instance_id}', checks=[
             self.check('resourceGroup', '{rg}'),
