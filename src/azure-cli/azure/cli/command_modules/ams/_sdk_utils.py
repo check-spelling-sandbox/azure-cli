@@ -63,7 +63,7 @@ def get_encoding_types():
     return ['Premium1080p', 'None', 'Standard']
 
 
-def get_transcription_langauges():
+def get_transcription_languages():
     return ['ca-ES', 'da-DK', 'de-DE', 'en-AU', 'en-CA', 'en-GB', 'en-IN', 'en-NZ', 'en-US', 'es-ES',
             'es-MX', 'fi-FI', 'fr-CA', 'fr-FR', 'it-IT', 'nl-NL', 'pt-BR', 'pt-PT', 'sv-SE']
 
