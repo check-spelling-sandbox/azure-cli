@@ -2463,7 +2463,7 @@ class SynapseScenarioTests(ScenarioTest):
             'az synapse pipeline-run query-by-workspace --workspace-name {workspace} '
             '--last-updated-after 2020-09-01T00:36:44.3345758Z --last-updated-before 2020-10-16T00:36:44.3345758Z')
 
-        # get acticity run
+        # get activity run
         self.cmd(
             'az synapse activity-run query-by-pipeline-run --workspace-name {workspace} --name {name} --run-id {runId} '
             '--last-updated-after 2020-09-01T00:36:44.3345758Z --last-updated-before 2020-10-16T00:36:44.3345758Z')
