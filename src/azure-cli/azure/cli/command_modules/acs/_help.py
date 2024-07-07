@@ -1202,7 +1202,7 @@ helps['aks maintenanceconfiguration add'] = """
           short-summary: A day in week on which maintenance is allowed. E.g. Monday. Applicable to default maintenance configuration only.
         - name: --start-hour
           type: string
-          short-summary: The start time of 1 hour window which maintenance is allowd. E.g. 1 means it's allowd between 1:00 am and 2:00 am. Applicable to default maintenance configuration only.
+          short-summary: The start time of 1 hour window which maintenance is allowed. E.g. 1 means it's allowed between 1:00 am and 2:00 am. Applicable to default maintenance configuration only.
         - name: --schedule-type
           type: string
           short-summary: Choose either 'Daily', 'Weekly', 'AbsoluteMonthly' or 'RelativeMonthly' for your maintenance schedule. Only applicable to 'aksManagedAutoUpgradeSchedule' and 'aksManagedNodeOSUpgradeSchedule' maintenance configuration.
@@ -1244,7 +1244,7 @@ helps['aks maintenanceconfiguration add'] = """
           text: |
             az aks maintenanceconfiguration add -g MyResourceGroup --cluster-name test1 -n default --weekday Monday  --start-hour 1
               The maintenance is allowed on Monday 1:00am to 2:00am
-        - name: Add default maintenance configuration with --weekday. The maintenance is allowd on any time of that day.
+        - name: Add default maintenance configuration with --weekday. The maintenance is allowed on any time of that day.
           text: |
             az aks maintenanceconfiguration add -g MyResourceGroup --cluster-name test1 -n default --weekday Monday
               The maintenance is allowed on Monday.
@@ -1336,7 +1336,7 @@ helps['aks maintenanceconfiguration update'] = """
           short-summary: A day in week on which maintenance is allowed. E.g. Monday. Applicable to default maintenance configuration only.
         - name: --start-hour
           type: string
-          short-summary: The start time of 1 hour window which maintenance is allowd. E.g. 1 means it's allowd between 1:00 am and 2:00 am. Applicable to default maintenance configuration only.
+          short-summary: The start time of 1 hour window which maintenance is allowed. E.g. 1 means it's allowed between 1:00 am and 2:00 am. Applicable to default maintenance configuration only.
         - name: --schedule-type
           type: string
           short-summary: Choose either 'Daily', 'Weekly', 'AbsoluteMonthly' or 'RelativeMonthly' for your maintenance schedule. Only applicable to 'aksManagedAutoUpgradeSchedule' and 'aksManagedNodeOSUpgradeSchedule' maintenance configuration.
@@ -1378,7 +1378,7 @@ helps['aks maintenanceconfiguration update'] = """
           text: |
             az aks maintenanceconfiguration update -g MyResourceGroup --cluster-name test1 -n default --weekday Monday  --start-hour 1
               The maintenance is allowed on Monday 1:00am to 2:00am
-        - name: Update default maintenance configuration with --weekday.The maintenance is allowd on any time of that day.
+        - name: Update default maintenance configuration with --weekday.The maintenance is allowed on any time of that day.
           text: |
             az aks maintenanceconfiguration update -g MyResourceGroup --cluster-name test1 -n default --weekday Monday
               The maintenance is allowed on Monday.
