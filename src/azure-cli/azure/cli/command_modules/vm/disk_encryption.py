@@ -563,7 +563,7 @@ def _verify_keyvault_good_for_encryption(cli_ctx, disk_vault_id, kek_vault_id, v
         if disk_vault_resource_info['name'].lower() != kek_vault_info['name'].lower():
             client.get(kek_vault_info['resource_group'], kek_vault_info['name'])
 
-    # verify subscription mataches
+    # verify subscription matches
     vm_vmss_resource_info = parse_resource_id(vm_or_vmss.id)
     if vm_vmss_resource_info['subscription'].lower() != disk_vault_resource_info['subscription'].lower():
         _report_client_side_validation_error("{} {}'s subscription does not match keyvault's subscription."
