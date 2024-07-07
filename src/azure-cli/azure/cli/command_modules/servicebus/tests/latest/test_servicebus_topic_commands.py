@@ -269,7 +269,7 @@ class SBTopicsCRUDScenarioTest(ScenarioTest):
         # Topic List
         self.cmd('servicebus topic list --resource-group {rg} --namespace-name {namespacename}')
 
-        # Create Authoriazation Rule
+        # Create Authorization Rule
         self.cmd(
             'servicebus topic authorization-rule create --resource-group {rg} --namespace-name {namespacename} --topic-name {topicname} --name {authoname} --rights {accessrights}',
             checks=[self.check('name', '{authoname}')])
@@ -279,7 +279,7 @@ class SBTopicsCRUDScenarioTest(ScenarioTest):
             'servicebus topic authorization-rule show --resource-group {rg} --namespace-name {namespacename} --topic-name {topicname} --name {authoname}',
             checks=[self.check('name', '{authoname}')])
 
-        # Update Authoriazation Rule
+        # Update Authorization Rule
         self.cmd(
             'servicebus topic authorization-rule update --resource-group {rg} --namespace-name {namespacename} --topic-name {topicname} --name {authoname} --rights {accessrights1}',
             checks=[self.check('name', '{authoname}')])

@@ -58,7 +58,7 @@ class SBDRAliasCRUDScenarioTest(ScenarioTest):
         getnamespace2result = self.cmd(
             'servicebus namespace show --resource-group {rg} --name {namespacenamesecondary}').get_output_in_json()
 
-        # Create Authoriazation Rule
+        # Create Authorization Rule
         self.cmd(
             'servicebus namespace authorization-rule create --resource-group {rg} --namespace-name {namespacenameprimary} --name {authoname} --rights {accessrights}',
             checks=[self.check('name', '{authoname}')])

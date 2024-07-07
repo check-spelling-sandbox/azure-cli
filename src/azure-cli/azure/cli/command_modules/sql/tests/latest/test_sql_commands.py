@@ -2057,7 +2057,7 @@ class SqlServerDbSecurityScenarioTest(ScenarioTest):
                  checks=[
                      JMESPathCheck('status', 'Active')])
 
-        # create event hub autorization rule
+        # create event hub authorization rule
         eventhub_auth_rule = 'cliehauthruledb01'
 
         eventhub_auth_rule_id = self.cmd(
@@ -2264,7 +2264,7 @@ class SqlServerSecurityScenarioTest(ScenarioTest):
                  checks=[
                      JMESPathCheck('status', 'Active')])
 
-        # create event hub autorization rule
+        # create event hub authorization rule
         eventhub_auth_rule = 'cliehauthruledb01'
 
         eventhub_auth_rule_id = self.cmd(
@@ -2674,7 +2674,7 @@ class SqlServerMSSupportScenarioTest(ScenarioTest):
                  checks=[
                      JMESPathCheck('status', 'Active')])
 
-        # create event hub autorization rule
+        # create event hub authorization rule
         eventhub_auth_rule = 'cliehauthrulems02'
 
         eventhub_auth_rule_id = self.cmd(

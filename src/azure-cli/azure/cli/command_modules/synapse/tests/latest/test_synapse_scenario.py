@@ -1712,7 +1712,7 @@ class SynapseScenarioTests(ScenarioTest):
                  checks=[
                      self.check('status', 'Active')])
 
-        # create event hub autorization rule
+        # create event hub authorization rule
         self.kwargs['eventhub_auth_rule_id'] = self.cmd(
             'az eventhubs namespace authorization-rule create --resource-group {rg} -n {eventhub_auth_rule} '
             '--namespace-name {eventhub_namespace} --rights Listen Manage Send').get_output_in_json()['id']
@@ -1888,7 +1888,7 @@ class SynapseScenarioTests(ScenarioTest):
                      self.check('status', 'Active')])
 
 
-        # create event hub autorization rule
+        # create event hub authorization rule
         self.kwargs['eventhub_auth_rule_id'] = self.cmd(
             'az eventhubs namespace authorization-rule create --resource-group {rg} -n {eventhub_auth_rule} '
             '--namespace-name {eventhub_namespace} --rights Listen Manage Send').get_output_in_json()['id']

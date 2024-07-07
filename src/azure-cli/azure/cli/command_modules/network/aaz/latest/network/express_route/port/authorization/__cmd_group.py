@@ -15,7 +15,7 @@ from azure.cli.core.aaz import *
     "network express-route port authorization",
 )
 class __CMDGroup(AAZCommandGroup):
-    """Manage ExpressRoute ports authorzation.
+    """Manage ExpressRoute ports authorization.
     """
     pass
 

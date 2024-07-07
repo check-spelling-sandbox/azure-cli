@@ -53,7 +53,7 @@ class SBNamespaceCRUDScenarioTest(ScenarioTest):
         n = [i for i in authRule['rights']]
         assert len(n) == 3
 
-        # Update Authoriazation Rule
+        # Update Authorization Rule
         authRule = self.cmd('servicebus namespace authorization-rule update --resource-group {rg} --namespace-name {namespacename} '
                             '--name {authoname} --rights {accessrights1} ', checks=[self.check('name','{authoname}')]).get_output_in_json()
         n = [i for i in authRule['rights']]
@@ -108,7 +108,7 @@ class SBNamespaceCRUDScenarioTest(ScenarioTest):
         n = [i for i in authRule['rights']]
         assert len(n) == 3
         
-        # Update Authoriazation Rule
+        # Update Authorization Rule
         authRule = self.cmd(
             'servicebus topic authorization-rule update --resource-group {rg} --namespace-name {namespacename} --topic-name {topicname} --name {authoname} --rights {accessrights1} ', checks=[self.check('name', '{authoname}')]).get_output_in_json()
         n = [i for i in authRule['rights']]
@@ -140,13 +140,13 @@ class SBNamespaceCRUDScenarioTest(ScenarioTest):
 
         # Create Queue
         self.cmd('servicebus queue create --resource-group {rg} --namespace-name {namespacename} --name {queuename} ')
-        # Create Authoriazation Rule on Queue
+        # Create Authorization Rule on Queue
         authRule = self.cmd(
             'servicebus queue authorization-rule create --resource-group {rg} --namespace-name {namespacename} --queue-name {queuename} --name {authoname} --rights {accessrights} ', checks=[self.check('name', '{authoname}')]).get_output_in_json()
         n = [i for i in authRule['rights']]
         assert len(n) == 3
 
-        # Update Authoriazation Rule
+        # Update Authorization Rule
         authRule = self.cmd(
             'servicebus queue authorization-rule update --resource-group {rg} --namespace-name {namespacename} --queue-name {queuename} --name {authoname} --rights {accessrights1} ',checks=[self.check('name', '{authoname}')]).get_output_in_json()
         n = [i for i in authRule['rights']]

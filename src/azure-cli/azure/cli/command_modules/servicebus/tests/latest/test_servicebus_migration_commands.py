@@ -71,7 +71,7 @@ class SBNSMigrationCRUDScenarioTest(ScenarioTest):
             'servicebus namespace show --resource-group {rg} --name {namespacenamepremium}',
             checks=[self.check('sku.name', '{sku}')]).get_output_in_json()
 
-        # Create Authoriazation Rule
+        # Create Authorization Rule
         self.cmd(
             'servicebus namespace authorization-rule create --resource-group {rg} --namespace-name {namespacenamestandard} --name {authoname} --rights {accessrights}',
             checks=[self.check('name', '{authoname}')])

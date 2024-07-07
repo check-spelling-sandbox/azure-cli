@@ -57,7 +57,7 @@ class EHgeorecoveryCURDScenarioTest(ScenarioTest):
         # Get Created Namespace - Secondary
         getnamespace2result = self.cmd('eventhubs namespace show --resource-group {rg} --name {namespacenamesecondary}', checks=[self.check('sku.name', self.kwargs['sku'])]).get_output_in_json()
 
-        # Create Authoriazation Rule
+        # Create Authorization Rule
         self.cmd('eventhubs namespace authorization-rule create --resource-group {rg} --namespace-name {namespacenameprimary} --name {authoname} --rights {accessrights}', checks=[self.check('name', self.kwargs['authoname'])])
 
         partnernamespaceid = getnamespace2result['id']
