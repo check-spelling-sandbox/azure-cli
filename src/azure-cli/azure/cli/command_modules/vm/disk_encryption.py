@@ -372,7 +372,7 @@ def _handles_default_volume_type_for_vmss_encryption(is_linux, volume_type, forc
     if is_linux:
         volume_type = volume_type or _DATA_VOLUME_TYPE
         if volume_type != _DATA_VOLUME_TYPE:
-            msg = 'OS disk encyrption is not yet supported for Linux VM scale sets'
+            msg = 'OS disk encryption is not yet supported for Linux VM scale sets'
             if force:
                 logger.warning(msg)
             else:

@@ -61,7 +61,7 @@ az storage account update \
 #### Manage encryption scope for storage account
 Manage encryption scope associated with a storage account.
 ```
-az storage account encryptipn-scope -h
+az storage account encryption-scope -h
 ```
 
 *Examples:*

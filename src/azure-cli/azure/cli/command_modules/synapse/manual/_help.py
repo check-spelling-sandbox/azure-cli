@@ -104,7 +104,7 @@ examples:
   - name: Update a Synapse workspace, set workspace encryption uami
     text: |-
         az synapse workspace update --name fromcli4 --resource-group rg \\
-        --uami-id-in-encrypt "{your-encrytion-uami-resourceid}" --use-sami-in-encrypt False
+        --uami-id-in-encrypt "{your-encryption-uami-resourceid}" --use-sami-in-encrypt False
 """
 
 helps['synapse workspace delete'] = """

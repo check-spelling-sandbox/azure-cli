@@ -5250,9 +5250,9 @@ def create_disk_encryption_set(
                                        namespace='Microsoft.KeyVault', type='vaults', name=source_vault)
         source_vault = SourceVault(id=source_vault)
 
-    key_for_disk_emcryption_set = KeyForDiskEncryptionSet(source_vault=source_vault, key_url=key_url)
+    key_for_disk_encryption_set = KeyForDiskEncryptionSet(source_vault=source_vault, key_url=key_url)
     disk_encryption_set = DiskEncryptionSet(location=location, tags=tags, identity=encryption_set_identity,
-                                            active_key=key_for_disk_emcryption_set, encryption_type=encryption_type,
+                                            active_key=key_for_disk_encryption_set, encryption_type=encryption_type,
                                             rotation_to_latest_key_version_enabled=enable_auto_key_rotation)
 
     if federated_client_id is not None:
