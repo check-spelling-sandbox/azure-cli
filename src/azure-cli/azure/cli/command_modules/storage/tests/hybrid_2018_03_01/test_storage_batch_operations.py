@@ -138,7 +138,7 @@ class StorageBatchOperationScenarios(StorageScenarioMixin, LiveScenarioTest):
                          src_share, local_folder)
         self.assertEqual(4, sum(len(f) for r, d, f in os.walk(local_folder)))
 
-        # download with pattern nonexsits/*
+        # download with pattern nonexists/*
         local_folder = self.create_temp_dir()
         self.storage_cmd('storage file download-batch -s {} -d "{}" --pattern nonexists/*', storage_account_info,
                          src_share, local_folder)

@@ -1800,7 +1800,7 @@ class NetworkAppGatewaySubresourceScenarioTest(ScenarioTest):
         # default http listener has been associated with default rule
         self.cmd("network application-gateway frontend-port create -n {port2} -g {rg} --gateway-name {ag} --port 8082")
         self.cmd("network application-gateway http-listener create -n {http_listener} -g {rg} --gateway-name {ag} --frontend-port {port2} --frontend-ip appGatewayFrontendIP")
-        # multiple pools are valid when redirection exsits
+        # multiple pools are valid when redirection exists
         self.cmd("network application-gateway address-pool create -n {pool} -g {rg} --gateway-name {ag}")
         self.cmd("network application-gateway frontend-port create -n rd-port -g {rg} --gateway-name {ag} --port 8084")
         self.cmd("network application-gateway http-listener create -n rd-listener -g {rg} --gateway-name {ag} --frontend-port rd-port --frontend-ip appGatewayFrontendIP")
