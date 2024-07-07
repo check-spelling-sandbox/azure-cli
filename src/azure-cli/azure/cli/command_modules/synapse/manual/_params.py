@@ -124,7 +124,7 @@ def load_arguments(self, _):
                    help=' Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId.')
 
     with self.argument_context('synapse workspace update') as c:
-        c.argument('user_assigned_identity_action', options_list=['--uami-action'], arg_type=get_enum_type(['Add', 'Remove', 'Set']), help='Action must be specified when you add/remove/set user assigned managed identities for workspace.The supported actions are:Add,Remove,Set.Add means to add user assigned managed identities for workspace, Remove means to remove user assigned managed identities from workspace, Set can be used when you want to add and remove user assigned managed identities at the same time, current identities will be coverd by specified ones.')
+        c.argument('user_assigned_identity_action', options_list=['--uami-action'], arg_type=get_enum_type(['Add', 'Remove', 'Set']), help='Action must be specified when you add/remove/set user assigned managed identities for workspace.The supported actions are:Add,Remove,Set.Add means to add user assigned managed identities for workspace, Remove means to remove user assigned managed identities from workspace, Set can be used when you want to add and remove user assigned managed identities at the same time, current identities will be covered by specified ones.')
 
     with self.argument_context('synapse workspace check-name') as c:
         c.argument('name', arg_type=name_type, help='The name you wanted to check.')
