@@ -980,9 +980,9 @@ examples:
     text: az aks update -g MyResourceGroup -n MyManagedCluster --aad-admin-group-object-ids <id-1,id-2> --aad-tenant-id <id>
   - name: Migrate a AKS AAD-Integrated cluster or a non-AAD cluster to a AKS-managed AAD cluster.
     text: az aks update -g MyResourceGroup -n MyManagedCluster --enable-aad --aad-admin-group-object-ids <id-1,id-2> --aad-tenant-id <id>
-  - name: Enable Azure Hybrid User Benefits featture for a kubernetes cluster.
+  - name: Enable Azure Hybrid User Benefits feature for a kubernetes cluster.
     text: az aks update -g MyResourceGroup -n MyManagedCluster --enable-ahub
-  - name: Disable Azure Hybrid User Benefits featture for a kubernetes cluster.
+  - name: Disable Azure Hybrid User Benefits feature for a kubernetes cluster.
     text: az aks update -g MyResourceGroup -n MyManagedCluster --disable-ahub
   - name: Update Windows password of a kubernetes cluster
     text: az aks update -g MyResourceGroup -n MyManagedCLuster --windows-admin-password "Repl@cePassw0rd12345678"

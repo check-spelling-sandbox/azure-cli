@@ -774,7 +774,7 @@ def __convert_featureflag_list_to_keyvalue_list(featureflags):
         try:
             kv = map_featureflag_to_keyvalue(feature)
         except ValueError as exception:
-            # If we failed to convert FatureFlag to KeyValue, log warning and continue parsing other features
+            # If we failed to convert FeatureFlag to KeyValue, log warning and continue parsing other features
             logger.warning(exception)
             continue
 
