@@ -895,10 +895,10 @@ class RoleDefinitionNameReplacer(RecordingProcessor):
         return request
 
 
-class KeyVaultHSMRoleDefintionTest(ScenarioTest):
+class KeyVaultHSMRoleDefinitionTest(ScenarioTest):
 
     def __init__(self, method_name):
-        super(KeyVaultHSMRoleDefintionTest, self).__init__(
+        super(KeyVaultHSMRoleDefinitionTest, self).__init__(
             method_name,
             recording_processors=[RoleDefinitionNameReplacer()],
             replay_processors=[RoleDefinitionNameReplacer()]
@@ -954,7 +954,7 @@ class KeyVaultHSMRoleDefintionTest(ScenarioTest):
             'role_number': len(results)
         })
 
-        # check create a role defintion
+        # check create a role definition
         custom_role_definition = self.cmd('keyvault role definition create --hsm-name {hsm_name} --role-definition {role_definition}',
                                           checks=role_definition_checks()).get_output_in_json()
 

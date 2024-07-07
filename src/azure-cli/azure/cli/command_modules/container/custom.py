@@ -433,33 +433,33 @@ yaml.add_constructor('!env_var', yaml_env_var_constructor, yaml.SafeLoader)
 def _create_update_from_file(cli_ctx, resource_group_name, name, location, file, no_wait):
     resource_client = cf_resource(cli_ctx)
     container_group_client = cf_container_groups(cli_ctx)
-    cg_defintion = None
+    cg_definition = None
 
     try:
         with open(file, 'r') as f:
-            cg_defintion = yaml.safe_load(f)
+            cg_definition = yaml.safe_load(f)
     except OSError:  # FileNotFoundError introduced in Python 3
         raise CLIError("No such file or directory: " + file)
     except yaml.YAMLError as e:
         raise CLIError("Error while parsing yaml file:\n\n" + str(e))
 
     # Validate names match if both are provided
-    if name and cg_defintion.get('name', None):
-        if name != cg_defintion.get('name', None):
+    if name and cg_definition.get('name', None):
+        if name != cg_definition.get('name', None):
             raise CLIError("The name parameter and name from yaml definition must match.")
     else:
         # Validate at least one name is provided
-        name = name or cg_defintion.get('name', None)
-        if cg_defintion.get('name', None) is None and not name:
+        name = name or cg_definition.get('name', None)
+        if cg_definition.get('name', None) is None and not name:
             raise CLIError("The name of the container group is required")
 
-    cg_defintion['name'] = name
+    cg_definition['name'] = name
 
-    if cg_defintion.get('location'):
-        location = cg_defintion.get('location')
-    cg_defintion['location'] = location
+    if cg_definition.get('location'):
+        location = cg_definition.get('location')
+    cg_definition['location'] = location
 
-    api_version = cg_defintion.get('apiVersion', None) or container_group_client._config.api_version
+    api_version = cg_definition.get('apiVersion', None) or container_group_client._config.api_version
 
     return sdk_no_wait(no_wait,
                        resource_client.resources.begin_create_or_update,
@@ -469,7 +469,7 @@ def _create_update_from_file(cli_ctx, resource_group_name, name, location, file,
                        "containerGroups",
                        name,
                        api_version,
-                       cg_defintion)
+                       cg_definition)
 
 
 # pylint: disable=inconsistent-return-statements

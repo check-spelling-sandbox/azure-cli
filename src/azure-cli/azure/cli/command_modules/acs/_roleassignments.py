@@ -75,7 +75,7 @@ def add_role_assignment_executor(cmd, role, assignee, resource_group_name=None, 
 
     scope = build_role_scope(resource_group_name, scope, assignments_client._config.subscription_id)
 
-    # XXX: if role is uuid, this function's output cannot be used as role assignment defintion id
+    # XXX: if role is uuid, this function's output cannot be used as role assignment definition id
     # ref: https://github.com/Azure/azure-cli/issues/2458
     role_id = resolve_role_id(role, scope, definitions_client)
 

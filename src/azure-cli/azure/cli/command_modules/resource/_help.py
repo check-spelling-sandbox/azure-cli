@@ -1633,12 +1633,12 @@ helps['managedapp definition create'] = """
 type: command
 short-summary: Create a managed application definition.
 examples:
-  - name: Create a managed application defintion.
+  - name: Create a managed application definition.
     text: >
         az managedapp definition create -g MyResourceGroup -n MyManagedAppDef -l eastus --display-name "MyManagedAppDef" \\
             --description "My Managed App Def description" -a "myPrincipalId:myRoleId" --lock-level None \\
             --package-file-uri "https://path/to/myPackage.zip"
-  - name: Create a managed application defintion with inline values for createUiDefinition and mainTemplate.
+  - name: Create a managed application definition with inline values for createUiDefinition and mainTemplate.
     text: >
         az managedapp definition create -g MyResourceGroup -n MyManagedAppDef -l eastus --display-name "MyManagedAppDef" \\
             --description "My Managed App Def description" -a "myPrincipalId:myRoleId" --lock-level None \\
@@ -1649,12 +1649,12 @@ helps['managedapp definition update'] = """
 type: command
 short-summary: Update a managed application definition.
 examples:
-  - name: Update a managed application defintion.
+  - name: Update a managed application definition.
     text: >
         az managedapp definition update -g MyResourceGroup -n MyManagedAppDef -l eastus --display-name "MyManagedAppDef" \\
             --description "My Managed App Def description" -a "myPrincipalId:myRoleId" --lock-level None \\
             --package-file-uri "https://path/to/myPackage.zip"
-  - name: Update a managed application defintion with inline values for createUiDefinition and mainTemplate.
+  - name: Update a managed application definition with inline values for createUiDefinition and mainTemplate.
     text: >
         az managedapp definition update -g MyResourceGroup -n MyManagedAppDef -l eastus --display-name "MyManagedAppDef" \\
             --description "My Managed App Def description" -a "myPrincipalId:myRoleId" --lock-level None \\
