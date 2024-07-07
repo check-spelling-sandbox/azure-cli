@@ -21,7 +21,7 @@ def generate_pop_key():
 
 class HttpMessageSecurity(object):
     """
-    Used for message authorization, encryption and decrtyption.
+    Used for message authorization, encryption and decryption.
 
     This class is intended for internal use only.  Details are subject to non-compatible changes, consumers of the
     azure-keyvault module should not take dependencies on this class or its current implementation.
