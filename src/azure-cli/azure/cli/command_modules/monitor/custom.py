@@ -139,7 +139,7 @@ def list_metrics(cmd, resource,
     })
 
 
-def list_definations(cmd, resource_uri, metricnamespace=None):
+def list_definitions(cmd, resource_uri, metricnamespace=None):
     from .aaz.latest.monitor.metrics import ListDefinitions
     return ListDefinitions(cli_ctx=cmd.cli_ctx)(command_args={
         "resource_uri": resource_uri,
