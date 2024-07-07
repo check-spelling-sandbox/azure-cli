@@ -695,7 +695,7 @@ class KeyVaultSoftDeleteScenarioTest(ScenarioTest):
 
         self.cmd('keyvault set-policy -n {kv} -g {rg} --object-id {obj_id} --key-permissions {key_perms} --secret-permissions {secret_perms} --certificate-permissions {cert_perms}')
 
-        # create secrets keys and certifictes to delete recover and purge
+        # create secrets keys and certificates to delete recover and purge
         self.cmd('keyvault secret set --vault-name {kv} -n secret1 --value ABC123',
                  checks=self.check('value', 'ABC123'))
         self.cmd('keyvault secret set --vault-name {kv} -n secret2 --value ABC123',
