@@ -380,7 +380,7 @@ class TestExtensions(TestExtensionsBase):
             self.assertEqual(ext['version'], '1.4.1a1')
             remove_extension(extension_name)
 
-    def test_add_extension_preview_inavailable(self):
+    def test_add_extension_preview_unavailable(self):
         extension_name = "extension-test-pkg"
         extension1 = 'extension_test_pkg-1.0.0b1-py3-none-any.whl'
         extension2 = 'extension_test_pkg-1.2.3-py3-none-any.whl'
