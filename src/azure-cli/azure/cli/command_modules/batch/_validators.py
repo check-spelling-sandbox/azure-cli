@@ -261,7 +261,7 @@ def validate_file_destination(namespace):
 
 
 def validate_pool_settings(namespace, parser):
-    """Custom parsing to enfore that either PaaS or IaaS instances are configured
+    """Custom parsing to enforce that either PaaS or IaaS instances are configured
     in the add pool request body.
     """
     if not namespace.json_file:
