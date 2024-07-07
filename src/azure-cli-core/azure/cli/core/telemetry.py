@@ -583,7 +583,7 @@ def _get_session_id():
         hasher.update(content.encode('utf-8'))
         return hasher.hexdigest()
 
-    # Usually, more than one layer of sub-process will be started when excuting a CLI command. While, the create time
+    # Usually, more than one layer of sub-process will be started when executing a CLI command. While, the create time
     # of these sub-processes will be very close, usually in several milliseconds. We use 1 second as the threshold here.
     # When the difference of create time between current process and its parent process is larger than the threshold,
     # the parent process will be viewed as the terminal process.
