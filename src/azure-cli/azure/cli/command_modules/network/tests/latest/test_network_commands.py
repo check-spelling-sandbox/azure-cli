@@ -5061,7 +5061,7 @@ class NetworkVNetCachingScenarioTest(ScenarioTest):
                  checks=self.check('length(@)', 2))
 
         # This test ensures you can pipe JSON output to --ids bash-style
-        # ensures that a JSON string where each line is interpretted individually
+        # ensures that a JSON string where each line is interpreted individually
         # is reassembled and treated as a single json string
         json_obj = self.cmd('network vnet list -g {rg}').get_output_in_json()
         for item in json_obj:

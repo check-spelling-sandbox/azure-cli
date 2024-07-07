@@ -82,7 +82,7 @@ def get_period_type(as_timedelta=False):
             return value
 
         # if shorthand is used, only support days, minutes, hours, seconds
-        # ensure M is interpretted as minutes
+        # ensure M is interpreted as minutes
         days = _get_substring(match.span(4))
         hours = _get_substring(match.span(6))
         minutes = _get_substring(match.span(7)) or _get_substring(match.span(3))
