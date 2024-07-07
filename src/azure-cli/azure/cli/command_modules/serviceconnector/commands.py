@@ -56,7 +56,7 @@ def load_command_table(self, _):  # pylint: disable=too-many-statements
                 og.custom_wait_command('wait', 'connection_show')
 
             # use SUPPORTED_AUTH_TYPE to decide target resource, as some
-            # target resources are not avialable for certain source resource
+            # target resources are not available for certain source resource
             supported_target_resources = list(SUPPORTED_AUTH_TYPE.get(source).keys())
             if RESOURCE.ConfluentKafka in supported_target_resources:
                 supported_target_resources.remove(RESOURCE.ConfluentKafka)

@@ -86,7 +86,7 @@ def connection_list_support_types(cmd, client,
                 break
 
     # use SUPPORTED_AUTH_TYPE to decide target resource, as some
-    # target resources are not avialable for certain source resource
+    # target resources are not available for certain source resource
     supported_target_resources = SUPPORTED_AUTH_TYPE.get(source).keys()
     for target in supported_target_resources:
         auth_types = SUPPORTED_AUTH_TYPE.get(source).get(target)

@@ -8612,7 +8612,7 @@ class DiskEncryptionSetTest(ScenarioTest):
         ])
 
 
-    # @unittest.skip('The requested VM size is not available, others VM siz also not availiable :https://github.com/Azure/azure-cli/issues/22199#issue-1216780069')
+    # @unittest.skip('The requested VM size is not available, others VM siz also not available :https://github.com/Azure/azure-cli/issues/22199#issue-1216780069')
     @ResourceGroupPreparer(name_prefix='cli_test_os_disk_security_encryption', location='NorthEurope')
     def test_os_disk_security_encryption(self, resource_group):
         self.kwargs.update({

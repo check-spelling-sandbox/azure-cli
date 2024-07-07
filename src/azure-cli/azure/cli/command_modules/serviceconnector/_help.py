@@ -208,7 +208,7 @@ for source in SOURCE_RESOURCES:
     """.format(source_display_name=source_display_name)
 
     # use SUPPORTED_AUTH_TYPE to decide target resource, as some
-    # target resources are not avialable for certain source resource
+    # target resources are not available for certain source resource
     supported_target_resources = list(SUPPORTED_AUTH_TYPE.get(source).keys())
     supported_target_resources.remove(RESOURCE.ConfluentKafka)
     for target in supported_target_resources:
@@ -590,7 +590,7 @@ helps['connection preview-configuration'] = """
 
 
 # use SUPPORTED_AUTH_TYPE to decide target resource, as some
-# target resources are not avialable for certain source resource
+# target resources are not available for certain source resource
 supported_target_resources = list(SUPPORTED_AUTH_TYPE.get(source).keys())
 supported_target_resources.remove(RESOURCE.ConfluentKafka)
 for target in supported_target_resources:

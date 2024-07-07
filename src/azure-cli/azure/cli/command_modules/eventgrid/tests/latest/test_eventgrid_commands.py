@@ -701,7 +701,7 @@ class EventGridTests(ScenarioTest):
                 self.check('[0].type', 'Microsoft.EventGrid/systemTopics'),
             ])
 
-            # Disable until service fix is availabler
+            # Disable until service fix is available
             self.cmd('az eventgrid system-topic list --resource-group devexprg --odata-query "name eq \'{system_topic_name}\'"', checks=[
                 self.check('[0].type', 'Microsoft.EventGrid/systemTopics')
             ])
