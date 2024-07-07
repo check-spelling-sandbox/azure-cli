@@ -698,7 +698,7 @@ def download_blob(client, file_path=None, open_mode='wb', start_range=None, end_
 
 
 def get_block_ids(content_length, block_length):
-    """Get the block id arrary from block blob length, block size"""
+    """Get the block id array from block blob length, block size"""
     block_count = 0
     if block_length:
         block_count = content_length // block_length
