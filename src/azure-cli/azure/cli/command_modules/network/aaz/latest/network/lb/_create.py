@@ -20,7 +20,7 @@ class Create(AAZCommand):
     :example: Create a basic load balancer on a specific virtual network and subnet If a virtual network with the same name is found in the same resource group, the load balancer will utilize this virtual network.  If one is not found a new one will be created.
         az network lb create -g MyResourceGroup -n MyLb --sku Basic --vnet-name MyVnet --subnet MySubnet
 
-    :example: Create a basic load balancer on a subnet of a pre-existing virtual network. The subnet can be in arbitary resource group or subscription by providing the ID of the subnet.
+    :example: Create a basic load balancer on a subnet of a pre-existing virtual network. The subnet can be in arbitrary resource group or subscription by providing the ID of the subnet.
         az network lb create -g MyResourceGroup -n MyLb --sku Basic --subnet {subnetID}
 
     :example: Create a basic zone flavored internal load balancer, through provisioning a zonal public ip.
