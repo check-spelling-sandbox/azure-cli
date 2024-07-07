@@ -860,7 +860,7 @@ class BillingProfileScenarioTest(ScenarioTest):
             "myBillingAccount": "aff095f4-f26b-5334-db79-29704a77c0e5:8d5301c9-db55-4eb6-8611-9db0417d6cb2_2019-05-31"   # This name is give by service team
         })
 
-    def test_biiling_profile_list_and_show(self):
+    def test_billing_profile_list_and_show(self):
 
         # list billing profiles under a certain billing account
         step__billingprofiles_get(self)
