@@ -41,7 +41,7 @@ class CognitiveServicesTests(ScenarioTest):
                  checks=[self.check('sku.name', '{sku}'),
                          self.check('tags', {tagname: tagvalue})])
 
-        # test to list keys of a cogntive services account
+        # test to list keys of a cognitive services account
         oldkeys = self.cmd('az cognitiveservices account keys list -n {sname} -g {rg}',
                            checks=[self.check('length(key1)', 32),
                                    self.check('length(key2)', 32)]).get_output_in_json()
