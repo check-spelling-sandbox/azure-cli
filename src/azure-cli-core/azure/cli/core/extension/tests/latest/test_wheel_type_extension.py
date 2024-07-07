@@ -84,7 +84,7 @@ class TestWheelTypeExtensionMetadata(ExtensionTypeTestMixin):
     def test_reading_wheel_type_extension_from_develop_mode(self):
         """
         Test wheel type extension but installing from source code.
-        For scenario that user are developing extension via 'pip install -e' directlly
+        For scenario that user are developing extension via 'pip install -e' directly
         and load it from _CUSTOM_EXT_DIR or GLOBAL_CONFIG_DIR
         """
 
