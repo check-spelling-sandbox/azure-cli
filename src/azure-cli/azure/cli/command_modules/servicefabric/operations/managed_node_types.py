@@ -46,7 +46,7 @@ def create_node_type(cmd,
                      is_stateless=False,
                      multiple_placement_groups=False):
 
-    #  set defult parameters
+    #  set default parameters
     if disk_size is None:
         disk_size = 100
 

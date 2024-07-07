@@ -57,7 +57,7 @@ def create_cluster(cmd,
         if rg is None:
             rg = _create_resource_group_name(cmd.cli_ctx, resource_group_name, location)
 
-        #  set defult parameters
+        #  set default parameters
         if location is None:
             location = rg.location
 
