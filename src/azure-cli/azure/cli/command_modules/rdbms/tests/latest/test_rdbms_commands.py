@@ -263,7 +263,7 @@ class ServerMgmtScenarioTest(ScenarioTest):
                          JMESPathCheck('storageProfile.geoRedundantBackup', geoGeoRedundantBackup)])
         self.assertTrue(' does not have the server ' in '{}'.format(exception.exception))
 
-        # test infrastructre encryption on server
+        # test infrastructure encryption on server
         if database_engine != 'mariadb':
             self.cmd('{} server create -g {} --name {} -l {} '
                      '--admin-user {} --admin-password {} '
