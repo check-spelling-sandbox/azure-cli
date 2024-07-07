@@ -3807,16 +3807,16 @@ def list_vmss_instance_connection_info(cmd, resource_group_name, vm_scale_set_na
                 raise CLIError('There is no connection information. '
                                'If you are using NAT rule V2, please confirm whether the load balancer SKU is Standard')
 
-            for load_balancer_backend_addresse in backend_address_pool['loadBalancerBackendAddresses']:
+            for load_balancer_backend_address in backend_address_pool['loadBalancerBackendAddresses']:
 
-                network_interface_ip_configuration = load_balancer_backend_addresse['networkInterfaceIPConfiguration']
+                network_interface_ip_configuration = load_balancer_backend_address['networkInterfaceIPConfiguration']
                 if not network_interface_ip_configuration or 'id' not in network_interface_ip_configuration:
                     continue
                 instance_id = parse_resource_id(network_interface_ip_configuration['id'])['child_name_1']
 
-                if not load_balancer_backend_addresse['inboundNatRulesPortMapping']:
+                if not load_balancer_backend_address['inboundNatRulesPortMapping']:
                     continue
-                frontend_port = load_balancer_backend_addresse['inboundNatRulesPortMapping'][0]['frontendPort']
+                frontend_port = load_balancer_backend_address['inboundNatRulesPortMapping'][0]['frontendPort']
                 instance_addresses['instance ' + instance_id] = '{}:{}'.format(public_ip_address, frontend_port)
 
         return instance_addresses

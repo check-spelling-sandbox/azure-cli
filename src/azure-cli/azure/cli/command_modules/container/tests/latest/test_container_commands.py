@@ -464,7 +464,7 @@ class AzureContainerInstanceScenarioTest(ScenarioTest):
             'resource_group_location': resource_group_location,
             'vnet_name': vnet_name,
             'subnet_name': subnet_name,
-            'ip_addresss': ip_address_type
+            'ip_address': ip_address_type
         })
 
         # Vnet name with no subnet
@@ -476,7 +476,7 @@ class AzureContainerInstanceScenarioTest(ScenarioTest):
             self.cmd('container create -g {rg} -n {container_group_name} --image nginx '
                      '--subnet {subnet_name} ')
 
-        self.cmd('container create -g {rg} -n {container_group_name} --image nginx --vnet {vnet_name} --subnet {subnet_name} --ip-address {ip_addresss}',
+        self.cmd('container create -g {rg} -n {container_group_name} --image nginx --vnet {vnet_name} --subnet {subnet_name} --ip-address {ip_address}',
             checks=[self.exists('subnetIds[0].id')])
 
 

@@ -78,7 +78,7 @@ class Create(AAZCommand):
         _args_schema.source_endpoint = AAZStrArg(
             options=["--source-endpoint"],
             arg_group="Properties",
-            help="IP adress of the source endpoint.",
+            help="IP address of the source endpoint.",
         )
         _args_schema.target_database = AAZStrArg(
             options=["--target-db", "--target-database"],
