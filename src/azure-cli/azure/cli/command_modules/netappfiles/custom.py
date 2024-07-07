@@ -408,7 +408,7 @@ class VolumeCreate(_VolumeCreate):
         else:
             logger.debug("Don't create export policy")
 
-# todo create export policy note no longer flatteneded
+# todo create export policy note no longer flattended
     # def post_operations(self):
     #     args = self.ctx.args
     #     backupPolicyId = None
