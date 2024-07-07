@@ -834,7 +834,7 @@ class BillingAccountScenarioTest(ScenarioTest):
 
         # show billing account with name
         step__billingaccounts_get_billingaccounts(self)
-        # show billing account with expaned arguments
+        # show billing account with expanded arguments
         step__billingaccounts_get_billingaccountwithexpand(self)
 
     def test_billing_account_update(self):
@@ -874,7 +874,7 @@ class BillingProfileScenarioTest(ScenarioTest):
 
         # show a billing profile with default properties
         step__billingprofiles_get_billingprofile(self)
-        # show a billing profile with expaned properties
+        # show a billing profile with expanded properties
         step__billingprofiles_get_billingprofilewithexpand(self)
 
     def test_billing_profile_create_and_update(self):

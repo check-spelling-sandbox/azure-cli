@@ -157,7 +157,7 @@ type Microsoft Customer Agreement or Microsoft Partner Agreement."
       - name: Show a billing profile with default properties
         text: |-
                az billing profile show --account-name "{billingAccountName}" --name "{billingProfileName}"
-      - name: Show a billing profile with expaned properties
+      - name: Show a billing profile with expanded properties
         text: |-
                az billing profile show --expand "invoiceSections" --account-name "{billingAccountName}" --name \
 "{billingProfileName}"
