@@ -68,7 +68,7 @@ def show_content_key_policy(client, resource_group_name, account_name, content_k
 
         if not content_key_policy:
             show_resource_not_found_message(
-                account_name, resource_group_name, 'contenKeyPolicies', content_key_policy_name)
+                account_name, resource_group_name, 'contentKeyPolicies', content_key_policy_name)
 
         json_object = json.dumps(content_key_policy, cls=JsonBytearrayEncoder, indent=4)
         return json.loads(json_object)
@@ -80,7 +80,7 @@ def show_content_key_policy(client, resource_group_name, account_name, content_k
 
     if not content_key_policy:
         show_resource_not_found_message(
-            account_name, resource_group_name, 'contenKeyPolicies', content_key_policy_name)
+            account_name, resource_group_name, 'contentKeyPolicies', content_key_policy_name)
 
     return content_key_policy
 
