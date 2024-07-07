@@ -137,7 +137,7 @@ class MetricsAlertUpdate(_MetricsAlertUpdate):
                  "Datetime can be the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format).\n\n"
                  "Dimensions can be queried by adding the 'where' keyword and multiple dimensions can be queried by combining them with the 'and' keyword.\n\n"
                  "Values for METRIC, DIMENSION and appropriate THRESHOLD values can be obtained from `az monitor metrics list-definitions` command.\n\n"
-                 "Due to server limitation, when an alert rule contains multiple criterias, the use of dimensions is limited to one value per dimension within each criterion.\n\n"
+                 "Due to server limitation, when an alert rule contains multiple criteria, the use of dimensions is limited to one value per dimension within each criterion.\n\n"
                  "Multiple conditions can be specified by using more than one `--add-condition` argument."
         )
         args_schema.add_conditions.Element = AAZListArg()

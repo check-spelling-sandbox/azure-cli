@@ -436,7 +436,7 @@ parameters:
 
         Values for METRIC, DIMENSION and appropriate THRESHOLD values can be obtained from `az monitor metrics list-definitions` command.
 
-        Due to server limitation, when an alert rule contains multiple criterias, the use of dimensions is limited to one value per dimension within each criterion.
+        Due to server limitation, when an alert rule contains multiple criteria, the use of dimensions is limited to one value per dimension within each criterion.
 
         Multiple conditions can be specified by using more than one `--condition` argument.
 examples:
