@@ -56,7 +56,7 @@ from ._validators import (
 
 DATABASE_DEPRECATION_INFO = 'cosmosdb sql database, cosmosdb mongodb database, cosmosdb cassandra keyspace or cosmosdb gremlin database'
 
-COLLECTION_DEPRECATON_INFO = 'cosmosdb sql container, cosmosdb mongodb collection, cosmosdb cassandra table, cosmosdb gremlin graph or cosmosdb table'
+COLLECTION_DEPRECATION_INFO = 'cosmosdb sql container, cosmosdb mongodb collection, cosmosdb cassandra table, cosmosdb gremlin graph or cosmosdb table'
 
 
 # pylint: disable=too-many-statements,line-too-long,too-many-locals
@@ -367,7 +367,7 @@ def load_command_table(self, _):
         g.cosmosdb_custom('delete', 'cli_cosmosdb_database_delete', confirmation=True)
 
     # collection operations
-    with self.command_group('cosmosdb collection', deprecate_info=self.deprecate(redirect=COLLECTION_DEPRECATON_INFO, hide=True)) as g:
+    with self.command_group('cosmosdb collection', deprecate_info=self.deprecate(redirect=COLLECTION_DEPRECATION_INFO, hide=True)) as g:
         g.cosmosdb_custom('show', 'cli_cosmosdb_collection_show', table_transformer=collection_output)
         g.cosmosdb_custom('list', 'cli_cosmosdb_collection_list', table_transformer=list_collection_output)
         g.cosmosdb_custom('exists', 'cli_cosmosdb_collection_exists')
