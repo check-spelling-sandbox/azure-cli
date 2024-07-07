@@ -44,7 +44,7 @@ class TestSplitRegistryAndImage(unittest.TestCase):
         with self.assertRaises(CLIError):
             acr_import._split_registry_and_image(single_dot)
 
-    def test_split_empy_source(self):
+    def test_split_empty_source(self):
         empty_source = ''
         with self.assertRaises(CLIError):
             acr_import._split_registry_and_image(empty_source)
