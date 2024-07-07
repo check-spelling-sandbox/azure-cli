@@ -2815,7 +2815,7 @@ def cli_cosmosdb_sql_database_restore(cmd,
             if account.account_name == account_name:
                 if account.deletion_time is not None:
                     if account.deletion_time >= restore_timestamp_datetime_utc >= account.creation_time:
-                        raise CLIError("Cannot perform inaccount restore on a deleted database account {}".format(account_name))
+                        raise CLIError("Cannot perform in account restore on a deleted database account {}".format(account_name))
                 else:
                     if restore_timestamp_datetime_utc >= account.creation_time:
                         restorable_database_account = account
@@ -2898,7 +2898,7 @@ def cli_cosmosdb_sql_container_restore(cmd,
             if account.account_name == account_name:
                 if account.deletion_time is not None:
                     if account.deletion_time >= restore_timestamp_datetime_utc >= account.creation_time:
-                        raise CLIError("Cannot perform inaccount restore on a deleted database account {}".format(account_name))
+                        raise CLIError("Cannot perform in account restore on a deleted database account {}".format(account_name))
                 else:
                     if restore_timestamp_datetime_utc >= account.creation_time:
                         restorable_database_account = account
@@ -2999,7 +2999,7 @@ def cli_cosmosdb_mongodb_database_restore(cmd,
             if account.account_name == account_name:
                 if account.deletion_time is not None:
                     if account.deletion_time >= restore_timestamp_datetime_utc >= account.creation_time:
-                        raise CLIError("Cannot perform inaccount restore on a deleted database account {}".format(account_name))
+                        raise CLIError("Cannot perform in account restore on a deleted database account {}".format(account_name))
                 else:
                     if restore_timestamp_datetime_utc >= account.creation_time:
                         restorable_database_account = account
@@ -3081,7 +3081,7 @@ def cli_cosmosdb_mongodb_collection_restore(cmd,
             if account.account_name == account_name:
                 if account.deletion_time is not None:
                     if account.deletion_time >= restore_timestamp_datetime_utc >= account.creation_time:
-                        raise CLIError("Cannot perform inaccount restore on a deleted database account {}".format(account_name))
+                        raise CLIError("Cannot perform in account restore on a deleted database account {}".format(account_name))
                 else:
                     if restore_timestamp_datetime_utc >= account.creation_time:
                         restorable_database_account = account
@@ -3181,7 +3181,7 @@ def cli_cosmosdb_gremlin_database_restore(cmd,
             if account.account_name == account_name:
                 if account.deletion_time is not None:
                     if account.deletion_time >= restore_timestamp_datetime_utc >= account.creation_time:
-                        raise CLIError("Cannot perform inaccount restore on a deleted database account {}".format(account_name))
+                        raise CLIError("Cannot perform in account restore on a deleted database account {}".format(account_name))
                 else:
                     if restore_timestamp_datetime_utc >= account.creation_time:
                         restorable_database_account = account
@@ -3264,7 +3264,7 @@ def cli_cosmosdb_gremlin_graph_restore(cmd,
             if account.account_name == account_name:
                 if account.deletion_time is not None:
                     if account.deletion_time >= restore_timestamp_datetime_utc >= account.creation_time:
-                        raise CLIError("Cannot perform inaccount restore on a deleted gremlin database account {}".format(account_name))
+                        raise CLIError("Cannot perform in account restore on a deleted gremlin database account {}".format(account_name))
                 else:
                     if restore_timestamp_datetime_utc >= account.creation_time:
                         restorable_database_account = account
@@ -3365,7 +3365,7 @@ def cli_cosmosdb_table_restore(cmd,
             if account.account_name == account_name:
                 if account.deletion_time is not None:
                     if account.deletion_time >= restore_timestamp_datetime_utc >= account.creation_time:
-                        raise CLIError("Cannot perform inaccount restore on a deleted table {}".format(account_name))
+                        raise CLIError("Cannot perform in account restore on a deleted table {}".format(account_name))
                 else:
                     if restore_timestamp_datetime_utc >= account.creation_time:
                         restorable_database_account = account
