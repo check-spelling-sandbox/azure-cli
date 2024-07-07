@@ -71,7 +71,7 @@ def acr_connected_registry_create(cmd,  # pylint: disable=too-many-locals, too-m
     registry, resource_group_name = get_registry_by_name(cmd.cli_ctx, registry_name, resource_group_name)
 
     if not registry.data_endpoint_enabled:
-        user_confirmation("Dedicated data enpoints must be enabled to use connected-registry. Enabling might " +
+        user_confirmation("Dedicated data endpoints must be enabled to use connected-registry. Enabling might " +
                           "impact your firewall rules. Are you sure you want to enable it for '{}' registry?".format(
                               registry_name), yes)
         acr_update_custom(cmd, registry, resource_group_name, data_endpoint_enabled=True)
