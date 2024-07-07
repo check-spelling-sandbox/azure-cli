@@ -286,7 +286,7 @@ parameters:
     short-summary: The name of the database.
   - name: --schema-name
     type: string
-    short-summary: The schema assocated with the tables to list.
+    short-summary: The schema associated with the tables to list.
 """
 
 helps['dla catalog table-partition'] = """
@@ -333,7 +333,7 @@ parameters:
     short-summary: The name of the database.
   - name: --schema-name
     type: string
-    short-summary: The name of the schema assocated with table valued functions to list.
+    short-summary: The name of the schema associated with table valued functions to list.
 """
 
 helps['dla catalog view'] = """
