@@ -212,7 +212,7 @@ class MainModuleCompactor:
         _LOGGER.debug("Parsing folder {}".format(folder))
         cmds_content, grp_cls = self._parse_cmd_group_file(folder, None)
 
-        cmds_content, cmd_clses, cmd_cls_helpers = self._parse_cmd_files(folder, cmds_content)
+        cmds_content, cmd_classes, cmd_cls_helpers = self._parse_cmd_files(folder, cmds_content)
 
         if cmd_cls_helpers:
             link_helper_codes = {}
@@ -261,16 +261,16 @@ class MainModuleCompactor:
         self._write_py_file(os.path.join(compact_folder, '__init__.py'), content=init_content)
 
         if cmds_content:
-            if cmd_clses:
-                all_clses = [f'"{cmd_cls}"' for cmd_cls in cmd_clses]
+            if cmd_classes:
+                all_classes = [f'"{cmd_cls}"' for cmd_cls in cmd_classes]
             else:
-                all_clses = []
+                all_classes = []
 
             if grp_cls:
-                all_clses.append(f'"{grp_cls}"')
+                all_classes.append(f'"{grp_cls}"')
 
-            if all_clses:
-                cmds_content += ''.join(['\n', '\n', f'__all__ = [{",".join(all_clses)}]\n'])
+            if all_classes:
+                cmds_content += ''.join(['\n', '\n', f'__all__ = [{",".join(all_classes)}]\n'])
 
             self._write_py_file(os.path.join(compact_folder, '__cmds.py'), content=cmds_content)
 
@@ -317,7 +317,7 @@ class MainModuleCompactor:
         return cmds_content, grp_cls
 
     def _parse_cmd_files(self, folder,  cmds_content):
-        cmd_clses = []
+        cmd_classes = []
         cmd_cls_helpers = {}
         for name in os.listdir(folder):
             if name.startswith('__') or not name.startswith('_') or not name.endswith('.py'):
@@ -328,7 +328,7 @@ class MainModuleCompactor:
             cmd_cls, cmd_lines, cmd_helper_lines = self._parse_cmd_file(cmd_file)
             if not cmd_cls:
                 continue
-            cmd_clses.append(cmd_cls)
+            cmd_classes.append(cmd_cls)
             cmds_content += ''.join(['\n', '\n', *cmd_lines])
 
             if cmd_helper_lines:
@@ -339,9 +339,9 @@ class MainModuleCompactor:
                         "codes": helper_codes
                     }
 
-        _LOGGER.debug("Parsed Command Classes: {}".format(cmd_clses))
+        _LOGGER.debug("Parsed Command Classes: {}".format(cmd_classes))
 
-        return cmds_content, cmd_clses, cmd_cls_helpers
+        return cmds_content, cmd_classes, cmd_cls_helpers
 
     def _parse_cmd_file(self, cmd_file):
         _LOGGER.debug("Parsing command file {}".format(cmd_file))
