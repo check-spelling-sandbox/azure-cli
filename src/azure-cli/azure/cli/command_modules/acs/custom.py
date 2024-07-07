@@ -2127,7 +2127,7 @@ def _get_command_context(command_files):
         for file in command_files:
             if file == ".":
                 raise ValidationError(
-                    ". is used to attach current folder, not expecting other attachements.")
+                    ". is used to attach current folder, not expecting other attachments.")
             if os.path.isfile(file):
                 # for individual attached file, flatten them to same folder
                 filesToAttach[file] = os.path.basename(file)

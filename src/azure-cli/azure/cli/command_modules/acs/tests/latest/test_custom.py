@@ -833,7 +833,7 @@ class TestRunCommand(unittest.TestCase):
             _get_command_context(
                 [".", get_test_data_file_path("ns.yaml")])
         self.assertEqual(str(
-            cm.exception), '. is used to attach current folder, not expecting other attachements.')
+            cm.exception), '. is used to attach current folder, not expecting other attachments.')
 
     def test_get_command_context_empty(self):
         context = _get_command_context([])
