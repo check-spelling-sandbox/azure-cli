@@ -7906,7 +7906,7 @@ class VMSSTerminateNotificationScenarioTest(ScenarioTest):
                      self.check(update_not_before_timeout_key, 'PT5M')
                  ])
 
-    @ResourceGroupPreparer(name_prefix='cli_test_vmss_os_iamge_notification_')
+    @ResourceGroupPreparer(name_prefix='cli_test_vmss_os_image_notification_')
     def test_vmss_os_image_notification(self, resource_group):
         self.kwargs.update({
             'vmss': self.create_random_name('vmss', 10),
