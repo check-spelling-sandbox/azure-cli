@@ -30,7 +30,7 @@ from azure.cli.command_modules.ams._completers import (get_role_definition_name_
                                                        get_stretch_mode_types_list,
                                                        get_storage_authentication_allowed_values_list,
                                                        get_allowed_face_detector_modes,
-                                                       get_allowed_face_dectector_blur_types,
+                                                       get_allowed_face_detector_blur_types,
                                                        get_allowed_encryption_key_types,
                                                        get_default_action_allowed_values_list)
 
@@ -146,7 +146,7 @@ def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statem
                    .format(", ".join(get_allowed_resolutions_completion_list())))
         c.argument('face_detector_mode', arg_group='Face Detector', help='This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction. Allowed values: {}.'
                    .format(", ".join(get_allowed_face_detector_modes())))
-        c.argument('blur_type', arg_group='Face Detector', help='Allowed values: {}.'.format(", ".join(get_allowed_face_dectector_blur_types())))
+        c.argument('blur_type', arg_group='Face Detector', help='Allowed values: {}.'.format(", ".join(get_allowed_face_detector_blur_types())))
         c.argument('relative_priority', arg_type=get_enum_type(Priority), help='Sets the relative priority of the transform outputs within a transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.')
         c.argument('on_error', arg_type=get_enum_type(OnErrorType), help="A Transform can define more than one output. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.")
         c.argument('description', help='The description of the transform.')

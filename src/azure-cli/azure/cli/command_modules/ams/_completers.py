@@ -101,7 +101,7 @@ def get_allowed_face_detector_modes():
     return modes
 
 
-def get_allowed_face_dectector_blur_types():
+def get_allowed_face_detector_blur_types():
     types = get_face_detector_blur_types()
     return types
 
