@@ -96,7 +96,7 @@ It's also possible to pass json file as value.
 
 Use `json file` for value:
 ```bash
-az some-command --contact address.details=./address_detials.json
+az some-command --contact address.details=./address_details.json
 ```
 
 ## Combine with `Full Value` and `Partial Value`
