@@ -15,7 +15,7 @@ from azure.cli.core.aaz import *
     "netappfiles account backup-policy",
 )
 class __CMDGroup(AAZCommandGroup):
-    """Manage Azure NetApp Files (ANF) Bakup Policy Resources.
+    """Manage Azure NetApp Files (ANF) Backup Policy Resources.
     """
     pass
 
