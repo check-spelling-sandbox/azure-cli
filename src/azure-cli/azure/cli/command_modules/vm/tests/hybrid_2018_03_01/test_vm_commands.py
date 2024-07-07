@@ -742,7 +742,7 @@ class VMAvailSetScenarioTest(ScenarioTest):
             self.check('sku.name', 'Aligned')
         ])
 
-        # create with explict UD count
+        # create with explicit UD count
         self.cmd('vm availability-set create -g {rg} -n avset2 --platform-fault-domain-count 2 --platform-update-domain-count 2', checks=[
             self.check('platformFaultDomainCount', 2),
             self.check('platformUpdateDomainCount', 2),
