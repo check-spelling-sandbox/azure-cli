@@ -157,7 +157,7 @@ class ActionGroupCreate(_ActionGroupCreate):
             Example:    --action webhook alert_hook https://www.contoso.com/alert useaadauth testobj http://identifier usecommonalertschema
         Arm Role:
             Format:     --action armrole NAME ROLE_ID [usecommonalertschema]
-            Example:    --action armole owner_role 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
+            Example:    --action armrole owner_role 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
         Azure App Push:
             Format:     --action azureapppush NAME EMAIL_ADDRESS
             Example:    --action azureapppush test_apppush bob@contoso.com
@@ -238,7 +238,7 @@ class ActionGroupUpdate(_ActionGroupUpdate):
             Example:    --add-action https://www.contoso.com/alert useaadauth testobj http://identifier usecommonalertschema
         Arm Role:
             Format:     --add-action armrole NAME ROLE_ID [usecommonalertschema]
-            Example:    --add-action armole owner_role 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
+            Example:    --add-action armrole owner_role 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
         Azure App Push:
             Format:     --add-action azureapppush NAME EMAIL_ADDRESS
             Example:    --add-action azureapppush test_apppush bob@contoso.com
@@ -369,7 +369,7 @@ class ActionGroupTestNotificationCreate(_ActionGroupTestNotificationCreate):
             Example:    --add-action https://www.contoso.com/alert useaadauth testobj http://identifier usecommonalertschema
         Arm Role:
             Format:     --add-action armrole NAME ROLE_ID [usecommonalertschema]
-            Example:    --add-action armole owner_role 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
+            Example:    --add-action armrole owner_role 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
         Azure App Push:
             Format:     --add-action azureapppush NAME EMAIL_ADDRESS
             Example:    --add-action azureapppush test_apppush bob@contoso.com
