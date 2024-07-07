@@ -121,7 +121,7 @@ class KeyVaultAuthBase(AuthBase):
         challenge = HttpChallenge(response.request.url, auth_header, response.headers)
 
         # bearer and PoP are the only authentication schemes supported at this time
-        # if the response auth header is not a bearer challenge or pop challange do not auth and return response
+        # if the response auth header is not a bearer challenge or pop challenge do not auth and return response
         if not (challenge.is_bearer_challenge() or challenge.is_pop_challenge()):
             self._thread_local.auth_attempted = False
             return response
