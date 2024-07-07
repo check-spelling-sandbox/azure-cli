@@ -21,7 +21,7 @@ helps['term show'] = """
     type: command
     short-summary: "Get marketplace terms."
     examples:
-      - name: Get marketeplace terms.
+      - name: Get marketplace terms.
         text: |-
                az term show --product "windows-data-science-vm" --plan "windows2016" --publisher "microsoft-ads"
 """
