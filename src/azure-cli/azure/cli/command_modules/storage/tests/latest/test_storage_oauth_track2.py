@@ -203,7 +203,7 @@ class StorageOauthTests(StorageScenarioMixin, ScenarioTest):
                                 JMESPathCheck('properties.contentSettings.contentType', 'application/octet-stream'),
                                 JMESPathCheck('properties.contentSettings.cacheControl', None),
                                 JMESPathCheck('properties.contentSettings.contentDisposition', None),
-                                JMESPathCheck('properties.contentSettings.contentEncooding', None),
+                                JMESPathCheck('properties.contentSettings.contentEncoding', None),
                                 JMESPathCheck('properties.contentSettings.contentLanguage', None),
                                 JMESPathCheckExists('properties.contentSettings.contentMd5'),
                                 JMESPathCheck('properties.copy.completionTime', None),
