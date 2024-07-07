@@ -3255,7 +3255,7 @@ def swap_slot(cmd, resource_group_name, webapp, slot, target_slot=None, preserve
     client = web_client_factory(cmd.cli_ctx)
     # Default isPreserveVnet to 'True' if preserve_vnet is 'None'
     isPreserveVnet = preserve_vnet if preserve_vnet is not None else 'true'
-    # converstion from string to Boolean
+    # conversion from string to Boolean
     isPreserveVnet = bool(isPreserveVnet == 'true')
     CsmSlotEntity = cmd.get_models('CsmSlotEntity')
     slot_swap_entity = CsmSlotEntity(target_slot=target_slot or 'production', preserve_vnet=isPreserveVnet)
