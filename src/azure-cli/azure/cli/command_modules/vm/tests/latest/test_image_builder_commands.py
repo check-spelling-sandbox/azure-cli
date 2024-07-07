@@ -94,7 +94,7 @@ class ImageTemplateTest(ScenarioTest):
             # self.cmd('role assignment create --assignee {identity_id} --role "{role_name}" --scope {scope}')
             self.cmd('role assignment create --assignee {identity_id} --role Contributor --scope {scope}')
 
-    @unittest.skip('The identity is genereated dynamically. Template file should contain it')
+    @unittest.skip('The identity is generated dynamically. Template file should contain it')
     @ResourceGroupPreparer(name_prefix='cli_test_image_builder_template_file_')
     def test_image_builder_template_file(self, resource_group):
         self._identity_role(resource_group)
