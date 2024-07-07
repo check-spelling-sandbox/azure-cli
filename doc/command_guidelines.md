@@ -353,7 +353,7 @@ def create_foo(cmd, client, resource_group_name, foo_name, policy_action, policy
 The corresponding rule create looks like:
 ```Python
 def create_foo_rule(cmd, client, resource_group_name, foo_name, rule_name, metric, operation, value):
-    from azure.cli.core.commands import cached_put, upsert_to_colleciton, get_property
+    from azure.cli.core.commands import cached_put, upsert_to_collection, get_property
     FooRule = cmd.get_models('FooRule')
     # retrieves the object from the cache. On a miss, retrieves from Azure
     foo_obj = cached_get(cmd, client.get, resource_group_name, foo_name)
