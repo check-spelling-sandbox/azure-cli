@@ -295,7 +295,7 @@ class CdnOriginScenarioTest(CdnScenarioMixin, ScenarioTest):
                                  options=f"--default-origin-group={origin_group_name}",
                                  checks=checks)
 
-        # Create two origin gorups.
+        # Create two origin groups.
         origin2_name = self.create_random_name(prefix='origin', length=24)
         origin2_hostname = f'{origin2_name}.contoso.com'
         http_port = 8080
