@@ -1335,7 +1335,7 @@ def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statem
         c.argument('container_name', options_list=['--destination-container', '-c'], required=True,
                    help='The container name.')
         c.extra('destination_lease', options_list='--destination-lease-id',
-                help='The lease ID specified for this header must match the lease ID of the estination blob. '
+                help='The lease ID specified for this header must match the lease ID of the destination blob. '
                 'If the request does not include the lease ID or it is not valid, the operation fails with status '
                 'code 412 (Precondition Failed).')
         c.extra('source_lease', options_list='--source-lease-id', arg_group='Copy Source',
