@@ -558,7 +558,7 @@ class ImageCleanerNamespace:
         self.disable_image_cleaner = disable_image_cleaner
         self.image_cleaner_interval_hours = image_cleaner_interval_hours
 
-class TestValidateImageCleanerEnableDiasble(unittest.TestCase):
+class TestValidateImageCleanerEnableDisable(unittest.TestCase):
     def test_invalid_image_cleaner_enable_disable_not_existing_together(self):
         namespace = ImageCleanerNamespace(
             enable_image_cleaner=True,
@@ -579,7 +579,7 @@ class ForceUpgradeNamespace:
         self.enable_force_upgrade = enable_force_upgrade
         self.disable_force_upgrade = disable_force_upgrade
 
-class TestValidateForceUpgradeEnableDiasble(unittest.TestCase):
+class TestValidateForceUpgradeEnableDisable(unittest.TestCase):
     def test_invalid_force_upgrade_enable_disable_not_existing_together(self):
         namespace = ForceUpgradeNamespace(
             enable_force_upgrade=True,
