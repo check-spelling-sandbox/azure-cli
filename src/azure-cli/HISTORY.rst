@@ -6807,7 +6807,7 @@ Added Cluster commands and trusted_service_access_enabled parameter for Networkr
 **AKS**
 
 * Change default vm sku to Standard_D2s_v3 (#13541)
-* Fix creating role assignment for MSI clsuter plus custom subnet (#13543)
+* Fix creating role assignment for MSI cluster plus custom subnet (#13543)
 
 **AppService**
 
