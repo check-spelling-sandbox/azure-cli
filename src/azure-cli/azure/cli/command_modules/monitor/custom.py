@@ -43,7 +43,7 @@ def _build_activity_log_odata_filter(correlation_id=None, resource_group=None, r
         # if no start_time, apply offset backwards from end_time
         start_time = (dateutil.parser.parse(end_time) - offset).isoformat()
     elif not end_time:
-        # if no end_time, apply offset fowards from start_time
+        # if no end_time, apply offset forwards from start_time
         end_time = (dateutil.parser.parse(start_time) + offset).isoformat()
 
     odata_filters = 'eventTimestamp ge {} and eventTimestamp le {}'.format(start_time, end_time)
@@ -119,7 +119,7 @@ def list_metrics(cmd, resource,
         # if no start_time, apply offset backwards from end_time
         start_time = (dateutil.parser.parse(end_time) - offset).isoformat()
     elif not end_time:
-        # if no end_time, apply offset fowards from start_time
+        # if no end_time, apply offset forwards from start_time
         end_time = (dateutil.parser.parse(start_time) + offset).isoformat()
 
     timespan = '{}/{}'.format(start_time, end_time)
