@@ -3573,7 +3573,7 @@ def import_ssl_cert(cmd, resource_group_name, name, key_vault, key_vault_certifi
     kv_resource_group_name = kv_id_parts['resource_group']
     kv_subscription = kv_id_parts['subscription']
 
-    # If in the public cloud, check if certificate is an app service certificate, in the same or a diferent
+    # If in the public cloud, check if certificate is an app service certificate, in the same or a different
     # subscription
     kv_secret_name = None
     cloud_type = cmd.cli_ctx.cloud.name
