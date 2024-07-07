@@ -260,7 +260,7 @@ def create_log_analytics_workspace_table(cmd, resource_group_name, workspace_nam
             if '=' in col:
                 n, t = col.split('=', 1)
             else:
-                raise ArgumentUsageError('Usage error: --columns should be provided in colunm_name=colunm_type format')
+                raise ArgumentUsageError('Usage error: --columns should be provided in column_name=column_type format')
             columns_list.append({"name": n, "type": t})
 
     if columns or description is not None:
@@ -328,7 +328,7 @@ def update_log_analytics_workspace_table(cmd, resource_group_name, workspace_nam
             if '=' in col:
                 n, t = col.split('=', 1)
             else:
-                raise ArgumentUsageError('Usage error: --columns should be provided in colunm_name=colunm_type format')
+                raise ArgumentUsageError('Usage error: --columns should be provided in column_name=column_type format')
             columns_list.append({"name": n, "type": t})
 
     command_args = {
