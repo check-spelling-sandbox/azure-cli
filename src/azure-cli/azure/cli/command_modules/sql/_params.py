@@ -1875,7 +1875,7 @@ def load_arguments(self, _):
         c.argument('identity_type',
                    options_list=['--identity-type', '-t'],
                    arg_type=get_enum_type(ResourceIdType),
-                   help='Type of Identity to be used. Possible values are SystemAsssigned,'
+                   help='Type of Identity to be used. Possible values are SystemAssigned,'
                    'UserAssigned, SystemAssigned,UserAssigned and None.')
 
         c.argument('federated_client_id',
@@ -2324,7 +2324,7 @@ def load_arguments(self, _):
         c.argument('identity_type',
                    options_list=['--identity-type', '-t'],
                    arg_type=get_enum_type(ResourceIdType),
-                   help='Type of Identity to be used. Possible values are SystemAsssigned,'
+                   help='Type of Identity to be used. Possible values are SystemAssigned,'
                    'UserAssigned, SystemAssignedUserAssigned and None.')
 
         c.argument('requested_backup_storage_redundancy',

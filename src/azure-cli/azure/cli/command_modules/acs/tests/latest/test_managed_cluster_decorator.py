@@ -3885,7 +3885,7 @@ class AKSManagedClusterContextTestCase(unittest.TestCase):
         with self.assertRaises(InvalidArgumentValueError):
             self.assertEqual(ctx_4.get_private_dns_zone(), CONST_PRIVATE_DNS_ZONE_NONE)
 
-    def test_get_user_assignd_identity_from_mc(self):
+    def test_get_user_assigned_identity_from_mc(self):
         ctx_1 = AKSManagedClusterContext(
             self.cmd,
             AKSManagedClusterParamDict({}),
@@ -3904,7 +3904,7 @@ class AKSManagedClusterContextTestCase(unittest.TestCase):
             identity=identity_1,
         )
         ctx_1.attach_mc(mc_1)
-        self.assertEqual(ctx_1.get_user_assignd_identity_from_mc(), "test_assign_identity")
+        self.assertEqual(ctx_1.get_user_assigned_identity_from_mc(), "test_assign_identity")
 
     def test_get_assign_kubelet_identity(self):
         # default

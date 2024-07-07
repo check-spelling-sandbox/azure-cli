@@ -963,7 +963,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         dns_name_prefix composed of name (cluster), resource_group_name, and subscription_id will be created.
 
         This function supports the option of enable_validation. When enabled, it will check if both dns_name_prefix and
-        fqdn_subdomain are assigend, if so, raise the MutuallyExclusiveArgumentError.
+        fqdn_subdomain are assigned, if so, raise the MutuallyExclusiveArgumentError.
         This function supports the option of read_only. When enabled, it will skip dynamic completion and validation.
 
         :return: string or None
@@ -1015,7 +1015,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         dns_name_prefix composed of name (cluster), resource_group_name, and subscription_id will be created.
 
         This function will verify the parameter by default. It will check if both dns_name_prefix and fqdn_subdomain
-        are assigend, if so, raise the MutuallyExclusiveArgumentError.
+        are assigned, if so, raise the MutuallyExclusiveArgumentError.
 
         :return: string or None
         """
@@ -3222,7 +3222,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         """Internal function to obtain the value of enable_aad.
 
         This function supports the option of enable_validation. When enabled, in create mode, if the value of
-        enable_aad is True and any of aad_client_app_id, aad_server_app_id or aad_server_app_secret is asssigned, a
+        enable_aad is True and any of aad_client_app_id, aad_server_app_id or aad_server_app_secret is assigned, a
         MutuallyExclusiveArgumentError will be raised. If the value of enable_aad is False and the value of
         enable_azure_rbac is True, a RequiredArgumentMissingError will be raised. In update mode, if enable_aad is
         specified and managed aad has been enabled, an InvalidArgumentValueError will be raised.
@@ -3279,7 +3279,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         """Obtain the value of enable_aad.
 
         This function will verify the parameter by default. In create mode, if the value of enable_aad is True and
-        any of aad_client_app_id, aad_server_app_id or aad_server_app_secret is asssigned, a
+        any of aad_client_app_id, aad_server_app_id or aad_server_app_secret is assigned, a
         MutuallyExclusiveArgumentError will be raised. If the value of enable_aad is False and the value of
         enable_azure_rbac is True, a RequiredArgumentMissingError will be raised. In update mode, if enable_aad is
         specified and managed aad has been enabled, an InvalidArgumentValueError will be raised.
@@ -3295,7 +3295,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         """Internal function to obtain the value of aad_client_app_id, aad_server_app_id and aad_server_app_secret.
 
         This function supports the option of enable_validation. When enabled, if the value of enable_aad is True and any
-        of aad_client_app_id, aad_server_app_id or aad_server_app_secret is asssigned, a MutuallyExclusiveArgumentError
+        of aad_client_app_id, aad_server_app_id or aad_server_app_secret is assigned, a MutuallyExclusiveArgumentError
         will be raised.
 
         :return: a tuple of three elements: aad_client_app_id of string type or None, aad_server_app_id of string type
@@ -3349,7 +3349,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         """Obtain the value of aad_client_app_id, aad_server_app_id and aad_server_app_secret.
 
         This function will verify the parameters by default. If the value of enable_aad is True and any of
-        aad_client_app_id, aad_server_app_id or aad_server_app_secret is asssigned, a MutuallyExclusiveArgumentError
+        aad_client_app_id, aad_server_app_id or aad_server_app_secret is assigned, a MutuallyExclusiveArgumentError
         will be raised.
 
         :return: a tuple of three elements: aad_client_app_id of string type or None, aad_server_app_id of string type
@@ -3362,7 +3362,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     ) -> Union[str, None]:
         """Internal function to dynamically obtain the value of aad_server_app_secret according to the context.
         When both aad_tenant_id and enable_aad are not assigned, and any of aad_client_app_id, aad_server_app_id or
-        aad_server_app_secret is asssigned, dynamic completion will be triggerd. Class
+        aad_server_app_secret is assigned, dynamic completion will be triggerd. Class
         "azure.cli.core._profile.Profile" will be instantiated, and then call its "get_login_credentials" method to
         get the tenant of the deployment subscription.
 
@@ -3413,7 +3413,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     def get_aad_tenant_id(self) -> Union[str, None]:
         """Dynamically obtain the value of aad_server_app_secret according to the context.
         When both aad_tenant_id and enable_aad are not assigned, and any of aad_client_app_id, aad_server_app_id or
-        aad_server_app_secret is asssigned, dynamic completion will be triggerd. Class
+        aad_server_app_secret is assigned, dynamic completion will be triggerd. Class
         "azure.cli.core._profile.Profile" will be instantiated, and then call its "get_login_credentials" method to
         get the tenant of the deployment subscription.
 
@@ -3759,7 +3759,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         """Internal function to obtain the value of fqdn_subdomain.
 
         This function supports the option of enable_validation. When enabled, it will check if both dns_name_prefix and
-        fqdn_subdomain are assigend, if so, raise the MutuallyExclusiveArgumentError. It will also check when both
+        fqdn_subdomain are assigned, if so, raise the MutuallyExclusiveArgumentError. It will also check when both
         private_dns_zone and fqdn_subdomain are assigned, if the value of private_dns_zone is
         CONST_PRIVATE_DNS_ZONE_SYSTEM, raise an InvalidArgumentValueError; Otherwise if the value of private_dns_zone
         is not a valid resource ID, raise an InvalidArgumentValueError.
@@ -3803,7 +3803,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         """Obtain the value of fqdn_subdomain.
 
         This function will verify the parameter by default. It will check if both dns_name_prefix and fqdn_subdomain
-        are assigend, if so, raise the MutuallyExclusiveArgumentError. It will also check when both private_dns_zone
+        are assigned, if so, raise the MutuallyExclusiveArgumentError. It will also check when both private_dns_zone
         and fqdn_subdomain are assigned, if the value of private_dns_zone is CONST_PRIVATE_DNS_ZONE_SYSTEM, raise an
         InvalidArgumentValueError; Otherwise if the value of private_dns_zone is not a valid resource ID, raise an
         InvalidArgumentValueError.
@@ -4061,8 +4061,8 @@ class AKSManagedClusterContext(BaseAKSContext):
         """
         return self._get_private_dns_zone(enable_validation=True)
 
-    def get_user_assignd_identity_from_mc(self) -> Union[str, None]:
-        """Helper function to obtain the (first) user assignd identity from ManagedCluster.
+    def get_user_assigned_identity_from_mc(self) -> Union[str, None]:
+        """Helper function to obtain the (first) user assigned identity from ManagedCluster.
 
         :return: string or None
         """
@@ -4109,7 +4109,7 @@ class AKSManagedClusterContext(BaseAKSContext):
                     )
                     if not self.get_yes() and not prompt_y_n(msg, default="n"):
                         raise DecoratorEarlyExitException
-                    if not self.get_assign_identity() and not self.get_user_assignd_identity_from_mc():
+                    if not self.get_assign_identity() and not self.get_user_assigned_identity_from_mc():
                         raise RequiredArgumentMissingError(
                             "--assign-identity is not provided and the cluster identity type "
                             "is not user assigned, cannot update kubelet identity"
@@ -8050,7 +8050,7 @@ class AKSManagedClusterUpdateDecorator(BaseAKSManagedClusterDecorator):
             }
             user_assigned_identity = self.context.get_assign_identity()
             if not user_assigned_identity:
-                user_assigned_identity = self.context.get_user_assignd_identity_from_mc()
+                user_assigned_identity = self.context.get_user_assigned_identity_from_mc()
             cluster_identity_object_id = self.context.get_user_assigned_identity_object_id(user_assigned_identity)
             # ensure the cluster identity has "Managed Identity Operator" role at the scope of kubelet identity
             self.context.external_functions.ensure_cluster_identity_permission_on_kubelet_identity(

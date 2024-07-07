@@ -858,7 +858,7 @@ short-summary: Manage server user assigned identities.
 
 helps['postgres flexible-server identity assign'] = """
 type: command
-short-summary: Add user asigned managed identities to the server.
+short-summary: Add user assigned managed identities to the server.
 examples:
   - name: Add identities 'test-identity' and 'test-identity-2' to server 'testsvr'.
     text: az postgres flexible-server identity assign -g testgroup -s testsvr --identity test-identity test-identity-2
@@ -866,7 +866,7 @@ examples:
 
 helps['postgres flexible-server identity remove'] = """
 type: command
-short-summary: Remove user asigned managed identites from the server.
+short-summary: Remove user assigned managed identites from the server.
 examples:
   - name: Remove identity 'test-identity' from server 'testsvr'.
     text: az postgres flexible-server identity remove -g testgroup -s testsvr --identity test-identity
