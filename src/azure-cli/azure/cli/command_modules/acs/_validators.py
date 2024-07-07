@@ -603,7 +603,7 @@ def validate_keyvault_secrets_provider_disable_and_enable_parameters(namespace):
 
 def validate_defender_config_parameter(namespace):
     if namespace.defender_config and not namespace.enable_defender:
-        raise RequiredArgumentMissingError("Please specify --enable-defnder")
+        raise RequiredArgumentMissingError("Please specify --enable-defender")
 
 
 def validate_defender_disable_and_enable_parameters(namespace):
