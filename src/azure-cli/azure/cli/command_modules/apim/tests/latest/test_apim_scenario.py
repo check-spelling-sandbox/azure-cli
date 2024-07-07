@@ -409,7 +409,7 @@ class ApimScenarioTest(ScenarioTest):
             'resolver_id': 'newresolver',
             'resolver_display_name': 'Query-allFamilies',
             'resolver_path': 'Query/allFamilies',
-            'resolver_decription': "A GraphQL Resolver example",
+            'resolver_description': "A GraphQL Resolver example",
             'value_path': policypath
         })
 
@@ -439,7 +439,7 @@ class ApimScenarioTest(ScenarioTest):
         
         #create resolver
         self.cmd(
-            'apim graphql resolver create -g "{rg}" --service-name "{service_name}" --api-id "{graphql_api_id}" --resolver-id "{resolver_id}" --display-name "{resolver_display_name}" --path "{resolver_path}" --description "{resolver_decription}"',
+            'apim graphql resolver create -g "{rg}" --service-name "{service_name}" --api-id "{graphql_api_id}" --resolver-id "{resolver_id}" --display-name "{resolver_display_name}" --path "{resolver_path}" --description "{resolver_description}"',
             checks=[self.check('name', '{resolver_id}'),
                     self.check('path', '{resolver_path}')])
         
