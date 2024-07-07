@@ -720,7 +720,7 @@ def load_arguments(self, _):
 
     with self.argument_context('aks nodepool wait', resource_type=ResourceType.MGMT_CONTAINERSERVICE, operation_group='agent_pools') as c:
         c.argument('resource_name', options_list=['--cluster-name'], help='The cluster name.')
-        # the option name '--agent-pool-name' is depracated, left for compatibility only
+        # the option name '--agent-pool-name' is deprecated, left for compatibility only
         c.argument('agent_pool_name', options_list=['--nodepool-name', '--name', '-n', c.deprecate(target='--agent-pool-name', redirect='--nodepool-name', hide=True)], validator=validate_agent_pool_name, help='The node pool name.')
 
     with self.argument_context('aks nodepool add') as c:
