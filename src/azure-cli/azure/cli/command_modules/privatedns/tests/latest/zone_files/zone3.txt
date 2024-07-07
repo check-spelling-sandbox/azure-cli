@@ -60,6 +60,6 @@ txt3 TXT ("this is a very long string with lots of text, in fact is has 74 chara
 	  "this is a very long string with lots of text, in fact is has 74 characters"
  	  "this is a very long string with lots of text, in fact is has 74 characters"
 	  "this is a very long string with lots of text, in fact is has 74 characters"
-	 ) ; Concatentate, and divide into 255 character strings
+	 ) ; Concatenate, and divide into 255 character strings
 
 txt3 TXT "string;string;string" ; String with ';' inside
