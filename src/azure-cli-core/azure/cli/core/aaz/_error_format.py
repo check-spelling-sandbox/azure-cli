@@ -76,7 +76,7 @@ class AAZODataV4Format:
         )
 
     def message_details(self):
-        """Return a detailled string of the error.
+        """Return a detailed string of the error.
         """
         # () -> str
         error_str = "Code: {}".format(self.code)
