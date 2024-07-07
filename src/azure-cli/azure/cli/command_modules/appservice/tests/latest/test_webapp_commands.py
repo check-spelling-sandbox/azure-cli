@@ -2056,7 +2056,7 @@ class WebappZipDeployScenarioTest(ScenarioTest):
         ])
 
 
-class WebappImplictIdentityTest(ScenarioTest):
+class WebappImplicitIdentityTest(ScenarioTest):
     @unittest.skip("Flaky test")
     @AllowLargeResponse(8192)
     @ResourceGroupPreparer(location=WINDOWS_ASP_LOCATION_WEBAPP)
