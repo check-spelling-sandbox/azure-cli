@@ -318,7 +318,7 @@ class AFDOriginCreate(_AFDOriginCreate):
         args_schema = super()._build_arguments_schema(*args, **kwargs)
         args_schema.enable_private_link = AAZBoolArg(
             options=['--enable-private-link'],
-            help='Indicates whether private link is enanbled on that origin.',
+            help='Indicates whether private link is enabled on that origin.',
         )
         args_schema.private_link_location = AAZStrArg(
             options=['--private-link-location'],
@@ -363,7 +363,7 @@ class AFDOriginUpdate(_AFDOriginUpdate):
         args_schema = super()._build_arguments_schema(*args, **kwargs)
         args_schema.enable_private_link = AAZBoolArg(
             options=['--enable-private-link'],
-            help='Indicates whether private link is enanbled on that origin.',
+            help='Indicates whether private link is enabled on that origin.',
         )
         args_schema.private_link_location = AAZStrArg(
             options=['--private-link-location'],
@@ -456,7 +456,7 @@ class AFDRouteCreate(_AFDRouteCreate):
         args_schema = super()._build_arguments_schema(*args, **kwargs)
         args_schema.enable_caching = AAZBoolArg(
             options=['--enable-caching'],
-            help='Indicates whether caching is enanbled on that route.',
+            help='Indicates whether caching is enabled on that route.',
         )
         args_schema.custom_domains = AAZListArg(
             options=['--custom-domains'],
@@ -558,7 +558,7 @@ class AFDRouteUpdate(_AFDRouteUpdate):
         args_schema = super()._build_arguments_schema(*args, **kwargs)
         args_schema.enable_caching = AAZBoolArg(
             options=['--enable-caching'],
-            help='Indicates whether caching is enanbled on that route.',
+            help='Indicates whether caching is enabled on that route.',
         )
         args_schema.custom_domains = AAZListArg(
             options=['--custom-domains'],
