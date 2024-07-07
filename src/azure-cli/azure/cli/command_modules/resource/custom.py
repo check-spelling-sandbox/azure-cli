@@ -3984,7 +3984,7 @@ def _validate_lock_params_match_lock(
     This can lead to a confusing user experience where the user specifies a lock
     name and assumes that it will work, even if they haven't given the right
     scope. This function attempts to validate the parameters and help the
-    user find the right scope, by first finding the lock, and then infering
+    user find the right scope, by first finding the lock, and then inferring
     what it's parameters should be.
     """
     locks = lock_client.management_locks.list_at_subscription_level()
