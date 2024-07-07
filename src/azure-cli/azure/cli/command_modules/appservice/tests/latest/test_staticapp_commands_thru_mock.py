@@ -752,7 +752,7 @@ def _set_up_fake_apps(self):
     self.environment1 = 'default'
     self.hostname1 = 'www.app1.com'
     self.hostname1_validation = StaticSiteCustomDomainRequestPropertiesARMResource(validation_method="cname-delegation")
-    self.app1 = _contruct_static_site_object(
+    self.app1 = _construct_static_site_object(
         self.rg1, self.name1, self.location1,
         self.source1, self.branch1, self.token1)
 
@@ -764,12 +764,12 @@ def _set_up_fake_apps(self):
     self.token2 = 'TOKEN_2'
     self.environment1 = 'prod'
     self.hostname1 = 'www.app2.com'
-    self.app2 = _contruct_static_site_object(
+    self.app2 = _construct_static_site_object(
         self.rg2, self.name2, self.location2,
         self.source2, self.branch2, self.token2)
 
 
-def _contruct_static_site_object(rg, app_name, location, source, branch, token):
+def _construct_static_site_object(rg, app_name, location, source, branch, token):
     from azure.mgmt.web.models import StaticSiteARMResource, SkuDescription
     app = StaticSiteARMResource(
         location=location,
