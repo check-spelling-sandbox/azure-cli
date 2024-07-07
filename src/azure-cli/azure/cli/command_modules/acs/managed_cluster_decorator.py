@@ -6713,7 +6713,7 @@ class AKSManagedClusterCreateDecorator(BaseAKSManagedClusterDecorator):
 
         :return: bool
         """
-        # some addons require post cluster creation role assigment
+        # some addons require post cluster creation role assignment
         monitoring_addon_enabled = self.context.get_intermediate("monitoring_addon_enabled", default_value=False)
         ingress_appgw_addon_enabled = self.context.get_intermediate("ingress_appgw_addon_enabled", default_value=False)
         virtual_node_addon_enabled = self.context.get_intermediate("virtual_node_addon_enabled", default_value=False)
@@ -8495,7 +8495,7 @@ class AKSManagedClusterUpdateDecorator(BaseAKSManagedClusterDecorator):
         :return: bool
         """
         from azure.cli.command_modules.acs._consts import CONST_AZURE_KEYVAULT_SECRETS_PROVIDER_ADDON_NAME
-        # some addons require post cluster creation role assigment
+        # some addons require post cluster creation role assignment
         monitoring_addon_enabled = self.context.get_intermediate("monitoring_addon_enabled", default_value=False)
         ingress_appgw_addon_enabled = self.context.get_intermediate("ingress_appgw_addon_enabled", default_value=False)
         virtual_node_addon_enabled = self.context.get_intermediate("virtual_node_addon_enabled", default_value=False)

@@ -462,7 +462,7 @@ class TestAAZField(unittest.TestCase):
                                     "policyDefinitionDisplayName": "Allowed locations",
                                     "policyDefinitionId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyDefinitions/TestPolicy1",
                                     "policyAssignmentDisplayName": "Allow Central US and WEU only",
-                                    "policyAsssignmentId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyAssignments/TestAssignment1"
+                                    "policyAssignmentId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyAssignments/TestAssignment1"
                                 }
                             },
                             {
@@ -486,7 +486,7 @@ class TestAAZField(unittest.TestCase):
                                             "policyDefinitionDisplayName": "Allowed locations",
                                             "policyDefinitionId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyDefinitions/TestPolicy1",
                                             "policyAssignmentDisplayName": "Allow Central US and WEU only",
-                                            "policyAsssignmentId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyAssignments/TestAssignment1"
+                                            "policyAssignmentId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyAssignments/TestAssignment1"
                                         }
                                     },
                                     {
@@ -525,7 +525,7 @@ class TestAAZField(unittest.TestCase):
                                         "policyDefinitionDisplayName": "Allowed locations",
                                         "policyDefinitionId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyDefinitions/TestPolicy1",
                                         "policyAssignmentDisplayName": "Allow Central US and WEU only",
-                                        "policyAsssignmentId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyAssignments/TestAssignment1"
+                                        "policyAssignmentId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyAssignments/TestAssignment1"
                                     }
                                 },
                                 {
@@ -549,7 +549,7 @@ class TestAAZField(unittest.TestCase):
                                                 "policyDefinitionDisplayName": "Allowed locations",
                                                 "policyDefinitionId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyDefinitions/TestPolicy1",
                                                 "policyAssignmentDisplayName": "Allow Central US and WEU only",
-                                                "policyAsssignmentId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyAssignments/TestAssignment1"
+                                                "policyAssignmentId": "/subscriptions/00000-00000-0000-000/providers/Microsoft.Authorization/policyAssignments/TestAssignment1"
                                             }
                                         },
                                         {

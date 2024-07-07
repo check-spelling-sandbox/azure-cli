@@ -54,7 +54,7 @@ def link_grafana_instance(cmd, raw_parameters, azure_monitor_workspace_resource_
         send_raw_request(cmd.cli_ctx, "PUT", roleDefinitionURI, body=association_body, headers=headers)
     except CLIError as e:
         if e.response.status_code != 409:
-            erroString = "Role Assingment failed. Please manually assign the `Monitoring Data Reader` role\
+            erroString = "Role Assignment failed. Please manually assign the `Monitoring Data Reader` role\
                 to the Azure Monitor Workspace ({0}) for the Azure Managed Grafana\
                 System Assigned Managed Identity ({1})".format(
                 azure_monitor_workspace_resource_id,
