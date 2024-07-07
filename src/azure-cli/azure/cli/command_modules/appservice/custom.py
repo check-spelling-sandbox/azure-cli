@@ -3807,8 +3807,8 @@ class _AbstractStackRuntimeHelper:
 
 # WebApps stack class
 class _StackRuntimeHelper(_AbstractStackRuntimeHelper):
-    DEFAULT_DELIMETER = "|"  # character that separates runtime name from version
-    ALLOWED_DELIMETERS = "|:"  # delimiters allowed: '|', ':'
+    DEFAULT_DELIMITER = "|"  # character that separates runtime name from version
+    ALLOWED_DELIMITERS = "|:"  # delimiters allowed: '|', ':'
 
     # pylint: disable=too-few-public-methods
     class Runtime:
@@ -3834,8 +3834,8 @@ class _StackRuntimeHelper(_AbstractStackRuntimeHelper):
         windows_stacks = [s.display_name for s in self.stacks if not s.linux]
         linux_stacks = [s.display_name for s in self.stacks if s.linux]
         if delimiter is not None:
-            windows_stacks = [n.replace(self.DEFAULT_DELIMETER, delimiter) for n in windows_stacks]
-            linux_stacks = [n.replace(self.DEFAULT_DELIMETER, delimiter) for n in linux_stacks]
+            windows_stacks = [n.replace(self.DEFAULT_DELIMITER, delimiter) for n in windows_stacks]
+            linux_stacks = [n.replace(self.DEFAULT_DELIMITER, delimiter) for n in linux_stacks]
         if self._linux and not self._windows:
             return linux_stacks
         if self._windows and not self._linux:
@@ -3859,8 +3859,8 @@ class _StackRuntimeHelper(_AbstractStackRuntimeHelper):
     def remove_delimiters(cls, runtime):
         if not runtime:
             return runtime
-        runtime = re.split("[{}]".format(cls.ALLOWED_DELIMETERS), runtime)
-        return cls.DEFAULT_DELIMETER.join(filter(None, runtime))
+        runtime = re.split("[{}]".format(cls.ALLOWED_DELIMITERS), runtime)
+        return cls.DEFAULT_DELIMITER.join(filter(None, runtime))
 
     def resolve(self, display_name, linux=False):
         display_name = display_name.lower()
