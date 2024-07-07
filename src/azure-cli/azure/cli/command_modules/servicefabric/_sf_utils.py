@@ -68,7 +68,7 @@ def add_to_collection(parent, collection_name, obj_to_add, key_name, warn=True):
     value, collection, match = _check_val_in_collection(parent, collection_name, obj_to_add, key_name)
     if match:
         if warn:
-            logger.warning("Item '%s' already exists. Exitting command.", value)
+            logger.warning("Item '%s' already exists. Exiting command.", value)
         return
     collection.append(obj_to_add)
 
