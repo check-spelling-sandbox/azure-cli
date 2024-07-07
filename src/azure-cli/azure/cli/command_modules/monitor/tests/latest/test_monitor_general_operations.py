@@ -235,7 +235,7 @@ class MonitorClonePublicIpScenarios(ScenarioTest):
 
 
 class MonitorCloneStorageAccountAcrossSubsScenarios(ScenarioTest):
-    @unittest.skip('Accross subs are not supported now.')
+    @unittest.skip('Across subs are not supported now.')
     # @live_only()
     @ResourceGroupPreparer(name_prefix='cli_test_metric_alert_clone')
     @ResourceGroupPreparer(name_prefix='cli_test_metric_alert_clone',

@@ -1666,12 +1666,12 @@ examples:
 
 helps['acr connected-registry permissions'] = """
 type: group
-short-summary: Manage the repository permissions accross multiple connected registries. Please see https://aka.ms/acr/connected-registry for more information.
+short-summary: Manage the repository permissions across multiple connected registries. Please see https://aka.ms/acr/connected-registry for more information.
 """
 
 helps['acr connected-registry permissions update'] = """
 type: command
-short-summary: Add and remove repository permissions accross all the necessary connected registry sync scope maps.
+short-summary: Add and remove repository permissions across all the necessary connected registry sync scope maps.
 examples:
   - name: Add permissions to synchronize images from 'repo1' and 'repo2' to the connected registry 'myconnectedregistry' and its ancestors.
     text: >

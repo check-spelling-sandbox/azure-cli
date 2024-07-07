@@ -332,7 +332,7 @@ def ensure_aks_acr(cmd, assignee, acr_name_or_id, subscription_id, detach=False,
         ensure_aks_acr_role_assignment(cmd, assignee, registry.id, detach, is_service_principal)
         return
 
-    # Check if the ACR exists by name accross all resource groups.
+    # Check if the ACR exists by name across all resource groups.
     registry_name = acr_name_or_id
     registry_resource = "Microsoft.ContainerRegistry/registries"
     try:
