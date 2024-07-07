@@ -359,7 +359,7 @@ def load_arguments(self, _):  # pylint: disable=too-many-statements
         c.argument('base_image_trigger_enabled', arg_group='Trigger', help="Indicates whether the base image trigger is enabled.", arg_type=get_three_state_flag())
         c.argument('base_image_trigger_type', arg_group='Trigger', help="The type of the auto trigger for base image dependency updates.", arg_type=get_enum_type(BaseImageTriggerType))
         c.argument('update_trigger_endpoint', arg_group='Trigger', help="The full URL of the endpoint to receive base image update trigger notifications.", is_preview=True)
-        c.argument('update_trigger_payload_type', arg_group='Trigger', help="Indicates whether to include metadata about the base image trigger in the payload alongwith the update trigger token, when a notification is sent.", arg_type=get_enum_type(UpdateTriggerPayloadType), is_preview=True)
+        c.argument('update_trigger_payload_type', arg_group='Trigger', help="Indicates whether to include metadata about the base image trigger in the payload along with the update trigger token, when a notification is sent.", arg_type=get_enum_type(UpdateTriggerPayloadType), is_preview=True)
 
         # Run related parameters
         c.argument('run_id', help='The unique run identifier.')
@@ -385,7 +385,7 @@ def load_arguments(self, _):  # pylint: disable=too-many-statements
 
     with self.argument_context('acr task run') as c:
         # Update trigger token parameters
-        c.argument('update_trigger_token', help="The payload that will be passed back alongwith the base image trigger notification.", is_preview=True)
+        c.argument('update_trigger_token', help="The payload that will be passed back along with the base image trigger notification.", is_preview=True)
 
     with self.argument_context('acr task list-runs') as c:
         c.argument('run_status', help='The current status of run.', arg_type=get_enum_type(RunStatus))
