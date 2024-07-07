@@ -981,9 +981,9 @@ def _get_next_subnet_addr_suffix(vnet_cidr, subnet_cidr, new_mask):
             raise CLIError(error_msg)
 
     # format back to the cidr
-    candaidate_str = '{0:32b}'.format(candidate_int << subnet_bit_mask_len)
-    return '{0}.{1}.{2}.{3}/{4}'.format(int(candaidate_str[0:8], 2), int(candaidate_str[8:16], 2),
-                                        int(candaidate_str[16:24], 2), int(candaidate_str[24:32], 2),
+    candidate_str = '{0:32b}'.format(candidate_int << subnet_bit_mask_len)
+    return '{0}.{1}.{2}.{3}/{4}'.format(int(candidate_str[0:8], 2), int(candidate_str[8:16], 2),
+                                        int(candidate_str[16:24], 2), int(candidate_str[24:32], 2),
                                         new_mask)
 
 
