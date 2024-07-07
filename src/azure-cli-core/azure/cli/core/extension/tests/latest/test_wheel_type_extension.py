@@ -22,7 +22,7 @@ class TestWheelTypeExtensionMetadata(ExtensionTypeTestMixin):
     def test_reading_wheel_type_0_30_0_extension_metadata(self):
         """
         Test wheel==0.30.0 containing metadata.json and we can handle it properly.
-        For scenario like 'az extenion add'.
+        For scenario like 'az extension add'.
         """
 
         # this wheel contains metadata.json and METADATA
@@ -53,7 +53,7 @@ class TestWheelTypeExtensionMetadata(ExtensionTypeTestMixin):
     def test_reading_wheel_type_0_31_0_extension_metadata(self):
         """
         Test wheel>=0.31.0 not containing metadata.json but we can still handle it properly.
-        For scenario like 'az extenion add'.
+        For scenario like 'az extension add'.
         """
 
         # this wheel contains METADATA only

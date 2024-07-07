@@ -512,7 +512,7 @@ stages:
             # Remove ext- prefix
             FinalTarget="$(Target)"
             if [[ "${FinalTarget}" =~ ^ext-.* ]]; then
-              echo "It is an extention"
+              echo "It is an extension"
               echo $(Target)
               FinalTarget=${FinalTarget:4}
               azdev extension add ${FinalTarget}
@@ -1089,7 +1089,7 @@ stages:
             # Remove ext- prefix
             FinalTarget="$(Target)"
             if [[ "${FinalTarget}" =~ ^ext-.* ]]; then
-              echo "It is an extention"
+              echo "It is an extension"
               echo $(Target)
               FinalTarget=${FinalTarget:4}
               azdev extension add ${FinalTarget}
@@ -1664,7 +1664,7 @@ stages:
             # Remove ext- prefix
             FinalTarget="$(Target)"
             if [[ "${FinalTarget}" =~ ^ext-.* ]]; then
-              echo "It is an extention"
+              echo "It is an extension"
               echo $(Target)
               FinalTarget=${FinalTarget:4}
               azdev extension add ${FinalTarget}

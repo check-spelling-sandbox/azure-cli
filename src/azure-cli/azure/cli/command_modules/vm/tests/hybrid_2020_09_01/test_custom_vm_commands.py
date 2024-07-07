@@ -69,22 +69,22 @@ class TestVmCustom(unittest.TestCase):
         self.assertEqual(None, auto_upgrade)
 
         # when there is existing extension with higher version, stick to that
-        extentions = [FakedAccessExtensionEntity(True, '3.0')]
+        extensions = [FakedAccessExtensionEntity(True, '3.0')]
         publisher, version, auto_upgrade = _get_access_extension_upgrade_info(
-            extentions, _LINUX_ACCESS_EXT)
+            extensions, _LINUX_ACCESS_EXT)
         self.assertEqual('3.0', version)
         self.assertEqual(None, auto_upgrade)
 
-        extentions = [FakedAccessExtensionEntity(False, '10.0')]
+        extensions = [FakedAccessExtensionEntity(False, '10.0')]
         publisher, version, auto_upgrade = _get_access_extension_upgrade_info(
-            extentions, _WINDOWS_ACCESS_EXT)
+            extensions, _WINDOWS_ACCESS_EXT)
         self.assertEqual('10.0', version)
         self.assertEqual(None, auto_upgrade)
 
         # when there is existing extension with lower version, upgrade to ours
-        extentions = [FakedAccessExtensionEntity(True, '1.0')]
+        extensions = [FakedAccessExtensionEntity(True, '1.0')]
         publisher, version, auto_upgrade = _get_access_extension_upgrade_info(
-            extentions, _LINUX_ACCESS_EXT)
+            extensions, _LINUX_ACCESS_EXT)
         self.assertEqual('1.5', version)
         self.assertEqual(True, auto_upgrade)
 
