@@ -3158,7 +3158,7 @@ def config_diagnostics(cmd, resource_group_name, name, level=None,
     http_logs = None
     server_logging_option = web_server_logging or docker_container_logging
     if server_logging_option:
-        # TODO: az blob storage log config currently not in use, will be impelemented later.
+        # TODO: az blob storage log config currently not in use, will be implemented later.
         # Tracked as Issue: #4764 on GitHub
         filesystem_log_config = None
         turned_on = server_logging_option != 'off'
