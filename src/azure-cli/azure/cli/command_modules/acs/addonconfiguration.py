@@ -149,7 +149,7 @@ AzureChinaRegionToOmsRegionMap = {
 }
 
 
-# mapping for azure us governmner cloud
+# mapping for azure us government cloud
 AzureFairfaxLocationToOmsRegionCodeMap = {
     "usgovvirginia": "USGV",
     "usgovarizona": "PHX",
