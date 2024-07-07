@@ -24,9 +24,9 @@ def assign_aaz_list_arg(target: AAZList, source: AAZList, element_transformer=No
     assert isinstance(target_schema, AAZListArg)
     assert isinstance(source_schema, AAZListArg)
 
-    assert target_schema._nullable == source_schema._nullable, "Inconsist nullable property between target and " \
+    assert target_schema._nullable == source_schema._nullable, "Inconsistent nullable property between target and " \
                                                                "source args"
-    assert target_schema.Element._nullable == source_schema.Element._nullable, "Inconsist nullable property between " \
+    assert target_schema.Element._nullable == source_schema.Element._nullable, "Inconsistent nullable property between " \
                                                                                "target element and source arg element"
 
     if not has_value(source):
@@ -78,9 +78,9 @@ def assign_aaz_dict_arg(target: AAZDict, source: AAZDict, element_transformer=No
     assert isinstance(target_schema, AAZDictArg)
     assert isinstance(source_schema, AAZDictArg)
 
-    assert target_schema._nullable == source_schema._nullable, "Inconsist nullable property between target and " \
+    assert target_schema._nullable == source_schema._nullable, "Inconsistent nullable property between target and " \
                                                                "source args"
-    assert target_schema.Element._nullable == source_schema.Element._nullable, "Inconsist nullable property between " \
+    assert target_schema.Element._nullable == source_schema.Element._nullable, "Inconsistent nullable property between " \
                                                                                "target element and source arg element"
 
     if not has_value(source):
