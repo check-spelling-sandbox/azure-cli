@@ -1021,32 +1021,32 @@ def _verify_cert_function_parameter(certificate_file=None,
     if certificate_file:
         if certificate_subject_name:
             raise CLIError(
-                '\'--certificate-subject-name\' is ingored if \'--certificate-file\' is present')
+                '\'--certificate-subject-name\' is ignored if \'--certificate-file\' is present')
         if certificate_output_folder:
             raise CLIError(
-                '\'--certificate-output-folder\' is ingored if \'--certificate-file\' is present')
+                '\'--certificate-output-folder\' is ignored if \'--certificate-file\' is present')
     else:
         if secret_identifier:
             if certificate_file:
                 raise CLIError(
-                    '\'--certificate-file\' is ingored if \'--secret-identifier\' is present')
+                    '\'--certificate-file\' is ignored if \'--secret-identifier\' is present')
             if certificate_password:
                 raise CLIError(
-                    '\'--certificate-password\' is ingored if \'--secret-identifier\' is present')
+                    '\'--certificate-password\' is ignored if \'--secret-identifier\' is present')
             if certificate_output_folder:
                 raise CLIError(
-                    '\'--certificate-output-folder\' is ingored if \'--secret-identifier\' is present')
+                    '\'--certificate-output-folder\' is ignored if \'--secret-identifier\' is present')
             if certificate_subject_name:
                 raise CLIError(
-                    '\'--certificate-subject-name\' is ingored if \'--secret-identifier\' is present')
+                    '\'--certificate-subject-name\' is ignored if \'--secret-identifier\' is present')
         else:
             if certificate_subject_name:
                 if certificate_file:
                     raise CLIError(
-                        '\'--certificate-file\' is ingored if \'--secret-identifier\' is present')
+                        '\'--certificate-file\' is ignored if \'--secret-identifier\' is present')
                 if secret_identifier:
                     raise CLIError(
-                        '\'--secret-identifier\' is ingored if \'--secret-identifier\' is present')
+                        '\'--secret-identifier\' is ignored if \'--secret-identifier\' is present')
             else:
                 raise CLIError("Invalid input")
 
