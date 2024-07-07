@@ -2483,7 +2483,7 @@ def _validate_vmss_update_terminate_notification_related(cmd, namespace):  # pyl
 
 def _validate_vmss_terminate_notification(cmd, namespace):  # pylint: disable=unused-argument
     """
-    Transform minutes to ISO 8601 formmat
+    Transform minutes to ISO 8601 format
     """
     if namespace.terminate_notification_time is not None:
         namespace.terminate_notification_time = 'PT' + namespace.terminate_notification_time + 'M'
@@ -2510,7 +2510,7 @@ def _validate_vmss_update_automatic_repairs(cmd, namespace):  # pylint: disable=
 
 def _validate_vmss_automatic_repairs(cmd, namespace):  # pylint: disable=unused-argument
     """
-        Transform minutes to ISO 8601 formmat
+        Transform minutes to ISO 8601 format
     """
     if namespace.automatic_repairs_grace_period is not None:
         namespace.automatic_repairs_grace_period = 'PT' + namespace.automatic_repairs_grace_period + 'M'
