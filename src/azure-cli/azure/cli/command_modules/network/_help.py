@@ -3336,7 +3336,7 @@ examples:
   - name: Assign an identity to the ExpressRoute Port
     text: |-
         az network express-route port identity assign \\
-        --resource-group MyResourceGroupg \\
+        --resource-group MyResourceGroup \\
         --name MyExpressRoutePort \\
         --identity MyUserAssignedManagedServiceIdentity
 """
