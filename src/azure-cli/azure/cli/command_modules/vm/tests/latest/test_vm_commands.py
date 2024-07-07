@@ -6117,7 +6117,7 @@ class VMGalleryImage(ScenarioTest):
     def test_shared_gallery(self, resource_group, resource_group_location):
         self.kwargs.update({
             'vm': 'vm1',
-            'gallery': self.create_random_name('gellery', 16),
+            'gallery': self.create_random_name('gallery', 16),
             'image': 'image1',
             'version': '1.1.2',
             'captured': 'managedImage1',
@@ -6870,7 +6870,7 @@ class VMGalleryImage(ScenarioTest):
             'vm_with_shared_gallery_version': self.create_random_name('vm_sgv', 16),
             'vm_with_shared_gallery_version2': self.create_random_name('vm_sgv2', 16),
             'vmss_with_shared_gallery_version': self.create_random_name('vmss', 16),
-            'gallery': self.create_random_name('gellery', 16),
+            'gallery': self.create_random_name('gallery', 16),
             'image': self.create_random_name('image', 16),
             'version': '1.1.2',
             'captured': 'managedImage1',
@@ -7055,7 +7055,7 @@ class VMGalleryImage(ScenarioTest):
     def test_community_gallery_operations(self, resource_group, resource_group_location):
         self.kwargs.update({
             'vm': self.create_random_name('vm', 16),
-            'gallery': self.create_random_name('gellery', 16),
+            'gallery': self.create_random_name('gallery', 16),
             'image': self.create_random_name('image', 16),
             'version': '1.1.2',
             'captured': 'managedImage1',
@@ -7121,7 +7121,7 @@ class VMGalleryImage(ScenarioTest):
             'vm': self.create_random_name('vm', 16),
             'vm_with_community_gallery': self.create_random_name('vm_sg', 16),
             'vmss_with_community_gallery_version': self.create_random_name('vmss', 16),
-            'gallery': self.create_random_name('gellery', 16),
+            'gallery': self.create_random_name('gallery', 16),
             'image': self.create_random_name('image', 16),
             'version': '1.1.2',
             'captured': 'managedImage1'
@@ -7195,7 +7195,7 @@ class VMGalleryApplication(ScenarioTest):
     def test_gallery_application(self, resource_group, resource_group_location):
         self.kwargs.update({
             'app_name': self.create_random_name('app', 10),
-            'gallery': self.create_random_name('gellery', 16),
+            'gallery': self.create_random_name('gallery', 16),
         })
 
         self.cmd('sig create -r {gallery} -g {rg}')
@@ -7234,7 +7234,7 @@ class VMGalleryApplication(ScenarioTest):
         curr_dir = os.path.dirname(os.path.realpath(__file__))
         self.kwargs.update({
             'app_name': self.create_random_name('app', 10),
-            'gallery': self.create_random_name('gellery', 15),
+            'gallery': self.create_random_name('gallery', 15),
             'ver_name': "1.0.0",
             'account': storage_account_info[0],
             'storage_key': storage_account_info[1],
