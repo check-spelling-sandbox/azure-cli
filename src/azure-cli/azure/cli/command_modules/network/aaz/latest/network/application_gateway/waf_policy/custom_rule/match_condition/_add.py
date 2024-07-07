@@ -381,7 +381,7 @@ class Add(AAZCommand):
             )
             _builder.set_prop("matchValues", AAZListType, ".values", typ_kwargs={"flags": {"required": True}})
             _builder.set_prop("matchVariables", AAZListType, ".variables", typ_kwargs={"flags": {"required": True}})
-            _builder.set_prop("negationConditon", AAZBoolType, ".negate")
+            _builder.set_prop("negationCondition", AAZBoolType, ".negate")
             _builder.set_prop("operator", AAZStrType, ".operator", typ_kwargs={"flags": {"required": True}})
             _builder.set_prop("transforms", AAZListType, ".transforms")
 
@@ -4006,8 +4006,8 @@ class _AddHelper:
             serialized_name="matchVariables",
             flags={"required": True},
         )
-        _element.negation_conditon = AAZBoolType(
-            serialized_name="negationConditon",
+        _element.negation_condition = AAZBoolType(
+            serialized_name="negationCondition",
         )
         _element.operator = AAZStrType(
             flags={"required": True},

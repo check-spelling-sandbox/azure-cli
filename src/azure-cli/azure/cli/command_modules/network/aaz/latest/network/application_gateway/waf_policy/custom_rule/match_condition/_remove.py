@@ -3923,8 +3923,8 @@ class _RemoveHelper:
             serialized_name="matchVariables",
             flags={"required": True},
         )
-        _element.negation_conditon = AAZBoolType(
-            serialized_name="negationConditon",
+        _element.negation_condition = AAZBoolType(
+            serialized_name="negationCondition",
         )
         _element.operator = AAZStrType(
             flags={"required": True},

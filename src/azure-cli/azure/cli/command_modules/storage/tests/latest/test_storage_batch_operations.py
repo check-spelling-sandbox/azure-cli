@@ -141,7 +141,7 @@ class StorageBatchOperationScenarios(StorageScenarioMixin, LiveScenarioTest):
         self.storage_cmd('storage blob list -c {} --prefix some_dir',
                          storage_account_info, container).assert_with_checks(JMESPathCheck('length(@)', 4))
 
-        # upload-batch with preconditon
+        # upload-batch with precondition
         container = self.create_container(storage_account_info)
         self.storage_cmd('storage blob upload-batch -d {} -s "{}"',
                                   storage_account_info, container, test_dir)

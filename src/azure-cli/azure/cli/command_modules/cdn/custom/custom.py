@@ -58,46 +58,46 @@ from msrestazure.tools import is_valid_resource_id
 logger = get_logger(__name__)
 
 
-def _check_condition_allowed_opertors(conditon_name, operator):
-    if conditon_name is not None and operator is not None:
-        conditon_allowed_operators = []
-        if conditon_name == "RequestScheme":
-            conditon_allowed_operators = ["Equal"]
+def _check_condition_allowed_opertors(condition_name, operator):
+    if condition_name is not None and operator is not None:
+        condition_allowed_operators = []
+        if condition_name == "RequestScheme":
+            condition_allowed_operators = ["Equal"]
         else:
             try:
-                attr = getattr(sys.modules["azure.mgmt.cdn.models"], conditon_name + "Operator")
-                conditon_allowed_operators = [operator.value for _, operator in attr.__members__.items()]
+                attr = getattr(sys.modules["azure.mgmt.cdn.models"], condition_name + "Operator")
+                condition_allowed_operators = [operator.value for _, operator in attr.__members__.items()]
             except AttributeError:
                 pass
 
-        if len(conditon_allowed_operators) > 0 and operator not in conditon_allowed_operators:
-            allowed_operators = ", ".join(conditon_allowed_operators)
+        if len(condition_allowed_operators) > 0 and operator not in condition_allowed_operators:
+            allowed_operators = ", ".join(condition_allowed_operators)
             raise InvalidArgumentValueError(
-                f"{operator} is not a valid operator for {conditon_name}, allowed values are: {allowed_operators}.")
+                f"{operator} is not a valid operator for {condition_name}, allowed values are: {allowed_operators}.")
 
 
-def _check_condition_allowed_match_values_opertors(conditon_name, match_values):
-    if conditon_name is not None and match_values is not None and len(match_values) > 0:
-        conditon_allowed_match_values = []
-        if conditon_name == "SslProtocol":
-            conditon_allowed_match_values = [protocol.value for protocol in SslProtocol]
+def _check_condition_allowed_match_values_opertors(condition_name, match_values):
+    if condition_name is not None and match_values is not None and len(match_values) > 0:
+        condition_allowed_match_values = []
+        if condition_name == "SslProtocol":
+            condition_allowed_match_values = [protocol.value for protocol in SslProtocol]
         else:
             try:
                 attr = getattr(
                     sys.modules["azure.mgmt.cdn.models"],
-                    conditon_name + "MatchConditionParametersMatchValuesItem")
-                conditon_allowed_match_values = [match_value.value for _, match_value in attr.__members__.items()]
+                    condition_name + "MatchConditionParametersMatchValuesItem")
+                condition_allowed_match_values = [match_value.value for _, match_value in attr.__members__.items()]
             except AttributeError:
                 pass
 
-        if len(conditon_allowed_match_values) > 0:
+        if len(condition_allowed_match_values) > 0:
             invalid_match_values = [match_value for match_value in match_values
-                                    if match_value not in conditon_allowed_match_values]
+                                    if match_value not in condition_allowed_match_values]
             if len(invalid_match_values) > 0:
-                allowed_match_values = ", ".join(conditon_allowed_match_values)
+                allowed_match_values = ", ".join(condition_allowed_match_values)
                 invalid_match_values = ", ".join(invalid_match_values)
                 raise InvalidArgumentValueError(
-                    f'Below match values: {invalid_match_values} are invalid for {conditon_name}, '
+                    f'Below match values: {invalid_match_values} are invalid for {condition_name}, '
                     f'allowed values are: {allowed_match_values}.')
 
 

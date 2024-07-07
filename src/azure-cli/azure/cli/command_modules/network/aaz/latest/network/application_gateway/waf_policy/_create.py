@@ -583,7 +583,7 @@ class Create(AAZCommand):
             if _elements is not None:
                 _elements.set_prop("matchValues", AAZListType, ".values", typ_kwargs={"flags": {"required": True}})
                 _elements.set_prop("matchVariables", AAZListType, ".variables", typ_kwargs={"flags": {"required": True}})
-                _elements.set_prop("negationConditon", AAZBoolType, ".negate")
+                _elements.set_prop("negationCondition", AAZBoolType, ".negate")
                 _elements.set_prop("operator", AAZStrType, ".operator", typ_kwargs={"flags": {"required": True}})
                 _elements.set_prop("transforms", AAZListType, ".transforms")
 
@@ -2046,8 +2046,8 @@ class Create(AAZCommand):
                 serialized_name="matchVariables",
                 flags={"required": True},
             )
-            _element.negation_conditon = AAZBoolType(
-                serialized_name="negationConditon",
+            _element.negation_condition = AAZBoolType(
+                serialized_name="negationCondition",
             )
             _element.operator = AAZStrType(
                 flags={"required": True},

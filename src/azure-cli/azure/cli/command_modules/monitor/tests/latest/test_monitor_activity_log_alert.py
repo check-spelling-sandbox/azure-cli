@@ -39,7 +39,7 @@ class TestMonitorActivityLogAlert(ScenarioTest):
                          JMESPathCheck('condition.allOf[0].field', 'category')])
 
     @ResourceGroupPreparer(location='southcentralus')
-    def test_monitor_create_update_activity_log_alert_anyof_conditon(self, resource_group):
+    def test_monitor_create_update_activity_log_alert_anyof_condition(self, resource_group):
         name = self.create_random_name('clialert', 32)
         create_cmd = 'az monitor activity-log alert create -n {} -g {} --disable'.format(name, resource_group)  + ' --all-of "[{{any-of:[{{field:level,equals:Informational}}]}}]"'
         self.cmd(create_cmd,
