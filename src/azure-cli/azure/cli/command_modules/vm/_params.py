@@ -257,7 +257,7 @@ def load_arguments(self, _):
         c.argument('tags', tags_type)
 
     with self.argument_context('image create') as c:
-        # here we collpase all difference image sources to under 2 common arguments --os-disk-source --data-disk-sources
+        # here we collapse all difference image sources to under 2 common arguments --os-disk-source --data-disk-sources
         c.argument('name', arg_type=name_arg_type, help='new image name')
         c.argument('source', help='OS disk source from the same region, including a virtual machine ID or name, OS disk blob URI, managed OS disk ID or name, or OS snapshot ID or name')
         c.argument('data_disk_sources', nargs='+', help='Space-separated list of data disk sources, including unmanaged blob URI, managed disk ID or name, or snapshot ID or name')
