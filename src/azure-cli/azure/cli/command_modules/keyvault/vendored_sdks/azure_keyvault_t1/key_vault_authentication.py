@@ -187,7 +187,7 @@ class KeyVaultAuthentication(OAuthTokenAuthentication):
     """
     Authentication class to be used as credentials for the KeyVaultClient.
     :Example Usage:    
-            def auth_callack(server, resource, scope):
+            def auth_callback(server, resource, scope):
                 self.data_creds = self.data_creds or ServicePrincipalCredentials(client_id=self.config.client_id,
                                                                                  secret=self.config.client_secret,
                                                                                  tenant=self.config.tenant_id,
@@ -195,7 +195,7 @@ class KeyVaultAuthentication(OAuthTokenAuthentication):
                 token = self.data_creds.token
                 return token['token_type'], token['access_token']
 
-            self.keyvault_data_client = KeyVaultClient(KeyVaultAuthentication(auth_callack))
+            self.keyvault_data_client = KeyVaultClient(KeyVaultAuthentication(auth_callback))
     """
 
     def __init__(self, authorization_callback=None, credentials=None):
