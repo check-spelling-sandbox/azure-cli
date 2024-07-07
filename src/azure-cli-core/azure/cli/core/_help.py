@@ -141,7 +141,7 @@ class AzCliHelp(CLIPrintMixin, CLIHelp):
 
         # TODO: This workaround is used to avoid a bizarre bug in Python 2.7. It
         # essentially reassigns Knack's HelpObject._normalize_text implementation
-        # with an identical implemenation in Az. For whatever reason, this fixes
+        # with an identical implementation in Az. For whatever reason, this fixes
         # the bug in Python 2.7.
         @staticmethod
         def new_normalize_text(s):
