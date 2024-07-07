@@ -782,7 +782,7 @@ class NetworkAppGatewayDefaultScenarioTest(ScenarioTest):
         self.kwargs.update({
             "ag_name": self.create_random_name("ag-", 12),
             "port_name": self.create_random_name("port-", 12),
-            "lisener_name": self.create_random_name("lisener-", 12),
+            "listener_name": self.create_random_name("listener-", 12),
             "rule_name": self.create_random_name("rule-", 12),
         })
 
@@ -790,10 +790,10 @@ class NetworkAppGatewayDefaultScenarioTest(ScenarioTest):
 
         self.kwargs["front_ip"] = self.cmd("network application-gateway show -n {ag_name} -g {rg}").get_output_in_json()["frontendIPConfigurations"][0]["name"]
         self.cmd("network application-gateway frontend-port create -n {port_name} -g {rg} --gateway-name {ag_name} --port 8080")
-        self.cmd("network application-gateway http-listener create -n {lisener_name} -g {rg} --gateway-name {ag_name} --frontend-ip {front_ip} --frontend-port {port_name}")
+        self.cmd("network application-gateway http-listener create -n {listener_name} -g {rg} --gateway-name {ag_name} --frontend-ip {front_ip} --frontend-port {port_name}")
 
         self.cmd(
-            "network application-gateway rule create -n {rule_name} -g {rg} --gateway-name {ag_name} --http-listener {lisener_name}",
+            "network application-gateway rule create -n {rule_name} -g {rg} --gateway-name {ag_name} --http-listener {listener_name}",
             checks=[
                 self.check("name", "{ag_name}"),
                 self.check("sku.tier", "WAF")
