@@ -2548,9 +2548,9 @@ examples:
 
 helps['synapse link-connection update-landing-zone-credential'] = """
 type: command
-short-summary: Update landing zone credetial of a link connection.
+short-summary: Update landing zone credential of a link connection.
 examples:
-  - name: Update landing zone credetial of a link connection.
+  - name: Update landing zone credential of a link connection.
     text: |-
         az synapse link-connection update-landing-zone-credential --workspace-name testsynapseworkspace \\
           --name linkconnectionname \\

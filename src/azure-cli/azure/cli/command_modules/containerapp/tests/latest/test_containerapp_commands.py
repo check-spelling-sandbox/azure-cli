@@ -1195,7 +1195,7 @@ class ContainerappRegistryIdentityTests(ScenarioTest):
 
     @AllowLargeResponse(8192)
     @ResourceGroupPreparer(location="westeurope")
-    def test_containerapp_registry_acr_look_up_credentical(self, resource_group):
+    def test_containerapp_registry_acr_look_up_credential(self, resource_group):
         self.cmd('configure --defaults location={}'.format(TEST_LOCATION))
         app = self.create_random_name(prefix='aca', length=24)
         acr = self.create_random_name(prefix='acr', length=24)
