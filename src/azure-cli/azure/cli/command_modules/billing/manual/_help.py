@@ -644,7 +644,7 @@ helps['billing role-assignment list'] = """
     short-summary: "List the role assignments for the caller on a billing account. The operation is supported for \
 billing accounts with agreement type Microsoft Partner Agreement or Microsoft Customer Agreement."
     examples:
-      - name: List role assignements by billing account scope
+      - name: List role assignments by billing account scope
         text: |-
                az billing role-assignment list --account-name "{billingAccountName}"
       - name: List role assignments by billing profile scope
