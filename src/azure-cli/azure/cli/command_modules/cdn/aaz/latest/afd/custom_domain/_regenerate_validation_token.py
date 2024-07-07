@@ -18,7 +18,7 @@ class RegenerateValidationToken(AAZCommand):
     """Updates the domain validation token.
 
     :example: Regenerate the domain validation token.
-        az afd custom-domain regenerate-validation-token -g MyResourceGroup --profile-name MyProfle --custom-domain-name MyCustomDomain
+        az afd custom-domain regenerate-validation-token -g MyResourceGroup --profile-name MyProfile --custom-domain-name MyCustomDomain
     """
 
     _aaz_info = {

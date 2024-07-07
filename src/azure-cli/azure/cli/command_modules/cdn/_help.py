@@ -836,7 +836,7 @@ type: command
 short-summary: Place the CLI in a waiting state until a condition of the custom domain is met.
 examples:
   - name: Wait until a custom domain is created.
-    text: az afd custom-domain wait -g MyResourceGroup --profile-name MyProfle --custom-domain-name MyCustomDomain --created
+    text: az afd custom-domain wait -g MyResourceGroup --profile-name MyProfile --custom-domain-name MyCustomDomain --created
 """
 
 helps['afd custom-domain regenerate-validation-token'] = """
@@ -844,7 +844,7 @@ type: command
 short-summary: Regenerate the domain validation token to restart the validation process.
 examples:
   - name: Regenerate the domain validation token.
-    text: az afd custom-domain regenerate-validation-token -g MyResourceGroup --profile-name MyProfle --custom-domain-name MyCustomDomain
+    text: az afd custom-domain regenerate-validation-token -g MyResourceGroup --profile-name MyProfile --custom-domain-name MyCustomDomain
 """
 
 helps['afd endpoint'] = """
