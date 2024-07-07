@@ -627,7 +627,7 @@ class TestActions(unittest.TestCase):
         _validate_vm_vmss_accelerated_networking(mock.MagicMock(), np)
         self.assertIsNone(np.accelerated_networking)
 
-        # qualified size, but distro infor is not available (say, custom images)
+        # qualified size, but distro information is not available (say, custom images)
         np = mock.MagicMock()
         np.size = 'Standard_f8'
         size_mock.number_of_cores, size_mock.name = 8, 'Standard_f8'

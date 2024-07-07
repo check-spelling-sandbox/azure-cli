@@ -1859,9 +1859,9 @@ examples:
 
 helps['synapse integration-runtime get-connection-info'] = """
 type: command
-short-summary: Get the integration runtime connection infomation.
+short-summary: Get the integration runtime connection information.
 examples:
-  - name: Get the integration runtime connection infomation.
+  - name: Get the integration runtime connection information.
     text: |-
         az synapse integration-runtime get-connection-info --workspace-name testsynapseworkspace --resource-group rg \\
           --name selfhostedintegrationruntime
