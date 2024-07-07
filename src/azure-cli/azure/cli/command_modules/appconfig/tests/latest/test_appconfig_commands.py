@@ -2821,7 +2821,7 @@ class AppConfigAadAuthLiveScenarioTest(ScenarioTest):
         self.cmd('role assignment create --assignee {user_id} --role "App Configuration Data Reader" --scope {appconfig_id}')
         time.sleep(900)  # It takes around 15 mins for RBAC permissions to propagate
 
-        # After asssigning data reader role, read operation should succeed
+        # After assigning data reader role, read operation should succeed
         self.cmd('appconfig kv show --endpoint {endpoint} --auth-mode login --key {key}',
                  checks=[self.check('key', entry_key),
                          self.check('value', entry_value)])
