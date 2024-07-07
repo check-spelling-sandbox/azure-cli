@@ -501,9 +501,9 @@ def decrypt_vmss(cmd, resource_group_name, vmss_name, volume_type=None, force=Fa
     _show_post_action_message(resource_group_name, vmss.name, vmss.upgrade_policy.mode == UpgradeMode.manual, False)
 
 
-def _show_post_action_message(resource_group_name, vmss_name, maunal_mode, enable):
+def _show_post_action_message(resource_group_name, vmss_name, manual_mode, enable):
     msg = ''
-    if maunal_mode:
+    if manual_mode:
         msg = ("With manual upgrade mode, you will need to run 'az vmss update-instances -g {} -n {} "
                "--instance-ids \"*\"' to propagate the change.\n".format(resource_group_name, vmss_name))
     msg += ("Note, {} encryption will take a while to finish. Please query the status using "
