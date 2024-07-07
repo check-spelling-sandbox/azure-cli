@@ -2490,7 +2490,7 @@ Release History
 **AKS**
 
 * Fix #23468: `az aks nodepool wait` crashes with error "'Namespace' object has no attribute 'nodepool_name'" (#23489)
-* `az aks check-acr`: Append acr suffix to option `--acr` acording to cloud env (#23506)
+* `az aks check-acr`: Append acr suffix to option `--acr` according to cloud env (#23506)
 * `az aks`: Add `--gpu-instance-profile` for Nvidia multi-instan… (#23501)
 * `az aks update`: Update without args prompts to reconcile (#23682)
 * `az aks create/update`: Add new parameters `--enable-disk-driver` and `--disable-disk-driver` to enable/disable AzureDisk CSI Driver. When creating new cluster, AzureDisk CSI Driver is enabled by default. (#23654)
