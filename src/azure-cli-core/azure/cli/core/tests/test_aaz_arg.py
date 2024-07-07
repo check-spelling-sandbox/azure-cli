@@ -1353,7 +1353,7 @@ class TestAAZArg(unittest.TestCase):
             "new_i_pv6": '00:00:00'
         })
 
-    def test_aaz_has_value_for_buildin(self):
+    def test_aaz_has_value_for_builtin(self):
         from azure.cli.core.aaz import has_value, AAZUndefined
         self.assertTrue(has_value(0))
         self.assertTrue(has_value(""))
