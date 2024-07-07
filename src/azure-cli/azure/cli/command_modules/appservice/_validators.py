@@ -395,7 +395,7 @@ def validate_staticsite_link_function(cmd, namespace):
 
     if not is_valid_resource_id(namespace.function_resource_id):
         raise ArgumentUsageError("--function-resource-id must specify a function resource ID. "
-                                 "To get resource ID, use the following commmand, inserting the function "
+                                 "To get resource ID, use the following command, inserting the function "
                                  "group/name as needed: \n"
                                  "az functionapp show --resource-group \"[FUNCTION_RESOURCE_GROUP]\" "
                                  "--name \"[FUNCTION_NAME]\" --query id ")
