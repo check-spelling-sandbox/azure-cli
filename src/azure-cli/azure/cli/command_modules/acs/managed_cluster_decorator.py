@@ -6681,7 +6681,7 @@ class AKSManagedClusterCreateDecorator(BaseAKSManagedClusterDecorator):
         mc = self.set_up_workload_identity_profile(mc)
         # set up storage profile
         mc = self.set_up_storage_profile(mc)
-        # set up azure keyvalut kms
+        # set up azure keyvalue kms
         mc = self.set_up_azure_keyvault_kms(mc)
         # set up image cleaner
         mc = self.set_up_image_cleaner(mc)
@@ -8467,7 +8467,7 @@ class AKSManagedClusterUpdateDecorator(BaseAKSManagedClusterDecorator):
         mc = self.update_workload_identity_profile(mc)
         # update stroage profile
         mc = self.update_storage_profile(mc)
-        # update azure keyvalut kms
+        # update azure keyvalue kms
         mc = self.update_azure_keyvault_kms(mc)
         # update image cleaner
         mc = self.update_image_cleaner(mc)
