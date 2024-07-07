@@ -509,7 +509,7 @@ examples:
   - name: Configure email recipients for a policy.
     text: |
         az sql db threat-policy update -g mygroup -s myserver -n mydb \\
-            --email-addresses me@examlee.com you@example.com \\
+            --email-addresses me@example.com you@example.com \\
             --email-account-admins Enabled
   - name: Disable a threat policy.
     text: az sql db threat-policy update -g mygroup -s myserver -n mydb --state Disabled

@@ -586,7 +586,7 @@ examples:
   - name: Configure email recipients for a policy.
     text: |-
         az synapse sql pool threat-policy update --name sqlpool --workspace-name testsynapseworkspace --resource-group rg \\
-        --email-addresses me@examlee.com you@example.com --email-account-admins true \\
+        --email-addresses me@example.com you@example.com --email-account-admins true \\
         --security-alert-policy-name threatpolicy
   - name: Disable a threat policy.
     text: |-
