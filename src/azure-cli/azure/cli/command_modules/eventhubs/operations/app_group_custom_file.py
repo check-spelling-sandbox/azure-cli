@@ -74,12 +74,12 @@ def cli_remove_appgroup_policy(cmd, resource_group_name, namespace_name, applica
     })
     policy_object = []
     for i in policy:
-        semaphor = 0
+        semaphore = 0
         for j in application_group["policies"]:
             if i["name"] == j["name"]:
                 application_group["policies"].remove(j)
-                semaphor = 1
-        if semaphor == 0:
+                semaphore = 1
+        if semaphore == 0:
             raise ResourceNotFoundError('The following policy was not found: Name: ' + i["name"])
     for col in application_group["policies"]:
         policy_object.append(create_app_group_policy_object(col))
