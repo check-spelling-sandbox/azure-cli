@@ -237,7 +237,7 @@ def _mysql_parse_list_skus(result):
     if not result:
         raise InvalidArgumentValueError("No available SKUs in this location")
     single_az = 'ZoneRedundant' not in result[0].supported_ha_mode
-    geo_paried_region = result[0].supported_geo_backup_regions
+    geo_paired_region = result[0].supported_geo_backup_regions
 
     tiers = result[0].supported_flexible_server_editions
     tiers_dict = {}
@@ -268,7 +268,7 @@ def _mysql_parse_list_skus(result):
     return {'sku_info': tiers_dict,
             'single_az': single_az,
             'iops_info': iops_dict,
-            'geo_paired_regions': geo_paried_region}
+            'geo_paired_regions': geo_paired_region}
 
 
 def _get_available_values(sku_info, argument, tier=None):

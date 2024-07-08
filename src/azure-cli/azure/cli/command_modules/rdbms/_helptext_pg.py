@@ -191,7 +191,7 @@ examples:
         --vault-name geoVault --query key.kid -o tsv)
 
 
-      # create identity in geo-raired location and save its principalId
+      # create identity in geo-paired location and save its principalId
 
       geoIdentityPrincipalId=$(az identity create -g testGroup --name geoIdentity \\
         --location geoPairedLocation --query principalId -o tsv)
