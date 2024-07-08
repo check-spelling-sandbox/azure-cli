@@ -18,11 +18,11 @@ class Diagnostics(Model):
     Variables are only populated by the server, and will be ignored when
     sending a request.
 
-    :ivar column_number: the column where the error occured.
+    :ivar column_number: the column where the error occurred.
     :vartype column_number: int
     :ivar end: the ending index of the error.
     :vartype end: int
-    :ivar line_number: the line number the error occured on.
+    :ivar line_number: the line number the error occurred on.
     :vartype line_number: int
     :ivar message: the error message.
     :vartype message: str

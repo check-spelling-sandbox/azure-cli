@@ -109,7 +109,7 @@ def import_zone(cmd, resource_group_name, private_zone_name, file_name):
         })
         result = LongRunningOperation(cmd.cli_ctx)(poller)
         if result["provisioningState"] != 'Succeeded':
-            raise CLIError('Error occured while creating or updating private dns zone.')
+            raise CLIError('Error occurred while creating or updating private dns zone.')
 
     for key, rs in record_sets.items():
 

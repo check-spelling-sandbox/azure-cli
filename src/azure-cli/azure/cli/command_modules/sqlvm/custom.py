@@ -771,7 +771,7 @@ def set_assessment_properties(
             dcr_response = send_raw_request(cmd.cli_ctx, method="GET", url=url)
         except HTTPError as e:
             raise AzureResponseError(
-                f'An Http Error occured: {e}'
+                f'An Http Error occurred: {e}'
                 'could not connect to the provided agent resource group {agent_rg}. Ensure the resource in the same subscription as {ama_sub}')
 
         # response contains list of dcr's

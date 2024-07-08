@@ -758,9 +758,9 @@ def enable_zip_deploy_flex(cmd, resource_group_name, name, src, timeout=None, sl
         raise UnclassifiedUserFault("There may be an ongoing deployment. Please track your deployment in {}"
                                     .format(deployment_status_url))
 
-    # check if an error occured during deployment
+    # check if an error occurred during deployment
     if res.status_code:
-        raise AzureInternalError("An error occured during deployment. Status Code: {}, Details: {}"
+        raise AzureInternalError("An error occurred during deployment. Status Code: {}, Details: {}"
                                  .format(res.status_code, res.text))
 
 
@@ -815,9 +815,9 @@ def enable_zip_deploy(cmd, resource_group_name, name, src, timeout=None, slot=No
                                     "--name MyWebApp --resource-group MyResourceGroup --setting-names <setting-names> "
                                     "to delete them.".format(deployment_status_url))
 
-    # check if an error occured during deployment
+    # check if an error occurred during deployment
     if res.status_code:
-        raise AzureInternalError("An error occured during deployment. Status Code: {}, Details: {}"
+        raise AzureInternalError("An error occurred during deployment. Status Code: {}, Details: {}"
                                  .format(res.status_code, res.text))
 
 
@@ -7005,7 +7005,7 @@ def _make_onedeploy_request(params):
                               "starting a new deployment. You can track the ongoing deployment at {}"
                               .format(deployment_status_url))
 
-    # check if an error occured during deployment
+    # check if an error occurred during deployment
     if response.status_code:
         scm_url = _get_scm_url(params.cmd, params.resource_group_name, params.webapp_name, params.slot)
         latest_deploymentinfo_url = scm_url + "/api/deployments/latest"

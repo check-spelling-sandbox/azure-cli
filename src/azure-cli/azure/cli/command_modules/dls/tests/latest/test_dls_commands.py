@@ -194,7 +194,7 @@ class DataLakeStoreFileScenarioTest(ScenarioTest):
         ]).get_output_in_json()
 
         # set expiration time on the file
-        # this future time gives the milliseconds since the epoch that have occured as of 01/31/2030 at noon
+        # this future time gives the milliseconds since the epoch that have occurred as of 01/31/2030 at noon
         epoch_time = datetime.datetime.utcfromtimestamp(0)
         final_time = datetime.datetime(2030, 1, 31, 12)
         self.kwargs['time_in_milliseconds'] = (final_time - epoch_time).total_seconds() * 1000

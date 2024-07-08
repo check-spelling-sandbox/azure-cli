@@ -37,7 +37,7 @@ class JobErrorDetails(Model):
      be retrieved, otherwise it will be empty.
     :vartype internal_diagnostics: str
     :ivar line_number: the specific line number in the job where the error
-     occured.
+     occurred.
     :vartype line_number: int
     :ivar message: the user friendly error message for the failure.
     :vartype message: str
