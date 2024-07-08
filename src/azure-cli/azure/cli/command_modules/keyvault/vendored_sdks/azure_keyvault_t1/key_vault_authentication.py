@@ -98,7 +98,7 @@ class KeyVaultAuthBase(AuthBase):
 
     def _handle_401(self, response, **kwargs):
         """
-        Takes the response authenticates and resends if neccissary
+        Takes the response authenticates and resends if necessary
         :return: The final response to the authenticated request
         :rtype: requests.Response
         """
