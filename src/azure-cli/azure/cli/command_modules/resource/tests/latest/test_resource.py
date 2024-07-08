@@ -2570,7 +2570,7 @@ class DeploymentStacksTest(ScenarioTest):
             'template-validate-parameters-file-invalid': os.path.join(curr_dir, 'template_rg_validate_parameters_invalid.json').replace('\\', '\\\\')
         })
 
-        # create templete spec
+        # create template spec
         basic_template_spec = self.cmd('ts create --name {template-spec-name} --version {template-spec-version} --location {location} --template-file {template-file} --resource-group {resource-group}').get_output_in_json()
         template_spec_id = basic_template_spec['id']
 
@@ -2943,7 +2943,7 @@ class DeploymentStacksTest(ScenarioTest):
             'mg': management_group_id
         })
 
-        # create templete spec
+        # create template spec
         basic_template_spec = self.cmd('ts create --name {template-spec-name} --version {template-spec-version} --location {location} --template-file {template-file} --resource-group {resource-group}').get_output_in_json()
         template_spec_id = basic_template_spec['id']
 

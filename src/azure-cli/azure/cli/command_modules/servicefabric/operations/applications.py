@@ -216,12 +216,12 @@ def _get_template_file_and_parameters_file():
 
 
 def _set_service_parameters(template, parameters, name, value, param_type):
-    tempalte_parameters = template['parameters']
-    if name not in tempalte_parameters:
-        tempalte_parameters[name] = {}
-    tempalte_parameters[name]["type"] = param_type
-    tempalte_resources_properties = template['resources'][0]['properties']
-    tempalte_resources_properties[name] = "[parameters('{}')]".format(name)
+    template_parameters = template['parameters']
+    if name not in template_parameters:
+        template_parameters[name] = {}
+    template_parameters[name]["type"] = param_type
+    template_resources_properties = template['resources'][0]['properties']
+    template_resources_properties[name] = "[parameters('{}')]".format(name)
     _set_parameters(parameters, name, value)
 
 
