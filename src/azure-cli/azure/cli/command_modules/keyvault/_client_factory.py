@@ -177,7 +177,7 @@ def keyvault_private_data_plane_factory_v7_2_preview(cli_ctx, _):
     client = KeyVaultClient(KeyVaultAuthentication(get_token), api_version='7.2')
 
     # HACK, work around the fact that KeyVault library doesn't take configuration object on constructor
-    # which could be used to turn off the verifiaction. Remove this once we migrate to new data plane library
+    # which could be used to turn off the verification. Remove this once we migrate to new data plane library
     # pylint: disable=protected-access
     if hasattr(client, '_client') and hasattr(client._client, 'config'):
         verify = not should_disable_connection_verify()
