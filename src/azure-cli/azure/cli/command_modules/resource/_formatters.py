@@ -223,7 +223,7 @@ def _format_resource_change_path(builder, change_type, resource_change_id, api_v
         0,
         1,
         lambda builder: _format_resource_change_type(builder, change_type),
-        lambda builder: _format_resource_change_api_verion(builder, api_version),
+        lambda builder: _format_resource_change_api_version(builder, api_version),
     )
 
 
@@ -232,7 +232,7 @@ def _format_resource_change_type(builder, change_type):
     builder.append(change_symbol).append(Symbol.WHITE_SPACE)
 
 
-def _format_resource_change_api_verion(builder, api_version):
+def _format_resource_change_api_version(builder, api_version):
     if not api_version:
         return
 
