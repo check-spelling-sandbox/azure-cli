@@ -383,10 +383,10 @@ class CdnOriginScenarioTest(CdnScenarioMixin, ScenarioTest):
                                      checks=checks)
 
         checks = [JMESPathCheck('length(@)', 3)]
-        orgin_groups = self.origin_group_list_cmd(resource_group, endpoint_name, profile_name, checks=checks)
+        origin_groups = self.origin_group_list_cmd(resource_group, endpoint_name, profile_name, checks=checks)
 
         # Specify origin group override by id
-        origin_group_2_id = orgin_groups.json_value[1]["id"]
+        origin_group_2_id = origin_groups.json_value[1]["id"]
         rule_name = 'r1'
         msg = 'az cdn endpoint rule add -g {} -n {} --profile-name {} --order {} --rule-name {}\
                --match-variable UrlPath --operator BeginsWith --match-values "/test1"\
@@ -410,7 +410,7 @@ class CdnOriginScenarioTest(CdnScenarioMixin, ScenarioTest):
 
         # Specify origin group override by name
         rule_name = 'r2'
-        origin_group_3_id = orgin_groups.json_value[2]["id"]
+        origin_group_3_id = origin_groups.json_value[2]["id"]
         msg = 'az cdn endpoint rule add -g {} -n {} --profile-name {} --order {} --rule-name {}\
                --match-variable UrlPath --operator BeginsWith --match-values "/test2"\
                --action-name OriginGroupOverride --origin-group {}'
