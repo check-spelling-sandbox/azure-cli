@@ -247,7 +247,7 @@ class ActivityLogAlertActionGroupAdd(_ActivityLogAlertUpdate):
         s/actionGroups/{ActionGroup} \\
           --webhook-properties usage=test owner=jane
 
-    :example: Overwite an existing action group's webhook properties.
+    :example: Overwrite an existing action group's webhook properties.
         az monitor activity-log alert action-group add -n AlertName -g ResourceGroup \\
           -a /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/microsoft.insights/acti
         onGroups/{ActionGroup} \\
