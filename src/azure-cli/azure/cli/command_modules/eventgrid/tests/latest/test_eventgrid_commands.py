@@ -741,7 +741,7 @@ class EventGridTests(ScenarioTest):
                 self.check('[0].provisioningState', 'Succeeded'),
             ])
 
-            # Comment this one until we fix the pagable property in swagger
+            # Comment this one until we fix the pageable property in swagger
             self.cmd('az eventgrid system-topic event-subscription list --resource-group devexprg --system-topic-name {system_topic_name} --odata-query "name eq \'{event_subscription_name}\'"', checks=[
                 self.check('[0].type', 'Microsoft.EventGrid/systemTopics/eventSubscriptions'),
                 self.check('[0].provisioningState', 'Succeeded'),
