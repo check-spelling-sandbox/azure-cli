@@ -337,7 +337,7 @@ def create_action(action_name, cache_behavior=None, cache_duration=None, header_
             formatetd_origin_group = None
 
         if not is_valid_resource_id(formatetd_origin_group):
-            # Ideally we should use resource_id but Auzre FrontDoor portal extension has some case-sensitive issues
+            # Ideally we should use resource_id but Azure FrontDoor portal extension has some case-sensitive issues
             # that prevent it from displaying correctly in portal.
             formatetd_origin_group = f'/subscriptions/{sub_id}/resourcegroups/{resource_group}' \
                 f'/providers/Microsoft.Cdn/profiles/{profile_name}/endpoints/{endpoint_name}' \

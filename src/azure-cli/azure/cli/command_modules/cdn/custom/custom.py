@@ -460,7 +460,7 @@ def create_action(action_name, cache_behavior=None, cache_duration=None, header_
             ))
     if action_name == 'OriginGroupOverride':
         if not is_valid_resource_id(origin_group):
-            # Ideally we should use resource_id but Auzre FrontDoor portal extension has some case-sensitive issues
+            # Ideally we should use resource_id but Azure FrontDoor portal extension has some case-sensitive issues
             # that prevent it from displaying correctly in portal.
             origin_group = f'/subscriptions/{get_subscription_id(cmd.cli_ctx)}/resourcegroups/{resource_group_name}' \
                            f'/providers/Microsoft.Cdn/profiles/{profile_name}/endpoints/{endpoint_name}' \
