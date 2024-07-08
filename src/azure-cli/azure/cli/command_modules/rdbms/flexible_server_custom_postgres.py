@@ -1186,8 +1186,8 @@ def migration_update_func(cmd, client, resource_group_name, server_name, migrati
 def migration_check_name_availability(cmd, client, resource_group_name, server_name, migration_name):
 
     subscription_id = get_subscription_id(cmd.cli_ctx)
-    migration_name_availability_parammeters = {"name": "%s" % migration_name, "type": "Microsoft.DBforPostgreSQL/flexibleServers/migrations"}
-    return get_postgresql_flexible_management_client(cmd.cli_ctx).check_migration_name_availability(subscription_id, resource_group_name, server_name, migration_name_availability_parammeters)
+    migration_name_availability_parameters = {"name": "%s" % migration_name, "type": "Microsoft.DBforPostgreSQL/flexibleServers/migrations"}
+    return get_postgresql_flexible_management_client(cmd.cli_ctx).check_migration_name_availability(subscription_id, resource_group_name, server_name, migration_name_availability_parameters)
 
 
 def virtual_endpoint_create_func(client, resource_group_name, server_name, virtual_endpoint_name, endpoint_type, members):

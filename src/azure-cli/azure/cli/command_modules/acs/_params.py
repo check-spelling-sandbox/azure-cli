@@ -277,7 +277,7 @@ def load_arguments(self, _):
         c.argument('tags', tags_type)
 
     with self.argument_context('aks create', resource_type=ResourceType.MGMT_CONTAINERSERVICE, operation_group='managed_clusters') as c:
-        # managed cluster paramerters
+        # managed cluster parameters
         c.argument('name', validator=validate_linux_host_name)
         c.argument('kubernetes_version',
                    completer=get_k8s_versions_completion_list)
@@ -387,7 +387,7 @@ def load_arguments(self, _):
         c.argument('enable_sgxquotehelper', action='store_true')
         c.argument('enable_app_routing', action="store_true")
 
-        # nodepool paramerters
+        # nodepool parameters
         c.argument('nodepool_name', default='nodepool1',
                    help='Node pool name, up to 12 alphanumeric characters', validator=validate_nodepool_name)
         c.argument('node_vm_size', options_list=['--node-vm-size', '-s'], completer=get_vm_size_completion_list)
@@ -469,7 +469,7 @@ def load_arguments(self, _):
         c.argument('enable_cost_analysis', action='store_true')
 
     with self.argument_context('aks update') as c:
-        # managed cluster paramerters
+        # managed cluster parameters
         c.argument('disable_local_accounts', action='store_true')
         c.argument('enable_local_accounts', action='store_true')
         c.argument('load_balancer_managed_outbound_ip_count', type=int)
@@ -548,7 +548,7 @@ def load_arguments(self, _):
         c.argument('enable_secret_rotation', action='store_true')
         c.argument('disable_secret_rotation', action='store_true', validator=validate_keyvault_secrets_provider_disable_and_enable_parameters)
         c.argument('rotation_poll_interval')
-        # nodepool paramerters
+        # nodepool parameters
         c.argument('enable_cluster_autoscaler', options_list=[
                    "--enable-cluster-autoscaler", "-e"], action='store_true')
         c.argument('disable_cluster_autoscaler', options_list=[

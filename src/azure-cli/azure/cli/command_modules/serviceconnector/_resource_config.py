@@ -167,7 +167,7 @@ LOCAL_CONNECTION_PARAMS = {
     }
 }
 # The dict defines the parameters used to position the source resources.
-# The parmaters should include all variables defined in source resource id expect
+# The parameters should include all variables defined in source resource id expect
 # for 'subscription', which will be dealt by CLI core as a default parameter.
 SOURCE_RESOURCES_PARAMS = {
     RESOURCE.WebApp: {
@@ -294,7 +294,7 @@ SOURCE_RESOURCES_OPTIONAL_PARAMS = {
 }
 
 # The dict defines the parameters used to position the target resources.
-# The parmaters should include all variables defined in target resource id expect
+# The parameters should include all variables defined in target resource id expect
 # for 'subscription', which will be dealt by CLI core as a default parameter.
 TARGET_RESOURCES_PARAMS = {
     RESOURCE.Postgres: {

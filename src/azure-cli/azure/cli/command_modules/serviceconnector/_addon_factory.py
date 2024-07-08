@@ -94,7 +94,7 @@ class AddonBase:
 
         logger.warning('Start creating a new %s', target_type.value)
         for cnt, step in enumerate(creation_steps):
-            # apply parmeters to format the command
+            # apply parameters to format the command
             cmd = step.format(**self._params)
             try:
                 run_cli_cmd(cmd)

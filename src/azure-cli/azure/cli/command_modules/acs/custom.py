@@ -578,7 +578,7 @@ def aks_create(
     enable_secret_rotation=False,
     rotation_poll_interval=None,
     enable_app_routing=False,
-    # nodepool paramerters
+    # nodepool parameters
     nodepool_name="nodepool1",
     node_vm_size=None,
     os_sku=None,
@@ -757,7 +757,7 @@ def aks_update(
     enable_secret_rotation=False,
     disable_secret_rotation=False,
     rotation_poll_interval=None,
-    # nodepool paramerters
+    # nodepool parameters
     enable_cluster_autoscaler=False,
     disable_cluster_autoscaler=False,
     update_cluster_autoscaler=False,
