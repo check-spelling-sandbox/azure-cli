@@ -375,11 +375,11 @@ def load_arguments(self, _):
 
     with self.argument_context('sql vm enable-azure-ad-auth') as c:
         c.argument('msi_client_id',
-                   help='Virutal Machine Managed Identity Client ID.')
+                   help='Virtual Machine Managed Identity Client ID.')
         c.argument('skip_client_validation',
                    help='Skip client side Azure AD authentication validation, the server side validation will still happen.',
                    action='store_true')
 
     with self.argument_context('sql vm validate-azure-ad-auth') as c:
         c.argument('msi_client_id',
-                   help='Virutal Machine Managed Identity Client ID.')
+                   help='Virtual Machine Managed Identity Client ID.')
