@@ -514,7 +514,7 @@ helps['apim api revision create'] = """
 type: command
 short-summary: Create API revision.
 examples:
-  - name: Create a revision for the specfic API.
+  - name: Create a revision for the specific API.
     text: |-
         az apim api revision create --resource-group MyResourceGroup --service-name MyServiceName --api-id MyApiId --api-revision RevisionNumber --api-revision-description RevisionDescription
 """
