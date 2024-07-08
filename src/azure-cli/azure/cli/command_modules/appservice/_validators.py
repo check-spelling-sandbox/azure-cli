@@ -378,7 +378,7 @@ def _validate_service_tag_existence(cmd, namespace):
 def validate_public_cloud(cmd):
     from azure.cli.core.cloud import AZURE_PUBLIC_CLOUD
     if cmd.cli_ctx.cloud.name != AZURE_PUBLIC_CLOUD.name:
-        raise ValidationError('This command is not yet supported on soveriegn clouds.')
+        raise ValidationError('This command is not yet supported on sovereign clouds.')
 
 
 def validate_staticsite_sku(cmd, namespace):
