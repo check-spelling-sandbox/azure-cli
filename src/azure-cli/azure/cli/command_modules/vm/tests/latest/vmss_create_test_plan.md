@@ -101,7 +101,7 @@ Execute P1 scenarios if a change is made in these areas
  - verify no LB
 
 ## P2: ERROR CASES ##
-Be aware of the P2 behavior, execute P2s occassionally or before an important event/ship cycle
+Be aware of the P2 behavior, execute P2s occasionally or before an important event/ship cycle
 
 **Windows VM with SSH**
 
