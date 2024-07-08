@@ -1834,7 +1834,7 @@ def create_or_update_applicationdefinition(cmd, resource_group_name,
     applicationAuthList = []
 
     for name_value in authorizations:
-        # split at the first ':', neither principalId nor roldeDefinitionId should have a ':'
+        # split at the first ':', neither principalId nor roleDefinitionId should have a ':'
         principalId, roleDefinitionId = name_value.split(':', 1)
         applicationAuth = ApplicationAuthorization(
             principal_id=principalId,
