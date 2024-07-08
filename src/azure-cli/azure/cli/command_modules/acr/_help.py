@@ -1576,7 +1576,7 @@ examples:
     text: |
         az acr connected-registry create --registry mycloudregistry  --name myreadonlyacr \\
             --mode readonly --parent myconnectedregistry --sync-token mySyncTokenName
-  - name: Create a read only connected registry with client tokens, that syncs every day at midninght and sync window of 4 hours.
+  - name: Create a read only connected registry with client tokens, that syncs every day at midnight and sync window of 4 hours.
     text: |
         az acr connected-registry create -r mycloudregistry -n myreadonlyacr -p myconnectedregistry \\
             --repository "app/mycomponent" -m ReadOnly -s "0 12 * * *" -w PT4H \\
