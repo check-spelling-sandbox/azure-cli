@@ -277,7 +277,7 @@ def create_webapp(cmd, resource_group_name, name, plan, runtime=None, startup_fi
         helper.get_site_config_setter(match, linux=is_linux)(cmd=cmd, stack=match, site_config=site_config)
 
         # TODO: Ask Calvin the purpose of this - seems like unneeded set of calls
-        # portal uses the current_stack propety in metadata to display stack for windows apps
+        # portal uses the current_stack property in metadata to display stack for windows apps
         current_stack = get_current_stack_from_runtime(runtime)
 
     else:  # windows webapp without runtime specified
