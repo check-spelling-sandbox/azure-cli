@@ -199,11 +199,11 @@ def load_arguments(self, _):  # pylint: disable=too-many-statements
         c.argument('consider_warning_as_error', options_list=['--warning-as-error', '--consider-warning-as-error'], arg_type=get_three_state_flag(),
                    help='Indicates whether to treat a warning health event as an error event during health evaluation.')
         c.argument('default_service_type_max_percent_unhealthy_partitions_per_service', options_list=['--max-percent-unhealthy-partitions', '--max-unhealthy-parts'],
-                   help='Specify the maximum percent of unhelthy partitions per service allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are form 0 to 100.')
+                   help='Specify the maximum percent of unhealthy partitions per service allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are form 0 to 100.')
         c.argument('default_service_type_max_percent_unhealthy_replicas_per_partition', options_list=['--max-percent-unhealthy-replicas', '--max-unhealthy-reps'],
-                   help='Specify the maximum percent of unhelthy replicas per service allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are form 0 to 100.')
+                   help='Specify the maximum percent of unhealthy replicas per service allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are form 0 to 100.')
         c.argument('default_service_type_max_percent_unhealthy_services', options_list=['--max-percent-unhealthy-services', '--max-unhealthy-servs'],
-                   help='Specify the maximum percent of unhelthy services allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are form 0 to 100.')
+                   help='Specify the maximum percent of unhealthy services allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are form 0 to 100.')
         c.argument('max_percent_unhealthy_deployed_applications', options_list=['--max-percent-unhealthy-apps', '--max-unhealthy-apps'],
                    help='Specify the maximum percentage of the application instances deployed on the nodes in the cluster that have a health state of error before the application health state for the cluster is error. Allowed values are form 0 to 100.')
 
@@ -404,11 +404,11 @@ def load_arguments(self, _):  # pylint: disable=too-many-statements
         c.argument('consider_warning_as_error', options_list=['--warning-as-error', '--consider-warning-as-error'], arg_type=get_three_state_flag(),
                    help='Indicates whether to treat a warning health event as an error event during health evaluation.')
         c.argument('default_service_type_max_percent_unhealthy_partitions_per_service', options_list=['--max-percent-unhealthy-partitions', '--max-unhealthy-parts'],
-                   help='Specify the maximum percent of unhelthy partitions per service allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are from 0 to 100.')
+                   help='Specify the maximum percent of unhealthy partitions per service allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are from 0 to 100.')
         c.argument('default_service_type_max_percent_unhealthy_replicas_per_partition', options_list=['--max-percent-unhealthy-replicas', '--max-unhealthy-reps'],
-                   help='Specify the maximum percent of unhelthy replicas per service allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are from 0 to 100.')
+                   help='Specify the maximum percent of unhealthy replicas per service allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are from 0 to 100.')
         c.argument('default_service_type_max_percent_unhealthy_services', options_list=['--max-percent-unhealthy-services', '--max-unhealthy-servs'],
-                   help='Specify the maximum percent of unhelthy services allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are from 0 to 100.')
+                   help='Specify the maximum percent of unhealthy services allowed by the health policy for the default service type to use for the monitored upgrade. Allowed values are from 0 to 100.')
         c.argument('service_type_health_policy_map', arg_type=service_type_health_policy_map)
         c.argument('max_percent_unhealthy_deployed_applications', options_list=['--max-percent-unhealthy-deployed-applications', '--max-percent-unhealthy-apps', '--max-unhealthy-apps'],
                    help='Specify the maximum percentage of the application instances deployed on the nodes in the cluster that have a health state of error before the application health state for the cluster is error. Allowed values are form 0 to 100.')
