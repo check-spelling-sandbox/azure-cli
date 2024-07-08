@@ -6921,7 +6921,7 @@ class SqlServerMinimalTlsVersionScenarioTest(ScenarioTest):
                      JMESPathCheck('resourceGroup', resource_group),
                      JMESPathCheck('minimalTlsVersion', tls1_2)]).get_output_in_json()
 
-class SqlManagedInstanceFailoverScenarionTest(ScenarioTest):
+class SqlManagedInstanceFailoverScenarioTest(ScenarioTest):
     @ManagedInstancePreparer()
     def test_sql_mi_failover_mgmt(self, mi, rg):
         self.kwargs.update({
@@ -6937,7 +6937,7 @@ class SqlManagedInstanceFailoverScenarionTest(ScenarioTest):
         self.cmd('sql mi failover -g {resource_group} -n {managed_instance_name}', checks=NoneCheck())
 
 
-class SqlManagedDatabaseLogReplayScenarionTest(ScenarioTest):
+class SqlManagedDatabaseLogReplayScenarioTest(ScenarioTest):
     @live_only()
     @AllowLargeResponse()
     @ManagedInstancePreparer()

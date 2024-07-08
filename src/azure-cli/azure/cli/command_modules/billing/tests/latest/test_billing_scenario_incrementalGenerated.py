@@ -1061,7 +1061,7 @@ class BillingRoleAssignmentScenarioTest(ScenarioTest):
 
 
 @record_only()
-class BillingRoleDefinitionScenarionTest(ScenarioTest):
+class BillingRoleDefinitionScenarioTest(ScenarioTest):
     def test_role_definition_list_and_show(self):
         self.kwargs.update({
             "myBillingAccount": "db038d21-b0d2-463c-942f-b09127c6f4e4:7c9c4a38-593e-479e-8958-9a338a0d8d02_2019-05-31",
