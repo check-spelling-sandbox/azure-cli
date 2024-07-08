@@ -990,11 +990,11 @@ class ReplicationMgmtScenarioTest(ScenarioTest):  # pylint: disable=too-few-publ
 class ReplicationPostgreSqlMgmtScenarioTest(ScenarioTest):  # pylint: disable=too-few-public-methods
 
     @ResourceGroupPreparer(parameter_name='resource_group')
-    def test_postgrsql_basic_replica_mgmt(self, resource_group):
+    def test_postgresql_basic_replica_mgmt(self, resource_group):
         self._test_replica_mgmt(resource_group, 'B_Gen5_2', 'B_Gen5_2', True)
 
     @ResourceGroupPreparer(parameter_name='resource_group')
-    def test_postgrsql_general_purpose_replica_mgmt(self, resource_group):
+    def test_postgresql_general_purpose_replica_mgmt(self, resource_group):
         self._test_replica_mgmt(resource_group, 'GP_Gen5_2', 'GP_Gen5_4', False)
 
     def _test_replica_mgmt(self, resource_group, skuName, testSkuName, isBasicTier):
