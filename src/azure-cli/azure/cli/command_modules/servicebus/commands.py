@@ -37,7 +37,7 @@ def load_command_table(self, _):
     with self.command_group('servicebus georecovery-alias', custom_command_type=sb_namespace_custom) as g:
         g.custom_command('set', 'set_georecovery_alias', supports_no_wait=True)
 
-# NetwrokRuleSet Region
+# NetworkRuleSet Region
     with self.command_group('servicebus namespace network-rule-set ip-rule', custom_command_type=sb_network_custom) as g:
         g.custom_command('add', 'add_network_rule_set_ip_rule')
         g.custom_command('remove', 'remove_network_rule_set_ip_rule')

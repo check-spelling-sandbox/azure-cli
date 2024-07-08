@@ -636,7 +636,7 @@ class HDInsightClusterTests(ScenarioTest):
         return '--encryption-in-transit true'
 
     @staticmethod
-    def _with_virtual_netowrk_profile(subnet_name):
+    def _with_virtual_network_profile(subnet_name):
         return '--subnet {}'.format(subnet_name)
 
     @staticmethod
