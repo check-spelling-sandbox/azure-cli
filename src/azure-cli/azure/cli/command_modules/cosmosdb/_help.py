@@ -1312,12 +1312,12 @@ short-summary: List all the versions of all the sql containers that were created
 
 helps['cosmosdb sql restorable-resource'] = """
 type: group
-short-summary: Manage the databases and its containers that can be restored in the given account at the given timesamp and region.
+short-summary: Manage the databases and its containers that can be restored in the given account at the given timestamp and region.
 """
 
 helps['cosmosdb sql restorable-resource list'] = """
 type: command
-short-summary: List all the databases and its containers that can be restored in the given account at the given timesamp and region.
+short-summary: List all the databases and its containers that can be restored in the given account at the given timestamp and region.
 """
 
 helps['cosmosdb mongodb restorable-database'] = """
@@ -1342,12 +1342,12 @@ short-summary: List all the versions of all the mongodb collections that were cr
 
 helps['cosmosdb mongodb restorable-resource'] = """
 type: group
-short-summary: Manage the databases and its collections that can be restored in the given account at the given timesamp and region.
+short-summary: Manage the databases and its collections that can be restored in the given account at the given timestamp and region.
 """
 
 helps['cosmosdb mongodb restorable-resource list'] = """
 type: command
-short-summary: List all the databases and its collections that can be restored in the given account at the given timesamp and region.
+short-summary: List all the databases and its collections that can be restored in the given account at the given timestamp and region.
 """
 
 helps['cosmosdb sql retrieve-latest-backup-time'] = """

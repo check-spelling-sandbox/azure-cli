@@ -1809,7 +1809,7 @@ def cli_cosmosdb_restore(cmd,
     if restore_timestamp_datetime_utc.tzinfo is not None and restore_timestamp_datetime_utc.tzinfo.utcoffset(restore_timestamp_datetime_utc) is not None:
         current_dateTime = datetime.datetime.now(timezone.utc)
 
-    # Fail if provided restoretimesamp is greater than current timestamp
+    # Fail if provided restoretimestamp is greater than current timestamp
     if restore_timestamp_datetime_utc > current_dateTime:
         raise CLIError("Restore timestamp {} should be less than current timestamp {}".format(restore_timestamp_datetime_utc, current_dateTime))
 
