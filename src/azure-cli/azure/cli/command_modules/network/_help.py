@@ -143,7 +143,7 @@ parameters:
         Usage: --ssl-profile name=MySslProfile client-auth-configuration=True cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 policy-type=Custom min-protocol-version=TLSv1_0
 
         name: Required. Name of the SSL profile that is unique within an Application Gateway.
-        polic-name: Name of Ssl Policy.
+        policy-name: Name of Ssl Policy.
         policy-type: Type of Ssl Policy.
         min-protocol-version: Minimum version of Ssl protocol to be supported on application gateway.
         cipher-suites: Ssl cipher suites to be enabled in the specified order to application gateway.
