@@ -808,7 +808,7 @@ Release History
 * Allowing command module authors to inject formatter class. (#2622)
 * Login: skip erroneous tenant (#2634)
 * Removed duplicate sql utils code (#2629)
-* Refactoring SDK reflaction utils into core.sdk (#2599)
+* Refactoring SDK reflection utils into core.sdk (#2599)
 * Add blank line after each example. (#2574)
 * login: set default subscription to one with the state of "Enabled" (#2575)
 * Add wait commands and --no-wait support (#2524)
