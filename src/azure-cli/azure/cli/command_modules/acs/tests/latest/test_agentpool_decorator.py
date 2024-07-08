@@ -102,7 +102,7 @@ class AKSAgentPoolContextCommonTestCase(unittest.TestCase):
         for key, value in kwargs.items():
             setattr(agentpool, key, value)
 
-        # resote defaults
+        # restore defaults
         if restore_defaults:
             self._restore_defaults_in_agentpool(agentpool)
         return agentpool
@@ -1781,7 +1781,7 @@ class AKSAgentPoolAddDecoratorCommonTestCase(unittest.TestCase):
         for key, value in kwargs.items():
             setattr(agentpool, key, value)
 
-        # resote defaults
+        # restore defaults
         if restore_defaults:
             self._restore_defaults_in_agentpool(agentpool)
         return agentpool
@@ -2196,7 +2196,7 @@ class AKSAgentPoolAddDecoratorStandaloneModeTestCase(AKSAgentPoolAddDecoratorCom
     def test_ensure_agentpool(self):
         self.common_ensure_agentpool()
 
-    def test_remove_resotre_defaults_in_agentpool(self):
+    def test_remove_restore_defaults_in_agentpool(self):
         self.common_remove_restore_defaults_in_agentpool()
 
     def test_init_agentpool(self):
@@ -2343,7 +2343,7 @@ class AKSAgentPoolAddDecoratorManagedClusterModeTestCase(AKSAgentPoolAddDecorato
     def test_ensure_agentpool(self):
         self.common_ensure_agentpool()
 
-    def test_remove_resotre_defaults_in_agentpool(self):
+    def test_remove_restore_defaults_in_agentpool(self):
         self.common_remove_restore_defaults_in_agentpool()
 
     def test_init_agentpool(self):
@@ -2485,7 +2485,7 @@ class AKSAgentPoolUpdateDecoratorCommonTestCase(unittest.TestCase):
         for key, value in kwargs.items():
             setattr(agentpool, key, value)
 
-        # resote defaults
+        # restore defaults
         if restore_defaults:
             self._restore_defaults_in_agentpool(agentpool)
         return agentpool
