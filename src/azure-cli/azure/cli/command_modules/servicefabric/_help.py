@@ -666,7 +666,7 @@ type: command
 short-summary: Update a Azure Service Fabric managed application.
 long-summary: This allows for updating the tags, the application parameters, value is the application UpgradePolicy and/or upgrade the application type version which will trigger an application upgrade.
 examples:
-  - name: Update application parameters and upgreade policy values and app type version to v2.
+  - name: Update application parameters and upgrade policy values and app type version to v2.
     text: >
         az sf managed-application update -g testRG -c testCluster --application-name testApp --application-type-version v2 \\
           --application-parameters key0=value0 --health-check-stable-duration 0 --health-check-wait-duration 0 --health-check-retry-timeout 0 \\

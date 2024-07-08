@@ -94,7 +94,7 @@ def update_app(client,
         if maximum_nodes is not None:
             appResource.maximum_nodes = maximum_nodes
 
-        appResource.upgrade_policy = _set_uprade_policy(currentApp.upgrade_policy,
+        appResource.upgrade_policy = _set_upgrade_policy(currentApp.upgrade_policy,
                                                         force_restart,
                                                         upgrade_replica_set_check_timeout,
                                                         failure_action,
@@ -231,7 +231,7 @@ def _set_parameters(parameters, name, value):
     parameters[name]["value"] = value
 
 
-def _set_uprade_policy(current_upgrade_policy,
+def _set_upgrade_policy(current_upgrade_policy,
                        force_restart,
                        upgrade_replica_set_check_timeout,
                        failure_action,
