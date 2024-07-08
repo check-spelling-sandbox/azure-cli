@@ -7,7 +7,7 @@ from azure.cli.testsdk import ScenarioTest
 from azure.cli.testsdk.scenario_tests import AllowLargeResponse
 
 
-class SecurityCenterDiscoveredSecuritySoluytionsTests(ScenarioTest):
+class SecurityCenterDiscoveredSecuritySolutionsTests(ScenarioTest):
 
     def test_security_discovered_security_solutions(self):
 
