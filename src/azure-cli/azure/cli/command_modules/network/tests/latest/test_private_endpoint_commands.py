@@ -3911,7 +3911,7 @@ class NetworkPrivateLinkDesktopVirtualizationScenarioTest(ScenarioTest):
             'reject_description_msg': 'Rejected!'
         })
 
-        # DesktopVirtualzation is an extension
+        # DesktopVirtualization is an extension
         self.cmd('extension add --name desktopvirtualization')
 
         #Create hostpool and workspace
