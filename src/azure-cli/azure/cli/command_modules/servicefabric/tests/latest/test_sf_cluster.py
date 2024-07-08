@@ -119,7 +119,7 @@ class ServiceFabricClusterTests(ScenarioTest):
         self.cmd('sf cluster node add -g {rg} -c {cluster_name} --node-type {primary_node_type} --number-of-nodes-to-add 2',
                 checks=[self.check('nodeTypes[0].vmInstanceCount', 7)])
 
-        # remvoe node from primary node type nt1vm
+        # remove node from primary node type nt1vm
         self.cmd('sf cluster node remove -g {rg} -c {cluster_name} --node-type {primary_node_type} --number-of-nodes-to-remove 1',
                  checks=[self.check('nodeTypes[1].vmInstanceCount', 6)])
 
