@@ -2860,11 +2860,11 @@ def aks_mesh_get_revisions(
         client,
         location
 ):
-    revisonProfiles = client.list_mesh_revision_profiles(location)
-    # 'revisonProfiles' is an ItemPaged object
+    revisionProfiles = client.list_mesh_revision_profiles(location)
+    # 'revisionProfiles' is an ItemPaged object
     revisions = []
     # Iterate over items within pages
-    for page in revisonProfiles.by_page():
+    for page in revisionProfiles.by_page():
         for item in page:
             revisions.append(item)
 

@@ -4270,13 +4270,13 @@ class AKSManagedClusterContext(BaseAKSContext):
                 if len(new_profile.istio.revisions) < 2:
                     raise ArgumentUsageError('Azure Service Mesh upgrade is not in progress.')
 
-                sorted_revisons = self._sort_revisions(new_profile.istio.revisions)
+                sorted_revisions = self._sort_revisions(new_profile.istio.revisions)
                 if mesh_upgrade_command == CONST_AZURE_SERVICE_MESH_UPGRADE_COMMAND_COMPLETE:
-                    revision_to_remove = sorted_revisons[0]
-                    revision_to_keep = sorted_revisons[-1]
+                    revision_to_remove = sorted_revisions[0]
+                    revision_to_keep = sorted_revisions[-1]
                 else:
-                    revision_to_remove = sorted_revisons[-1]
-                    revision_to_keep = sorted_revisons[0]
+                    revision_to_remove = sorted_revisions[-1]
+                    revision_to_keep = sorted_revisions[0]
                 msg = (
                     f"This operation will remove Istio control plane for revision {revision_to_remove}. "
                     f"Please ensure all data plane workloads have been rolled over to revision {revision_to_keep} "
