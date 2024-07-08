@@ -526,7 +526,7 @@ def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statem
                                    resource_type=ResourceType.MGMT_STORAGE) as c:
             t_key_source = self.get_models('KeySource', resource_type=ResourceType.MGMT_STORAGE)
             c.argument('encryption_key_name', help='The name of the KeyVault key.', )
-            c.argument('encryption_key_vault', help='The Uri of the KeyVault.')
+            c.argument('encryption_key_vault', help='The URI of the KeyVault.')
             c.argument('encryption_key_version',
                        help='The version of the KeyVault key to use, which will opt out of implicit key rotation. '
                        'Please use "" to opt in key auto-rotation again.')

@@ -39,7 +39,7 @@ class WebAppOperations:
                 return "https://{}".format(host.name)
 
         # this should not happen, but throw anyway
-        raise ValueError('Failed to retrieve SCM Uri')
+        raise ValueError('Failed to retrieve SCM URI')
 
     @staticmethod
     def get_site_credential(cli_ctx, resource_group_name, name, slot=None):

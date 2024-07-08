@@ -1008,7 +1008,7 @@ def load_arguments(self, _):
                    help='Required. Storage key type.')
 
         c.argument('storage_uri',
-                   help='Required. Storage Uri.')
+                   help='Required. Storage URI.')
 
     with self.argument_context('sql db import') as c:
         # Create args that will be used to build up the ImportExistingDatabaseDefinition object
@@ -1042,7 +1042,7 @@ def load_arguments(self, _):
                    help='Required. Storage key type.')
 
         c.argument('storage_uri',
-                   help='Required. Storage Uri.')
+                   help='Required. Storage URI.')
 
         # The parameter name '--name' is used for 'database_name', so we need to give a different name
         # for the import extension 'name' parameter to avoid conflicts. This parameter is actually not

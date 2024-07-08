@@ -107,7 +107,7 @@ class Update(AAZCommand):
         _args_schema.key_vault_uri = AAZStrArg(
             options=["-v", "--key-vault-uri"],
             arg_group="Encryption",
-            help="The Uri of KeyVault.",
+            help="The URI of KeyVault.",
         )
 
         encryption_identity = cls._args_schema.encryption_identity

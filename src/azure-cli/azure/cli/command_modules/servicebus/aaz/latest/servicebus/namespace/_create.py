@@ -198,7 +198,7 @@ class Create(AAZCommand):
         )
         _element.key_vault_uri = AAZStrArg(
             options=["key-vault-uri"],
-            help="Uri of KeyVault",
+            help="URI of KeyVault",
         )
         _element.key_version = AAZStrArg(
             options=["key-version"],

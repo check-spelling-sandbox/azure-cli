@@ -18,7 +18,7 @@ class SasTokenAuthentication(Authentication):
     """
     Shared Access Signature authorization for Azure IoT Hub.
 
-    :param str uri: Uri of target resource.
+    :param str uri: URI of target resource.
     :param str shared_access_policy_name: Name of shared access policy.
     :param str shared_access_key: Shared access key.
     :param int expiry: Expiry of the token to be generated.

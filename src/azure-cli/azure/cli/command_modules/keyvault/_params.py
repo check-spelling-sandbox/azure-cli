@@ -384,7 +384,7 @@ def load_arguments(self, _):
 
     with self.argument_context('keyvault key restore', arg_group='Storage Id') as c:
         c.argument('storage_resource_uri', options_list=['--storage-resource-uri', '-u'],
-                   help='Azure Blob storage container Uri. If specified, all '
+                   help='Azure Blob storage container URI. If specified, all '
                         'other \'Storage Id\' arguments should be omitted')
         c.argument('storage_account_name', help='Name of Azure Storage Account.')
         c.argument('blob_container_name', help='Name of Blob Container.')
@@ -626,7 +626,7 @@ def load_arguments(self, _):
 
     with self.argument_context('keyvault backup start', arg_group='Storage Id') as c:
         c.argument('storage_resource_uri', required=False,
-                   help='Azure Blob storage container Uri. If specified all other \'Storage Id\' arguments '
+                   help='Azure Blob storage container URI. If specified all other \'Storage Id\' arguments '
                         'should be omitted')
         c.extra('storage_account_name', help='Name of Azure Storage Account.')
         c.extra('blob_container_name', help='Name of Blob Container.')
@@ -647,7 +647,7 @@ def load_arguments(self, _):
 
     with self.argument_context('keyvault restore start', arg_group='Storage Id') as c:
         c.extra('storage_resource_uri', required=False,
-                help='Azure Blob storage container Uri. If specified all other \'Storage Id\' '
+                help='Azure Blob storage container URI. If specified all other \'Storage Id\' '
                      'arguments should be omitted')
         c.extra('storage_account_name', help='Name of Azure Storage Account.')
         c.extra('blob_container_name', help='Name of Blob Container.')

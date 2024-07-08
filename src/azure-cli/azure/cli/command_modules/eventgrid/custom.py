@@ -1865,7 +1865,7 @@ def _get_event_subscription_info(    # pylint: disable=too-many-locals,too-many-
                            'endpoint types WebHook.')
         if azure_active_directory_application_id_or_uri is None:
             raise CLIError('usage error: azure-active-directory-application-id-or-uri is missing. '
-                           'It should include an Azure Active Directory Application Id or Uri.')
+                           'It should include an Azure Active Directory Application Id or URI.')
 
     if azure_active_directory_application_id_or_uri is not None:
         if normalized_endpoint_type != normalized_webhook_destination:

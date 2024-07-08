@@ -941,7 +941,7 @@ def load_arguments(self, _):
                        validator=get_default_location_from_resource_group)
             c.argument('tags', tags_type)
             c.argument('script', help='Contain the powershell or bash script to execute on the VM.')
-            c.argument('script_uri', help='Contain a uri to the script to execute on the VM. Uri can be any link accessible from the VM or a storage blob without SAS. If subscription has access to the storage blob, then SAS will be auto-generated. ')
+            c.argument('script_uri', help='Contain a uri to the script to execute on the VM. URI can be any link accessible from the VM or a storage blob without SAS. If subscription has access to the storage blob, then SAS will be auto-generated. ')
             c.argument('command_id', help='Specify a command id of predefined script. All command ids can be listed using "list" command.')
             c.argument('parameters', nargs='+', help='Set custom parameters in a name-value pair.')
             c.argument('protected_parameters', nargs='+', help='Set custom parameters in a name-value pair. These parameters will be encrypted during transmission and will not be logged.')
@@ -989,7 +989,7 @@ def load_arguments(self, _):
             c.argument('tags', tags_type)
             c.argument('script', help='Contain the powershell or bash script to execute on the VM.')
             c.argument('script_uri',
-                       help='Contain a uri to the script to execute on the VM. Uri can be any link accessible from the VM or a storage blob without SAS. If subscription has access to the storage blob, then SAS will be auto-generated. ')
+                       help='Contain a uri to the script to execute on the VM. URI can be any link accessible from the VM or a storage blob without SAS. If subscription has access to the storage blob, then SAS will be auto-generated. ')
             c.argument('command_id',
                        help='Specify a command id of predefined script. All command ids can be listed using "list" command.')
             c.argument('parameters', nargs='+', help='Set custom parameters in a name-value pair.')

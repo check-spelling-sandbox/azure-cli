@@ -130,7 +130,7 @@ class Create(AAZCommand):
         _args_schema.internet_ingress_public_ips = AAZListArg(
             options=["--internet-ingress-ips"],
             arg_group="Properties",
-            help="List of Resource Uri of Public IPs for Internet Ingress Scenario.",
+            help="List of Resource URI of Public IPs for Internet Ingress Scenario.",
         )
         _args_schema.network_profile = AAZObjectArg(
             options=["--network-profile"],
@@ -178,7 +178,7 @@ class Create(AAZCommand):
         _element = cls._args_schema.internet_ingress_public_ips.Element
         _element.id = AAZResourceIdArg(
             options=["id"],
-            help="Resource Uri of Public Ip",
+            help="Resource URI of Public Ip",
         )
 
         network_profile = cls._args_schema.network_profile

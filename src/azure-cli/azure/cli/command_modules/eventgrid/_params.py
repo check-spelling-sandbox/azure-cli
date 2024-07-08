@@ -96,7 +96,7 @@ odata_query_type = CLIArgumentType(
 )
 
 aad_app_id_type = CLIArgumentType(
-    help="The Azure Active Directory Application Id or Uri to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination",
+    help="The Azure Active Directory Application Id or URI to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination",
     options_list=['--azure-active-directory-application-id-or-uri', '--aad-app-id']
 )
 
@@ -509,7 +509,7 @@ def load_arguments(self, _):    # pylint: disable=too-many-statements
         c.argument('advanced_filter', arg_group="Filtering", action=EventSubscriptionAddFilter, nargs='+')
         c.argument('expiration_date', help="Date or datetime (in UTC, e.g. '2018-11-30T11:59:59+00:00' or '2018-11-30') after which the event subscription would expire. By default, there is no expiration for the event subscription.")
         c.argument('azure_active_directory_tenant_id', options_list=['--azure-active-directory-tenant-id', '--aad-tenant-id'], help="The Azure Active Directory Tenant Id to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
-        c.argument('azure_active_directory_application_id_or_uri', help="The Azure Active Directory Application Id or Uri to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
+        c.argument('azure_active_directory_application_id_or_uri', help="The Azure Active Directory Application Id or URI to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
         c.argument('delivery_identity', arg_type=delivery_identity_type)
         c.argument('deadletter_identity', arg_type=deadletter_identity_type)
         c.argument('delivery_identity_endpoint', help="Endpoint with identity where EventGrid should deliver events matching this event subscription. For webhook endpoint type, this should be the corresponding webhook URL. For other endpoint types, this should be the Azure resource identifier of the endpoint.", is_preview=True)
@@ -547,7 +547,7 @@ def load_arguments(self, _):    # pylint: disable=too-many-statements
         c.argument('advanced_filter', arg_group="Filtering", action=EventSubscriptionAddFilter, nargs='+')
         c.argument('expiration_date', help="Date or datetime (in UTC, e.g. '2018-11-30T11:59:59+00:00' or '2018-11-30') after which the event subscription would expire. By default, there is no expiration for the event subscription.")
         c.argument('azure_active_directory_tenant_id', options_list=['--azure-active-directory-tenant-id', '--aad-tenant-id'], help="The Azure Active Directory Tenant Id to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
-        c.argument('azure_active_directory_application_id_or_uri', help="The Azure Active Directory Application Id or Uri to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
+        c.argument('azure_active_directory_application_id_or_uri', help="The Azure Active Directory Application Id or URI to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
         c.argument('resource_group_name', arg_type=resource_group_name_type)
         c.argument('enable_advanced_filtering_on_arrays', arg_type=get_three_state_flag(),
                    options_list=['--enable-advanced-filtering-on-arrays', '--enable-af-arr'], arg_group="Filtering",
@@ -587,7 +587,7 @@ def load_arguments(self, _):    # pylint: disable=too-many-statements
         c.argument('advanced_filter', arg_group="Filtering", action=EventSubscriptionAddFilter, nargs='+')
         c.argument('expiration_date', help="Date or datetime (in UTC, e.g. '2018-11-30T11:59:59+00:00' or '2018-11-30') after which the event subscription would expire. By default, there is no expiration for the event subscription.")
         c.argument('azure_active_directory_tenant_id', options_list=['--azure-active-directory-tenant-id', '--aad-tenant-id'], help="The Azure Active Directory Tenant Id to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
-        c.argument('azure_active_directory_application_id_or_uri', arg_type=aad_app_id_type, help="The Azure Active Directory Application Id or Uri to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
+        c.argument('azure_active_directory_application_id_or_uri', arg_type=aad_app_id_type, help="The Azure Active Directory Application Id or URI to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
         c.argument('resource_group_name', arg_type=resource_group_name_type)
         c.argument('enable_advanced_filtering_on_arrays', arg_type=get_three_state_flag(),
                    options_list=['--enable-advanced-filtering-on-arrays', '--enable-af-arr'], arg_group="Filtering",
@@ -623,7 +623,7 @@ def load_arguments(self, _):    # pylint: disable=too-many-statements
         c.argument('advanced_filter', arg_group="Filtering", action=EventSubscriptionAddFilter, nargs='+')
         c.argument('expiration_date', help="Date or datetime (in UTC, e.g. '2018-11-30T11:59:59+00:00' or '2018-11-30') after which the event subscription would expire. By default, there is no expiration for the event subscription.")
         c.argument('azure_active_directory_tenant_id', options_list=['--azure-active-directory-tenant-id', '--aad-tenant-id'], help="The Azure Active Directory Tenant Id to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
-        c.argument('azure_active_directory_application_id_or_uri', help="The Azure Active Directory Application Id or Uri to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
+        c.argument('azure_active_directory_application_id_or_uri', help="The Azure Active Directory Application Id or URI to get the access token that will be included as the bearer token in delivery requests. Applicable only for webhook as a destination")
         c.argument('resource_group_name', arg_type=resource_group_name_type)
         c.argument('enable_advanced_filtering_on_arrays', arg_type=get_three_state_flag(),
                    options_list=['--enable-advanced-filtering-on-arrays', '--enable-af-arr'], arg_group="Filtering",

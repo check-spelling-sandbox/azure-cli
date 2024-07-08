@@ -209,7 +209,7 @@ class Update(AAZCommand):
         )
         _element.key_vault_uri = AAZStrArg(
             options=["key-vault-uri"],
-            help="Uri of KeyVault",
+            help="URI of KeyVault",
             nullable=True,
         )
         _element.key_version = AAZStrArg(
