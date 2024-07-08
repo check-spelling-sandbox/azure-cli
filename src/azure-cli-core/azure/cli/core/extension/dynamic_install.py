@@ -231,7 +231,7 @@ def _check_value_in_extensions(cli_ctx, parser, args, no_prompt):  # pylint: dis
             exit_code = subprocess.call(args, shell=platform.system() == 'Windows')
             # In this case, error msg is for telemetry recording purpose only.
             # From UX perspective, the command will rerun in subprocess. Whether it succeeds or fails,
-            # mesages will be shown from the subprocess and this process should not print more message to
+            # messages will be shown from the subprocess and this process should not print more message to
             # interrupt that.
             print_error = False
             error_msg = ("Extension {} dynamically installed{} and commands will be "
