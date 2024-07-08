@@ -164,7 +164,7 @@ class TunnelServer:
                 data = ws_socket.recv()
                 logger.info('Received websocket data: %s, index: %s', data, index)
                 if data:
-                    # Set the response to echo back the recieved data
+                    # Set the response to echo back the received data
                     response = data
                     logger.info('Sending to debugger, response: %s, index: %s', response, index)
                     client.sendall(response)
