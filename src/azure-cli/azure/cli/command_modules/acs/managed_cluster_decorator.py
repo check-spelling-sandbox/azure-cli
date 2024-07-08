@@ -8030,7 +8030,7 @@ class AKSManagedClusterUpdateDecorator(BaseAKSManagedClusterDecorator):
                                     'Could not create a role assignment for App Routing. '
                                     'Are you an Owner on this subscription?')
                     except Exception as ex:
-                        raise CLIError('Error in granting dns zone permisions to managed identity.\n') from ex
+                        raise CLIError('Error in granting dns zone permissions to managed identity.\n') from ex
         else:
             raise CLIError('App Routing must be enabled to modify DNS zone resource IDs.\n')
 
