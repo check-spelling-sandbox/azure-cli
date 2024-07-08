@@ -159,14 +159,14 @@ class RelayNamespaceCURDScenarioTest(ScenarioTest):
             'relay hyco authorization-rule keys list --resource-group {rg} --namespace-name {namespacename} --hybrid-connection-name {hyconame} --name {authoname}')
 
         # Regeneratekeys - Primary
-        regenrateprimarykeyresult = self.cmd(
+        regenerateprimarykeyresult = self.cmd(
             'relay hyco authorization-rule keys renew --resource-group {rg} --namespace-name {namespacename} --hybrid-connection-name {hyconame} --name {authoname} --key {primary}')
-        self.assertIsNotNone(regenrateprimarykeyresult)
+        self.assertIsNotNone(regenerateprimarykeyresult)
 
         # Regeneratekeys - Secondary
-        regenratesecondarykeyresult = self.cmd(
+        regeneratesecondarykeyresult = self.cmd(
             'relay hyco authorization-rule keys renew --resource-group {rg} --namespace-name {namespacename} --hybrid-connection-name {hyconame} --name {authoname} --key {secondary}')
-        self.assertIsNotNone(regenratesecondarykeyresult)
+        self.assertIsNotNone(regeneratesecondarykeyresult)
 
         # Delete HybridConnection Authorization Rule
         self.cmd(
