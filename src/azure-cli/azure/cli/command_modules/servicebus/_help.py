@@ -529,7 +529,7 @@ short-summary: Approve a private endpoint connection request for servicebus name
 examples:
   - name: Approve a private endpoint connection request for servicebus namespace by ID.
     text: |
-        az servicebus namespace private-endpoint-connection approve --id "/subscriptions/0000-0000-0000-0000/resourceGroups/MyResourceGroup/providers/Microsoft.ServiceBus/namepsaces/mynamepsace/privateEndpointConnections/mynamespace.b56b5a95-0588-4f8b-b348-15db61590a6c"
+        az servicebus namespace private-endpoint-connection approve --id "/subscriptions/0000-0000-0000-0000/resourceGroups/MyResourceGroup/providers/Microsoft.ServiceBus/namespaces/mynamespace/privateEndpointConnections/mynamespace.b56b5a95-0588-4f8b-b348-15db61590a6c"
   - name: Approve a private endpoint connection request for servicebus namespace by ID.
     text: |
         id = (az servicebus namespace show -n mynamespace --query "privateEndpointConnections[0].id")

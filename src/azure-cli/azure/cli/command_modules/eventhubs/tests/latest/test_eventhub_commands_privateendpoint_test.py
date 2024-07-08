@@ -51,8 +51,8 @@ class EHNetworkCURDScenarioTest(ScenarioTest):
         pr = self.cmd('eventhubs namespace private-link-resource show --namespace-name {namespacename} -g {rg}').get_output_in_json()
         self.kwargs['group_id'] = pr[0]['groupId']
 
-        getnamepsace = self.cmd('eventhubs namespace show -n {namespacename} -g {rg}').get_output_in_json()
-        self.kwargs['ehn_id'] = getnamepsace['id']
+        getnamespace = self.cmd('eventhubs namespace show -n {namespacename} -g {rg}').get_output_in_json()
+        self.kwargs['ehn_id'] = getnamespace['id']
         private_endpoint = self.cmd(
             'network private-endpoint create -g {rg} -n {pe} --vnet-name {vnet} --subnet {subnet} -l {loc} '
             '--connection-name {pe_connection} --private-connection-resource-id {ehn_id} '
@@ -67,14 +67,14 @@ class EHNetworkCURDScenarioTest(ScenarioTest):
         self.kwargs['pe_id'] = private_endpoint['privateLinkServiceConnections'][0]['id']
 
         # Show the connection at eventhubs namespace
-        getnamepsace = self.cmd('eventhubs namespace show -n {namespacename} -g {rg}').get_output_in_json()
-        self.assertIn('privateEndpointConnections', getnamepsace)
-        self.assertEqual(len(getnamepsace['privateEndpointConnections']), 1)
-        self.assertEqual(getnamepsace['privateEndpointConnections'][0]['privateLinkServiceConnectionState']['status'],
+        getnamespace = self.cmd('eventhubs namespace show -n {namespacename} -g {rg}').get_output_in_json()
+        self.assertIn('privateEndpointConnections', getnamespace)
+        self.assertEqual(len(getnamespace['privateEndpointConnections']), 1)
+        self.assertEqual(getnamespace['privateEndpointConnections'][0]['privateLinkServiceConnectionState']['status'],
                          'Approved')
 
-        self.kwargs['sa_pec_id'] = getnamepsace['privateEndpointConnections'][0]['id']
-        self.kwargs['ehn_pec_name'] = getnamepsace['privateEndpointConnections'][0]['name']
+        self.kwargs['sa_pec_id'] = getnamespace['privateEndpointConnections'][0]['id']
+        self.kwargs['ehn_pec_name'] = getnamespace['privateEndpointConnections'][0]['name']
 
         self.cmd('eventhubs namespace private-endpoint-connection show --namespace-name {namespacename} -g {rg} --name {ehn_pec_name}',
                  checks=self.check('id', '{sa_pec_id}'))

@@ -121,7 +121,7 @@ def load_arguments_eh(self, _):
             c.extra('connection_id', options_list=['--id'],
                     help='The ID of the private endpoint connection associated with the EventHubs Namespace. You can get '
                          'it using `az eventhubs namespace show`.')
-            c.argument('namespace_name', help='The eventhubs namepsace name.', required=False)
+            c.argument('namespace_name', help='The eventhubs namespace name.', required=False)
             c.argument('resource_group_name', help='The resource group name of specified eventhubs namespace.',
                        required=False)
             c.argument('description', help='Comments for {} operation.'.format(item))

@@ -42,7 +42,7 @@ class SBNSMigrationCRUDScenarioTest(ScenarioTest):
             'alternatename': self.create_random_name(prefix='cliAlter', length=20),
             'id1': '',
             'id2': '',
-            'partnernamepsaceid2': '',
+            'partnernamespaceid2': '',
             'test': '',
             'queuename': '',
             'topicname': '',
