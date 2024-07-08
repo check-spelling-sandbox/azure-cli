@@ -920,7 +920,7 @@ short-summary: Failover a managed instance.
 examples:
   - name: Failover a managed instance primary replica
     text: az sql mi failover -g mygroup -n myinstance
-  - name: Failover a managed instance readable secodary replica
+  - name: Failover a managed instance readable secondary replica
     text: az sql mi failover -g mygroup -n myinstance --replica-type ReadableSecondary
 """
 
