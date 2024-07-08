@@ -430,7 +430,7 @@ def summary_data(testdata):
                                 del i['disabled']
                         src_soup.find('span', {'class': 'passed'}).string = f'{passed} passed'
                         src_soup.find('span', {'class': 'failed'}).string = f'{failed} failed'
-                        # src_soup.find('span', {'class': 'skipped'}).string = f'{skiped} skipped'
+                        # src_soup.find('span', {'class': 'skipped'}).string = f'{skipped} skipped'
 
                 elif file.startswith(module) and file.endswith('html'):
                     platform = file.split('.')[1]
