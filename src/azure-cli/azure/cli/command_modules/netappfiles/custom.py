@@ -355,8 +355,8 @@ class VolumeCreate(_VolumeCreate):
         # the RP ordinarily only creates a default setting NFSv3.
         logger.debug("ANF log: ProtocolTypes rules len:%s", len(args.protocol_types))
 
-        for protocl in args.protocol_types:
-            logger.debug("ANF log: ProtocolType: %s", protocl)
+        for protocol in args.protocol_types:
+            logger.debug("ANF log: ProtocolType: %s", protocol)
 
         logger.debug("ANF log: exportPolicy rules len:%s", len(args.export_policy_rules))
 
