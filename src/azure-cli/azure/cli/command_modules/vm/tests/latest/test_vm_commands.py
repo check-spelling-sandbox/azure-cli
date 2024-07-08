@@ -5748,7 +5748,7 @@ class VMSSRunCommandScenarioTest(ScenarioTest):
 
         self.cmd('vmss create -g {rg} -n {vmss} --image Canonical:UbuntuServer:18.04-LTS:latest --admin-username clitest1 --instance-count 1 --generate-ssh-keys --disable-overprovision').get_output_in_json()
 
-        # get load balancer and allow trafic to scale set.
+        # get load balancer and allow traffic to scale set.
         lb = self.cmd('network lb list -g {rg}').get_output_in_json()[0]
         self.kwargs.update({
             'lb_name': lb['name'],

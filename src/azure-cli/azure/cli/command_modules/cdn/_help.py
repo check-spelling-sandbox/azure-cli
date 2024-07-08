@@ -931,7 +931,7 @@ examples:
     text: >
         az afd route create -g group --endpoint-name endpoint1 --profile-name profile --route-name route1 --rule-sets ruleset1 ruleset2
         --origin-group og001 --supported-protocols Http Https --link-to-default-domain Enabled --forwarding-protocol MatchRequest --https-redirect Disabled
-  - name: Creates a route to associate the endpoint's default domain and a custom domain with an origin group for all requests with the specified path patterns and redirect all trafic to use Https.
+  - name: Creates a route to associate the endpoint's default domain and a custom domain with an origin group for all requests with the specified path patterns and redirect all traffic to use Https.
     text: >
         az afd route create -g group --endpoint-name endpoint1 --profile-name profile --route-name route1 --patterns-to-match /test1/* /tes2/*
         --origin-group og001 --supported-protocols Http Https --custom-domains cd001 --forwarding-protocol MatchRequest --https-redirect Enabled --link-to-default-domain Enabled
@@ -941,7 +941,7 @@ helps['afd route update'] = """
 type: command
 short-summary: Update an existing route within the specified endpoint.
 examples:
-  - name: Update a route to accept both Http and Https requests and redirect all trafic to use Https.
+  - name: Update a route to accept both Http and Https requests and redirect all traffic to use Https.
     text: >
         az afd route update -g group --endpoint-name endpoint1 --profile-name profile --route-name route1
         --supported-protocols Http Https --https-redirect Enabled
