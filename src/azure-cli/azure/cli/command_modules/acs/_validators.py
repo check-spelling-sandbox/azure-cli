@@ -460,7 +460,7 @@ def validate_label(label):
 
 
 def validate_max_surge(namespace):
-    """validates parameters like max surge are postive integers or percents. less strict than RP"""
+    """validates parameters like max surge are positive integers or percents. less strict than RP"""
     if namespace.max_surge is None:
         return
     int_or_percent = namespace.max_surge
