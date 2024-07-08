@@ -570,7 +570,7 @@ class TestProfile(unittest.TestCase):
                 self.set_token()
 
             def set_token(self):
-                # here we will reject the 1st sniffing of trying with client_id and then acccept the 2nd
+                # here we will reject the 1st sniffing of trying with client_id and then accept the 2nd
                 if self.object_id:
                     self.token = {
                         'token_type': 'Bearer',
