@@ -826,7 +826,7 @@ class NetworkAppGatewayDefaultScenarioTest(ScenarioTest):
         # self.assertTrue(show_data["frontendIpConfigurations"][1]["id"].endswith("appGatewayPrivateFrontendIP"))  # default name
         # self.assertEqual(show_data["frontendIpConfigurations"][1]["privateIpAddress"], "10.0.0.17")
         # self.assertEqual(show_data["frontendIpConfigurations"][1]["privateLinkConfiguration"], None)
-        # service buggy, this properties won't be populcated so fast even in Azure CLI 2.12.0
+        # service buggy, this properties won't be populated so fast even in Azure CLI 2.12.0
         # self.assertTrue(show_data["frontendIpConfigurations"][1]["privateLinkConfiguration"]["id"].endswith("PrivateLinkDefaultConfiguration"))
 
         self.cmd("network application-gateway delete -g {rg} -n {appgw}")
