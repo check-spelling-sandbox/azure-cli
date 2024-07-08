@@ -2745,7 +2745,7 @@ def _get_extended_location(kind_name=None, extended_location_name=None, extended
 def _ensure_extended_location_is_none(extended_location_name=None, extended_location_type=None):
 
     if extended_location_name is not None or extended_location_type is not None:
-        raise CLIError('Cannot specify extended-location-name or extended-location-type when targetting Azure.')
+        raise CLIError('Cannot specify extended-location-name or extended-location-type when targeting Azure.')
 
 
 def _ensure_extended_location_is_valid(extended_location_name=None, extended_location_type=None):
