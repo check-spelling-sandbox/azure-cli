@@ -44,7 +44,7 @@ def get_graph_object_transformer(object_type):
 
 def graph_err_handler(ex):
     # Convert GraphError to CLIError that can be printed
-    from ._msgrpah import GraphError
+    from ._msgraph import GraphError
     if isinstance(ex, GraphError):
         from knack.util import CLIError
         raise CLIError(ex)

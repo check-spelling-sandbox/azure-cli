@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
 
-from azure.cli.command_modules.role._msgrpah._graph_client import _get_user_url
+from azure.cli.command_modules.role._msgraph._graph_client import _get_user_url
 
 
 def test_get_user_url():
