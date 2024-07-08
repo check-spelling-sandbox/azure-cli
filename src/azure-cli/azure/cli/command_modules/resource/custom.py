@@ -3425,11 +3425,11 @@ def delete_policy_non_compliance_message(cmd, name, message, scope=None, resourc
 
 def _is_non_compliance_message_equivalent(first, second):
     first_message = '' if first.message is None else first.message
-    seccond_message = '' if second.message is None else second.message
+    second_message = '' if second.message is None else second.message
     first_reference_id = '' if first.policy_definition_reference_id is None else first.policy_definition_reference_id
     second_reference_id = '' if second.policy_definition_reference_id is None else second.policy_definition_reference_id
 
-    return first_message.lower() == seccond_message.lower() and first_reference_id.lower() == second_reference_id.lower()
+    return first_message.lower() == second_message.lower() and first_reference_id.lower() == second_reference_id.lower()
 
 
 def set_identity(cmd, name, scope=None, resource_group_name=None,
