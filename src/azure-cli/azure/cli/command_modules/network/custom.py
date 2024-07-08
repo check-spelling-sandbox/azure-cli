@@ -4925,20 +4925,20 @@ def configure_network_watcher(cmd, locations, resource_group_name=None, enabled=
     watcher_list = List(cli_ctx=cmd.cli_ctx)(command_args={})
     locations_list = [location.lower() for location in locations]
     existing_watchers = [w for w in watcher_list if w["location"] in locations_list]
-    nonenabled_regions = list(set(locations) - set(watcher["location"] for watcher in existing_watchers))
+    disabled_regions = list(set(locations) - set(watcher["location"] for watcher in existing_watchers))
 
     if enabled is None:
         if resource_group_name is not None:
             logger.warning(
                 "Resource group '%s' is only used when enabling new regions and will be ignored.",
                 resource_group_name)
-        for location in nonenabled_regions:
+        for location in disabled_regions:
             logger.warning(
                 "Region '%s' is not enabled for Network Watcher and will be ignored.", location)
         _update_network_watchers(cmd, existing_watchers, tags)
 
     elif enabled:
-        _create_network_watchers(cmd, resource_group_name, nonenabled_regions, tags)
+        _create_network_watchers(cmd, resource_group_name, disabled_regions, tags)
         _update_network_watchers(cmd, existing_watchers, tags)
 
     else:
