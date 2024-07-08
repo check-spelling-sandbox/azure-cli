@@ -2858,7 +2858,7 @@ class PowerBINetworkARMTemplateBasedScenarioTest(ScenarioTest):
 
 class NetworkPrivateLinkBotServiceScenarioTest(ScenarioTest):
     @ResourceGroupPreparer(name_prefix='test_abs_private_endpoint', random_name_length=40)
-    def test_abs_privatendpoint_with_default(self, resource_group):
+    def test_abs_privateendpoint_with_default(self, resource_group):
         self.kwargs.update({
             'vnet_name': self.create_random_name('testabsvnet', 20),
             'subnet_name': self.create_random_name('testabssubnet', 20),
