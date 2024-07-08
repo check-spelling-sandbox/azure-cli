@@ -291,7 +291,7 @@ def load_arguments(self, _):
     with self.argument_context('image builder create') as c:
         ib_source_type = CLIArgumentType(arg_group="Image Source")
         ib_customizer_type = CLIArgumentType(arg_group="Customizer")
-        ib_cutput_type = CLIArgumentType(arg_group="Output")
+        ib_output_type = CLIArgumentType(arg_group="Output")
 
         c.argument('build_timeout', type=int, help="The Maximum duration to wait while building the image template, in minutes. Default is 60.")
         c.argument('image_template', help='Local path or URL to an image template file. When using --image-template, all other parameters are ignored except -g and -n. Reference: https://docs.microsoft.com/azure/virtual-machines/linux/image-builder-json')
@@ -319,9 +319,9 @@ def load_arguments(self, _):
         c.argument('', arg_type=ib_customizer_type)
 
         # Image Output Arguments
-        c.argument('managed_image_destinations', arg_type=ib_cutput_type)
-        c.argument('shared_image_destinations', arg_type=ib_cutput_type)
-        c.argument('output_name', arg_type=ib_cutput_type)
+        c.argument('managed_image_destinations', arg_type=ib_output_type)
+        c.argument('shared_image_destinations', arg_type=ib_output_type)
+        c.argument('output_name', arg_type=ib_output_type)
 
     for scope in ['image builder identity assign', 'image builder identity remove']:
         with self.argument_context(scope, min_api='2022-02-14') as c:
