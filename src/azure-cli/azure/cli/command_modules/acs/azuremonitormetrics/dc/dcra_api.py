@@ -25,7 +25,7 @@ def create_dcra(cmd, cluster_region, cluster_subscription, cluster_resource_grou
             cluster_resource_group_name,
             dcra_name
         )
-    description_str = "Promtheus data collection association between DCR, DCE and target AKS resource"
+    description_str = "Prometheus data collection association between DCR, DCE and target AKS resource"
     # only create or delete the association between the DCR and cluster
     association_body = json.dumps({"location": cluster_region,
                                    "properties": {
