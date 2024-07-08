@@ -4793,9 +4793,9 @@ class VMSSCreateExistingOptions(ScenarioTest):
 
         message = 'usage error: --os-disk-delete-option/--data-disk-delete-option is only available for VMSS with flexible orchestration mode'
         with self.assertRaisesRegex(InvalidArgumentValueError, message):
-            self.cmd('vmss create -g {rg} -n {vmss} --image ubutults --os-disk-delete-option delete --admin-username vmtest --orchestration-mode Uniform')
+            self.cmd('vmss create -g {rg} -n {vmss} --image ubuntults --os-disk-delete-option delete --admin-username vmtest --orchestration-mode Uniform')
         with self.assertRaisesRegex(InvalidArgumentValueError, message):
-            self.cmd('vmss create -g {rg} -n {vmss} --image ubutults --data-disk-delete-option delete --admin-username vmtest --orchestration-mode Uniform')
+            self.cmd('vmss create -g {rg} -n {vmss} --image ubuntults --data-disk-delete-option delete --admin-username vmtest --orchestration-mode Uniform')
 
         self.cmd('vmss create -g {rg} -n {vmss} --image Canonical:UbuntuServer:18.04-LTS:latest --os-disk-delete-option delete', checks=[
             self.check('vmss.orchestrationMode', 'Flexible'),
