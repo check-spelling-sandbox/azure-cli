@@ -20,7 +20,7 @@ class QueryNetworkSiblingSet(AAZCommand):
     Get details of the specified network sibling set
 
     :example: Query network sibling set
-        az netappfiles query-network-sibling-set -l westus2 --network-sibling-set-id {SIBLIING_SET_ID} --subnet-id {SUBNET_ID}
+        az netappfiles query-network-sibling-set -l westus2 --network-sibling-set-id {SIBLING_SET_ID} --subnet-id {SUBNET_ID}
     """
 
     _aaz_info = {
