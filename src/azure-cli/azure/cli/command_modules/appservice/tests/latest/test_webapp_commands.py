@@ -391,16 +391,16 @@ class BackupRestoreTest(ScenarioTest):
 
         def get_backup_id(command, backup_name):
             backup_status = 'InProgress'
-            list_backups_respone = []
+            list_backups_response = []
             while backup_status == 'InProgress':
-                list_backups_respone = self.cmd(command, checks=[
+                list_backups_response = self.cmd(command, checks=[
                     JMESPathCheck('length(@)', 1),
                     JMESPathCheck('[0].namePropertiesName', backup_name)
                 ]).get_output_in_json()
-                backup_status =  list_backups_respone[0]['status']
+                backup_status =  list_backups_response[0]['status']
                 # Backup operation is still in progress, Sleep 30 seconds
                 time.sleep(30)
-            return list_backups_respone[0]['backupId']
+            return list_backups_response[0]['backupId']
 
         # Verify webapp backups count
         webapp_backup_id = get_backup_id(f'webapp config backup list -g {resource_group} --webapp-name {webapp}', backup_name)
