@@ -2859,7 +2859,7 @@ def load_arguments(self, _):
                    required=False,
                    options_list=['--auto-complete', '-a'],
                    action='store_true',
-                   help='The flag that in usage with last_backup_name automatically completes log replay servise.')
+                   help='The flag that in usage with last_backup_name automatically completes log replay service.')
 
         c.argument('last_backup_name',
                    required=False,

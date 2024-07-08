@@ -4995,7 +4995,7 @@ def undelete_image_version(cmd, resource_group_name, gallery_name, gallery_image
 
 
 def fix_gallery_image_date_info(date_info):
-    # here we add needed time, if only date is provided, so the setting can be accepted by servie end
+    # here we add needed time, if only date is provided, so the setting can be accepted by service end
     if date_info and 't' not in date_info.lower():
         date_info += 'T12:59:59Z'
     return date_info

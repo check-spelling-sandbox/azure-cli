@@ -673,7 +673,7 @@ helps['apim deletedservice purge'] = """
 type: command
 short-summary: Purge soft-deleted Api Management service instance (deletes it with no option to undelete)
 examples:
-  - name: Purge a soft-deleted serivce.
+  - name: Purge a soft-deleted service.
     text: |
         az apim deletedservice purge --service-name MyApim --location westus
 """

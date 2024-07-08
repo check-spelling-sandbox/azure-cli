@@ -1900,7 +1900,7 @@ class WebAppConnectionScenarioTest(ScenarioTest):
             'source_resource_group': 'clitest',
             'target_resource_group': 'servicelinker-test-openai-group',
             'site': 'servicelinker-cognitive-app',
-            'account': 'serivcelinker-aiservices-test'
+            'account': 'servicelinker-aiservices-test'
         })
 
         # prepare params

@@ -1183,7 +1183,7 @@ Release History
 * Fix #27066: `az network vnet list`: Fix -o table cannot be used (#27076)
 * `az network express-route port delete`: Add confirmation while deleting (#27150)
 * `az network application-gateway waf-policy custom-rule`: Add an example of using `--group-by-user-session` (#27172)
-* `az network express-route update`: Fix `properties.SeriveProviderProperties` unexpected null (#27127)
+* `az network express-route update`: Fix `properties.ServiceProviderProperties` unexpected null (#27127)
 * Fix #26730: `az network public-ip update`: `--ip-tags` cannot be correctly parsed (#27187)
 * `az network application-gateway waf-policy managed-rule rule-set`: Support Microsoft_BotManagerRuleSet version 1.0 (#27184)
 * `az network vnet peering create`: Mark `--remote-vnet` as required (#27198)
@@ -1536,7 +1536,7 @@ Release History
 * [BREAKING CHANGE] `az keyvault role assignment delete`: Nothing will return for successful run (#26422)
 * [BREAKING CHANGE] `az keyvault certificate show/set-attributes/import`: No longer return `x509CertificateProperties.basicConstraints`, `pending` (#26242)
 * [BREAKING CHANGE] `az keyvault certificate contact delete`: Return an empty list instead of the deleted contact for consistency if the operation would remove the last contact (#26242)
-* [BREAKING CHANGE] `az keyvault certificate issuer create`: `organizationDetails.zip` is no longer returned by serivce, use 0 as the default (#26242)
+* [BREAKING CHANGE] `az keyvault certificate issuer create`: `organizationDetails.zip` is no longer returned by service, use 0 as the default (#26242)
 * `az keyvault security-domain upload`: Fix sd warpping keys with passwords (#26288)
 * `az keyvault setting`: New command group to manage MHSM settings (#26422)
 
