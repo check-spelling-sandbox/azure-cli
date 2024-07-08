@@ -279,7 +279,7 @@ def download_app(cmd, client, resource_group_name, resource_name, file_save_path
     # If the bot source contains a .bot file
     # TODO: If there is only one bot file, that is the bot file.
     # TODO: If there are more than one bot file, the user must disambiguate before continuing.
-    # TODO: Show error and suggest passsing --bot-file-name
+    # TODO: Show error and suggest passing --bot-file-name
 
     bot_file_path = os.path.join(folder_path, '{0}.bot'.format(resource_name))
     if os.path.exists(bot_file_path):

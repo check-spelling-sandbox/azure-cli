@@ -1418,7 +1418,7 @@ Release History
 * `az postgres flexible-server migration update`: Remove unsupported update parameters `--db-names` and `--overwrite-dbs` (#26720)
 * `az postgres flexible-server migration create`: Add support for tags and location using `--tags` and `--location` (#26720)
 * `az postgres flexible-server revive-dropped`: Add support to revive a dropped PostgreSQL flexible server (#26720)
-* `az postgres flexible-server create`: Add support to create PostgreSQL flexible server with data encryption enabled for geo-backup enabled server by pasing parameters `--geo-redundant-backup`, `--backup-key` and `--backup-identity` (#26720)
+* `az postgres flexible-server create`: Add support to create PostgreSQL flexible server with data encryption enabled for geo-backup enabled server by passing parameters `--geo-redundant-backup`, `--backup-key` and `--backup-identity` (#26720)
 * `az postgres flexible-server show-connection-string`: Add support to pass `--pg-bouncer` in connection strings for cmd and programming languages with PgBouncer enabled for PostgreSQL flexible server. Updated connection strings to show port as well as database (#26720)
 * `az postgres flexible-server update`: Add support for parameter `--private-dns-zone` during update operation, to update private DNS zone for a VNET enabled PostgreSQL flexible server (#26720)
 
