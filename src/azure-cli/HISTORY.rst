@@ -3135,7 +3135,7 @@ This version is only available on CentOS 7 and RHEL 7.
 * [BREAKING CHANGE] `az containerapp connection create`: Default client_type changed to `none` (#22311)
 * `az containerapp connection`: Add new command group to support container app connection (#22290)
 * `az containerapp connection create`: Add `--container` parameter in interactive mode (#22311)
-* `az spring connection`: Add support for `az sping-cloud` renaming (#22356)
+* `az spring connection`: Add support for `az spring-cloud` renaming (#22356)
 Add new parameter key value pair to support password from KeyVault (#22319)
 
 **Service Fabric**
