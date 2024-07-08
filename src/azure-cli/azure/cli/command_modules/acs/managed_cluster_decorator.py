@@ -8423,7 +8423,7 @@ class AKSManagedClusterUpdateDecorator(BaseAKSManagedClusterDecorator):
         :return: the ManagedCluster object
         """
         # check raw parameters
-        # promt y/n if no options are specified to ask user whether to perform a reconcile operation
+        # prompt y/n if no options are specified to ask user whether to perform a reconcile operation
         self.check_raw_parameters()
         # fetch the ManagedCluster object
         mc = self.fetch_mc()
