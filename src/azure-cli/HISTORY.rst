@@ -1009,7 +1009,7 @@ Release History
 * `az storage file/directory`: Add `--disallow-trailing-dot` (#27622)
 * `az storage share list-handle/close-handle`: Add `--disallow-trailing-dot` (#27622)
 * `az storage file copy start/start-batch`: Add `--disallow-source-trailing-dot` (#27622)
-* Fix #27590: `az storage fs directory download`: Check user sytem PATH for azcopy and use CLI config directory for new install (#27593)
+* Fix #27590: `az storage fs directory download`: Check user system PATH for azcopy and use CLI config directory for new install (#27593)
 * `az storage account blob-inventory-policy create`: Add support for new filter `creationTime.lastNDays` in json (#27666)
 * `az storage account migration start/show`: Support customer initiated migration between replication options (#27692)
 * [BREAKING CHANGE] `az storage container-rm update`: Remove `--default-encryption-scope` and `--deny-encryption-scope-override` as they should only be specified during create (#27791)
