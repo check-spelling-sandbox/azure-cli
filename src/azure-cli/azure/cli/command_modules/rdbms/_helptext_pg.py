@@ -564,7 +564,7 @@ examples:
       az postgres flexible-server migration create --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --resource-group testGroup --name testserver \
         --migration-name testmigration --properties "migrationConfig.json" --migration-option Migrate
   - name: >
-      Default migration-option is ValidateAndMigrate. SoureType and SslMode must be passed for migrations other than PostgreSQLSingleServer. \
+      Default migration-option is ValidateAndMigrate. SourceType and SslMode must be passed for migrations other than PostgreSQLSingleServer. \
       Migration parameters in json file should look like below:
       {
         "properties": {
