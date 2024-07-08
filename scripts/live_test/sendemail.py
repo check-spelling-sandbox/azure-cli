@@ -343,10 +343,10 @@ def get_remaining_tests():
     cmd = ['az', 'group', 'list', '--tag', 'module', '--query', '[][name, tags]']
     logger.info(cmd)
     out = subprocess.run(cmd, capture_output=True)
-    remaing_tests = json.loads(out.stdout) if out.stdout else []
-    if remaing_tests:
-        # sorted remaing tests by module name and test name
-        sorted_tests = sorted(remaing_tests, key=lambda x: (x[1]['module'], x[1]['test']))
+    remaining_tests = json.loads(out.stdout) if out.stdout else []
+    if remaining_tests:
+        # sorted remaining tests by module name and test name
+        sorted_tests = sorted(remaining_tests, key=lambda x: (x[1]['module'], x[1]['test']))
         soup = BeautifulSoup(resource_html, 'html.parser')
         for test in sorted_tests:
             module = test[1]['module']
