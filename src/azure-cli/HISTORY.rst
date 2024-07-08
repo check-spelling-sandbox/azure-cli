@@ -819,7 +819,7 @@ Release History
 
 * [BREAKING CHANGE] `az aks create`: Make container log V2 as default and remove region dependency (#27615)
 * `az aks create/update`: Support custom ips/ipprefixes and managed ips being assigned to aks cluster outbound resources together (#27414)
-* `az aks nodepool add/update/upgrade`: Add new parameter `--drain-timout` to slow down the upgrade (#27475)
+* `az aks nodepool add/update/upgrade`: Add new parameter `--drain-timeout` to slow down the upgrade (#27475)
 * `az aks update`: Fix bug where supportPlan can be reset to None (#27554)
 * `az aks nodepool add`: Fix incorrectly specified property name for option `--drain-timeout` (#27621)
 * `az aks create/update`: Enable Grafana support in US Government clouds (#27488)
