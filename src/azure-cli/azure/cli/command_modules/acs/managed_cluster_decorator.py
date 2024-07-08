@@ -4647,7 +4647,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         return azure_defender
 
     def get_workload_identity_profile(self) -> Optional[ManagedClusterSecurityProfileWorkloadIdentity]:
-        """Obtrain the value of security_profile.workload_identity.
+        """Obtain the value of security_profile.workload_identity.
         :return: Optional[ManagedClusterSecurityProfileWorkloadIdentity]
         """
         enable_workload_identity = self.raw_param.get("enable_workload_identity")
