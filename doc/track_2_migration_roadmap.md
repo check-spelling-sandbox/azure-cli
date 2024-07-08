@@ -108,7 +108,7 @@ This document provides the roadmap for Track 2 SDK migration in Azure CLI. When 
 | DataShare   |  | **Completed** | N/A |Vendored_SDK | N/A | N/A | Extension |
 | DesktopVirtualization   |  | **Completed** | N/A |Vendored_Preview (0.2.0) | N/A | N/A | Extension |
 | GuestConfig   |  | **Completed** | N/A |Vendored_SDK | N/A | N/A | Extension |
-| Hardware-Secutiry-Modules   |  | **Completed** | N/A|Vendored_SDK | N/A | N/A | Extension |
+| Hardware-Security-Modules   |  | **Completed** | N/A|Vendored_SDK | N/A | N/A | Extension |
 | Import-Export   |  | **Completed** | N/A |Vendored_SDK | N/A | N/A | Extension |
 | Resource-Mover   |  | **Completed** | N/A |Vendored_SDK | N/A | N/A | Extension |
 | ProviderHub   |  | **Completed** | N/A |Vendored_SDK | N/A | N/A | Extension |
