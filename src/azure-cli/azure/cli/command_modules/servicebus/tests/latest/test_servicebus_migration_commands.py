@@ -84,7 +84,7 @@ class SBNSMigrationCRUDScenarioTest(ScenarioTest):
             'servicebus namespace authorization-rule show --resource-group {rg} --namespace-name {namespacenamestandard} --name {authoname}',
             checks=[self.check('name', '{authoname}')])
 
-        # Create Queues under Standrad namespace
+        # Create Queues under Standard namespace
         for x in range(0, 10):
             queuenamestr = 'queue' + repr(x)
             self.kwargs.update({'queuename': queuenamestr})
@@ -92,7 +92,7 @@ class SBNSMigrationCRUDScenarioTest(ScenarioTest):
                 'servicebus queue create --resource-group {rg} --namespace-name {namespacenamestandard} --name {queuename}',
                 checks=[self.check('name', '{queuename}')])
 
-        # Create Topics under Standrad namespace
+        # Create Topics under Standard namespace
         for x in range(0, 10):
             topicnamestr = 'topic' + repr(x)
             self.kwargs.update({'topicname': topicnamestr})
