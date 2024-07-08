@@ -248,7 +248,7 @@ def _validate_msi_valid_on_vm(cli_ctx, namespace):
     compute_client = get_mgmt_service_client(cli_ctx, ResourceType.MGMT_COMPUTE)
 
     # Retrieve the vm instance. This is a rest call to the server and deserialization afterwards
-    # therefore there is a greater chance to encounter an exception. Instead of poping the exception
+    # therefore there is a greater chance to encounter an exception. Instead of popping the exception
     # to the caller directly, we will throw our own InvalidArgumentValueError with more context
     # information.
     try:
