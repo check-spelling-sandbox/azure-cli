@@ -999,7 +999,7 @@ type: group
 short-summary: Manage secrets within the specified profile.
 long-summary: >
     Secrets are used to reference your own certificate stored in Azure Key Vault.
-    You must specifiy the secret name when creating custom domain if you want to use your own certificate for TLS encryption.
+    You must specify the secret name when creating custom domain if you want to use your own certificate for TLS encryption.
 """
 
 helps['afd secret create'] = """
