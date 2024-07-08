@@ -584,7 +584,7 @@ class VMManagedDiskScenarioTest(ScenarioTest):
         self.kwargs['disk1_id'] = data_disk['id']
         data_disk2 = self.cmd('disk create -g {rg} -n {disk2} --source {disk1_id}').get_output_in_json()
 
-        # create a snpashot
+        # create a snapshot
         os_snapshot = self.cmd('snapshot create -g {rg} -n {snapshot1} --size-gb 1 --sku Premium_LRS --tags tag1=s1', checks=[
             self.check('sku.name', 'Premium_LRS'),
             self.check('diskSizeGb', 1),
