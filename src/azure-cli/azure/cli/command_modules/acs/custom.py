@@ -1757,7 +1757,7 @@ def get_windows_user_path():
     try:
         reg_result = subprocess.run(reg_query_exp.split(" "), shell=True, check=True, capture_output=True, text=True)
     except Exception as e:
-        raise CLIInternalError("failed to perfrom reg query, error: {}".format(e))
+        raise CLIInternalError("failed to perform reg query, error: {}".format(e))
     raw_user_path = reg_result.stdout.strip()
     # find the identifier where the user's path really starts
     m = re.search(reg_regex_exp, raw_user_path)
