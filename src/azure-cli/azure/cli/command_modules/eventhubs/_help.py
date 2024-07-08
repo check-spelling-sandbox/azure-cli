@@ -258,7 +258,7 @@ examples:
 
 helps['eventhubs georecovery-alias show'] = """
 type: command
-short-summary: shows properties of Geo-Disaster Recovery Configuration Alias for Primay or Secondary Namespace
+short-summary: shows properties of Geo-Disaster Recovery Configuration Alias for Primary or Secondary Namespace
 examples:
   - name: Shows properties of Geo-Disaster Recovery Configuration Alias of the Primary Namespace
     text: az eventhubs georecovery-alias show --resource-group myresourcegroup --namespace-name primarynamespace --alias myaliasname
