@@ -69,7 +69,7 @@ az storage account encryption-scope -h
 ```
 az storage account encryption-scope create \
     -n myencryption \
-    -s Micrsoft.Storage \
+    -s Microsoft.Storage \
     --account-name mystorageaccount \
     -g MyResourceGroup
 ```
@@ -93,7 +93,7 @@ az storage account encryption-scope list \
 ```
 az storage account encryption-scope update \
     -n myencryption \
-    -s Micrsoft.KeyVault \
+    -s Microsoft.KeyVault \
     -u "https://vaultname.vault.azure.net/keys/keyname/1f7fa7edc99f4cdf82b5b5f32f2a50a7" \
     --account-name mystorageaccount \
     -g MyResourceGoup
