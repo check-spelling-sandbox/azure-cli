@@ -2871,7 +2871,7 @@ class TrackRuntimeStatusTest(ScenarioTest):
         ])
 
     @ResourceGroupPreparer(name_prefix='cli_test_webapp_deploy_runtimestatus', location='eastus')
-    def test_webapp_track_runtimestatus_runtimesucessful(self, resource_group):
+    def test_webapp_track_runtimestatus_runtimesuccessful(self, resource_group):
         webapp_name = self.create_random_name('webapp-runtimestatus-test', 40)
         plan_name = self.create_random_name('webapp-runtimestatus-plan', 40)
         war_file = os.path.join(TEST_DIR, 'data', 'sample.war')
@@ -2928,7 +2928,7 @@ class TrackRuntimeStatusTest(ScenarioTest):
         ])
 
     @ResourceGroupPreparer(name_prefix='cli_test_webapp_deployment_source_configzip_runtimestatus', location='eastus')
-    def test_webapp_deployment_source_track_runtimestatus_runtimesucessful(self, resource_group):
+    def test_webapp_deployment_source_track_runtimestatus_runtimesuccessful(self, resource_group):
         webapp_name = self.create_random_name('webapp-runtimestatus-test', 40)
         plan_name = self.create_random_name('webapp-runtimestatus-plan', 40)
         war_file = os.path.join(TEST_DIR, 'data', 'sample.war')
