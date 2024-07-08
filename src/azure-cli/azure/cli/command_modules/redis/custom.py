@@ -208,18 +208,18 @@ def cli_redis_force_reboot(client, resource_group_name, name, reboot_type, shard
 
 def cli_redis_identity_show(client, resource_group_name, cache_name):
     from azure.mgmt.redis.models import ManagedServiceIdentityType, ManagedServiceIdentity
-    redis_resourse = client.get(resource_group_name, cache_name)
-    if redis_resourse.identity is None:
-        redis_resourse.identity = ManagedServiceIdentity(
+    redis_resource = client.get(resource_group_name, cache_name)
+    if redis_resource.identity is None:
+        redis_resource.identity = ManagedServiceIdentity(
             type=ManagedServiceIdentityType.NONE.value,
         )
-    return redis_resourse.identity
+    return redis_resource.identity
 
 
 def cli_redis_identity_assign(client, resource_group_name, cache_name, mi_system_assigned=None, mi_user_assigned=None):
     from azure.mgmt.redis.models import RedisUpdateParameters, ManagedServiceIdentityType
-    redis_resourse = client.get(resource_group_name, cache_name)
-    identity = redis_resourse.identity
+    redis_resource = client.get(resource_group_name, cache_name)
+    identity = redis_resource.identity
     if identity is not None:
         if ManagedServiceIdentityType.SYSTEM_ASSIGNED.value in identity.type:
             mi_system_assigned = True
@@ -233,14 +233,14 @@ def cli_redis_identity_assign(client, resource_group_name, cache_name, mi_system
         identity=build_identity(mi_system_assigned, mi_user_assigned),
         public_network_access=None
     )
-    redis_resourse = client.begin_update(resource_group_name, cache_name, update_params).result()
-    return redis_resourse.identity
+    redis_resource = client.begin_update(resource_group_name, cache_name, update_params).result()
+    return redis_resource.identity
 
 
 def cli_redis_identity_remove(client, resource_group_name, cache_name, mi_system_assigned=None, mi_user_assigned=None):
     from azure.mgmt.redis.models import RedisUpdateParameters, ManagedServiceIdentityType, ManagedServiceIdentity
-    redis_resourse = client.get(resource_group_name, cache_name)
-    identity = redis_resourse.identity
+    redis_resource = client.get(resource_group_name, cache_name)
+    identity = redis_resource.identity
     system_assigned = None
     none_identity = ManagedServiceIdentity(
         type=ManagedServiceIdentityType.NONE.value)
@@ -266,10 +266,10 @@ def cli_redis_identity_remove(client, resource_group_name, cache_name, mi_system
         identity=build_identity(system_assigned, user_assigned),
         public_network_access=None
     )
-    updated_resourse = client.begin_update(resource_group_name, cache_name, update_params).result()
-    if updated_resourse.identity is None:
-        updated_resourse.identity = none_identity
-    return updated_resourse.identity
+    updated_resource = client.begin_update(resource_group_name, cache_name, update_params).result()
+    if updated_resource.identity is None:
+        updated_resource.identity = none_identity
+    return updated_resource.identity
 
 
 def build_identity(mi_system_assigned, mi_user_assigned):

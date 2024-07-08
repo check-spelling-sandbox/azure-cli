@@ -533,7 +533,7 @@ class PolicyInsightsTests(ScenarioTest):
             'policy metadata list --top {}'.format(len(all_metadata_resources) - 1)).get_output_in_json()
         assert len(top_metadata_resources) == len(all_metadata_resources) - 1
 
-        # Test getting an individual resouce
+        # Test getting an individual resource
         resource_metadata_name = top_metadata_resources[0]['name']
         metadata_resource = self.cmd(
             'policy metadata show --name {}'.format(resource_metadata_name)).get_output_in_json()

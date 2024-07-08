@@ -34,10 +34,10 @@ def clean_lock():
     cmd = ['az', 'group', 'list', '--tag', 'product=azurecli', '--query', '[].name']
     print(cmd)
     out = subprocess.run(cmd, capture_output=True)
-    cli_test_resoure_groups = json.loads(out.stdout)
-    print(cli_test_resoure_groups)
+    cli_test_resource_groups = json.loads(out.stdout)
+    print(cli_test_resource_groups)
     for resource_id, lock_name, rg in tqdm(locks):
-        if rg in cli_test_resoure_groups:
+        if rg in cli_test_resource_groups:
             cmd = f'az lock delete --name {lock_name} --resource-group {rg}'
             print(cmd)
             result = os.popen(cmd).read()
@@ -48,7 +48,7 @@ def clean_lock():
     locks = json.loads(out.stdout)
     print(locks)
     for resource_id, lock_name, rg in tqdm(locks):
-        if rg in cli_test_resoure_groups:
+        if rg in cli_test_resource_groups:
             resource_id = resource_id.split('providers')[1].split('/')
             resource_name = resource_id[3]
             resource_type = "/".join(resource_id[1:3])

@@ -68,7 +68,7 @@ def load_arguments(self, _):
                    help='SQL image sku.',
                    arg_type=get_enum_type(SqlVmGroupImageSku))
         c.argument('location',
-                   help='Location. If not provided, group will be created in the same reosurce group location.'
+                   help='Location. If not provided, group will be created in the same resource group location.'
                    'You can configure the default location using `az configure --defaults location=<location>`.',
                    arg_type=get_location_type(self.cli_ctx),
                    validator=get_default_location_from_resource_group)

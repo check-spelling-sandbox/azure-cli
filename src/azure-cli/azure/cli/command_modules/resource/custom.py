@@ -4337,7 +4337,7 @@ class _ResourceUtils:  # pylint: disable=too-many-instance-attributes
                  resource_group_name=None, resource_provider_namespace=None,
                  parent_resource_path=None, resource_type=None, resource_name=None,
                  resource_id=None, api_version=None, rcf=None, latest_include_preview=False):
-        # if the resouce_type is in format 'namespace/type' split it.
+        # if the resource_type is in format 'namespace/type' split it.
         # (we don't have to do this, but commands like 'vm show' returns such values)
         if resource_type and not resource_provider_namespace and not parent_resource_path:
             parts = resource_type.split('/')
