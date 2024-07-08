@@ -1126,7 +1126,7 @@ def _db_dw_create(
     # finding a default sku for Serverless is not yet implemented.
     if kwargs['compute_model'] == ComputeModelType.serverless:
         if not sku or not sku.tier or not sku.family or not sku.capacity:
-            raise CLIError('When creating a severless database, please pass in edition, '
+            raise CLIError('When creating a serverless database, please pass in edition, '
                            'family, and capacity parameters through -e -f -c')
 
     # Determine server location
