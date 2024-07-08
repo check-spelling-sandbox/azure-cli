@@ -22,7 +22,7 @@ threshold           : NUMBER ;
 
 dynamic             : DYNAMIC WHITESPACE ;
 
-dynamics            : dynamic dyn_sensitivity dyn_violations dyn_of_separator dyn_windows (WHITESPACE dyn_since_seperator dyn_datetime)* ;
+dynamics            : dynamic dyn_sensitivity dyn_violations dyn_of_separator dyn_windows (WHITESPACE dyn_since_separator dyn_datetime)* ;
 
 dyn_sensitivity     : WORD WHITESPACE ;
 
@@ -32,7 +32,7 @@ dyn_of_separator    : OF WHITESPACE ;
 
 dyn_windows         : NUMBER ;
 
-dyn_since_seperator : SINCE WHITESPACE ;
+dyn_since_separator : SINCE WHITESPACE ;
 
 dyn_datetime        : (NUMBER | WORD | '.' | '-' | ':' | '+')+;
 

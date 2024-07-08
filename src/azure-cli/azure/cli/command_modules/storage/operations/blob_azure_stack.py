@@ -239,7 +239,7 @@ def storage_blob_download_batch(client, source, destination, source_container_na
     source_blobs = collect_blobs(client, source_container_name, pattern)
     blobs_to_download = {}
     for blob_name in source_blobs:
-        # remove starting path seperator and normalize
+        # remove starting path separator and normalize
         normalized_blob_name = normalize_blob_file_path(None, blob_name)
         if normalized_blob_name in blobs_to_download:
             raise CLIError('Multiple blobs with download path: `{}`. As a solution, use the `--pattern` parameter '

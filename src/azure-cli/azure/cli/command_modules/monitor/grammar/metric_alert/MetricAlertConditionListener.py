@@ -122,12 +122,12 @@ class MetricAlertConditionListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MetricAlertConditionParser#dyn_since_seperator.
-    def enterDyn_since_seperator(self, ctx:MetricAlertConditionParser.Dyn_since_seperatorContext):
+    # Enter a parse tree produced by MetricAlertConditionParser#dyn_since_separator.
+    def enterDyn_since_separator(self, ctx:MetricAlertConditionParser.Dyn_since_separatorContext):
         pass
 
-    # Exit a parse tree produced by MetricAlertConditionParser#dyn_since_seperator.
-    def exitDyn_since_seperator(self, ctx:MetricAlertConditionParser.Dyn_since_seperatorContext):
+    # Exit a parse tree produced by MetricAlertConditionParser#dyn_since_separator.
+    def exitDyn_since_separator(self, ctx:MetricAlertConditionParser.Dyn_since_separatorContext):
         pass
 
 

@@ -137,8 +137,8 @@ class IgnoreRule:  # pylint: disable=too-few-public-methods
             if token == "**":
                 self.pattern += ".*"  # treat **/ as **
             else:
-                # * matches any sequence of non-seperator characters
-                # ? matches any single non-seperator character
+                # * matches any sequence of non-separator characters
+                # ? matches any single non-separator character
                 # . matches dot character
                 self.pattern += token.replace(
                     "*", "[^/]*").replace("?", "[^/]").replace(".", "\\.")

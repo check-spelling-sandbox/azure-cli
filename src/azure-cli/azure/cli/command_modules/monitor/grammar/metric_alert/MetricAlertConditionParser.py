@@ -114,7 +114,7 @@ class MetricAlertConditionParser ( Parser ):
     RULE_dyn_violations = 9
     RULE_dyn_of_separator = 10
     RULE_dyn_windows = 11
-    RULE_dyn_since_seperator = 12
+    RULE_dyn_since_separator = 12
     RULE_dyn_datetime = 13
     RULE_where = 14
     RULE_dimensions = 15
@@ -132,7 +132,7 @@ class MetricAlertConditionParser ( Parser ):
     ruleNames =  [ "expression", "aggregation", "namespace", "metric", "operator", 
                    "threshold", "dynamic", "dynamics", "dyn_sensitivity", 
                    "dyn_violations", "dyn_of_separator", "dyn_windows", 
-                   "dyn_since_seperator", "dyn_datetime", "where", "dimensions", 
+                   "dyn_since_separator", "dyn_datetime", "where", "dimensions", 
                    "dimension", "dim_separator", "dim_operator", "dim_val_separator", 
                    "dim_name", "dim_values", "dim_value", "options_", "with_", 
                    "option" ]
@@ -707,11 +707,11 @@ class MetricAlertConditionParser ( Parser ):
             else:
                 return self.getToken(MetricAlertConditionParser.WHITESPACE, i)
 
-        def dyn_since_seperator(self, i:int=None):
+        def dyn_since_separator(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MetricAlertConditionParser.Dyn_since_seperatorContext)
+                return self.getTypedRuleContexts(MetricAlertConditionParser.Dyn_since_separatorContext)
             else:
-                return self.getTypedRuleContext(MetricAlertConditionParser.Dyn_since_seperatorContext,i)
+                return self.getTypedRuleContext(MetricAlertConditionParser.Dyn_since_separatorContext,i)
 
 
         def dyn_datetime(self, i:int=None):
@@ -759,7 +759,7 @@ class MetricAlertConditionParser ( Parser ):
                     self.state = 117
                     self.match(MetricAlertConditionParser.WHITESPACE)
                     self.state = 118
-                    self.dyn_since_seperator()
+                    self.dyn_since_separator()
                     self.state = 119
                     self.dyn_datetime() 
                 self.state = 125
@@ -954,7 +954,7 @@ class MetricAlertConditionParser ( Parser ):
         return localctx
 
 
-    class Dyn_since_seperatorContext(ParserRuleContext):
+    class Dyn_since_separatorContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -968,23 +968,23 @@ class MetricAlertConditionParser ( Parser ):
             return self.getToken(MetricAlertConditionParser.WHITESPACE, 0)
 
         def getRuleIndex(self):
-            return MetricAlertConditionParser.RULE_dyn_since_seperator
+            return MetricAlertConditionParser.RULE_dyn_since_separator
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDyn_since_seperator" ):
-                listener.enterDyn_since_seperator(self)
+            if hasattr( listener, "enterDyn_since_separator" ):
+                listener.enterDyn_since_separator(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDyn_since_seperator" ):
-                listener.exitDyn_since_seperator(self)
+            if hasattr( listener, "exitDyn_since_separator" ):
+                listener.exitDyn_since_separator(self)
 
 
 
 
-    def dyn_since_seperator(self):
+    def dyn_since_separator(self):
 
-        localctx = MetricAlertConditionParser.Dyn_since_seperatorContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_dyn_since_seperator)
+        localctx = MetricAlertConditionParser.Dyn_since_separatorContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 24, self.RULE_dyn_since_separator)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 137

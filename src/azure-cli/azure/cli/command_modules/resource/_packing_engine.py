@@ -167,7 +167,7 @@ def _get_template_links_to_artifacts(cmd, template_obj, includeNested=False):
     return template_link_objs
 
 
-def _normalize_directory_seperators_for_local_file_system(abs_file_path):
+def _normalize_directory_separators_for_local_file_system(abs_file_path):
     """
     Simply normalizes directory path separators in the specified path
     to match those of the local filesystem(s).
@@ -181,7 +181,7 @@ def _normalize_directory_seperators_for_local_file_system(abs_file_path):
 
 def _absolute_to_relative_path(root_dir_path, abs_file_path):
     root_dir_path = root_dir_path.rstrip(os.sep).rstrip(os.altsep)
-    # Ensure we have a trailing seperator
+    # Ensure we have a trailing separator
     root_dir_path += os.sep
     # AbsolutePath ensures paths are normalized
 
@@ -207,7 +207,7 @@ def unpack(cmd, exported_template, target_dir, template_file_name):
     if artifacts is not None:
         for artifact in artifacts:
             local_path = os.path.join(target_dir,
-                                      _normalize_directory_seperators_for_local_file_system(getattr(artifact, 'path')))
+                                      _normalize_directory_separators_for_local_file_system(getattr(artifact, 'path')))
             abs_local_path = os.path.abspath(local_path)
             if os.path.commonpath([target_dir]) != os.path.commonpath([target_dir, abs_local_path]):
                 raise BadRequestError('Unable to unpack linked template ' + getattr(artifact, 'path') +
@@ -221,7 +221,7 @@ def unpack(cmd, exported_template, target_dir, template_file_name):
         for artifact in artifacts:
             if not isinstance(artifact, LinkedTemplateArtifact):
                 raise CLIError('Unknown linked template type encountered...')
-            artifact_path = _normalize_directory_seperators_for_local_file_system(getattr(artifact, 'path'))
+            artifact_path = _normalize_directory_separators_for_local_file_system(getattr(artifact, 'path'))
             abs_local_path = os.path.abspath(os.path.join(target_dir, artifact_path))
             if not os.path.exists(os.path.dirname(abs_local_path)):
                 os.makedirs(os.path.dirname(abs_local_path))
