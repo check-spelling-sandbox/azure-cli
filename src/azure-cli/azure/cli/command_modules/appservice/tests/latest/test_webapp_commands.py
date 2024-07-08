@@ -1183,7 +1183,7 @@ class LinuxWebappScenarioTest(ScenarioTest):
         self.cmd('webapp config show -g {} -n {}'.format(resource_group, webapp), checks=[
             JMESPathCheck('windowsFxVersion', None)
         ])
-        # workaround the fact that a new linux web's "kind" won't be settled instantatest_linux_webapp_remote_sshneously
+        # workaround the fact that a new linux web's "kind" won't be settled instantaneously
         time.sleep(30)
         self.cmd('webapp list -g {}'.format(resource_group), checks=[
             JMESPathCheck('length([])', 1),
