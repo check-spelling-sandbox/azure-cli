@@ -27,8 +27,8 @@ def _validate_lock_duration(namespace):
                     '--lock-duration Value Error : {0} value, The maximum value for LockDuration is 5 minutes; the default value is 1 minute.'.format(
                         namespace.lock_duration))
         elif timedeltapattern.match(namespace.lock_duration):
-            day, miniute, seconds = namespace.lock_duration.split(":")
-            if int(day) > 0 or int(miniute) > 6:
+            day, minute, seconds = namespace.lock_duration.split(":")
+            if int(day) > 0 or int(minute) > 6:
                 raise CLIError(
                     '--lock-duration Value Error : {0} value, The maximum value for LockDuration is 5 minutes; the default value is 1 minute.'.format(
                         namespace.lock_duration))
