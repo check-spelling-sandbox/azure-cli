@@ -6159,7 +6159,7 @@ def list_vnet_integration(cmd, name, resource_group_name, slot=None):
         result = list(client.web_apps.list_vnet_connections_slot(resource_group_name, name, slot))
     mod_list = []
 
-    # reformats the vnet entry, removing unecessary information
+    # reformats the vnet entry, removing unnecessary information
     for x in result:
         # removes GUIDs from name and id
         longName = x.name
