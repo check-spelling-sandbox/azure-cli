@@ -1055,6 +1055,6 @@ def set_assessment_properties(
                 send_raw_request(
                     cmd.cli_ctx, method="DELETE", url=dcra_url)
                 return
-            # Raise message DCRA deleted. Assessment disabled succesfully.
+            # Raise message DCRA deleted. Assessment disabled successfully.
 
 # endregion Helpers for custom commands
