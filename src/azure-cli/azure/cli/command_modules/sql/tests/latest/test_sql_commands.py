@@ -1392,7 +1392,7 @@ class SqlServerDbLongTermRetentionScenarioTest(ScenarioTest):
 class SqlServerDbGeoRestoreScenarioTest(ScenarioTest):
     @live_only() # Adding the live_only label after discussing with test owner rebeccaxu as the test was initially recorded on existing fixed resources.
     @AllowLargeResponse()
-    # using fixed resources because of long time preperation for geo-redundant backup
+    # using fixed resources because of long time preparation for geo-redundant backup
     # need to change resources for others who want to rerecord this test
     def test_sql_db_geo_restore(
             self):
