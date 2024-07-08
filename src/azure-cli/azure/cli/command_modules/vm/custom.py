@@ -109,7 +109,7 @@ def _construct_identity_info(identity_scope, identity_role, implicit_identity, e
     return info
 
 
-# for injecting test seams to produce predicatable role assignment id for playback
+# for injecting test seams to produce predictable role assignment id for playback
 def _gen_guid():
     import uuid
     return uuid.uuid4()
