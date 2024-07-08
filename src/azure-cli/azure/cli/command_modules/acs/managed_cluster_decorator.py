@@ -1045,7 +1045,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         Note: no_ssh_key will not be decorated into the `mc` object.
 
         If the user does not explicitly specify --ssh-key-value, the validator function "validate_ssh_key" will check
-        the default file location "~/.ssh/id_rsa.pub", if the file exists, read its content and return. Otherise,
+        the default file location "~/.ssh/id_rsa.pub", if the file exists, read its content and return. Otherwise,
         create a key pair at "~/.ssh/id_rsa.pub" and return the public key.
         If the user provides a string-like input for --ssh-key-value, the validator function "validate_ssh_key" will
         check whether it is a file path, if so, read its content and return; if it is a valid public key, return it.
