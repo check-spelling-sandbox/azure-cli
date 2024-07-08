@@ -44,7 +44,7 @@ def prepare_mysql_exist_private_network(cmd, resource_group, server_name, vnet, 
 
         subnet_result = _create_mysql_exist_vnet_subnet_delegation(cmd, nw_subscription, resource_client, delegation_service_name, id_resource_group, id_vnet, id_subnet, location)
     elif subnet is None and vnet is not None:
-        raise ValidationError("Missing Subnet. If you want to use private access, --subnet is requried.")
+        raise ValidationError("Missing Subnet. If you want to use private access, --subnet is required.")
     elif subnet is not None and vnet is not None:
         if _is_resource_name(vnet) and _is_resource_name(subnet):
             subnet_result = _create_mysql_exist_vnet_subnet_delegation(cmd, nw_subscription, resource_client, delegation_service_name, resource_group, vnet, subnet, location)

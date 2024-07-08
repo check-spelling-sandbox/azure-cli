@@ -1185,7 +1185,7 @@ def flexible_server_provision_network_resource(cmd, resource_group_name, server_
 def flexible_server_exist_network_resource(cmd, resource_group_name, server_name, location, private_dns_zone_arguments=None, vnet=None, subnet=None):
     network = mysql_flexibleservers.models.Network()
     if private_dns_zone_arguments is None:
-        raise RequiredArgumentMissingError("Missing Private DNS Zone. If you want to use private access, --private-dns-zone is requried.")
+        raise RequiredArgumentMissingError("Missing Private DNS Zone. If you want to use private access, --private-dns-zone is required.")
 
     if subnet is not None or vnet is not None:
         subnet_id = prepare_mysql_exist_private_network(cmd, resource_group_name, server_name, vnet, subnet, location, DELEGATION_SERVICE_NAME)
