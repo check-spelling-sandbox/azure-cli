@@ -4252,7 +4252,7 @@ class AKSManagedClusterContext(BaseAKSContext):
 
     def _handle_upgrade_asm(self, new_profile: ServiceMeshProfile) -> Tuple[ServiceMeshProfile, bool]:
         mesh_upgrade_command = self.raw_param.get("mesh_upgrade_command", None)
-        supress_confirmation = self.raw_param.get("yes", False)
+        suppress_confirmation = self.raw_param.get("yes", False)
         updated = False
 
         # deal with mesh upgrade commands
@@ -4282,7 +4282,7 @@ class AKSManagedClusterContext(BaseAKSContext):
                     f"Please ensure all data plane workloads have been rolled over to revision {revision_to_keep} "
                     "so that they are still part of the mesh.\nAre you sure you want to proceed?"
                 )
-                if not supress_confirmation and not prompt_y_n(msg, default="n"):
+                if not suppress_confirmation and not prompt_y_n(msg, default="n"):
                     raise DecoratorEarlyExitException()
                 new_profile.istio.revisions.remove(revision_to_remove)
                 updated = True

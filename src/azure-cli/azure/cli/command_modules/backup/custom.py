@@ -277,7 +277,7 @@ def _get_vault_redundancy_settings(backup_storage_redundancy, cross_region_resto
     return redundancy_settings
 
 
-# TODO Remove pylint supress once the new SDK is in place
+# TODO Remove pylint suppress once the new SDK is in place
 # pylint: disable=unused-argument
 def _get_vault_security_settings(immutability_state, existing_vault=None):
     security_settings = None
