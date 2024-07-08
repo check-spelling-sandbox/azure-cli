@@ -322,7 +322,7 @@ def _show_missing_access_warning(resource_group, name, command):
     warn = ("No access was given yet to the '{1}', because '--scope' was not provided. "
             "You should setup by creating a role assignment, e.g. "
             "'az role assignment create --assignee <principal-id> --role contributor -g {0}' "
-            "would let it access the current resource group. To get the pricipal id, run "
+            "would let it access the current resource group. To get the principal id, run "
             "'az {2} show -g {0} -n {1} --query \"identity.principalId\" -otsv'".format(resource_group, name, command))
     logger.warning(warn)
 
