@@ -239,7 +239,7 @@ Release History
 **AKS**
 
 * `az aks create/update`: Prompt warning during disablement about CR deletion (#28655)
-* `az aks create/update`: Udpate RP registration code to work on azure monitor subscription (#28607)
+* `az aks create/update`: Update RP registration code to work on azure monitor subscription (#28607)
 * `az aks create/update`: Update to add default region for workspace creation in air gapped cloud (#28607)
 * `az aks nodepool add`: Add parameter `--disable-windows-outbound-nat` to add a Windows agent pool which the Windows OutboundNAT is disabled (#28806)
 

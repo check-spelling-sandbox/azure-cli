@@ -126,7 +126,7 @@ az storage fs delete -n myfilesystem -y
 ##### Manage metadata for file system in ADLS Gen2
 - Set user-defined metadata for the specified filesystem as one or more name-value pairs.
 ```
-az storage fs metadata uptdate \
+az storage fs metadata update \
     --metadata tag1=value1 tag2=value2 \
     -n myfilesystem
 ```
@@ -232,7 +232,7 @@ az storage fs directory delete \
 ##### Manage metadata for directory in ADLS Gen2
 - Set user-defined metadata for the specified directory as one or more name-value pairs.
 ```
-az storage fs directory metadata uptdate \
+az storage fs directory metadata update \
     --metadata tag1=value1 tag2=value2 \
     -n mydir \
     -f myfilesystem
@@ -396,7 +396,7 @@ az storage fs file delete \
 ##### Manage metadata for file in ADLS Gen2
 - Set user-defined metadata for the specified file as one or more name-value pairs.
 ```
-az storage fs file metadata uptdate \
+az storage fs file metadata update \
     --metadata tag1=value1 tag2=value2 \
     -p myfile \
     -f myfilesystem
