@@ -114,7 +114,7 @@ def connected_registry_list_output_format(result):
             "loginServer_host": _get_value(reg, 'loginServer', 'host'),
             "parent_syncProperties_lastSyncTime": _get_value(reg, 'parent', 'syncProperties', 'lastSyncTime'),
             "mode": _get_value(reg, 'mode'),
-            "childs": []
+            "children": []
         }
 
     roots = []
@@ -123,11 +123,11 @@ def connected_registry_list_output_format(result):
         if parent_id.isspace() or parent_id not in family_tree:
             roots.append(_get_value(reg, 'id'))
         else:
-            family_tree[parent_id]["childs"].append(_get_value(reg, 'id'))
+            family_tree[parent_id]["children"].append(_get_value(reg, 'id'))
 
     result_list_format = []
     for connected_registry_id in roots:
-        result_list_format.extend(_recursive_format_list_acr_childs(family_tree, connected_registry_id))
+        result_list_format.extend(_recursive_format_list_acr_children(family_tree, connected_registry_id))
 
     return _output_format(result_list_format, _connected_registry_list_format_group)
 
@@ -155,12 +155,12 @@ def manifest_output_format(result):
     return manifests
 
 
-def _recursive_format_list_acr_childs(family_tree, connected_registry_id):
+def _recursive_format_list_acr_children(family_tree, connected_registry_id):
     connected_registry = family_tree[connected_registry_id]
-    childs = connected_registry['childs']
+    children = connected_registry['children']
     result = [connected_registry]
-    for child_id in childs:
-        result.extend(_recursive_format_list_acr_childs(family_tree, child_id))
+    for child_id in children:
+        result.extend(_recursive_format_list_acr_children(family_tree, child_id))
     return result
 
 
