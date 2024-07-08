@@ -5251,7 +5251,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         return self._get_enable_azure_monitor_metrics(enable_validation=True)
 
     def _get_disable_azure_monitor_metrics(self, enable_validation: bool = False) -> bool:
-        """Internal function to obtain the value of disable_azure_monito4790r_metrics.
+        """Internal function to obtain the value of disable_azure_monitor_metrics.
         This function supports the option of enable_validation.
         When enabled, if both enable_azure_monitor_metrics and disable_azure_monitor_metrics are
         specified, raise a MutuallyExclusiveArgumentError.
