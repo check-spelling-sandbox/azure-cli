@@ -127,7 +127,7 @@ az storage fs delete -n myfilesystem -y
 - Set user-defined metadata for the specified filesystem as one or more name-value pairs.
 ```
 az storage fs metadata uptdate \
-    --metdata tag1=value1 tag2=value2 \
+    --metadata tag1=value1 tag2=value2 \
     -n myfilesystem
 ```
 
@@ -233,7 +233,7 @@ az storage fs directory delete \
 - Set user-defined metadata for the specified directory as one or more name-value pairs.
 ```
 az storage fs directory metadata uptdate \
-    --metdata tag1=value1 tag2=value2 \
+    --metadata tag1=value1 tag2=value2 \
     -n mydir \
     -f myfilesystem
 ```
@@ -397,7 +397,7 @@ az storage fs file delete \
 - Set user-defined metadata for the specified file as one or more name-value pairs.
 ```
 az storage fs file metadata uptdate \
-    --metdata tag1=value1 tag2=value2 \
+    --metadata tag1=value1 tag2=value2 \
     -p myfile \
     -f myfilesystem
 ```

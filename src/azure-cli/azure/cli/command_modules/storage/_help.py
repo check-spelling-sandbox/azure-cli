@@ -1364,7 +1364,7 @@ examples:
   - name: Create a new container under the specified storage account.
     text: az storage container-rm create --storage-account myaccount --name mycontainer
   - name: Create a new container with metadata and public-access as blob under the specified storage account(account id).
-    text: az storage container-rm create --storage-account myaccountid --name mycontainer --public-access blob --metada key1=value1 key2=value2
+    text: az storage container-rm create --storage-account myaccountid --name mycontainer --public-access blob --metadata key1=value1 key2=value2
 """
 
 helps['storage container-rm delete'] = """

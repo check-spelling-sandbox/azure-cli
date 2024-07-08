@@ -2135,7 +2135,7 @@ short-summary: List permissions from a provider.
 
 helps['provider operation'] = """
 type: group
-short-summary: Get provider operations metadatas.
+short-summary: Get provider operations metadata.
 """
 
 helps['provider operation list'] = """
