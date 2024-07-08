@@ -479,7 +479,7 @@ class List(AAZCommand):
             )
 
             windows_configuration = cls._schema_on_200.value.Element.properties.virtual_machine_profile.os_profile.windows_configuration
-            windows_configuration.additional_unattend_content = AAZListType(
+            windows_configuration.additional_unattended_content = AAZListType(
                 serialized_name="additionalUnattendContent",
             )
             windows_configuration.enable_automatic_updates = AAZBoolType(
@@ -495,10 +495,10 @@ class List(AAZCommand):
                 serialized_name="winRM",
             )
 
-            additional_unattend_content = cls._schema_on_200.value.Element.properties.virtual_machine_profile.os_profile.windows_configuration.additional_unattend_content
-            additional_unattend_content.Element = AAZObjectType()
+            additional_unattended_content = cls._schema_on_200.value.Element.properties.virtual_machine_profile.os_profile.windows_configuration.additional_unattended_content
+            additional_unattended_content.Element = AAZObjectType()
 
-            _element = cls._schema_on_200.value.Element.properties.virtual_machine_profile.os_profile.windows_configuration.additional_unattend_content.Element
+            _element = cls._schema_on_200.value.Element.properties.virtual_machine_profile.os_profile.windows_configuration.additional_unattended_content.Element
             _element.component_name = AAZStrType(
                 serialized_name="componentName",
             )
@@ -1010,7 +1010,7 @@ class List(AAZCommand):
             )
 
             windows_configuration = cls._schema_on_200.value.Element.properties.virtual_machine_profile.os_profile.windows_configuration
-            windows_configuration.additional_unattend_content = AAZListType(
+            windows_configuration.additional_unattended_content = AAZListType(
                 serialized_name="additionalUnattendContent",
             )
             windows_configuration.enable_automatic_updates = AAZBoolType(
@@ -1026,10 +1026,10 @@ class List(AAZCommand):
                 serialized_name="winRM",
             )
 
-            additional_unattend_content = cls._schema_on_200.value.Element.properties.virtual_machine_profile.os_profile.windows_configuration.additional_unattend_content
-            additional_unattend_content.Element = AAZObjectType()
+            additional_unattended_content = cls._schema_on_200.value.Element.properties.virtual_machine_profile.os_profile.windows_configuration.additional_unattended_content
+            additional_unattended_content.Element = AAZObjectType()
 
-            _element = cls._schema_on_200.value.Element.properties.virtual_machine_profile.os_profile.windows_configuration.additional_unattend_content.Element
+            _element = cls._schema_on_200.value.Element.properties.virtual_machine_profile.os_profile.windows_configuration.additional_unattended_content.Element
             _element.component_name = AAZStrType(
                 serialized_name="componentName",
             )
