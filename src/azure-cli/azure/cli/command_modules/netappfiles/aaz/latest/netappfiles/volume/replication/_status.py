@@ -19,7 +19,7 @@ class Status(AAZCommand):
 
     Get the replication status for the specified replication volume
 
-    :example: Get the replication status for the volume. Returns whether the replication is healthy, the replication schedule and the mirror state (whether replication is suspened/broken or synced/mirrored)
+    :example: Get the replication status for the volume. Returns whether the replication is healthy, the replication schedule and the mirror state (whether replication is suspended/broken or synced/mirrored)
         az netappfiles volume replication status -g mygroup --account-name myaccname --pool-name mypoolname --name mydestinationvolname
     """
 
