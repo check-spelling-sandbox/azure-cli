@@ -5275,7 +5275,7 @@ Workload container registration fix, SDK upgraded to 0.12.0, Fixed and Re-ran te
 * `az ams account storage set-authentication`: New command to set the authentication for the storage account associated with the media service account (#16492)
 * `az ams account create (mi-system-assigned)`: New `--mi-system-assigned` parameter for account create to set the managed identity of the media account (#16492)
 * `az ams account mru set`: This command will no longer work for Media Services accounts that are created with the 2020-05-01 version of the API or later. (#16492)
-* `az ams live-event create (stretch-mode, key-frame-interval, transcrip-lang, use-static-hostname, custom hostname)`: Add new parameter options to live-event create command (#16492)
+* `az ams live-event create (stretch-mode, key-frame-interval, transcript-lang, use-static-hostname, custom hostname)`: Add new parameter options to live-event create command (#16492)
 * `az ams live-event standby`: New command to put the live event in standby mode (#16492)
 * `az ams transform create (videoanalysismode, audioanalysis mode)`: New parameter options for transform create (#16492)
 
