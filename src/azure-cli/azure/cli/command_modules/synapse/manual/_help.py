@@ -2224,7 +2224,7 @@ helps['synapse kql-script export'] = """
     examples:
       - name: KustoScriptsExport
         text: |-
-               az synapse kql-script export --workspace-name "kustoWorkspaceName" --output-folder "C:\\KqlScirpt"
+               az synapse kql-script export --workspace-name "kustoWorkspaceName" --output-folder "C:\\KqlScript"
 """
 
 helps['synapse kql-script delete'] = """
