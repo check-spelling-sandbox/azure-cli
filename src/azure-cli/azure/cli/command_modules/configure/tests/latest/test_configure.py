@@ -37,7 +37,7 @@ class ConfigureGlobalDefaultsTest(ScenarioTest):
         self.cmd('configure --defaults local="" --scope local')
 
     def test_configure_global_defaults(self):
-        # setiing the az configure defaults
+        # setting the az configure defaults
         self.cmd('configure --defaults global=global1')
         self.cmd('configure --defaults global2=global2')
 
