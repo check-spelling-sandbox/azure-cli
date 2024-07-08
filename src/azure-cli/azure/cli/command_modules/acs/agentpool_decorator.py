@@ -392,7 +392,7 @@ class AKSAgentPoolContext(BaseAKSContext):
     def _get_kubernetes_version(self, read_only: bool = False) -> str:
         """Internal function to dynamically obtain the value of kubernetes_version according to the context.
 
-        If snapshot_id is specified, dynamic completion will be triggerd, and will try to get the corresponding value
+        If snapshot_id is specified, dynamic completion will be triggered, and will try to get the corresponding value
         from the Snapshot. When determining the value of the parameter, obtaining from `agentpool` takes precedence over
         user's explicit input over snapshot over default vaule.
 
@@ -435,7 +435,7 @@ class AKSAgentPoolContext(BaseAKSContext):
     def _get_node_vm_size(self, read_only: bool = False) -> str:
         """Internal function to dynamically obtain the value of node_vm_size according to the context.
 
-        If snapshot_id is specified, dynamic completion will be triggerd, and will try to get the corresponding value
+        If snapshot_id is specified, dynamic completion will be triggered, and will try to get the corresponding value
         from the Snapshot. When determining the value of the parameter, obtaining from `agentpool` takes precedence over
         user's explicit input over snapshot over default vaule.
 
@@ -481,7 +481,7 @@ class AKSAgentPoolContext(BaseAKSContext):
     def _get_os_type(self, read_only: bool = False) -> Union[str, None]:
         """Internal function to dynamically obtain the value of os_type according to the context.
 
-        If snapshot_id is specified, dynamic completion will be triggerd, and will try to get the corresponding value
+        If snapshot_id is specified, dynamic completion will be triggered, and will try to get the corresponding value
         from the Snapshot. When determining the value of the parameter, obtaining from `agentpool` takes precedence over
         user's explicit input over snapshot over default vaule.
 
@@ -543,7 +543,7 @@ class AKSAgentPoolContext(BaseAKSContext):
     def _get_os_sku(self, read_only: bool = False) -> Union[str, None]:
         """Internal function to dynamically obtain the value of os_sku according to the context.
 
-        If snapshot_id is specified, dynamic completion will be triggerd, and will try to get the corresponding value
+        If snapshot_id is specified, dynamic completion will be triggered, and will try to get the corresponding value
         from the Snapshot. When determining the value of the parameter, obtaining from `agentpool` takes precedence over
         user's explicit input over snapshot over default vaule.
 

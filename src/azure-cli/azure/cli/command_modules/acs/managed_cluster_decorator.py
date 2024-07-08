@@ -533,7 +533,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     def _get_location(self, read_only: bool = False) -> Union[str, None]:
         """Internal function to dynamically obtain the value of location according to the context.
 
-        When location is not assigned, dynamic completion will be triggerd. Function "get_rg_location" will be called
+        When location is not assigned, dynamic completion will be triggered. Function "get_rg_location" will be called
         to get the location of the provided resource group, which internally used ResourceManagementClient to send
         the request.
 
@@ -569,7 +569,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     def get_location(self) -> Union[str, None]:
         """Dynamically obtain the value of location according to the context.
 
-        When location is not assigned, dynamic completion will be triggerd. Function "get_rg_location" will be called
+        When location is not assigned, dynamic completion will be triggered. Function "get_rg_location" will be called
         to get the location of the provided resource group, which internally used ResourceManagementClient to send
         the request.
 
@@ -959,7 +959,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     ) -> Union[str, None]:
         """Internal function to dynamically obtain the value of dns_name_prefix according to the context.
 
-        When both dns_name_prefix and fqdn_subdomain are not assigned, dynamic completion will be triggerd. A default
+        When both dns_name_prefix and fqdn_subdomain are not assigned, dynamic completion will be triggered. A default
         dns_name_prefix composed of name (cluster), resource_group_name, and subscription_id will be created.
 
         This function supports the option of enable_validation. When enabled, it will check if both dns_name_prefix and
@@ -1011,7 +1011,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     def get_dns_name_prefix(self) -> Union[str, None]:
         """Dynamically obtain the value of dns_name_prefix according to the context.
 
-        When both dns_name_prefix and fqdn_subdomain are not assigned, dynamic completion will be triggerd. A default
+        When both dns_name_prefix and fqdn_subdomain are not assigned, dynamic completion will be triggered. A default
         dns_name_prefix composed of name (cluster), resource_group_name, and subscription_id will be created.
 
         This function will verify the parameter by default. It will check if both dns_name_prefix and fqdn_subdomain
@@ -1141,7 +1141,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         Note: All the external parameters involved in the validation are not verified in their own getters.
 
         When one of windows_admin_username and windows_admin_password is not assigned, dynamic completion will be
-        triggerd. The user will be prompted to enter the missing windows_admin_username or windows_admin_password in
+        triggered. The user will be prompted to enter the missing windows_admin_username or windows_admin_password in
         tty (pseudo terminal). If the program is running in a non-interactive environment, a NoTTYError error will be
         raised.
 
@@ -1251,7 +1251,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         Note: All the external parameters involved in the validation are not verified in their own getters.
 
         When one of windows_admin_username and windows_admin_password is not assigned, dynamic completion will be
-        triggerd. The user will be prompted to enter the missing windows_admin_username or windows_admin_password in
+        triggered. The user will be prompted to enter the missing windows_admin_username or windows_admin_password in
         tty (pseudo terminal). If the program is running in a non-interactive environment, a NoTTYError error will be
         raised.
 
@@ -2131,7 +2131,7 @@ class AKSManagedClusterContext(BaseAKSContext):
 
         Note: All the external parameters involved in the validation are not verified in their own getters.
 
-        When outbound_type is not assigned, dynamic completion will be triggerd. By default, the value is set to
+        When outbound_type is not assigned, dynamic completion will be triggered. By default, the value is set to
         CONST_OUTBOUND_TYPE_LOAD_BALANCER.
 
         This function supports the option of enable_validation. When enabled, if the value of outbound_type is
@@ -2228,7 +2228,7 @@ class AKSManagedClusterContext(BaseAKSContext):
 
         Note: All the external parameters involved in the validation are not verified in their own getters.
 
-        When outbound_type is not assigned, dynamic completion will be triggerd. By default, the value is set to
+        When outbound_type is not assigned, dynamic completion will be triggered. By default, the value is set to
         CONST_OUTBOUND_TYPE_LOAD_BALANCER.
 
         This function will verify the parameter by default. If the value of outbound_type is
@@ -2651,7 +2651,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     ) -> Union[str, None]:
         """Internal function to dynamically obtain the value of workspace_resource_id according to the context.
 
-        When workspace_resource_id is not assigned, dynamic completion will be triggerd. Function
+        When workspace_resource_id is not assigned, dynamic completion will be triggered. Function
         "ensure_default_log_analytics_workspace_for_monitoring" will be called to create a workspace with
         subscription_id and resource_group_name, which internally used ResourceManagementClient to send the request.
 
@@ -2716,7 +2716,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     def get_workspace_resource_id(self) -> Union[str, None]:
         """Dynamically obtain the value of workspace_resource_id according to the context.
 
-        When workspace_resource_id is not assigned, dynamic completion will be triggerd. Function
+        When workspace_resource_id is not assigned, dynamic completion will be triggered. Function
         "ensure_default_log_analytics_workspace_for_monitoring" will be called to create a workspace with
         subscription_id and resource_group_name, which internally used ResourceManagementClient to send the request.
 
@@ -3362,7 +3362,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     ) -> Union[str, None]:
         """Internal function to dynamically obtain the value of aad_server_app_secret according to the context.
         When both aad_tenant_id and enable_aad are not assigned, and any of aad_client_app_id, aad_server_app_id or
-        aad_server_app_secret is assigned, dynamic completion will be triggerd. Class
+        aad_server_app_secret is assigned, dynamic completion will be triggered. Class
         "azure.cli.core._profile.Profile" will be instantiated, and then call its "get_login_credentials" method to
         get the tenant of the deployment subscription.
 
@@ -3413,7 +3413,7 @@ class AKSManagedClusterContext(BaseAKSContext):
     def get_aad_tenant_id(self) -> Union[str, None]:
         """Dynamically obtain the value of aad_server_app_secret according to the context.
         When both aad_tenant_id and enable_aad are not assigned, and any of aad_client_app_id, aad_server_app_id or
-        aad_server_app_secret is assigned, dynamic completion will be triggerd. Class
+        aad_server_app_secret is assigned, dynamic completion will be triggered. Class
         "azure.cli.core._profile.Profile" will be instantiated, and then call its "get_login_credentials" method to
         get the tenant of the deployment subscription.
 
@@ -4174,7 +4174,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         by default.
 
         In update mode, when cluster_autoscaler_profile is assigned and auto_scaler_profile in the `mc` object has also
-        been set, dynamic completion will be triggerd. We will first make a copy of the original configuration
+        been set, dynamic completion will be triggered. We will first make a copy of the original configuration
         (extract the dictionary from the ManagedClusterPropertiesAutoScalerProfile object), and then update the copied
         dictionary with the dictionary of new options.
 
@@ -4216,7 +4216,7 @@ class AKSManagedClusterContext(BaseAKSContext):
         by default.
 
         In update mode, when cluster_autoscaler_profile is assigned and auto_scaler_profile in the `mc` object has also
-        been set, dynamic completion will be triggerd. We will first make a copy of the original configuration
+        been set, dynamic completion will be triggered. We will first make a copy of the original configuration
         (extract the dictionary from the ManagedClusterPropertiesAutoScalerProfile object), and then update the copied
         dictionary with the dictionary of new options.
 
