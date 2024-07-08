@@ -1881,14 +1881,14 @@ def _get_event_subscription_info(    # pylint: disable=too-many-locals,too-many-
         raise CLIError('usage error: one or more deadletter identity information is missing. If '
                        'deadletter_identity is specified, deadletter_identity_endpoint should be specified.')
 
-    tennant_id = None
+    tenant_id = None
     application_id = None
 
     condition1 = endpoint_type is not None and normalized_endpoint_type == normalized_webhook_destination
     condition2 = delivery_identity_endpoint_type is not None and \
         delivery_identity_endpoint_type.lower() == normalized_webhook_destination
     if condition1 or condition2:
-        tennant_id = azure_active_directory_tenant_id
+        tenant_id = azure_active_directory_tenant_id
         application_id = azure_active_directory_application_id_or_uri
 
     destination = None
@@ -1900,7 +1900,7 @@ def _get_event_subscription_info(    # pylint: disable=too-many-locals,too-many-
             endpoint,
             max_events_per_batch,
             preferred_batch_size_in_kilobytes,
-            tennant_id,
+            tenant_id,
             application_id,
             storage_queue_msg_ttl,
             delivery_attribute_mapping)
@@ -1916,7 +1916,7 @@ def _get_event_subscription_info(    # pylint: disable=too-many-locals,too-many-
             delivery_identity_endpoint,
             max_events_per_batch,
             preferred_batch_size_in_kilobytes,
-            tennant_id,
+            tenant_id,
             application_id,
             storage_queue_msg_ttl,
             delivery_attribute_mapping)
