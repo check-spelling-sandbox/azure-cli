@@ -398,7 +398,7 @@ def load_command_table(self, _):
         g.command('get-ip-address', 'get', command_type=synapse_integrationruntimenodeipaddress_sdk,
                   client_factory=cf_synapse_client_integrationruntimenodeipaddress_factory)
 
-    # Data Plane Commands --Spark batch opertions
+    # Data Plane Commands --Spark batch operations
     with self.command_group('synapse spark job', command_type=synapse_spark_batch_sdk,
                             custom_command_type=get_custom_sdk('spark', None)) as g:
         g.custom_command('submit', 'create_spark_batch_job')

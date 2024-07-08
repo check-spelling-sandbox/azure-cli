@@ -319,10 +319,10 @@ class TestBatchParser(unittest.TestCase):
         self.assertEqual(_command_type.arg_name("start_task_id"), "--start-task-id")
 
     def test_batch_format_options_name(self):
-        op = "azure.batch.operations.pool_opterations#PoolOperations.get"
+        op = "azure.batch.operations.pool_operations#PoolOperations.get"
         self.assertEqual(_command_type.format_options_name(op), "pool_get_options")
 
-        op = "azure.batch.operations.pool_opterations#JobScheduleOperations.get"
+        op = "azure.batch.operations.pool_operations#JobScheduleOperations.get"
         self.assertEqual(_command_type.format_options_name(op), "job_schedule_get_options")
 
     def test_batch_argument_tree(self):  # pylint: disable=too-many-statements
