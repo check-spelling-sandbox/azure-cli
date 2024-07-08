@@ -1216,7 +1216,7 @@ Copyright 2012 Nokia Siemens Networks Oyj
 Copyright (c) 1993-2003 Yukihiro Matsumoto
 Copyright 2006-2019 by r'the Pygments team
 (c) 2010 Jeremy Ashkenas, DocumentCloud Inc.
-(c) opyright 2003, MetaQuotes Software Corp.
+Copyright (c) 2003, MetaQuotes Software Corp.
 Copyright (c) 2009-2010, Gary L. Cutler, GPL
 Copyright (c) 1998-2009, Modelica Association
 Copyright (c) 2008, Brian Frank and Andy Frank
