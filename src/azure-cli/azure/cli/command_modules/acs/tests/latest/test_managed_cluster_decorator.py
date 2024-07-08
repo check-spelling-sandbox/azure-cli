@@ -4484,7 +4484,7 @@ class AKSManagedClusterContextTestCase(unittest.TestCase):
 
     def test_get_workload_identity_profile__update_with_enable(self):
         for previous_enablement_status in [
-            None,  # preivous not set
+            None,  # previous not set
             True,  # previous set to enabled=true
             False,  # previous set to enabled=false
         ]:
@@ -4514,7 +4514,7 @@ class AKSManagedClusterContextTestCase(unittest.TestCase):
 
     def test_get_workload_identity_profile__update_with_disable(self):
         for previous_enablement_status in [
-            None,  # preivous not set
+            None,  # previous not set
             True,  # previous set to enabled=true
             False,  # previous set to enabled=false
         ]:
