@@ -365,7 +365,7 @@ def get_sku_to_use(src_dir, html=False, sku=None, runtime=None, app_service_envi
     if sku is None:
         if app_service_environment:
             return 'I1v2'
-        if runtime:  # user overrided language detection by specifiying runtime
+        if runtime:  # user overridden language detection by specifiying runtime
             return 'F1'
         lang_details = get_lang_from_content(src_dir, html)
         return lang_details.get("default_sku")

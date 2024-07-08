@@ -229,7 +229,7 @@ class TestCustom(unittest.TestCase):
                 "parameter_list": [['stringParam=foo', 'stringParam=bar']],
                 "expected": {"stringParam": {"value": "bar"}},
             },
-            {  # file loading overriden by KEY=VALUE
+            {  # file loading overridden by KEY=VALUE
                 "parameter_list": [[parameters_path], ['stringParam=bar']],
                 "expected": {"stringParam": {"value": "bar"}, "intParam": {"value": 10}, "madeupParam": {"value": "bar"}},
             }
@@ -278,7 +278,7 @@ class TestCustom(unittest.TestCase):
                 "parameter_list": [['stringParam=foo', 'stringParam=bar']],
                 "expected": {"stringParam": {"value": "bar"}},
             },
-            {  # file loading overriden by KEY=VALUE
+            {  # file loading overridden by KEY=VALUE
                 "parameter_list": [[parameters_path], ['stringParam=bar']],
                 "expected": {"stringParam": {"value": "bar"}, "intParam": {"value": 10}, "madeupParam": {"value": "bar"}},
             },

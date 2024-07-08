@@ -46,7 +46,7 @@ class AROClusterServicePrincipalPreparer(RoleBasedServicePrincipalPreparer):
             self.parameter_password: client_secret,
         }
 
-    # Overriden because RoleBasedServicePrincipal.remove_resource does not delete
+    # Overridden because RoleBasedServicePrincipal.remove_resource does not delete
     # the underlying AAD application generated when creating the service principal
     def remove_resource(self, name, **kwargs):
         super().remove_resource(name, **kwargs)

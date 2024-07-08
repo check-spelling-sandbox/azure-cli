@@ -498,7 +498,7 @@ def delete_role_assignments(cmd, ids=None, assignee=None, role=None, resource_gr
     definitions_client = factory.role_definitions
     ids = ids or []
     if ids:
-        # Warn that other arguments are overriden.
+        # Warn that other arguments are overridden.
         # We can't reuse the logic of `azure.cli.core.commands.arm.register_ids_argument`, because in that function,
         # `ids_metadata` is built by checking `id_part` of each argument.
         # Commands like `az vm delete` require a resource ID with fixed parts, such as

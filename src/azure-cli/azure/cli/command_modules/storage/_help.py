@@ -2145,7 +2145,7 @@ examples:
 helps['storage file update'] = """
 type: command
 short-summary: Set system properties on the file.
-long-summary: If one property is set for the content_settings, all properties will be overriden.
+long-summary: If one property is set for the content_settings, all properties will be overridden.
 examples:
   - name:  Set system properties on the file.
     text: |

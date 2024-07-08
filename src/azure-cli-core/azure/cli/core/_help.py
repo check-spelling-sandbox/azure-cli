@@ -334,7 +334,7 @@ class CliCommandHelpFile(KnackCommandHelpFile, CliHelpFile):
         help_param = next(p for p in self.parameters if p.name == '--help -h')
         help_param.group_name = 'Global Arguments'
 
-        # update parameter type so we can use overriden update_from_data method to update value sources.
+        # update parameter type so we can use overridden update_from_data method to update value sources.
         for param in self.parameters:
             param.__class__ = HelpParameter
 
