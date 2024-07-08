@@ -1537,7 +1537,7 @@ Release History
 * [BREAKING CHANGE] `az keyvault certificate show/set-attributes/import`: No longer return `x509CertificateProperties.basicConstraints`, `pending` (#26242)
 * [BREAKING CHANGE] `az keyvault certificate contact delete`: Return an empty list instead of the deleted contact for consistency if the operation would remove the last contact (#26242)
 * [BREAKING CHANGE] `az keyvault certificate issuer create`: `organizationDetails.zip` is no longer returned by service, use 0 as the default (#26242)
-* `az keyvault security-domain upload`: Fix sd warpping keys with passwords (#26288)
+* `az keyvault security-domain upload`: Fix sd wrapping keys with passwords (#26288)
 * `az keyvault setting`: New command group to manage MHSM settings (#26422)
 
 **Monitor**
