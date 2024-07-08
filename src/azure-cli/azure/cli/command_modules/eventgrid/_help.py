@@ -435,7 +435,7 @@ examples:
   - name: Show the details of a partner namespace.
     text: az eventgrid partner namespace show -g rg1 -n partnernamespace1
   - name: Show the details of a partner namespace based on resource ID.
-    text: az eventgrid partner namespace show --ids /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/partnenamespaces/partnernamespace1
+    text: az eventgrid partner namespace show --ids /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/partnernamespaces/partnernamespace1
 """
 
 helps['eventgrid partner namespace key'] = """
@@ -522,7 +522,7 @@ examples:
   - name: Show the details of an event channel.
     text: az eventgrid partner namespace event-channel show -g rg1 --partner-namespace-name partnernamespace1 -n eventChannelName1
   - name: Show the details of an event-channel based on resource ID.
-    text: az eventgrid partner namespace event-channel show --ids /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/partnenamespaces/partnernamespace1/eventChannels/eventChannelName1
+    text: az eventgrid partner namespace event-channel show --ids /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/partnernamespaces/partnernamespace1/eventChannels/eventChannelName1
 """
 
 
@@ -618,7 +618,7 @@ examples:
   - name: Show the details of a partner topic.
     text: az eventgrid partner topic show -g rg1 -n partnertopic1
   - name: Show the details of a partner topic based on resource ID.
-    text: az eventgrid partner topic show --ids /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/partnetopics/topic1
+    text: az eventgrid partner topic show --ids /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/partnertopics/topic1
 """
 
 helps['eventgrid partner topic activate'] = """
@@ -740,7 +740,7 @@ parameters:
   - name: --authorized-partner
     short-summary: Add authorized partner information. Multiple authorized partners can be specified by using more than one `--authorized-partner` argument.
     long-summary: |
-      Add authorized partner information. Multiple authorized partners can be specified by using more than one `--authorized-partner` argument. `partner-name` represents the verified partner resource name corresponding to the partner if it is a verified publisher. `partner-registration-immutable-id` represents the immutable id of the publisher registration ARM resource. `partner-name` and `partner-registration-immutable-id` are optional parameters but at least one parameter should be specified when authorizing a partner. When both are present, they both should correspond to the same verified parner information.
+      Add authorized partner information. Multiple authorized partners can be specified by using more than one `--authorized-partner` argument. `partner-name` represents the verified partner resource name corresponding to the partner if it is a verified publisher. `partner-registration-immutable-id` represents the immutable id of the publisher registration ARM resource. `partner-name` and `partner-registration-immutable-id` are optional parameters but at least one parameter should be specified when authorizing a partner. When both are present, they both should correspond to the same verified partner information.
 
       Usage:                     --authorized-partner [partner-name=<name>] \\
                                         [partner-registration-immutable-id=<id>] \\
@@ -883,7 +883,7 @@ examples:
   - name: Show the details of a channel.
     text: az eventgrid partner namespace channel show -g rg1 --partner-namespace-name partnernamespace1 --name channelname1
   - name: Show the details of a channel based on resource ID.
-    text: az eventgrid partner namespace channel show --ids /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/partnenamespaces/partnernamespace1/channels/channelName1
+    text: az eventgrid partner namespace channel show --ids /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/partnernamespaces/partnernamespace1/channels/channelName1
 """
 
 helps['eventgrid partner namespace channel update'] = """
