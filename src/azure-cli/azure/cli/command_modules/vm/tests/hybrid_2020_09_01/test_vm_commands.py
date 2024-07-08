@@ -2358,7 +2358,7 @@ class VMSimulateEvictionScenarioTest(ScenarioTest):
 
         self.kwargs.update({
             'loc': 'eastus',
-            'vm1': 'vm-simualte-eviction1',
+            'vm1': 'vm-simulate-eviction1',
             'vm2': 'vm-simulate-eviction2',
             'vm3': 'vm-simulate-eviction3'
         })
@@ -2431,7 +2431,7 @@ class VMSSSimulateEvictionScenarioTest(ScenarioTest):
 
         self.kwargs.update({
             'loc': 'eastus',
-            'vmss1': 'vmss-simualte-eviction1',
+            'vmss1': 'vmss-simulate-eviction1',
             'vmss2': 'vmss-simulate-eviction2',
             'vmss3': 'vmss-simulate-eviction3',
             'instance_ids': []
