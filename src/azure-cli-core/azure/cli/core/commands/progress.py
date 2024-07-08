@@ -79,7 +79,7 @@ class ProgressHook:
         self.active_progress.flush()
 
     def stop(self):
-        """ if there is an abupt stop before ending """
+        """ if there is an abrupt stop before ending """
         self.reporter.closed = True
         self.add(message='Interrupted')
         self.active_progress.clear()
