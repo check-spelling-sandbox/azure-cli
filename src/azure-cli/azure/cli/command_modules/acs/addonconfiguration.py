@@ -780,8 +780,8 @@ def validate_data_collection_settings(dataCollectionSettings):
         if namespaceFilteringModeValue not in ["off", "exclude", "include"]:
             raise InvalidArgumentValueError('namespaceFilteringMode value MUST be either Off or Exclude or Include')
     if 'namespaces' in dataCollectionSettings.keys():
-        namspaces = dataCollectionSettings["namespaces"]
-        if isinstance(namspaces, list) is False:
+        namespaces = dataCollectionSettings["namespaces"]
+        if isinstance(namespaces, list) is False:
             raise InvalidArgumentValueError('namespaces must be an array type')
     if 'enableContainerLogV2' in dataCollectionSettings.keys():
         enableContainerLogV2Value = dataCollectionSettings["enableContainerLogV2"]
