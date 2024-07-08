@@ -479,12 +479,12 @@ def create_action(action_name, cache_behavior=None, cache_duration=None, header_
                     origin_group=ResourceReference(id=origin_group),
                     forwarding_protocol=forwarding_protocol)
             else:
-                origin_group_refernce = f'/subscriptions/{get_subscription_id(cmd.cli_ctx)}/resourcegroups/' \
+                origin_group_reference = f'/subscriptions/{get_subscription_id(cmd.cli_ctx)}/resourcegroups/' \
                                         f'{resource_group_name}/providers/Microsoft.Cdn/profiles/{profile_name}/' \
                                         f'origingroups/{origin_group}'
 
                 origin_group_override = OriginGroupOverride(
-                    origin_group=ResourceReference(id=origin_group_refernce),
+                    origin_group=ResourceReference(id=origin_group_reference),
                     forwarding_protocol=forwarding_protocol)
 
         return DeliveryRuleRouteConfigurationOverrideAction(

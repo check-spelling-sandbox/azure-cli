@@ -372,12 +372,12 @@ def create_action(action_name, cache_behavior=None, cache_duration=None, header_
                     "forwarding_protocol": forwarding_protocol
                 }
             else:
-                origin_group_refernce = f'/subscriptions/{sub_id}/resourcegroups/' \
+                origin_group_reference = f'/subscriptions/{sub_id}/resourcegroups/' \
                     f'{resource_group}/providers/Microsoft.Cdn/profiles/{profile_name}/' \
                     f'origingroups/{formatted_origin_group}'
                 origin_group_override = {
                     "origin_group": {
-                        "id": origin_group_refernce
+                        "id": origin_group_reference
                     },
                     "forwarding_protocol": forwarding_protocol
                 }
