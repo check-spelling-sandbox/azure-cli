@@ -1355,7 +1355,7 @@ def load_arguments(self, _):
                    options_list=['--database-state', '--state'],
                    help='\'All\', \'Live\', or \'Deleted\'. '
                    'Will fetch backups only from databases of specified state. '
-                   'If no state provied, defaults to \'All\'.')
+                   'If no state provided, defaults to \'All\'.')
 
         c.argument('only_latest_per_database',
                    options_list=['--only-latest-per-database', '--latest'],
@@ -2812,7 +2812,7 @@ def load_arguments(self, _):
                    options_list=['--database-state', '--state'],
                    help='\'All\', \'Live\', or \'Deleted\'. '
                    'Will fetch backups only from databases of specified state. '
-                   'If no state provied, defaults to \'All\'.')
+                   'If no state provided, defaults to \'All\'.')
 
         c.argument('only_latest_per_database',
                    action='store_true',
