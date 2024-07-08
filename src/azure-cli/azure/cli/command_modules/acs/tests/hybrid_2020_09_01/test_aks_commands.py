@@ -22,7 +22,7 @@ from azure.cli.command_modules.acs.tests.hybrid_2020_09_01.recording_processors 
 
 # The RoleBasedServicePrincipalPreparer returns sp name and needs to be turned
 # into Application ID URI. Based on the recording files, some Application ID (GUID)
-# is set with the environment varibale for sp_name. This method is compatible with
+# is set with the environment variable for sp_name. This method is compatible with
 # both cases.
 def _process_sp_name(sp_name):
     return sp_name
