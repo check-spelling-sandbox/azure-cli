@@ -24,7 +24,7 @@ def datetime_format(value):
 
 
 def disk_encryption_target_format(value):
-    """Space seperated target disks to be encrypted. Values can either be OsDisk or TemporaryDisk"""
+    """Space separated target disks to be encrypted. Values can either be OsDisk or TemporaryDisk"""
     if value == 'OsDisk':
         return azure.batch.models.DiskEncryptionTarget.os_disk
     if value == 'TemporaryDisk':

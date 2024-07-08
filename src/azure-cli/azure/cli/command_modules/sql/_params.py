@@ -1178,7 +1178,7 @@ def load_arguments(self, _):
                    options_list=['--actions'],
                    arg_group=policy_arg_group,
                    help='List of actions and action groups to audit.'
-                   'These are space seperated values.'
+                   'These are space separated values.'
                    'Example: --actions FAILED_DATABASE_AUTHENTICATION_GROUP BATCH_COMPLETED_GROUP',
                    nargs='+')
 
@@ -1992,7 +1992,7 @@ def load_arguments(self, _):
                    options_list=['--actions'],
                    arg_group=policy_arg_group,
                    help='List of actions and action groups to audit.'
-                   'These are space seperated values.'
+                   'These are space separated values.'
                    'Example: --actions FAILED_DATABASE_AUTHENTICATION_GROUP BATCH_COMPLETED_GROUP',
                    nargs='+')
 
