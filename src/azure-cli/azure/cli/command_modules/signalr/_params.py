@@ -86,10 +86,10 @@ def load_arguments(self, _):
 
     # Network Rule
     with self.argument_context('signalr network-rule update') as c:
-        c.argument('connection_name', nargs='*', help='Space-separeted list of private endpoint connection name.', required=False, arg_group='Private Endpoint Connection')
+        c.argument('connection_name', nargs='*', help='Space-separated list of private endpoint connection name.', required=False, arg_group='Private Endpoint Connection')
         c.argument('public_network', arg_type=get_three_state_flag(), help='Set rules for public network.', required=False, arg_group='Public Network')
-        c.argument('allow', nargs='*', help='The allowed virtual network rule. Space-separeted list of scope to assign. Allowed values: ClientConnection, ServerConnection, RESTAPI', type=SignalRRequestType, required=False)
-        c.argument('deny', nargs='*', help='The denied virtual network rule. Space-separeted list of scope to assign. Allowed values: ClientConnection, ServerConnection, RESTAPI', type=SignalRRequestType, required=False)
+        c.argument('allow', nargs='*', help='The allowed virtual network rule. Space-separated list of scope to assign. Allowed values: ClientConnection, ServerConnection, RESTAPI', type=SignalRRequestType, required=False)
+        c.argument('deny', nargs='*', help='The denied virtual network rule. Space-separated list of scope to assign. Allowed values: ClientConnection, ServerConnection, RESTAPI', type=SignalRRequestType, required=False)
 
     with self.argument_context('signalr network-rule list') as c:
         c.argument('signalr_name', id_part=None)
