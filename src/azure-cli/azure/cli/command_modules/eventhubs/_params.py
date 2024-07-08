@@ -37,7 +37,7 @@ def load_arguments_eh(self, _):
         c.argument('location', arg_type=get_location_type(self.cli_ctx), validator=get_default_location_from_resource_group)
         c.argument('capacity', type=int, help='Capacity for Sku')
         c.argument('is_auto_inflate_enabled', options_list=['--enable-auto-inflate'], arg_type=get_three_state_flag(), help='A boolean value that indicates whether AutoInflate is enabled for eventhub namespace.')
-        c.argument('maximum_throughput_units', type=int, help='Upper limit of throughput units when AutoInflate is enabled, vaule should be within 0 to 20 throughput units. ( 0 if AutoInflateEnabled = true)')
+        c.argument('maximum_throughput_units', type=int, help='Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( 0 if AutoInflateEnabled = true)')
         c.argument('zone_redundant', options_list=['--zone-redundant'], arg_type=get_three_state_flag(),
                    help='Enabling this property creates a Standard EventHubs Namespace in regions supported availability zones')
         c.argument('disable_local_auth', options_list=['--disable-local-auth'], arg_type=get_three_state_flag(),

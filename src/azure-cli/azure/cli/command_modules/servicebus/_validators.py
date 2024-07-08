@@ -138,6 +138,6 @@ def validate_private_endpoint_connection_id(namespace):
 #        namespace.resource_group_name = _query_account_rg(cmd.cli_ctx, namespace.account_name)[0]
 
     if not all([namespace.namespace_name, namespace.resource_group_name, namespace.private_endpoint_connection_name]):
-        raise RequiredArgumentMissingError("Please provide either `--Id` or `-g` value `--namespace-name` vaule `--name` value")
+        raise RequiredArgumentMissingError("Please provide either `--Id` or `-g` value `--namespace-name` value `--name` value")
 
     del namespace.connection_id

@@ -394,7 +394,7 @@ class AKSAgentPoolContext(BaseAKSContext):
 
         If snapshot_id is specified, dynamic completion will be triggered, and will try to get the corresponding value
         from the Snapshot. When determining the value of the parameter, obtaining from `agentpool` takes precedence over
-        user's explicit input over snapshot over default vaule.
+        user's explicit input over snapshot over default value.
 
         :return: string
         """
@@ -437,7 +437,7 @@ class AKSAgentPoolContext(BaseAKSContext):
 
         If snapshot_id is specified, dynamic completion will be triggered, and will try to get the corresponding value
         from the Snapshot. When determining the value of the parameter, obtaining from `agentpool` takes precedence over
-        user's explicit input over snapshot over default vaule.
+        user's explicit input over snapshot over default value.
 
         :return: string
         """
@@ -483,7 +483,7 @@ class AKSAgentPoolContext(BaseAKSContext):
 
         If snapshot_id is specified, dynamic completion will be triggered, and will try to get the corresponding value
         from the Snapshot. When determining the value of the parameter, obtaining from `agentpool` takes precedence over
-        user's explicit input over snapshot over default vaule.
+        user's explicit input over snapshot over default value.
 
         :return: string or None
         """
@@ -545,7 +545,7 @@ class AKSAgentPoolContext(BaseAKSContext):
 
         If snapshot_id is specified, dynamic completion will be triggered, and will try to get the corresponding value
         from the Snapshot. When determining the value of the parameter, obtaining from `agentpool` takes precedence over
-        user's explicit input over snapshot over default vaule.
+        user's explicit input over snapshot over default value.
 
         :return: string or None
         """
