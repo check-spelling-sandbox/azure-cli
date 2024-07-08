@@ -12,13 +12,13 @@ from azure.cli.core.aaz import *
 
 
 @register_command(
-    "network public-ip ddos-protection-statu show",
+    "network public-ip ddos-protection-status show",
 )
 class Show(AAZCommand):
     """Get the Ddos Protection Status of a Public IP Address
 
     :example: Gets the Ddos Protection Status of a Public IP Address
-        az network public-ip show-ddos-protection-statu -n MyPublicIp -g MyResourceGroup
+        az network public-ip show-ddos-protection-status -n MyPublicIp -g MyResourceGroup
     """
 
     _aaz_info = {

@@ -586,7 +586,7 @@ Release History
 * Fix #28131: `az network vnet-gateway list`: Conflict key when apply client flatten (#28170)
 * `az network express-route port authorization`: Support to manage authorization with express route port (#28149)
 * `az network private-link-service list-auto-approved`: Support to list all auto-approved private link services (#28149)
-* `az network public-ip ddos-protection-statu show`: Support to get the DDoS protection status of public IP address (#28149)
+* `az network public-ip ddos-protection-status show`: Support to get the DDoS protection status of public IP address (#28149)
 * `az network vnet-gateway`: Support ExpressRoute SKU (#28219)
 * `az network lb create`: Support cross-subscription resource ID (#28247)
 
