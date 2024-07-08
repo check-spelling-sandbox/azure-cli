@@ -51,19 +51,19 @@ examples:
   - name: Dismiss a security alert on a resource group scope.
     text: >
         az security alert update -g "myRg" --location "centralus" -n "alertName" --status "dismiss"
-  - name: Activate a security alert on a subscritpion scope.
+  - name: Activate a security alert on a subscription scope.
     text: >
         az security alert update --location "centralus" -n "alertName" --status "activate"
   - name: Activate a security alert on a resource group scope.
     text: >
         az security alert update -g "myRg" --location "centralus" -n "alertName" --status "activate"
-  - name: Resolve a security alert on a subscritpion scope.
+  - name: Resolve a security alert on a subscription scope.
     text: >
         az security alert update --location "centralus" -n "alertName" --status "resolve"
   - name: Resolve a security alert on a resource group scope.
     text: >
         az security alert update -g "myRg" --location "centralus" -n "alertName" --status "resolve"
-  - name: Change security alert status to "InProgress" on a subscritpion scope.
+  - name: Change security alert status to "InProgress" on a subscription scope.
     text: >
         az security alert update --location "centralus" -n "alertName" --status "inprogress"
   - name: Change security alert status to "InProgress" on a resource group scope.
