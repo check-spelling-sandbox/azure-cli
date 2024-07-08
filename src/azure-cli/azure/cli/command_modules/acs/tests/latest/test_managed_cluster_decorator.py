@@ -5783,7 +5783,7 @@ class AKSManagedClusterCreateDecoratorTestCase(unittest.TestCase):
             location="test_location",
             tags={"t1": "v1"},
             kubernetes_version="test_kubernetes_version",
-            dns_prefix="testcluste-testrgname-1234-5",
+            dns_prefix="testcluster-testrgname-1234-5",
             disk_encryption_set_id="test_node_osdisk_diskencryptionset_id",
             disable_local_accounts=True,
             enable_rbac=False,
