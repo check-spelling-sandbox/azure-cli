@@ -1688,7 +1688,7 @@ def aks_check_acr(cmd, client, resource_group_name, name, acr, node_name=None):
                 "--namespace=default",
             ]
 
-            # Support kubectl versons < 1.18
+            # Support kubectl versions < 1.18
             if kubectl_minor_version < 18:
                 cmd += ["--generator=run-pod/v1"]
 
