@@ -2529,7 +2529,7 @@ def _set_site_config_storage_keys(cmd, site_config):
             keys = scf.list_keys(acct_rg, acct.account_name, logging_enable=False).keys
             if keys:
                 key = keys[0]
-                logger.info("Retreived key %s", key.key_name)
+                logger.info("Retrieved key %s", key.key_name)
                 acct.access_key = key.value
 
 
