@@ -490,7 +490,7 @@ class JsonCTemplatePolicy(SansIOHTTPPolicy):
             # This caused a very difficult-to-debug issue, because AzCLI's debug logs are written before this transformation.
             # This means the logs do not accurately represent the bytes being sent to the server.
             # If you see "The request content was invalid and could not be deserialized" in the response, this might be something to investigate.
-            logger.debug("HTTP content is being overwritten to preserve template whitepace accurately. The request body logging may not accurately represent this.")
+            logger.debug("HTTP content is being overwritten to preserve template whitespace accurately. The request body logging may not accurately represent this.")
 
 
 # pylint: disable=unused-argument
