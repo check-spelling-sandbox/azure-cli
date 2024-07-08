@@ -472,7 +472,7 @@ helps['functionapp scale config always-ready delete'] = """
 type: command
 short-summary: Delete always-ready settings in the scale configuration.
 examples:
-  - name: Delete always-ready setings in the scale configuration.
+  - name: Delete always-ready settings in the scale configuration.
     text: az functionapp scale config always-ready delete --name MyFunctionApp --resource-group MyResourceGroup --setting-names key1 key2
 """
 
