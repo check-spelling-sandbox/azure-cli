@@ -1560,7 +1560,7 @@ def load_arguments(self, _):
 
         c.argument('min_capacity',
                    options_list=['--db-dtu-min', '--db-min-dtu', '--db-min-capacity'],
-                   help='The minumum capacity (in DTUs or vcores) each database is guaranteed.')
+                   help='The minimum capacity (in DTUs or vcores) each database is guaranteed.')
 
         # --storage was the original param name, which is consistent with the underlying REST API.
         # --max-size is an alias which is consistent with the `sql elastic-pool list-editions
