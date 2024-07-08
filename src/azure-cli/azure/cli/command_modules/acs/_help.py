@@ -444,7 +444,7 @@ parameters:
     short-summary: The node resource group is the resource group where all customer's resources will be created in, such as virtual machines.
   - name: --k8s-support-plan
     type: string
-    short-summary: Choose from "KubernetesOfficial" or "AKSLongTermSupport", with "AKSLongTermSupport" you get 1 extra year of CVE patchs.
+    short-summary: Choose from "KubernetesOfficial" or "AKSLongTermSupport", with "AKSLongTermSupport" you get 1 extra year of CVE patches.
   - name: --enable-defender
     type: bool
     short-summary: Enable Microsoft Defender security profile.
@@ -817,7 +817,7 @@ parameters:
     short-summary: Set interval of rotation poll. Use with azure-keyvault-secrets-provider addon.
   - name: --k8s-support-plan
     type: string
-    short-summary: Choose from "KubernetesOfficial" or "AKSLongTermSupport", with "AKSLongTermSupport" you get 1 extra year of CVE patchs.
+    short-summary: Choose from "KubernetesOfficial" or "AKSLongTermSupport", with "AKSLongTermSupport" you get 1 extra year of CVE patches.
   - name: --enable-windows-gmsa
     type: bool
     short-summary: Enable Windows gmsa on cluster.
