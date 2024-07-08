@@ -24,7 +24,7 @@ logger.addHandler(logging.StreamHandler())
 __path__ = __import__('pkgutil').extend_path(__path__, __name__)
 exceptions = []
 test_map = dict()
-SUCCESSED = "successed"
+SUCCEEDED = "succeeded"
 FAILED = "failed"
 
 
@@ -58,7 +58,7 @@ def try_manual(func):
         logger.info("running %s()...", func.__name__)
         try:
             test_map[func.__name__] = dict()
-            test_map[func.__name__]["result"] = SUCCESSED
+            test_map[func.__name__]["result"] = SUCCEEDED
             test_map[func.__name__]["error_message"] = ""
             test_map[func.__name__]["error_stack"] = ""
             test_map[func.__name__]["error_normalized"] = ""
@@ -97,7 +97,7 @@ def calc_coverage(filename):
             if not k.startswith("step_"):
                 total -= 1
                 continue
-            if v["result"] == SUCCESSED:
+            if v["result"] == SUCCEEDED:
                 covered += 1
             f.write("|{step_name}|{result}|{error_message}|{error_stack}|{error_normalized}|{start_dt}|"
                     "{end_dt}|\n".format(step_name=k, **v))
