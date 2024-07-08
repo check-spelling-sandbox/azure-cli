@@ -3008,7 +3008,7 @@ def _get_scm_url(cmd, resource_group_name, name, slot=None):
             return "https://{}".format(host.name)
 
     # this should not happen, but throw anyway
-    raise ResourceNotFoundError('Failed to retrieve Scm Uri')
+    raise ResourceNotFoundError('Failed to retrieve SCM Uri')
 
 
 def _get_host_url(cmd, resource_group_name, name):
