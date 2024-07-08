@@ -156,7 +156,7 @@ def build_application_gateway_resource(cmd, name, location, tags, sku_name, sku_
     # |                   |                                   |                                   |
     # |                   | 1 frontend IP configs entry       | 1 frontend IP configs entry       |
     # |                   |                                   |                                   |
-    # |                   | frontend_ip_config_id: priavte_ip | frontend_ip_config_id: priavte_ip |
+    # |                   | frontend_ip_config_id: private_ip | frontend_ip_config_id: private_ip |
     # |                   |                                   |                                   |
     # |                   | private link link to private IP   | private link link to private IP   |
     # |-------------------------------------------------------------------------------------------|
