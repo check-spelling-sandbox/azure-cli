@@ -4586,7 +4586,7 @@ Workload container registration fix, SDK upgraded to 0.12.0, Fixed and Re-ran te
 * `az sig image-definition show-shared`:  Get a shared gallery image. (#18503)
 * `az sig image-version list-shared`:  List shared galleries by subscription id or tenant id. (#18503)
 * `az sig image-version show-shared`:   Get a shared gallery image version. (#18503)
-* `az vmss create`: Support NetworkApiVersion for Vmss with OrchestraionMode == Flexible (#18132)
+* `az vmss create`: Support NetworkApiVersion for Vmss with OrchestrationMode == Flexible (#18132)
 * Make dependent resources of VM/VMSS support edge zone (#18708)
 * Update from CoreOS to Flatcar (#18644)
 * Add the hint to suggest users use the standard public IP when creating VM (#18662)
