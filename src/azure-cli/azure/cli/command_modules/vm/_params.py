@@ -1173,7 +1173,7 @@ def load_arguments(self, _):
 
     for scope in ['vm diagnostics', 'vmss diagnostics']:
         with self.argument_context(scope) as c:
-            c.argument('version', help='version of the diagnostics extension. Will use the latest if not specfied')
+            c.argument('version', help='version of the diagnostics extension. Will use the latest if not specified')
             c.argument('settings', help='json string or a file path, which defines data to be collected.', type=validate_file_or_dict, completer=FilesCompleter())
             c.argument('protected_settings', help='json string or a file path containing private configurations such as storage account keys, etc.', type=validate_file_or_dict, completer=FilesCompleter())
             c.argument('is_windows_os', action='store_true', help='for Windows VMs')
@@ -1546,7 +1546,7 @@ def load_arguments(self, _):
         c.argument('aggregation', arg_type=get_enum_type(t for t in AggregationType if t.name != 'none'), nargs='*')
         c.argument('metrics', nargs='*')
         c.argument('orderby',
-                   help='Aggregation to use for sorting results and the direction of the sort. Only one order can be specificed. Examples: sum asc')
+                   help='Aggregation to use for sorting results and the direction of the sort. Only one order can be specified. Examples: sum asc')
         c.argument('top', help='Max number of records to retrieve. Valid only if --filter used.')
         c.argument('filters', options_list=['--filter'])
         c.argument('metric_namespace', options_list=['--namespace'])

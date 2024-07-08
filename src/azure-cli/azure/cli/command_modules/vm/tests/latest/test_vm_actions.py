@@ -50,7 +50,7 @@ class TestActions(unittest.TestCase):
         result = getattr(import_module('azure.mgmt.compute.{}.models'.format(api_version)), model_type)
         return result
 
-    def test_generate_specfied_ssh_key_files(self):
+    def test_generate_specified_ssh_key_files(self):
         temp_dir_name = tempfile.mkdtemp(prefix="ssh_dir_")
 
         # cleanup temporary directory and its contents

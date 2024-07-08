@@ -118,7 +118,7 @@ class KeyVaultClient(MultiApiClientMixin):
 
     def _create_client_impl(self, api_version):
         """
-        Creates the client implementation corresponding to the specifeid api_version.
+        Creates the client implementation corresponding to the specified api_version.
         :param api_version:
         :return:
         """

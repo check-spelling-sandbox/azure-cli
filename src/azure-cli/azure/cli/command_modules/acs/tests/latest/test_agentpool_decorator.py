@@ -702,7 +702,7 @@ class AKSAgentPoolContextCommonTestCase(unittest.TestCase):
             with self.assertRaises(ArgumentUsageError):
                 ctx_2.get_update_enable_disable_cluster_autoscaler_and_min_max_count()
         else:
-            # fail on min count and max count not specifed
+            # fail on min count and max count not specified
             with self.assertRaises(RequiredArgumentMissingError):
                 ctx_2.get_update_enable_disable_cluster_autoscaler_and_min_max_count()
 

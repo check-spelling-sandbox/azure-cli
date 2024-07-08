@@ -281,7 +281,7 @@ class SqlVmScenarioTest(ScenarioTest):
         assert 'keyVaultCredentialSettings' not in expand_one
         assert 'serverConfigurationsManagementSettings' not in expand_one
 
-        # test expand parameter: comma-separated values - all specificed settings exist
+        # test expand parameter: comma-separated values - all specified settings exist
         expand_comma = self.cmd('sql vm show -n {} -g {} --expand {}'
                                 .format(sqlvm, resource_group, 'AutoPatchingSettings AutoBackupSettings')
                                 ).get_output_in_json()

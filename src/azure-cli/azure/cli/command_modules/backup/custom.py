@@ -1433,7 +1433,7 @@ def restore_disks(cmd, client, resource_group_name, vault_name, container_name, 
         if restore_as_unmanaged_disks and target_resource_group is not None:
             raise MutuallyExclusiveArgumentError(
                 """
-                Both restore_as_unmanaged_disks and target_resource_group can't be spceified.
+                Both restore_as_unmanaged_disks and target_resource_group can't be specified.
                 Please give Only one parameter and retry.
                 """)
 
