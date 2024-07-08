@@ -2644,7 +2644,7 @@ def create_deployment_stack_at_resource_group(
         description=description, action_on_unmanage=action_on_unmanage_model, deny_settings=deny_settings_model,
         bypass_stack_out_of_sync_error=bypass_stack_out_of_sync_error, tags=tags)
 
-    # validate and prepare template & paramaters
+    # validate and prepare template & parameters
     deployment_stack_model = _prepare_stacks_templates_and_parameters(
         cmd, rcf, 'resourceGroup', deployment_stack_model, template_file, template_spec, template_uri, parameters, query_string)
 

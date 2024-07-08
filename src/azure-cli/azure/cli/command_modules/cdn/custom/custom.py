@@ -702,18 +702,18 @@ def create_endpoint(client, resource_group_name, profile_name, name, origins, lo
 
 def purge_endpoint_content(client, resource_group_name, profile_name, endpoint_name,
                            content_paths, no_wait=None):
-    purge_paramters = PurgeParameters(content_paths=content_paths)
+    purge_parameters = PurgeParameters(content_paths=content_paths)
 
     return sdk_no_wait(no_wait, client.endpoints.begin_purge_content, resource_group_name,
-                       profile_name, endpoint_name, purge_paramters)
+                       profile_name, endpoint_name, purge_parameters)
 
 
 def load_endpoint_content(client, resource_group_name, profile_name, endpoint_name,
                           content_paths, no_wait=None):
-    load_paramters = LoadParameters(content_paths=content_paths)
+    load_parameters = LoadParameters(content_paths=content_paths)
 
     return sdk_no_wait(no_wait, client.endpoints.begin_load_content, resource_group_name, profile_name,
-                       endpoint_name, load_paramters)
+                       endpoint_name, load_parameters)
 
 
 # pylint: disable=unused-argument

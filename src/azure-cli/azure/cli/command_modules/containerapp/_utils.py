@@ -487,7 +487,7 @@ def parse_auth_flags(auth_list):
         if len(key_val) != 2:
             raise ValidationError("Auth parameters must be in format \"<triggerParameter>=<secretRef> <triggerParameter>=<secretRef> ...\".")
         if key_val[0] in auth_pairs:
-            raise ValidationError("Duplicate trigger parameter \"{param}\" found, trigger paramaters must be unique.".format(param=key_val[0]))
+            raise ValidationError("Duplicate trigger parameter \"{param}\" found, trigger parameters must be unique.".format(param=key_val[0]))
         auth_pairs[key_val[0]] = key_val[1]
 
     auth_def = []

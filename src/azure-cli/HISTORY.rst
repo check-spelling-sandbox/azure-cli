@@ -1678,8 +1678,8 @@ Release History
 * `az aks create`: Add new parameter `--network-plugin-mode` to support creating Azure CNI Overlay clusters (#25932)
 * `az aks create/update`: Add new parameter `--enable-workload-identity` to support enabling workload identity addon (#25966)
 * `az aks create`: Add new parameter `--network-dataplane` to support creating Cilium clusters (#25951)
-* `az aks update`: Add prameter `--network-plugin-mode` to update the mode of a network plugin (#25978)
-* `az aks update`: Add prameter `--pod-cidr` to update the pod CIDR for a cluster (#25978)
+* `az aks update`: Add parameter `--network-plugin-mode` to update the mode of a network plugin (#25978)
+* `az aks update`: Add parameter `--pod-cidr` to update the pod CIDR for a cluster (#25978)
 
 **App Config**
 
@@ -2095,7 +2095,7 @@ Release History
 
 * Fix #24896: `az vm create`: Fix the bug that the VM cannot be created from ACG image to other resource group (#24948)
 * `az disk create`: Add new parameter `--performance-plus` to support boosting the performance target (#24913)
-* `az vm list`: Add new paramter `--vmss` to support querying VM instances in a specific VMSS (#24813)
+* `az vm list`: Add new parameter `--vmss` to support querying VM instances in a specific VMSS (#24813)
 * `az sig image-version create/update`: Add parameters `--target-edge-zone-encryption` and `--target-edge-zones` to support edge zones (#24202)
 
 **Container**

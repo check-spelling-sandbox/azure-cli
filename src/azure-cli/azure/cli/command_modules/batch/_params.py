@@ -305,7 +305,7 @@ def load_arguments(self, _):
         c.argument('thumbprint', help='The certificate thumbprint.', validator=validate_cert_settings)
 
     with self.argument_context('batch task create') as c:
-        c.argument('json_file', type=file_type, help='The file containing the task(s) to create in JSON(formatted to match REST API request body). When submitting multiple tasks, accepts either an array of tasks or a TaskAddCollectionParamater. If this parameter is specified, all other parameters are ignored.', validator=validate_json_file, completer=FilesCompleter())
+        c.argument('json_file', type=file_type, help='The file containing the task(s) to create in JSON(formatted to match REST API request body). When submitting multiple tasks, accepts either an array of tasks or a TaskAddCollectionParameter. If this parameter is specified, all other parameters are ignored.', validator=validate_json_file, completer=FilesCompleter())
         c.argument('application_package_references', nargs='+', help='The space-separated list of IDs specifying the application packages to be installed. Space-separated application IDs with optional version in \'id[#version]\' format.', type=application_package_reference_format)
         c.argument('job_id', help='The ID of the job containing the task.')
         c.argument('task_id', help='The ID of the task.')

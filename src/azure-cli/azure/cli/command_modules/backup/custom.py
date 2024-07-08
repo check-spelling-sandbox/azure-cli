@@ -588,7 +588,7 @@ def update_encryption(cmd, client, resource_group_name, vault_name, encryption_k
         if mi_system_assigned is None and mi_user_assigned is None:
             raise RequiredArgumentMissingError(
                 """
-                Please provide user assigned identity id using --identity-id paramter or set --use-system-assigned flag
+                Please provide user assigned identity id using --identity-id parameter or set --use-system-assigned flag
                 """)
         if infrastructure_encryption is None:
             infrastructure_encryption = "Disabled"

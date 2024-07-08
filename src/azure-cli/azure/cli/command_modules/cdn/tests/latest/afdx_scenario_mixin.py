@@ -7,9 +7,9 @@
 from .scenario_mixin import add_tags
 
 
-def _add_paramter_if_needed(command, paramter_name, parameter_value):
+def _add_parameter_if_needed(command, parameter_name, parameter_value):
     if parameter_value is not None:
-        return f'{command} --{paramter_name} {parameter_value}'
+        return f'{command} --{parameter_name} {parameter_value}'
 
     return command
 
@@ -74,7 +74,7 @@ class CdnAfdScenarioMixin:
         if tags:
             command = add_tags(command, tags)
 
-        command = _add_paramter_if_needed(command, "enabled-state", enabled_state)
+        command = _add_parameter_if_needed(command, "enabled-state", enabled_state)
 
         if options:
             command = command + ' ' + options

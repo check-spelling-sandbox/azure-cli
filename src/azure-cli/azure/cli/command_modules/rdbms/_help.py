@@ -98,7 +98,7 @@ examples:
     text: |
         az mariadb server create -l northeurope -g testgroup -n testsvr -u username -p password \\
             --sku-name GP_Gen5_2
-  - name: Create a MariaDB server with all paramaters set.
+  - name: Create a MariaDB server with all parameters set.
     text: |
         az mariadb server create -l northeurope -g testgroup -n testsvr -u username -p password \\
             --sku-name B_Gen5_1 --ssl-enforcement Disabled --public-network-access Disabled \\
@@ -459,7 +459,7 @@ examples:
     text: |
         az mysql server create -l northeurope -g testgroup -n testsvr -u username -p password \\
             --sku-name GP_Gen5_2
-  - name: Create a MySQL server with all paramaters set.
+  - name: Create a MySQL server with all parameters set.
     text: |
         az mysql server create -l northeurope -g testgroup -n testsvr -u username -p password \\
             --sku-name B_Gen5_1 --ssl-enforcement Enabled --minimal-tls-version TLS1_0 --public-network-access Disabled \\
@@ -901,7 +901,7 @@ examples:
     text: |
         az postgres server create -l northeurope -g testgroup -n testsvr -u username -p password \\
             --sku-name GP_Gen5_2
-  - name: Create a PostgreSQL server with all paramaters set.
+  - name: Create a PostgreSQL server with all parameters set.
     text: |
         az postgres server create -l northeurope -g testgroup -n testsvr -u username -p password \\
             --sku-name B_Gen5_1 --ssl-enforcement Enabled --minimal-tls-version TLS1_0 --public-network-access Disabled \\

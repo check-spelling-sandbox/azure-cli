@@ -163,7 +163,7 @@ def validate_snapshot_query_fields(namespace):
 
 
 def validate_filter_parameters(namespace):
-    """ Extracts multiple space-separated filter paramters in name[=value] format """
+    """ Extracts multiple space-separated filter parameters in name[=value] format """
     if isinstance(namespace.filter_parameters, list):
         filter_parameters_dict = {}
         for item in namespace.filter_parameters:
