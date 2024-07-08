@@ -163,7 +163,7 @@ class StorageADLSGen2Tests(StorageScenarioMixin, ScenarioTest):
 
         # Test continue on failure
         def reset_file_to_fail():
-            # reset the file to make it failure in set acl resusive
+            # reset the file to make it failure in set acl recursive
             self.storage_cmd('storage fs file upload -p "{}" -f {} -s "{}" --overwrite', account_info, file1,
                              filesystem, local_file)
             self.storage_cmd('storage fs file upload -p "{}" -f {} -s "{}" --overwrite', account_info, file5,
