@@ -5463,7 +5463,7 @@ class NetworkVirtualRouter(ScenarioTest):
                  '--subnet-name {subnet1} '
                  '--address-prefix 10.0.0.0/24')
 
-        # a cleanup program runs in short peoridically to assign subnets a NSG within that subscription
+        # a cleanup program runs in short periodically to assign subnets a NSG within that subscription
         # which will block subnet is assigned to the virtual router
         self.cmd('network vnet subnet update -g {rg} --vnet-name {vnet} -n {subnet1} --remove networkSecurityGroup')
         vnet = self.cmd('network vnet show -g {rg} -n {vnet}').get_output_in_json()
@@ -5518,7 +5518,7 @@ class NetworkVirtualHubRouter(ScenarioTest):
                  '--subnet-name {subnet1} '
                  '--address-prefix 10.0.0.0/24')
 
-        # a cleanup program runs in short peoridically to assign subnets a NSG within that subscription
+        # a cleanup program runs in short periodically to assign subnets a NSG within that subscription
         # which will block subnet is assigned to the virtual router
         self.cmd('network vnet subnet update -g {rg} --vnet-name {vnet} -n {subnet1} --remove networkSecurityGroup')
         vnet = self.cmd('network vnet show -g {rg} -n {vnet}').get_output_in_json()
