@@ -2923,7 +2923,7 @@ Copyright (c) 2005/OISTE Foundation
 Copyright (c) 2005/OISTE Foundation Endorsed Label OISTE WISeKey Global Root
 (c) 1999 Entrust.net Limited Label Entrust.net Premium 2048 Secure Server CA Serial
 
-This packge contains a modified version of ca-bundle.crt:
+This package contains a modified version of ca-bundle.crt:
 
 ca-bundle.crt -- Bundle of CA Root Certificates
 
