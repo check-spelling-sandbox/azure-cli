@@ -835,7 +835,7 @@ class TestProfile(unittest.TestCase):
 
         profile._set_subscriptions(subscriptions)
 
-        # verify we skip the overdued subscription and default to the 2nd one in the list
+        # verify we skip the overdue subscription and default to the 2nd one in the list
         self.assertEqual(storage_mock['subscriptions'][1]['name'], self.subscription1.display_name)
         self.assertTrue(storage_mock['subscriptions'][1]['isDefault'])
 

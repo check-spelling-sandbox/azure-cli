@@ -20,7 +20,7 @@ class ProfileCommandTest(unittest.TestCase):
         cmd = mock.MagicMock()
         cmd.cli_ctx = DummyCli()
         sub1 = {'state': 'Enabled'}
-        sub2 = {'state': 'Overdued'}
+        sub2 = {'state': 'Overdue'}
         load_subscription_mock.return_value = [sub1, sub2]
 
         # list all
