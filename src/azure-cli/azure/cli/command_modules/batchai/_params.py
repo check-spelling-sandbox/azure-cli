@@ -52,7 +52,7 @@ def load_arguments(self, _):
 
     with self.argument_context('batchai cluster create', arg_group='Admin Account') as c:
         c.argument('user_name', options_list=['--user-name', '-u'], help='Name of admin user account to be created on each compute node. If the value is not provided and no user configuration is provided in the config file, current user\'s name will be used.')
-        c.argument('ssh_key', options_list=['--ssh-key', '-k'], help='Optional SSH public key value or path. If ommited and no password specified, default SSH key (~/.ssh/id_rsa.pub) will be used.', completer=FilesCompleter())
+        c.argument('ssh_key', options_list=['--ssh-key', '-k'], help='Optional SSH public key value or path. If omitted and no password specified, default SSH key (~/.ssh/id_rsa.pub) will be used.', completer=FilesCompleter())
         c.argument('generate_ssh_keys', action='store_true', help='Generate SSH public and private key files in ~/.ssh directory (if missing).')
         c.argument('password', options_list=['--password', '-p'], help='Optional password for the admin user account to be created on each compute node.')
 
@@ -175,7 +175,7 @@ def load_arguments(self, _):
 
     with self.argument_context('batchai file-server create', arg_group='Admin Account') as c:
         c.argument('user_name', options_list=['--user-name', '-u'], help='Name of admin user account to be created on NFS node. If the value is not provided and no user configuration is provided in the config file, current user\'s name will be used.')
-        c.argument('ssh_key', options_list=['--ssh-key', '-k'], help='Optional SSH public key value or path. If ommited and no password specified, default SSH key (~/.ssh/id_rsa.pub) will be used.', completer=FilesCompleter())
+        c.argument('ssh_key', options_list=['--ssh-key', '-k'], help='Optional SSH public key value or path. If omitted and no password specified, default SSH key (~/.ssh/id_rsa.pub) will be used.', completer=FilesCompleter())
         c.argument('generate_ssh_keys', action='store_true', help='Generate SSH public and private key files in ~/.ssh directory (if missing).')
         c.argument('password', options_list=['--password', '-p'], help='Optional password for the admin user created on the NFS node.')
 

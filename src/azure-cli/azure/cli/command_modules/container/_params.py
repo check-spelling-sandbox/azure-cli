@@ -130,7 +130,7 @@ def load_arguments(self, _):
         c.argument('file', options_list=['--file', '-f'], help="The file path to export the container group.")
 
     with self.argument_context('container exec') as c:
-        c.argument('container_name', help='The container name where to execute the command. Can be ommitted for container groups with only one container.')
+        c.argument('container_name', help='The container name where to execute the command. Can be omitted for container groups with only one container.')
         c.argument('exec_command', help='The command to run from within the container')
         c.argument('terminal_row_size', help='The row size for the command output')
         c.argument('terminal_col_size', help='The col size for the command output')
