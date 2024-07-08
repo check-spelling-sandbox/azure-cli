@@ -1135,7 +1135,7 @@ class AppConfigAppServiceImportExportLiveScenarioTest(LiveScenarioTest):
         })
         self.cmd('appconfig kv import --connection-string {connection_string} -s {export_dest} --appservice-account {appservice_account} --label {label} -y')
 
-        # Verfiy that app configuration reference does not exist in imported keys
+        # Verify that app configuration reference does not exist in imported keys
         imported_config =  self.cmd('appconfig kv list --connection-string {connection_string} --label {label}').get_output_in_json()
         assert not any(setting['value'].lower().startswith(AppServiceConstants.APPSVC_CONFIG_REFERENCE_PREFIX.lower()) for setting in imported_config)
 
