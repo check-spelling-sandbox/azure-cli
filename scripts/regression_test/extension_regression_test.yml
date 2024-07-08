@@ -186,7 +186,7 @@ jobs:
             # this would remove the prefix 'refs/heads/':
             # "refs/heads/regression_test_23193_storage-preview" -> regression_test_23193_storage-preview"
             branch=${branch##*/}
-            # this would remove the surfix '"':
+            # this would remove the suffix '"':
             # regression_test_23193_storage-preview" -> regression_test_23193_storage-preview
             branch=${branch%\"*}
             echo ${branch}
