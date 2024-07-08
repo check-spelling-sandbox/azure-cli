@@ -2278,7 +2278,7 @@ def update_container_settings_functionapp(cmd, resource_group_name, name, regist
                                           workload_profile_name=None, cpu=None, memory=None):
     check_language_runtime(cmd, resource_group_name, name)
     if is_centauri_functionapp(cmd, resource_group_name, name):
-        _validate_cpu_momory_functionapp(cpu, memory)
+        _validate_cpu_memory_functionapp(cpu, memory)
         if any([enable_dapr, dapr_app_id, dapr_app_port, dapr_http_max_request_size, dapr_http_read_buffer_size,
                 dapr_log_level, dapr_enable_api_logging, cpu, memory, workload_profile_name]):
             update_dapr_and_workload_config(cmd, resource_group_name, name, enable_dapr, dapr_app_id, dapr_app_port,
@@ -4959,7 +4959,7 @@ def create_functionapp(cmd, resource_group_name, name, storage_account, plan=Non
         functionapp_def.type = 'Microsoft.Web/sites'
 
         # validate cpu and memory parameters.
-        _validate_cpu_momory_functionapp(cpu, memory)
+        _validate_cpu_memory_functionapp(cpu, memory)
 
         if (workload_profile_name is not None):
             functionapp_def.workload_profile_name = workload_profile_name
@@ -5214,7 +5214,7 @@ def create_functionapp(cmd, resource_group_name, name, storage_account, plan=Non
     return functionapp
 
 
-def _validate_cpu_momory_functionapp(cpu=None, memory=None):
+def _validate_cpu_memory_functionapp(cpu=None, memory=None):
     # validate either both cpu and memory are provided or none is provided. throw error otherwise
     if cpu is None and memory is None:
         return
