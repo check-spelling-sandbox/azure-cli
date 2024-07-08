@@ -764,7 +764,7 @@ def _validate_up_args(cmd, source, image, repo, registry_server):
         )
     if source and repo:
         raise MutuallyExclusiveArgumentError(
-            "Cannot use --source and --repo togther. "
+            "Cannot use --source and --repo together. "
             "Can either deploy from a local directory or a GitHub repo"
         )
 
