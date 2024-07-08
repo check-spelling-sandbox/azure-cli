@@ -165,7 +165,7 @@ class TestVmCustom(unittest.TestCase):
         self.assertEqual(CachingTypes.read_write, data_disk.caching)
         self.assertEqual(DiskCreateOptionTypes.empty, data_disk.create_option)
         self.assertIsNone(data_disk.image)
-        self.assertEqual(data_disk.lun, 0)  # the existing disk has '1', so it verifes the second one be picked as '0'
+        self.assertEqual(data_disk.lun, 0)  # the existing disk has '1', so it verifies the second one be picked as '0'
         self.assertEqual(data_disk.vhd.uri, faked_vhd_uri2)
 
     @mock.patch('azure.cli.command_modules.vm.custom.get_vm_to_update', autospec=True)
