@@ -48,7 +48,7 @@ def split_resource_id(resource_id):
     resource_group_name = resource_group_match.group("resource_group_name") if resource_group_match else ""
     remaining = remaining[len(resource_group_match.group(0)) if resource_group_match else 0:]
 
-    # Parse relateive_path.
+    # Parse relative_path.
     relative_resource_id_match = re.match(_relative_resource_id_pattern, remaining, flags=re.IGNORECASE)
     relative_resource_id = (
         relative_resource_id_match.group("relative_resource_id") if relative_resource_id_match else ""
