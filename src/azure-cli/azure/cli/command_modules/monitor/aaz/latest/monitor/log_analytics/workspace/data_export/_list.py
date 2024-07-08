@@ -15,7 +15,7 @@ from azure.cli.core.aaz import *
     "monitor log-analytics workspace data-export list",
 )
 class List(AAZCommand):
-    """List all data export ruleses for a given workspace.
+    """List all data export rulesets for a given workspace.
     """
 
     _aaz_info = {
