@@ -378,7 +378,7 @@
       "file": [
         "src\\azure-cli\\azure\\cli\\command_modules\\signalr\\tests\\latest\\recordings\\test_signalr_commands.yaml"
       ],
-      "_justification": "[SingalR] response body contains random value recognized as secret"
+      "_justification": "[SignalR] response body contains random value recognized as secret"
     },
     {
       "placeholder": "registry_password",
