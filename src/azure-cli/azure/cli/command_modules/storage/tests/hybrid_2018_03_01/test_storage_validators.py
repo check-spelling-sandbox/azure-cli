@@ -130,7 +130,7 @@ class TestStorageValidators(unittest.TestCase):
         with self.assertRaises(ValueError):
             services_type(self.loader)(input)
 
-    def test_storage_process_blob_source_uri_redundent_parameter(self):
+    def test_storage_process_blob_source_uri_redundant_parameter(self):
         with self.assertRaises(ValueError):
             process_blob_source_uri(MockCmd(self.cli),
                                     Namespace(copy_source='https://example.com', source_sas='some_sas'))

@@ -154,7 +154,7 @@ examples:
     text: >
       az postgres flexible-server create --resource-group testGroup --name testserver --geo-redundant-backup Enabled --public-access 125.23.54.31-125.23.54.35
   - name: >
-      Create a PostgreSQL flexible server with data encryption for geo-rundundant backup enabled server.
+      Create a PostgreSQL flexible server with data encryption for geo-redundant backup enabled server.
     text: >
       # create keyvault
 
