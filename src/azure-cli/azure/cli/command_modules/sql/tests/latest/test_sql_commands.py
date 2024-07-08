@@ -1196,7 +1196,7 @@ class SqlServerDbForwardMigrationScenarioTest(ScenarioTest):
         operationPhaseDetailsPhase = None
 
         # Wait until UpdateSlo from GeneralPurpose to Hyperscale is in WaitingForCutover
-        # When run live, this may take like 10 minutes. Unforunately there's no way to speed this up
+        # When run live, this may take like 10 minutes. Unfortunately there's no way to speed this up
         while operationPhaseDetailsObject is None or operationPhaseDetailsPhase != 'WaitingForCutover':
             time.sleep(60)
             # List operations
@@ -1691,7 +1691,7 @@ def _create_db_wait_for_first_backup(test, resource_group, server, database_name
                       JMESPathCheck('status', 'Online')]).get_output_in_json()
 
     # Wait until earliestRestoreDate is in the past. When run live, this will take at least
-    # 10 minutes. Unforunately there's no way to speed this up
+    # 10 minutes. Unfortunately there's no way to speed this up
     while db['earliestRestoreDate'] is None:
         time.sleep(60)
         db = test.cmd('sql db show -g {} -s {} -n {}'
@@ -1805,7 +1805,7 @@ class SqlServerDbRestoreDeletedScenarioTest(ScenarioTest):
         self.cmd('sql db delete -g {} -s {} -n {} --yes'.format(resource_group, server, database_name))
 
         # Wait for deleted database to become visible. When run live, this will take around
-        # 5-10 minutes. Unforunately there's no way to speed this up. Use timeout to ensure
+        # 5-10 minutes. Unfortunately there's no way to speed this up. Use timeout to ensure
         # test doesn't loop forever if there's a bug.
         start_time = datetime.now()
         timeout = timedelta(0, 15 * 60)  # 15 minutes timeout
