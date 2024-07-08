@@ -635,7 +635,7 @@ def container_logs(cmd, resource_group_name, name, container_name=None, follow=F
         _start_streaming(
             terminate_condition=_is_container_terminated,
             terminate_condition_args=(container_group_client, resource_group_name, name, container_name),
-            shupdown_grace_period=5,
+            shutdown_grace_period=5,
             stream_target=_stream_logs,
             stream_args=(container_client, resource_group_name, name, container_name, container_group.restart_policy))
 
@@ -834,12 +834,12 @@ def attach_to_container(cmd, resource_group_name, name, container_name=None):
     _start_streaming(
         terminate_condition=_is_container_terminated,
         terminate_condition_args=(container_group_client, resource_group_name, name, container_name),
-        shupdown_grace_period=5,
+        shutdown_grace_period=5,
         stream_target=_stream_container_events_and_logs,
         stream_args=(container_group_client, container_client, resource_group_name, name, container_name))
 
 
-def _start_streaming(terminate_condition, terminate_condition_args, shupdown_grace_period, stream_target, stream_args):
+def _start_streaming(terminate_condition, terminate_condition_args, shutdown_grace_period, stream_target, stream_args):
     """Start streaming for the stream target. """
     import colorama
     colorama.init()
@@ -852,7 +852,7 @@ def _start_streaming(terminate_condition, terminate_condition_args, shupdown_gra
         while not terminate_condition(*terminate_condition_args) and t.is_alive():
             time.sleep(10)
 
-        time.sleep(shupdown_grace_period)
+        time.sleep(shutdown_grace_period)
 
     finally:
         colorama.deinit()
