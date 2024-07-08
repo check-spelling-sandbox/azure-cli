@@ -368,7 +368,7 @@ def load_arguments(self, _):
                        help='The subscription id of storage account')
             c.argument('is_storage_secondary_key_in_use', arg_group=storage_arg_group,
                        arg_type=get_three_state_flag(), options_list=['--use-secondary-key'],
-                       help='Indicates whether using the secondary storeage key or not')
+                       help='Indicates whether using the secondary storage key or not')
             c.argument('is_azure_monitor_target_enabled', options_list=['--enable-azure-monitor'],
                        help='Whether enabling azure monitor target or not.',
                        arg_type=get_three_state_flag())

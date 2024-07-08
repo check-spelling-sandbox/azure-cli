@@ -8465,7 +8465,7 @@ class AKSManagedClusterUpdateDecorator(BaseAKSManagedClusterDecorator):
         mc = self.update_defender(mc)
         # update workload identity profile
         mc = self.update_workload_identity_profile(mc)
-        # update stroage profile
+        # update storage profile
         mc = self.update_storage_profile(mc)
         # update azure keyvalue kms
         mc = self.update_azure_keyvault_kms(mc)

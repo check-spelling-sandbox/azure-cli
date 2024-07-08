@@ -122,7 +122,7 @@ def validate_client_parameters(cmd, namespace):
             n.account_name = get_config_value(cmd, 'storage', 'account', None)
         if auth_mode == 'login':
             prefix = cmd.command_kwargs['resource_type'].value[0]
-            # is_storagv2() is used to distinguish if the command is in track2 SDK
+            # is_storagev2() is used to distinguish if the command is in track2 SDK
             # If yes, we will use get_login_credentials() as token credential
             if is_storagev2(prefix):
                 from azure.cli.core._profile import Profile

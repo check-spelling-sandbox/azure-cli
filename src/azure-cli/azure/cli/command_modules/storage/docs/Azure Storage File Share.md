@@ -121,7 +121,7 @@ az storage share-rm show \
 az storage share-rm update \
     --quota 10 \
     -n sharename \
-    --storage-account mystroageaccount 
+    --storage-account mystorageccount 
     -g myresourcegroup 
 ```
 
