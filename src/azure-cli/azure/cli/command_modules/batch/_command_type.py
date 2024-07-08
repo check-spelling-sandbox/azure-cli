@@ -39,7 +39,7 @@ def _load_model(name):
 
 
 def _join_prefix(prefix, name):
-    """Filter certain superflous parameter name suffixes
+    """Filter certain superfluous parameter name suffixes
     from argument names.
     :param str prefix: The potential prefix that will be filtered.
     :param str name: The arg name to be prefixed.
