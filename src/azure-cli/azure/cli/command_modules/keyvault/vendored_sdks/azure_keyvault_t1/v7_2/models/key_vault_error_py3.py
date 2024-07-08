@@ -38,7 +38,7 @@ class KeyVaultError(Model):
 
 
 class KeyVaultErrorException(HttpOperationError):
-    """Server responsed with exception of type: 'KeyVaultError'.
+    """Server responded with exception of type: 'KeyVaultError'.
 
     :param deserialize: A deserializer
     :param response: Server response to be deserialized.
