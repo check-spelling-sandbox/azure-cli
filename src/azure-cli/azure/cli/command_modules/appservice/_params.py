@@ -163,7 +163,7 @@ subscription than the app service environment, please use the resource ID for --
                    help="name or resource id of the app service plan. Use 'appservice plan create' to get one",
                    local_context_attribute=LocalContextAttribute(name='plan_name', actions=[LocalContextAction.GET]))
         c.argument('vnet', help="Name or resource ID of the regional virtual network. If there are multiple vnets of the same name across different resource groups, use vnet resource id to specify which vnet to use. If vnet name is used, by default, the vnet in the same resource group as the webapp will be used. Must be used with --subnet argument.")
-        c.argument('subnet', help="Name or resource ID of the pre-existing subnet to have the webapp join. The --vnet is argument also needed if specifying subnet by name.")
+        c.argument('subnet', help="Name or resource ID of the preexisting subnet to have the webapp join. The --vnet is argument also needed if specifying subnet by name.")
         c.argument('public_network_access', help="Enable or disable public access to the web app", arg_type=get_enum_type(PUBLIC_NETWORK_ACCESS_MODES))
         c.argument('acr_use_identity', action='store_true', help="Enable or disable pull image from acr use managed identity")
         c.argument('basic_auth', help='Enable or disable basic auth.', arg_type=get_enum_type(BASIC_AUTH_TYPES))
@@ -724,7 +724,7 @@ subscription than the app service environment, please use the resource ID for --
                    help="Configure default logging required to enable viewing log stream immediately after launching the webapp",
                    default=False, action='store_true')
         c.argument('html', help="Ignore app detection and deploy as an html app", default=False, action='store_true')
-        c.argument('app_service_environment', options_list=['--app-service-environment', '-e'], help='name or resource ID of the (pre-existing) App Service Environment to deploy to. Requires an Isolated V2 sku')
+        c.argument('app_service_environment', options_list=['--app-service-environment', '-e'], help='name or resource ID of the (preexisting) App Service Environment to deploy to. Requires an Isolated V2 sku')
         c.argument('basic_auth', help='Enable or disable basic auth.', arg_type=get_enum_type(BASIC_AUTH_TYPES))
         c.argument('track_status', help="If true, web app startup status during deployment will be tracked for linux web apps.",
                    arg_type=get_three_state_flag())
@@ -782,7 +782,7 @@ subscription than the app service environment, please use the resource ID for --
 
     with self.argument_context('functionapp create') as c:
         c.argument('vnet', options_list=['--vnet'], help="Name or resource ID of the regional virtual network. If there are multiple vnets of the same name across different resource groups, use vnet resource id to specify which vnet to use. If vnet name is used, by default, the vnet in the same resource group as the webapp will be used. Must be used with --subnet argument.")
-        c.argument('subnet', options_list=['--subnet'], help="Name or resource ID of the pre-existing subnet to have the webapp join. The --vnet is argument also needed if specifying subnet by name.")
+        c.argument('subnet', options_list=['--subnet'], help="Name or resource ID of the preexisting subnet to have the webapp join. The --vnet is argument also needed if specifying subnet by name.")
         c.argument('environment', help="Name of the container app environment.", is_preview=True)
         c.argument('image', options_list=['--image', '-i', c.deprecate(target='--deployment-container-image-name', redirect='--image')],
                    help='Container image, e.g. publisher/image-name:tag')

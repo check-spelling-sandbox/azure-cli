@@ -2797,7 +2797,7 @@ helps['staticwebapp secrets reset-api-key'] = """
 
 helps['staticwebapp functions'] = """
 type: group
-short-summary: Link or unlink a prexisting functionapp with a static webapp. Also known as "Bring your own Functions."
+short-summary: Link or unlink a preexisting functionapp with a static webapp. Also known as "Bring your own Functions."
 """
 
 helps['staticwebapp functions link'] = """
@@ -2826,7 +2826,7 @@ helps['staticwebapp functions show'] = """
 
 helps['staticwebapp backends'] = """
 type: group
-short-summary: Link or unlink a prexisting backend with a static web app. Also known as "Bring your own API."
+short-summary: Link or unlink a preexisting backend with a static web app. Also known as "Bring your own API."
 """
 
 helps['staticwebapp backends validate'] = """

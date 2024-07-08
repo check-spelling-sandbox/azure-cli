@@ -2983,7 +2983,7 @@ class DomainScenarioTest(ScenarioTest):
 
 class TunnelProxyTest(unittest.TestCase):
     def setUp(self):
-        # Clean pre-existing proxy env vars
+        # Clean preexisting proxy env vars
         for env_var in [
             'NO_PROXY',
             'no_proxy',

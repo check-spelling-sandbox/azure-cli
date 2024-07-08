@@ -1098,7 +1098,7 @@ def __update_existing_key_value(azconfig_client,
                                 retrieved_kv,
                                 updated_value):
     '''
-        To update the value of a pre-existing KeyValue
+        To update the value of a preexisting KeyValue
 
         Args:
             azconfig_client - AppConfig client making calls to the service

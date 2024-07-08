@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Build wheel packages containing both CLI product and tests. The script doesn't rely on a pre-existing virtual
+# Build wheel packages containing both CLI product and tests. The script doesn't rely on a preexisting virtual
 # environment.
 
 set -ev
