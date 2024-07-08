@@ -191,13 +191,13 @@ def validate_mongo_role_definition_body(ns):
 
             if 'Db' not in privilege['Resource'] or not isinstance(privilege['Resource']['Db'], str):
                 raise InvalidArgumentValueError(
-                    'Role creation failed. Invalid Mongo database name under Privileges->Resoures.\
+                    'Role creation failed. Invalid Mongo database name under Privileges->Resources.\
                     A valid string database name is expected.')
 
             if 'Collection' in privilege['Resource']\
                     and not isinstance(privilege['Resource']['Collection'], str):
                 raise InvalidArgumentValueError(
-                    'Role creation failed. Invalid Mongo database Collection name under Privileges->Resoures.\
+                    'Role creation failed. Invalid Mongo database Collection name under Privileges->Resources.\
                     A valid string database name is expected.')
 
             if 'Actions' not in privilege or not isinstance(privilege['Actions'], list)\
