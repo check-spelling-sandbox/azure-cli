@@ -209,7 +209,7 @@ def load_arguments(self, _):
         c.argument('disabled', arg_type=get_three_state_flag(), help='Create the autoscale settings in a disabled state.')
 
     with self.argument_context('monitor autoscale', arg_group='Instance Limit') as c:
-        c.argument('count', type=int, help='The numer of instances to use. If used with --min/max-count, the default number of instances to use.')
+        c.argument('count', type=int, help='The number of instances to use. If used with --min/max-count, the default number of instances to use.')
         c.argument('min_count', type=int, help='The minimum number of instances.')
         c.argument('max_count', type=int, help='The maximum number of instances.')
 

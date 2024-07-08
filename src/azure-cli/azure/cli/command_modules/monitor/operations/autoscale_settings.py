@@ -93,7 +93,7 @@ class AutoScaleUpdate(_AutoScaleUpdate):
         args_schema.target_resource_uri._registered = False
         args_schema.count = AAZIntArg(
             options=["--count"],
-            help='The numer of instances to use. If used with --min/max-count, the default number of instances to use.',
+            help='The number of instances to use. If used with --min/max-count, the default number of instances to use.',
             arg_group="Instance Limit",
         )
         args_schema.min_count = AAZIntArg(

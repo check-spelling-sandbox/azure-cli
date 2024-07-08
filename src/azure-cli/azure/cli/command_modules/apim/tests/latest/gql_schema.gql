@@ -485,7 +485,7 @@ type Query {
   users(
     # distinct select on columns
     distinct_on: [users_select_column!]
-    # limit the nuber of rows returned
+    # limit the number of rows returned
     limit: Int
     # skip the first n rows. Use only with order_by
     offset: Int
@@ -498,7 +498,7 @@ type Query {
   users_aggregate(
     # distinct select on columns
     distinct_on: [users_select_column!]
-    # limit the nuber of rows returned
+    # limit the number of rows returned
     limit: Int
     # skip the first n rows. Use only with order_by
     offset: Int
@@ -891,7 +891,7 @@ type Subscription {
   users(
     # distinct select on columns
     distinct_on: [users_select_column!]
-    # limit the nuber of rows returned
+    # limit the number of rows returned
     limit: Int
     # skip the first n rows. Use only with order_by
     offset: Int
@@ -904,7 +904,7 @@ type Subscription {
   users_aggregate(
     # distinct select on columns
     distinct_on: [users_select_column!]
-    # limit the nuber of rows returned
+    # limit the number of rows returned
     limit: Int
     # skip the first n rows. Use only with order_by
     offset: Int
