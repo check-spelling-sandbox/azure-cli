@@ -2045,7 +2045,7 @@ def aks_runcommand(cmd, client, resource_group_name, name, command_string="", co
         ]
         command_id_regex = re.compile(r"commandResults\/(\w*)\?")
         command_id = command_id_regex.findall(command_result_polling_url)[0]
-        _aks_command_result_in_progess_helper(client, resource_group_name, name, command_id)
+        _aks_command_result_in_progress_helper(client, resource_group_name, name, command_id)
         return
     return _print_command_result(cmd.cli_ctx, command_result_poller.result(300))
 
@@ -2056,12 +2056,12 @@ def aks_command_result(cmd, client, resource_group_name, name, command_id=""):
 
     commandResult = client.get_command_result(resource_group_name, name, command_id)
     if commandResult is None:
-        _aks_command_result_in_progess_helper(client, resource_group_name, name, command_id)
+        _aks_command_result_in_progress_helper(client, resource_group_name, name, command_id)
         return
     return _print_command_result(cmd.cli_ctx, commandResult)
 
 
-def _aks_command_result_in_progess_helper(client, resource_group_name, name, command_id):
+def _aks_command_result_in_progress_helper(client, resource_group_name, name, command_id):
     # pylint: disable=unused-argument
     def command_result_direct_response_handler(pipeline_response, *args, **kwargs):
         deserialized_data = pipeline_response.context.get("deserialized_data", {})
