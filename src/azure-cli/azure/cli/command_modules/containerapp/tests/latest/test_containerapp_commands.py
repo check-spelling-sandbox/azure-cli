@@ -1438,7 +1438,7 @@ class ContainerappScaleTests(ScenarioTest):
         template:
             containers:
             -   image: nginx
-                name: azure-equeue-container
+                name: azure-queue-container
                 resources:
                   cpu: 0.5
                   memory: 1Gi
