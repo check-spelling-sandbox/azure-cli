@@ -546,7 +546,7 @@ examples:
   - name: Create primary node type with 5 nodes.
     text: >
         az sf managed-node-type create -g testRG -c testCluster -n pnt --instance-count 5 --primary
-  - name: Create non primary node type with placement properities, capacities and ports.
+  - name: Create non primary node type with placement properties, capacities and ports.
     text: >
         az sf managed-node-type create -g testRG -c testCluster -n snt --instance-count 5 --placement-property NodeColor=Green SomeProperty=5 --capacity ClientConnections=65536 --app-start-port 20575 --app-end-port 20605 --ephemeral-start-port 20606 --ephemeral-end-port 20861
 """

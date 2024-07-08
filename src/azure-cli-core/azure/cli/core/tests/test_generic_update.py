@@ -140,7 +140,7 @@ class GenericUpdateTest(unittest.TestCase):
         cli.invoke('genupdate --set additional1=v1'.split())
         self.assertEqual(my_obj.additional_properties['additional1'], 'v1')
 
-        cli.invoke('genupdate --set my_test_object.additional1=v1'.split())  # for unknown properties, we also set as additional_proeprties
+        cli.invoke('genupdate --set my_test_object.additional1=v1'.split())  # for unknown properties, we also set as additional_properties
         self.assertEqual(my_obj.my_test_object.additional_properties['additional1'], 'v1')
 
         # Test the different ways of indexing into a list of objects or dictionaries by filter

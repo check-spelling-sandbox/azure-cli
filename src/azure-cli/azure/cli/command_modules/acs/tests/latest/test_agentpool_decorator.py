@@ -2164,7 +2164,7 @@ class AKSAgentPoolAddDecoratorCommonTestCase(unittest.TestCase):
         )
         self.assertEqual(dec_agentpool_1, ground_truth_agentpool_1)
 
-    def common_set_up_gpu_propertes(self):
+    def common_set_up_gpu_properties(self):
         dec_1 = AKSAgentPoolAddDecorator(
             self.cmd,
             self.client,
@@ -2328,8 +2328,8 @@ class AKSAgentPoolAddDecoratorStandaloneModeTestCase(AKSAgentPoolAddDecoratorCom
             headers={},
         )
 
-    def test_set_up_gpu_propertes(self):
-        self.common_set_up_gpu_propertes()
+    def test_set_up_gpu_properties(self):
+        self.common_set_up_gpu_properties()
 
 class AKSAgentPoolAddDecoratorManagedClusterModeTestCase(AKSAgentPoolAddDecoratorCommonTestCase):
     def setUp(self):
@@ -2446,8 +2446,8 @@ class AKSAgentPoolAddDecoratorManagedClusterModeTestCase(AKSAgentPoolAddDecorato
 
         dec_1.context.raw_param.print_usage_statistics()
 
-    def test_set_up_gpu_propertes(self):
-        self.common_set_up_gpu_propertes()
+    def test_set_up_gpu_properties(self):
+        self.common_set_up_gpu_properties()
 
 class AKSAgentPoolUpdateDecoratorCommonTestCase(unittest.TestCase):
     def _remove_defaults_in_agentpool(self, agentpool):

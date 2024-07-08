@@ -651,7 +651,7 @@ def container_export(cmd, resource_group_name, name, file):
                                              name,
                                              container_group_client._config.api_version).__dict__
 
-    # Remove unwanted properites
+    # Remove unwanted properties
     resource['properties'].pop('instanceView', None)
     resource.pop('sku', None)
     resource.pop('id', None)
