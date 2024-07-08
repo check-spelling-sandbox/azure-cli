@@ -2121,7 +2121,7 @@ def _build_app_settings_input(settings, connection_string_type):
         results = []
         for name_value in settings:
             conn_string_name, value = name_value.split('=', 1)
-            if value[0] in ["'", '"']:  # strip away the quots used as separators
+            if value[0] in ["'", '"']:  # strip away the quotes used as separators
                 value = value[1:-1]
             results.append({'name': conn_string_name, 'value': value, 'type': connection_string_type})
         return results
