@@ -292,7 +292,7 @@ def _get_streaming_operation_info_from_image(cmd,
     return repository, response
 
 
-# OPEERATION GROUP COMMANDS
+# OPERATION GROUP COMMANDS
 def acr_artifact_streaming_operation_show(cmd,
                                           registry_name,
                                           repository=None,
