@@ -9772,7 +9772,7 @@ class VMTrustedLaunchScenarioTest(ScenarioTest):
     @ResourceGroupPreparer(name_prefix='cli_test_vm_trusted_launch_os_disk_secure_import', location='southcentralus')
     def test_vm_trusted_launch_os_disk_secure_import(self):
         self.kwargs.update({
-            'disk': 'seccuredisk',
+            'disk': 'securedisk',
             'vm': self.create_random_name('vm', 10),
         })
         self.cmd('vm create -g {rg} -n {vm} --admin-username azrureuser --image MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest --security-type ConfidentialVM'
@@ -9781,7 +9781,7 @@ class VMTrustedLaunchScenarioTest(ScenarioTest):
         blob_uri = self.cmd('vm show -g {rg} -n {vm}', checks=self.check('length(storageProfile.dataDisks)', 0)).get_output_in_json()['storageProfile']['osDisk']['vhd']['uri']
         self.kwargs.update({
             'blob_uri': blob_uri,
-            'vhd_uri': blob_uri[0:blob_uri.rindex('/') + 1] + 'seccuredisk.vhd'
+            'vhd_uri': blob_uri[0:blob_uri.rindex('/') + 1] + 'securedisk.vhd'
         })
         self.cmd('vm unmanaged-disk attach -g {rg} --vm-name {vm} -n {disk} --vhd {vhd_uri} --new --caching ReadWrite')
         self.cmd('disk create -n {disk} -g {rg} --hyper-v-generation v2 --security-type TrustedLaunch --source {vhd_uri} --sku standard_lrs --security-data-uri {blob_uri}', checks=[
