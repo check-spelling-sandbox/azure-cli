@@ -70,8 +70,8 @@ def _server_create(cmd, client, resource_group_name=None, server_name=None, sku_
         location, resource_group_name, server_name = generate_missing_parameters(cmd, location, resource_group_name,
                                                                                  server_name, engine_name)
         check_name_client = cf_postgres_check_resource_availability_sterling(cmd.cli_ctx, None)
-        name_availability_resquest = postgresql.models.NameAvailabilityRequest(name=server_name, type="Microsoft.DBforPostgreSQL/servers")
-        check_server_name_availability(check_name_client, name_availability_resquest)
+        name_availability_request = postgresql.models.NameAvailabilityRequest(name=server_name, type="Microsoft.DBforPostgreSQL/servers")
+        check_server_name_availability(check_name_client, name_availability_request)
         logger.warning('Creating %s Server \'%s\' in group \'%s\'...', engine_name, server_name, resource_group_name)
         logger.warning('Your server \'%s\' is using sku \'%s\' (Paid Tier). '
                        'Please refer to %s  for pricing details', server_name, sku_name, pricing_link)
@@ -102,8 +102,8 @@ def _server_create(cmd, client, resource_group_name=None, server_name=None, sku_
         location, resource_group_name, server_name = generate_missing_parameters(cmd, location, resource_group_name,
                                                                                  server_name, engine_name)
         check_name_client = cf_mysql_check_resource_availability_sterling(cmd.cli_ctx, None)
-        name_availability_resquest = mysql.models.NameAvailabilityRequest(name=server_name, type="Microsoft.DBforMySQL/servers")
-        check_server_name_availability(check_name_client, name_availability_resquest)
+        name_availability_request = mysql.models.NameAvailabilityRequest(name=server_name, type="Microsoft.DBforMySQL/servers")
+        check_server_name_availability(check_name_client, name_availability_request)
         logger.warning('Creating %s Server \'%s\' in group \'%s\'...', engine_name, server_name, resource_group_name)
         logger.warning('Your server \'%s\' is using sku \'%s\' (Paid Tier). '
                        'Please refer to %s  for pricing details', server_name, sku_name, pricing_link)
@@ -133,8 +133,8 @@ def _server_create(cmd, client, resource_group_name=None, server_name=None, sku_
         location, resource_group_name, server_name = generate_missing_parameters(cmd, location, resource_group_name,
                                                                                  server_name, engine_name)
         check_name_client = cf_mariadb_check_resource_availability_sterling(cmd.cli_ctx, None)
-        name_availability_resquest = mariadb.models.NameAvailabilityRequest(name=server_name, type="Microsoft.DBforMariaDB")
-        check_server_name_availability(check_name_client, name_availability_resquest)
+        name_availability_request = mariadb.models.NameAvailabilityRequest(name=server_name, type="Microsoft.DBforMariaDB")
+        check_server_name_availability(check_name_client, name_availability_request)
         logger.warning('Creating %s Server \'%s\' in group \'%s\'...', engine_name, server_name, resource_group_name)
         logger.warning('Your server \'%s\' is using sku \'%s\' (Paid Tier). '
                        'Please refer to %s  for pricing details', server_name, sku_name, pricing_link)

@@ -327,7 +327,7 @@ MICROSOFT_GRAPH_API_ERROR = "Unable to validate the permission of MSI due to que
 
 
 def _send(cli_ctx, method, url, param=None, body=None):
-    """ Send the HTTP requet to the url
+    """ Send the HTTP request to the url
         Copied from src/azure-cli/azure/cli/command_modules/role/_msgraph/_graph_client.py with minor modification
 
         :param cli_ctx: The CLI context.

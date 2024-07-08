@@ -606,11 +606,11 @@ def synapse_list_link_table(cmd, workspace_name, link_connection_name):
 
 def synapse_edit_link_table(cmd, workspace_name, link_connection_name, definition_file):
     client = cf_synapse_link_connection(cmd.cli_ctx, workspace_name)
-    linkTableRequset_list = []
+    linkTableRequest_list = []
     for i in range(0, len(definition_file['linkTables'])):
-        linkTableRequset = LinkTableRequest.from_dict(definition_file['linkTables'][i])
-        linkTableRequset_list.append(linkTableRequset)
-    return client.edit_tables(link_connection_name, linkTableRequset_list)
+        linkTableRequest = LinkTableRequest.from_dict(definition_file['linkTables'][i])
+        linkTableRequest_list.append(linkTableRequest)
+    return client.edit_tables(link_connection_name, linkTableRequest_list)
 
 
 def synapse_get_link_tables_status(cmd, workspace_name, link_connection_name, max_segment_count=50,

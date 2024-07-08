@@ -1755,7 +1755,7 @@ class AKSAgentPoolAddDecorator:
         """Send request to add a new agentpool.
 
         The function "sdk_no_wait" will be called to use the Agentpool operations of ContainerServiceClient to send a
-        reqeust to add a new agent pool to the cluster.
+        request to add a new agent pool to the cluster.
 
         :return: the AgentPool object
         """
@@ -2002,7 +2002,7 @@ class AKSAgentPoolUpdateDecorator:
         """Send request to add a new agentpool.
 
         The function "sdk_no_wait" will be called to use the Agentpool operations of ContainerServiceClient to send a
-        reqeust to update an existing agent pool of the cluster.
+        request to update an existing agent pool of the cluster.
 
         :return: the AgentPool object
         """
