@@ -101,7 +101,7 @@ class TestUtils(unittest.TestCase):
                 rand_len = random.randint(50, 100)
                 test_values.append(random_string(rand_len))
 
-            # test each value against eachother to verify hashing properties
+            # test each value against each other to verify hashing properties
             equal_count = 0
             for val1 in test_values:
                 result1 = hash_string(val1, length, force_lower)
