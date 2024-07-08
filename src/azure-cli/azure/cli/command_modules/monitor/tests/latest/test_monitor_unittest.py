@@ -142,9 +142,9 @@ class MonitorMetricAlertActionTest(unittest.TestCase):
             self.call_condition(ns, 'avg Wra!!ga * woo')
 
         ns = self._build_namespace()
-        self.call_condition(ns, 'avg SuccessE2ELatenc,|y > 250 where ApiName includes Get|,%_Blob or PutB,_lob')
+        self.call_condition(ns, 'avg SuccessE2ELatenc,|y > 250 where ApiName includes Get%_Blob or PutB,_lob')
         self.check_condition(ns, 'Average', None, 'SuccessE2ELatenc,|y', 'GreaterThan', 250.0, None)
-        self.check_dimension(ns, 0, 'ApiName', 'Include', ['Get|,%_Blob', 'PutB,_lob'])
+        self.check_dimension(ns, 0, 'ApiName', 'Include', ['Get%_Blob', 'PutB,_lob'])
 
         ns = self._build_namespace()
         self.call_condition(ns, 'avg ns.foo/bar_doo > 90 with skipmetricvalidation')
