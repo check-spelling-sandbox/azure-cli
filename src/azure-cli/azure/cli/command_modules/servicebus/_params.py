@@ -122,7 +122,7 @@ def load_arguments_sb(self, _):
             c.extra('connection_id', options_list=['--id'],
                     help='The ID of the private endpoint connection associated with the Service Bus Namespace. You can get '
                          'it using `az servicebus namespace show`.')
-            c.argument('namespace_name', help='The Service Bus namesapce name.', required=False)
+            c.argument('namespace_name', help='The Service Bus namepsace name.', required=False)
             c.argument('resource_group_name', help='The resource group name of specified Service bus namespace.',
                        required=False)
             c.argument('description', help='Comments for {} operation.'.format(item))

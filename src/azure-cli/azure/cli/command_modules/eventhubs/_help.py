@@ -530,11 +530,11 @@ short-summary: Manage eventhubs namespace private endpoint connection.
 
 helps['eventhubs namespace private-endpoint-connection approve'] = """
 type: command
-short-summary: Approve a private endpoint connection request for eventhubs namesapce.
+short-summary: Approve a private endpoint connection request for eventhubs namepsace.
 examples:
   - name: Approve a private endpoint connection request for eventhubs namespace by ID.
     text: |
-        az eventhubs namespace private-endpoint-connection approve --id "/subscriptions/0000-0000-0000-0000/resourceGroups/MyResourceGroup/providers/Microsoft.Eventhub/namesapces/mynamepsace/privateEndpointConnections/mynamespace.b56b5a95-0588-4f8b-b348-15db61590a6c"
+        az eventhubs namespace private-endpoint-connection approve --id "/subscriptions/0000-0000-0000-0000/resourceGroups/MyResourceGroup/providers/Microsoft.Eventhub/namepsaces/mynamepsace/privateEndpointConnections/mynamespace.b56b5a95-0588-4f8b-b348-15db61590a6c"
   - name: Approve a private endpoint connection request for eventhubs namespace by ID.
     text: |
         id = (az eventhubs namespace show -n mynamespace --query "privateEndpointConnections[0].id")
