@@ -454,7 +454,7 @@ def _find_role_id(cli_ctx):
         raise InvalidArgumentValueError(MICROSOFT_GRAPH_API_ERROR.format(ex)) from ex
 
     # If we failed to find the Microsoft Graph service application, fail the validation.
-    # This in fact shoud not happen.
+    # This in fact should not happen.
     if service_principals is None or len(service_principals) == 0:
         error_message = "Querying Microsoft Graph API failed to find the service principal of Microsoft Graph Application"
         raise InvalidArgumentValueError(MICROSOFT_GRAPH_API_ERROR.format(error_message))
@@ -469,7 +469,7 @@ def _find_role_id(cli_ctx):
             app_role_id_map[GROUP_MEMBER_READ_ALL] = app_role["id"]
 
     # If we failed to find all role definitions, fail the validation.
-    # This in fact shoud not happen.
+    # This in fact should not happen.
     if len(app_role_id_map) < 3:
         required_role_defs = [USER_READ_ALL, APPLICATION_READ_ALL, GROUP_MEMBER_READ_ALL]
         missing_role_defs = [role for role in required_role_defs if role not in app_role_id_map]
