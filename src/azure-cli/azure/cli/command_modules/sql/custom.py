@@ -2647,7 +2647,7 @@ def _audit_policy_update_apply_blob_storage_details(
                 resource_group_name=storage_resource_group,
                 use_secondary_key=is_storage_secondary_key_in_use)
 
-        # Apply retenation days
+        # Apply retention days
         if hasattr(instance, 'retention_days') and retention_days is not None:
             instance.retention_days = retention_days
     else:
