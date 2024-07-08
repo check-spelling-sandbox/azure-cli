@@ -909,7 +909,7 @@ class IoTHubTest(ScenarioTest):
                     identity_id = self.cmd('identity show --id "{}"'.format(identity)).get_output_in_json()['principalId']
                     self.cmd('role assignment create --role "{0}" --assignee "{1}" --scope "{2}"'.format(role, identity_id, eh['id']))
 
-        # RBAC propogation
+        # RBAC propagation
         if self.is_live:
             from time import sleep
             sleep(30)
