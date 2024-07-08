@@ -824,8 +824,8 @@ class TestAKSCommand(unittest.TestCase):
 class TestRunCommand(unittest.TestCase):
     def test_get_command_context_invalid_file(self):
         with self.assertRaises(CLIError) as cm:
-            _get_command_context([get_test_data_file_path("notexistingfile")])
-        self.assertIn('notexistingfile is not valid file, or not accessable.', str(
+            _get_command_context([get_test_data_file_path("nonexistentfile")])
+        self.assertIn('nonexistentfile is not valid file, or not accessable.', str(
             cm.exception))
 
     def test_get_command_context_mixed(self):
