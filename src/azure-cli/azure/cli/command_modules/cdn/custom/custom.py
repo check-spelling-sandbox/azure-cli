@@ -58,7 +58,7 @@ from msrestazure.tools import is_valid_resource_id
 logger = get_logger(__name__)
 
 
-def _check_condition_allowed_opertors(condition_name, operator):
+def _check_condition_allowed_operators(condition_name, operator):
     if condition_name is not None and operator is not None:
         condition_allowed_operators = []
         if condition_name == "RequestScheme":
@@ -76,7 +76,7 @@ def _check_condition_allowed_opertors(condition_name, operator):
                 f"{operator} is not a valid operator for {condition_name}, allowed values are: {allowed_operators}.")
 
 
-def _check_condition_allowed_match_values_opertors(condition_name, match_values):
+def _check_condition_allowed_match_values_operators(condition_name, match_values):
     if condition_name is not None and match_values is not None and len(match_values) > 0:
         condition_allowed_match_values = []
         if condition_name == "SslProtocol":
@@ -241,8 +241,8 @@ def update_endpoint(instance,
 def create_condition(match_variable=None, operator=None, match_values=None,
                      selector=None, negate_condition=None, transforms=None):
 
-    _check_condition_allowed_opertors(match_variable, operator)
-    _check_condition_allowed_match_values_opertors(match_variable, match_values)
+    _check_condition_allowed_operators(match_variable, operator)
+    _check_condition_allowed_match_values_operators(match_variable, match_values)
 
     if match_variable == 'RemoteAddress':
         return DeliveryRuleRemoteAddressCondition(
