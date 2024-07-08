@@ -544,7 +544,7 @@ class AAZResourceLocationArg(AAZStrArg):
         arg = super().to_cmd_arg(name, **kwargs)
         if self._required and \
                 isinstance(self._fmt, AAZResourceLocationArgFormat) and self._fmt._resource_group_arg is not None:
-            # when location is required and it will be retrived from resource group by default, arg is not required.
+            # when location is required and it will be retrieved from resource group by default, arg is not required.
             arg.required = False
             short_summary = arg.type.settings.get('help', None) or ''
             if short_summary:

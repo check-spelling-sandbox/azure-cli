@@ -410,14 +410,14 @@ def load_arguments(self, _):
         c.argument('mongo_user_definition_id', options_list=['--id', '-i'], validator=validate_mongo_user_definition_id, help="Unique ID for the Mongo User Definition.")
         c.argument('mongo_user_definition_body', options_list=['--body', '-b'], validator=validate_mongo_user_definition_body, completer=FilesCompleter(), help="User Definition body with Id (Optional for create), UserName, Password, DatabaseName, CustomData, Mechanisms, Roles.  You can enter it as a string or as a file, e.g., --body @mongo-user_definition-body-file.json or " + MONGO_USER_DEFINITION_EXAMPLE)
 
-    # Retrive Sql Container Backup Info
+    # Retrieve Sql Container Backup Info
     with self.argument_context('cosmosdb sql retrieve-latest-backup-time') as c:
         c.argument('account_name', account_name_type, id_part=None, required=True, help='Name of the CosmosDB database account')
         c.argument('database_name', database_name_type, required=True, help='Name of the CosmosDB Sql database name')
         c.argument('container_name', container_name_type, required=True, help='Name of the CosmosDB Sql container name')
         c.argument('location', options_list=['--location', '-l'], help="Location of the account", required=True)
 
-    # Retrive MongoDB Collection Backup Info
+    # Retrieve MongoDB Collection Backup Info
     with self.argument_context('cosmosdb mongodb retrieve-latest-backup-time') as c:
         c.argument('account_name', account_name_type, id_part=None, required=True, help='Name of the CosmosDB database account')
         c.argument('database_name', database_name_type, required=True, help='Name of the CosmosDB MongoDB database name')
@@ -509,7 +509,7 @@ def load_arguments(self, _):
         c.argument('restore_location', options_list=['--restore-location', '-r'], help="The region of the restore.", required=True)
         c.argument('restore_timestamp_in_utc', options_list=['--restore-timestamp', '-t'], help="The timestamp of the restore", required=True)
 
-    # Retrive Gremlin Graph Backup Info
+    # Retrieve Gremlin Graph Backup Info
     database_name_type = CLIArgumentType(options_list=['--database-name', '-d'], help='Database name.')
     with self.argument_context('cosmosdb gremlin retrieve-latest-backup-time') as c:
         c.argument('account_name', account_name_type, id_part=None, required=True, help='Name of the CosmosDB database account')
@@ -517,7 +517,7 @@ def load_arguments(self, _):
         c.argument('graph_name', options_list=['--graph-name', '-n'], required=True, help='Name of the CosmosDB Gremlin graph name')
         c.argument('location', options_list=['--location', '-l'], help="Location of the account", required=True)
 
-    # Retrive Table Backup Info
+    # Retrieve Table Backup Info
     with self.argument_context('cosmosdb table retrieve-latest-backup-time') as c:
         c.argument('account_name', account_name_type, id_part=None, required=True, help='Name of the CosmosDB database account')
         c.argument('table_name', options_list=['--table-name', '-n'], required=True, help='Name of the CosmosDB Table name')

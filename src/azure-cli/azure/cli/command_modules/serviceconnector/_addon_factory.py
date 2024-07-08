@@ -50,8 +50,8 @@ AddonConfig = {
             'az postgres db delete -g {target_resource_group} -s {server} -n {database} --yes'
         ],
         'params': {
-            'target_resource_group': '_retrive_source_rg',
-            'location': '_retrive_source_loc',
+            'target_resource_group': '_retrieve_source_rg',
+            'location': '_retrieve_source_loc',
             'server': generate_random_string(length=5, prefix='server-', lower_only=True),
             'user': generate_random_string(length=5, prefix='user_', lower_only=True),
             'password': generate_random_string(length=12, ensure_complexity=True),
@@ -62,8 +62,8 @@ AddonConfig = {
         'create': ['az keyvault create -g {target_resource_group} -n {vault} -l {location}'],
         'delete': ['az keyvault delete -g {target_resource_group} -n {vault} --yes'],
         'params': {
-            'target_resource_group': '_retrive_source_rg',
-            'location': '_retrive_source_loc',
+            'target_resource_group': '_retrieve_source_rg',
+            'location': '_retrieve_source_loc',
             'vault': generate_random_string(length=5, prefix='vault-')
         }
     },
@@ -71,8 +71,8 @@ AddonConfig = {
         'create': ['az storage account create -g {target_resource_group} -n {account} -l {location}'],
         'delete': ['az storage account delete -g {target_resource_group} -n {account} --yes'],
         'params': {
-            'target_resource_group': '_retrive_source_rg',
-            'location': '_retrive_source_loc',
+            'target_resource_group': '_retrieve_source_rg',
+            'location': '_retrieve_source_loc',
             'account': generate_random_string(length=5, prefix='account', lower_only=True)
         }
     }
@@ -171,7 +171,7 @@ class AddonBase:
 
         return params
 
-    def _retrive_source_rg(self):
+    def _retrieve_source_rg(self):
         '''Retrieve the resource group name in source resource id
         '''
         if not is_valid_resource_id(self._source_id):
@@ -182,10 +182,10 @@ class AddonBase:
         segments = parse_resource_id(self._source_id)
         return segments.get('resource_group')
 
-    def _retrive_source_loc(self):
+    def _retrieve_source_loc(self):
         '''Retrieve the location of source resource group
         '''
-        rg = self._retrive_source_rg()
+        rg = self._retrieve_source_rg()
         output = run_cli_cmd('az group show -n {} -o json'.format(rg))
         return output.get('location')
 
