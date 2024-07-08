@@ -166,7 +166,7 @@ def update_vault(cmd, client, vault_name, resource_group_name, tags=None,
 
     if backup_storage_redundancy is not None or cross_region_restore_flag is not None:
         patchvault.properties.redundancy_settings = \
-            _get_vault_redunancy_settings(backup_storage_redundancy, cross_region_restore_flag, existing_vault)
+            _get_vault_redundancy_settings(backup_storage_redundancy, cross_region_restore_flag, existing_vault)
 
     if tags is not None:
         patchvault.tags = tags
@@ -261,7 +261,7 @@ def _get_vault_monitoring_settings(azure_monitor_alerts_for_job_failures, classi
 
 
 # We only support backup vault update, not create. Hence we don't need to setup any defaults. Existing vault won't be None.
-def _get_vault_redunancy_settings(backup_storage_redundancy, cross_region_restore_flag, existing_vault):
+def _get_vault_redundancy_settings(backup_storage_redundancy, cross_region_restore_flag, existing_vault):
     redundancy_settings = existing_vault.properties.redundancy_settings
 
     if backup_storage_redundancy is not None:
