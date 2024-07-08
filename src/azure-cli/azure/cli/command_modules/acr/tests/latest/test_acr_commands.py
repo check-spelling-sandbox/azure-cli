@@ -497,7 +497,7 @@ class AcrCommandsTests(ScenarioTest):
     @ResourceGroupPreparer()
     def test_acr_create_with_audits(self, resource_group):
         registry_name = self.create_random_name('clireg', 20)
-        workspace_name = self.create_random_name('wprkspace', 20)
+        workspace_name = self.create_random_name('workspace', 20)
         self.kwargs.update({
             'registry_name': registry_name,
             'sku': 'basic',

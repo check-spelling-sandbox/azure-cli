@@ -3961,7 +3961,7 @@ class NetworkPrivateLinkDesktopVirtualizationScenarioTest(ScenarioTest):
                                                 ]).get_output_in_json()
         self.kwargs['pecsHostpool-id'] = pecsHostpool[0]['id']
 
-        # Get private endpoint connection for workpace
+        # Get private endpoint connection for workspace
         pecsWorkspace = self.cmd('network private-endpoint-connection list --id {workspace_id}',
                                                 checks=[
                                                     self.check(

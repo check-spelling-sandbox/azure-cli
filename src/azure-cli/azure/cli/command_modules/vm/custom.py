@@ -5201,7 +5201,7 @@ def execute_query_for_vm(cmd, client, resource_group_name, vm_name, analytics_qu
             workspace = resource.settings.get('workspaceId', None)
     if workspace is None:
         raise CLIError('Cannot find the corresponding log analytics workspace. '
-                       'Please check the status of log analytics workpsace.')
+                       'Please check the status of log analytics workspace.')
     return client.query_workspace(workspace, analytics_query, timespan=timespan)
 
 
